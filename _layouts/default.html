@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/files/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/files/css/main.css">
+		
+		<!-- Font CSS -->
+		<link href='http://fonts.googleapis.com/css?family=Noto+Serif|Oxygen|Vollkorn|Marcellus+SC|Raleway:500|Roboto' rel='stylesheet' type='text/css'>
+		
+    </head>
+    <body class="{{ page.section }}">
+        <div id="container">
+          <div id="site">
+            <div id="header">
+              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+              <div  id="nav">
+                 <ul>
+                     <li><a class="extra" id="home" href="{{ site.baseurl }}/">home</a></li>
+                     <li><a class="extra" id="cv" href="{{ site.baseurl }}/cv/">cv</a></li>
+                     <li><a class="extra" id="work" href="{{ site.baseurl }}/work/">work</a></li>
+                     <li>
+                         <a class="extra" id="writing" href="{{ site.baseurl }}/writing/">writing</a>
+                 	     <ul>
+                 	         <li><a class="extra" id="articles" href="{{ site.baseurl }}/writing/articles/">articles</a></li>
+                 	         <li><a class="extra" id="personal" href="{{ site.baseurl }}/writing/personal/">personal</a></li>
+                 	     </ul>
+                 	 </li>
+                 </ul>
+              </div>
+            </div>
+            <div id="page">
+                {{ content }}
+            </div>
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                   Content and design by Bryan W. Weber. <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Some rights reserved.</a>
+                   <br />
+                   Powered by <a href="http://jekyllrb.com" target="_blank" title="Jekyll: Simple, blog-aware static sites">Jekyll</a>
+                   <br />
+                   Contact the <a href="mailto:webmaster@bryanwweber.com" title="webmaster@bryanwweber.com">webmaster</a>.
+                </p>
+              </div>
+              <div class="social">
+                <p>
+                   <a href="http://uconn.academia.edu/BryanWWeber"><img src="{{ site.baseurl }}/files/icons/academia.png" width="50" height="50"></a>
+                   <a href="http://www.linkedin.com/in/bryanwweber"><img src="{{ site.baseurl }}/files/icons/linkedin.png" width="50" height="50"></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+    </body>
+</html>

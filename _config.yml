@@ -1,0 +1,9 @@
+name: Bryan W. Weber
+markdown: kramdown
+pygments: true
+kramdown:
+    auto_ids: false
+lsi: false
+permalink: /writing/:categories/:year/:month/:day/:title
+baseurl: 
+exclude: [.gitignore, .git]

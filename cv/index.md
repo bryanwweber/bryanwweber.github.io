@@ -65,13 +65,20 @@ Sample project assignments are available on request
 
 Professional Experience
 ---
-**Combustion Energy Frontier Research Center, 2012-Present**  
-Lead Chairperson, Junior Associates Committee
+**Lead Chairperson, Junior Associates Committee, 2012-Present**  
+Combustion Energy Frontier Research Center, 2012-Present
 
 {:.duties}
 + Coordinate monthly teleconferences for graduate students and post-doctoral researchers in the CEFRC  
 + Attend PI teleconferences on behalf of the junior members of the CEFRC  
-+ Contributed to the Department of Energy EFRC newsletter with the article ["Burning Butanol in a Better Engine"](http://www.energyfrontier.us/newsletter/201210/burning-butanol-better-engine)
+
+**EFRC Newsletter Editorial Board Member 2013-Present**  
+U.S. Department of Energy
+
+{:.duties}
++ Contributed articles to the newsletter describing recent scientific advances resulting from EFRC research, including:  
+["Burning Butanol in a Better Engine"](http://www.energyfrontier.us/newsletter/201210/burning-butanol-better-engine)
++ Edited articles written by other board members for factual and grammatical correctness
 
 **Journal Referee, 2013-Present**
 

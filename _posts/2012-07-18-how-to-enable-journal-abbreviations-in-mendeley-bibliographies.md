@@ -10,9 +10,9 @@ tags:
 - papers
 ---
 **UPDATE (10/10/2013):** The newest version of Mendeley (1.10.1) now supports journal abbreviations, so go out there and upgrade!
-
-Whilst working on my latest journal paper today, I needed to include journal abbreviations in my bibliography. Unfortunately, the software I use to manage my references, Mendeley, does not include a method to automatically abbreviate journal titles in references. Fortunately, there is a workaround.
 <!--more-->
+Whilst working on my latest journal paper today, I needed to include journal abbreviations in my bibliography. Unfortunately, the software I use to manage my references, Mendeley, does not include a method to automatically abbreviate journal titles in references. Fortunately, there is a workaround.
+
 As detailed in this [forum post](http://support.mendeley.com/customer/portal/questions/179297-how-to-enable-journal-abbreviations-?new=179297), the method is to create a file in the user data folder that Mendeley can read. The following steps worked on Win7, Word 2010, Mendeley 1.5.2:
 
 1. Open the Mendeley Data Folder (`"C:\Users\_Username_\AppData\Local\Mendeley Ltd\Mendeley Desktop"`) or by <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> in Mendeley. The keyboard shortcut opens the Debug dialog, simply click "Open Data Folder"

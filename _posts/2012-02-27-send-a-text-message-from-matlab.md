@@ -10,7 +10,7 @@ tags:
 - sendmail
 - text message
 ---
-User Ke Feng has posted a MATLAB script to use the sendmail function within MATLAB to send a text message to US based mobile numbers.
+User Ke Feng has posted a MATLAB script to use the sendmail function within MATLAB to send a text message to US based mobile numbers. <!--more-->
 
 [http://www.mathworks.com/matlabcentral/fileexchange/16649](http://www.mathworks.com/matlabcentral/fileexchange/16649)
 

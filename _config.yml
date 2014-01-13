@@ -7,3 +7,4 @@ lsi: false
 permalink: /writing/:categories/:year/:month/:day/:title
 baseurl: 
 exclude: [.gitignore, .git]
+excerpt_separator : <!--more-->

@@ -13,7 +13,7 @@ tags:
 - word 2007
 - word 2010
 ---
-When adding integrals or sums to formulas in Word 2010 or 2007, the command `\sum` or `\int` will give the correct symbol, but it will not stretch to fit the argument. To avoid having to go to the toolbar and add the symbol directly, simply type `\int\of`<kbd>Space</kbd><em>function</em><kbd>Space</kbd>, where <kbd>Space</kbd> indicates a press on the spacebar, and where <em>function</em> indicates the function you wish to show. If you have a more complicated argument (for instance, one involving an operator such as plus or times), use the syntax `\int\of`<kbd>Space</kbd>`\begin`<kbd>Space</kbd><em>function</em>`\end`<kbd>Space</kbd><kbd>Space</kbd>.
+When adding integrals or sums to formulas in Word 2010 or 2007, the command `\sum` or `\int` will give the correct symbol, but it will not stretch to fit the argument. To avoid having to go to the toolbar and add the symbol directly, simply type `\int\of`<kbd>Space</kbd><em>function</em><kbd>Space</kbd>, where <kbd>Space</kbd> indicates a press on the spacebar, and where <em>function</em> indicates the function you wish to show. If you have a more complicated argument (for instance, one involving an operator such as plus or times), use the syntax `\int\of`<kbd>Space</kbd>`\begin`<kbd>Space</kbd><em>function</em>`\end`<kbd>Space</kbd><kbd>Space</kbd>. <!--more-->
 
 Alternatively, the much simpler method is `\int`<kbd>Space</kbd><kbd>Space</kbd> will stretch the integral and put the cursor into the box for the integrand.
 

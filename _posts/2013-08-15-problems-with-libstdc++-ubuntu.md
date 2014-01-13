@@ -4,13 +4,11 @@ title:  "Problems with libstdc++ on Ubuntu when using
          Intel Fortran Compiler 11.1"
 date:   2013-08-15 10:11:53
 categories: Personal
-excerpt: "<p>Lately, we've had a problem on our computational server in the lab when
-trying to link custom solvers to the CHEMKIN-Pro libraries. When the
-compiler runs, it complains about undefined references to a symbol.</p>"
 ---
 Lately, we've had a problem on our computational server in the lab when
 trying to link custom solvers to the CHEMKIN-Pro libraries. When the
-compiler runs, it complains about undefined references to a symbol. <!--more-->
+compiler runs, it complains about undefined references to a symbol. 
+<!--more-->
 The actual error code is:
 
 

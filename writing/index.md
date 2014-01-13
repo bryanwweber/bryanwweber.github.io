@@ -12,8 +12,8 @@ title: Writing
       {% else %}
       <span>Posted in <a class="category" href="{{ post.categories[0] | prepend:"/writing/" | append:"/" }}">Research Revealed!</a> on {{ post.date | date_to_string }} </span>
       {% endif %}
-      {% if post.content contains '<!--more-->' %}
-          {{ post.content | split:'<!--more-->' | first }}
+      {% if post.excerpt %}
+          {{ post.excerpt | markdownify }}
       {% else %}
           <p>No excerpt, sorry! Try clicking the title to read the whole post.</p>
       {% endif %}

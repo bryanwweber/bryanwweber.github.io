@@ -3,7 +3,7 @@ layout: post
 title:  "Installing Cantera on Ubuntu 12.04.3 from scratch/source with Intel compilers"
 date:   2014-01-08 17:09
 categories: Personal
-excerpt: "<p>My lab typically uses the CHEMKIN-Pro software from Reaction Design
+excerpt: "<p>My lab typically uses the CHEMKIN-Pro software from Reaction Design 
 to perform simulations of our experiments. Unfortunately, CHEMKIN-Pro is closed
 source and does not include a number of features I have found useful for my
 research. Thus, my labmate and I have recently endeavored to install a separate
@@ -77,8 +77,8 @@ since we will not be compiling any 32-bit applications.
 Once the Intel compilers are installed, it is very important to add them to your PATH
 environment variable. Intel helpfully provides a script to set all of the relevent variables
 at once. You can source this script from your login script to allow easy access to the compilers.
-On our server, this meant adding `source /opt/intel/bin/compilervars.sh intel64` to the `.bashrc` 
-file.
+On our server, this meant adding `source /opt/intel/bin/compilervars.sh intel64` to the `~/.profile` 
+file. On a desktop install, the better place to add this is in the `~/.bashrc` file
 
 ## Install Dependencies {#InstallDependencies}
 
@@ -90,7 +90,7 @@ in some cases the Intel compilers are little more than a wrapper around the GNU 
 switch the entire system between compiler versions, use the built-in program 
 [`update-alternatives`](http://askubuntu.com/questions/233190/what-exactly-does-update-alternatives-do).
 
-The following commands were tested on a fresh installation of Ubuntu 12.04.3, with only package updates
+The following commands were tested on a fresh installation of Ubuntu 12.04.3 with GCC 4.6, with only package updates
 and the Intel compilers installed (as shown above), so it should get anyone up and running.
 
 A list of Cantera's dependencies can be found at the 
@@ -107,9 +107,9 @@ the dependencies.
 With the `apt-get` installs out of the way, its time to move on to the Python dependencies. First up is
 `pip`, which makes installing the other dependencies much easier. One note - if you do not have admin
 access (i.e. `sudo` rights) on the particular machine you're using, be sure to specify the `--user` option
-to all of the following commands (and you'll have to have gotten a sysadmin to do the previous steps.
+to all of the following `easy_install` commands (and you'll have to have gotten a sysadmin to do the previous steps).
 The `--user` option will install the packages in the directory 
-`/home/username/.local/lib/pythonX.Y/site-packages`, which is editable by the user.
+`/home/username/.local/lib/pythonX.Y/site-packages`, which is editable by the user and thus doesn't require super-user rights.
 
     wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
     -O - | sudo python3.2
@@ -148,7 +148,7 @@ SourceForge download site: <http://sourceforge.net/projects/boost/files/boost/>
 
 When you have downloaded the appropriate `.tar.gz` file, unzip it with the command
 
-    tar -xvf boost_X_YY_Z.tar.gz
+    tar -xzf boost_X_YY_Z.tar.gz
     
 Then change to the appropriate directory (most likely `boost_X_YY_Z`), and run the following
 commands
@@ -159,7 +159,8 @@ source /opt/intel/bin/compilervars.sh intel64
 ./bootstrap.sh --with-toolset=intel-linux
 ./b2 -a -q --link=shared --variant=release --address-model=64 \
     --link-flags="-Wl,-z,defs,--no-undefined" \
-    --compileflags="-xhost -fp-model precise -O3" -j2 install
+    --compileflags="-xhost -fp-model precise -O3" -j2 \
+    --threading=multi install
 exit
 {% endhighlight %}
     
@@ -171,7 +172,7 @@ Let's look at these commands.
 4. Run the install program that `bootstrap.sh` has created. The options (as far as I know them) are:
     - `-a`: Rebuild all targets, even if they're up-to-date
     - `-q`: Quit the build on the first error
-    - `--link=shared`: Build shared libraries. No idea if its required.
+    - `--link=shared`: Build shared libraries.
     - `--variant=release`: Build the release version. No idea if its required.
     - `--address-model=64`: Build 64 bit binaries. No idea if its required.
     - `--link-flags="..."`: Flags that are sent to the linker. No idea which of these are required.
@@ -185,9 +186,10 @@ Let's look at these commands.
 
 If you don't have `sudo` privileges, you can use the option `--prefix=/path/to/install`. Make 
 sure that you have permissions to write to `/path/to/install`. The `--prefix` option should be
-specified to `b2` I think - not sure about that, proceed at your own risk. Note also that these
-directions are somewhat different than the ones provided at 
-[the official documentation](http://www.boost.org/doc/libs/1_55_0/more/getting_started/unix-variants.html) 
+specified to `b2` I think - not sure about that, proceed at your own risk. If resources are tight,
+you can add `--with-python --with-regex --with-system --with-thread` to install only the minimal
+set of libraries that Cantera requires. Note also that these directions are somewhat different 
+than the ones provided at [the official documentation](http://www.boost.org/doc/libs/1_55_0/more/getting_started/unix-variants.html) 
 so proceed at your own risk.
 
 ## Install Sundials {#InstallSundials}
@@ -198,7 +200,7 @@ and whistles, so let's go for it. Download Sundials (as of this writing, the mos
 version is 2.5.0) from here: <http://computation.llnl.gov/casc/sundials/download/download.html>.
 Similar to the Boost section, we untar the tarball
 
-    tar -xvf sundials-X.Y.Z.tar.gz
+    tar -xzf sundials-X.Y.Z.tar.gz
     
 Then change to the appropriate directory and run the following commands
 
@@ -256,7 +258,7 @@ Now we have finally finished installing the dependencies, and we can actually in
 You can either download the tarball of the most recent stable source from here:
 <https://code.google.com/p/cantera/downloads/list> and unzip it by
 
-    tar -xvf cantera-X.Y.Z.tar.gz
+    tar -xzf cantera-X.Y.Z.tar.gz
 
 Alternatively, you can download the source code by Subversion or `git-svn`
 
@@ -269,6 +271,7 @@ or
     git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
     #                                                                   ^The space here is 
     #                                                                    important
+    cd cantera
     git checkout 2.1
     
 Either of these options will give you the most recent stable build of Cantera. If you want to live on
@@ -287,8 +290,9 @@ or
 and don't give the `git checkout 2.1` line. After that, change into the directory where Cantera was
 downloaded or unzipped.
 
-Now we need to configure the installation of Cantera. I actually don't remember why we decided
-to have each user install their own copy of Cantera, but that's what this install will get you.
+Now we need to configure the installation of Cantera. This configuration file will install the Cantera
+files in a different directory per user. The reason for this is that we wanted to allow each user of
+the server to have their own independent install of Cantera, rather than a global single version.
 Create a file called `cantera.conf` and copy the following into it
 
 {% highlight python %}
@@ -303,7 +307,7 @@ f90_interface = 'y'
 F90 = 'ifort'
 F90FLAGS = '-O3 -openmp -xhost'
 use_sundials = 'y'
-sundials_include = '/usr/local/include/sundials'
+sundials_include = '/usr/local/include'
 sundials_libdir = '/usr/local/lib'
 blas_lapack_libs = 'mkl_rt'
 blas_lapack_dir = '/opt/intel/composerxe/mkl/lib/intel64/'
@@ -315,7 +319,7 @@ debug_linker_flags = '-L/opt/intel/composerxe/mkl/lib/intel64 \
 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread \
 -lm -openmp -lboost_system -lboost_regex'
 build_thread_safe = True
-boost_inc_dir = '/usr/local/include/boost'
+boost_inc_dir = '/usr/local/include'
 boost_lib_dir = '/usr/local/lib'
 F77 = 'ifort'
 F77FLAGS = '-O3 -openmp -xhost'

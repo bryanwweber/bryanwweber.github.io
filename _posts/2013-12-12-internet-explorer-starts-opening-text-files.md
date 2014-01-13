@@ -15,4 +15,4 @@ requires restarting the explorer.exe process. Open a Task Manager window (<kbd>C
 bingo, fixed.
 
 
-Source: http://sourceforge.net/p/notepad-plus/discussion/331754/thread/0a714707
+Source: <http://sourceforge.net/p/notepad-plus/discussion/331754/thread/0a714707>

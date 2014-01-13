@@ -5,8 +5,7 @@ section: work
 ---
 Download the latest version of my CV here: [pdf]({{ site.baseurl }}/files/cv/Weber_Bryan_CV.pdf)
 
-{: #researchinterests}
-Research Interests
+Research Interests {#researchinterests}
 ---------------------
 **Combustion Engineering:** Alternative biofuels including alcohols and biodiesel;
 design of novel experimental methods for combustion analysis;

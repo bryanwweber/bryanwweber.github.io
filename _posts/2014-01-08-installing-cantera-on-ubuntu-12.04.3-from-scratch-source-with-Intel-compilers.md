@@ -210,9 +210,9 @@ mkdir build && cd build
     --with-lapack="mkl_rt" \
     --with-libs="-L$MKLROOT/lib/intel64 -lmkl_intel_lp64 -lmkl_core \
     -lmkl_intel_thread -lpthread -liomp5 -lm" \
-    --with-cflags="-xhost -O3 -m64 -I$MKLROOT/include -openmp -fPIC -fp-model precise" \
-    --with-cppflags="-xhost -O3 -I$MKLROOT/include -openmp -fPIC -fp-model precise" \
-    --with-fflags="-xhost -O3 -I$MKLROOT/include -openmp -fPIC -fp-model precise" \
+    --with-cflags="-xhost -O3 -m64 -I$MKLROOT/include -fPIC -fp-model precise" \
+    --with-cppflags="-xhost -O3 -m64 -I$MKLROOT/include -fPIC -fp-model precise" \
+    --with-fflags="-xhost -O3 -m64 -I$MKLROOT/include -fPIC -fp-model precise" \
     --enable-shared
 make
 sudo -s
@@ -232,18 +232,20 @@ Let's take a look at these commands now too.
     - `--with-blas="mkl_rt"`: This tells Sundials to use BLAS from the Intel MKL 
     - `--with-lapack="mkl_rt"`: This tells Sundials to use LAPACK from the Intel MKL
     - `--with-libs="..."`: This line tells Sundials where it can find all of the fancy Intel MKL stuff. 
-    The `mkl_intel_thread` and `iomp5` entries are particularly important, as these enable multi-threaded 
-    solving for the Cantera 1-D solvers.
+      <del>The `mkl_intel_thread` and `iomp5` entries are particularly important, as these enable multi-threaded 
+      solving for the Cantera 1-D solvers.</del> Update: Further testing has shown that including these libraries 
+      in SUNDIALS is not important for the 1-D solver in Cantera. I think these libraries are only required if
+      the Intel MKL will be used in a program that uses OpenMP threading.
     - `--with-cflags="..."`, `--with-cppflags="..."`, and `--with-fflags="..."`: These are compiler flags for
-    Sundials. 
+      Sundials. 
         - `-xhost`: Intel specific optimizations for Intel processors
         - `-O3`: Optimization level
         - `-m64`: Build for 64 bits
         - `-I$MKLROOT/include`: `MKLROOT` is an environment variable defined by the Intel `compilervars.sh` script.
-        This flag tells the compiler where it can find the include files the program needs.
-        - `-openmp`: Compile the program using OpenMP directives to allow shared-memory multi-threading
-        - `-fPIC`: Generate position independent code, meaning the compiled file does not depend on being in a
-        particular location in the filesystem.
+          This flag tells the compiler where it can find the include files the library needs.
+        - `-fPIC`: Generate position independent code, <del>meaning the compiled file does not depend on being in a
+          particular location in the filesystem.</del> meaning the library does not depend on being in a particular
+          location in memory when it is compiled into a separate program.
         - `-fp-model precise`: Use the `precise` floating point model
     - `--enable-shared`: Build the shared libraries in addition to the static libraries.
 3. Run `make` to compile and link all the files
@@ -305,24 +307,21 @@ python3_prefix = 'USER'
 python_compiler = 'icpc'
 f90_interface = 'y'
 F90 = 'ifort'
-F90FLAGS = '-O3 -openmp -xhost'
+F90FLAGS = '-O3 -xhost'
 use_sundials = 'y'
 sundials_include = '/usr/local/include'
 sundials_libdir = '/usr/local/lib'
 blas_lapack_libs = 'mkl_rt'
 blas_lapack_dir = '/opt/intel/composerxe/mkl/lib/intel64/'
 env_vars = 'all'
-cxx_flags = ''
-cc_flags = '-Wall -Wno-deprecated -I/opt/intel/composerxe/mkl/include \
--xhost -fp-model precise -openmp'
-debug_linker_flags = '-L/opt/intel/composerxe/mkl/lib/intel64 \
--lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread \
--lm -openmp -lboost_system -lboost_regex'
+cc_flags = '-Wall -Wno-deprecated -xhost -fp-model precise'
+debug_linker_flags = '-lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread \
+-liomp5 -lboost_system -lboost_regex'
 build_thread_safe = True
 boost_inc_dir = '/usr/local/include'
 boost_lib_dir = '/usr/local/lib'
 F77 = 'ifort'
-F77FLAGS = '-O3 -openmp -xhost'
+F77FLAGS = '-O3 -xhost'
 rpfont = 'helvetica'
 {% endhighlight %}
 
@@ -336,11 +335,15 @@ of the Intel MKL. Briefly, they are:
    install is desired
 - `python_prefix`,`python3_prefix`: The directories where the Python module should be installed. Specifying
   `'USER'` tells the installer to put the module in the default user directory, which is `~/.local` by
-  default
+  default. This overrides any value of the prefix, so if you want the Python module installed in the
+  prefix directory, delete these lines
 - `python_compiler`: The compiler to use when compiling the Python module. Should be the same as `CXX`.
+- `f90_interface`: Compile the Fortran 90 interface
+- `F90FLAGS` and `F77FLAGS`: Flags to send to the Fortran compiler when compiling the Fortran 90 and 
+  Fortran 77 interfaces, respectively
+- `use_sundials`: Specify whether or not to use SUNDIALS
 - `sundials_include`,`sundials_libdir`: The directories where Cantera can find the header files and the
-  Sundials libraries, respectively. Should be set to the directory where Sundials was installed in the
-  previous step
+  Sundials libraries, respectively. Should be set to the directory where Sundials was installed
 - `blas_lapack_libs`, `blas_lapack_dir`: The libraries and directory for BLAS and LAPACK. To use the
   Intel MKL, `mkl_rt` should be specified for the `libs`, and the full absolute path to the directory
   where the libraries are stored needs to be given. Note that in this configuration, shell variables
@@ -359,11 +362,14 @@ After `cantera.conf` is set, its time to build and install Cantera. The followin
 build, test, and install Cantera:
 
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/lib
-    scons build
+    scons build -j2
     scons test
     scons install
     
-After that, change out of the Cantera directory, and in Python 2 & 3 shells, type
+As before, the `-jn` option specifies the number of build tasks to perform in parallel. Set `n`
+less than or equal to the number of processors you wish to use to perform the build. Higher `n`
+makes the build go muuuuuch faster as long as you don't exceed the number of processors on your
+computer. After that, change out of the Cantera directory, and in Python 2 & 3 shells, type
 
     >>> import cantera
     
@@ -373,5 +379,5 @@ is ready to go on each login:
 
     source /opt/intel/bin/compilervars.sh intel64
     export PATH=/home/username/.local/bin:$PATH
-    export LD_LIBRARY_PATH=/home/username/.local/lib:/usr/local/lib:usr/lib:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/home/_username_/.local/lib:/usr/local/lib:usr/lib:$LD_LIBRARY_PATH
     export MANPATH=/home/username/.local/man:$MANPATH

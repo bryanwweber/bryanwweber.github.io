@@ -96,7 +96,7 @@ Awards and Fellowships
 **University of Connecticut**
 
 {:.award}
-Doctoral Dissertation Fellowship, 2014
+Doctoral Dissertation Fellowship, 2014  
 Competitively awarded to Ph.D. candidates who have completed their dissertation proposals
 
 {:.award}

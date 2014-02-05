@@ -121,5 +121,5 @@ Professional Affiliations
 ---
 AIAA, Student Member  
 ASME, Student Member  
-The Combustion Institute, Student Member
+The Combustion Institute, Student Member  
 ACS, Student Member

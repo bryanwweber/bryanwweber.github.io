@@ -77,13 +77,15 @@ U.S. Department of Energy
 
 {:.duties}
 + Contributed articles to the newsletter describing recent scientific advances resulting from EFRC research, including:  
-["Burning Butanol in a Better Engine"](http://www.energyfrontier.us/newsletter/201210/burning-butanol-better-engine)
+["Burning Butanol in a Better Engine"](http://www.energyfrontier.us/newsletter/201210/burning-butanol-better-engine)  
+["The Advantage of Renewable Fuels in High-Efficiency Engines"](http://www.energyfrontier.us/newsletter/201401/advantage-renewable-fuels-high-efficiency-engines)
 + Edited articles written by other board members for factual and grammatical correctness
 
 **Journal Referee, 2013-Present**
 
 {:.duties}
 + Energy & Fuels
++ Proceedings of the Combustion Institute
 
 Publications
 ---
@@ -92,6 +94,10 @@ See the updated list on the [Publications page]({{ site.baseurl }}/work/)
 Awards and Fellowships
 ---
 **University of Connecticut**
+
+{:.award}
+Doctoral Dissertation Fellowship, 2014
+Competitively awarded to Ph.D. candidates who have completed their dissertation proposals
 
 {:.award}
 Department of Mechanical Engineering Graduate Predoctoral Fellowship Award, 2013  
@@ -116,3 +122,4 @@ Professional Affiliations
 AIAA, Student Member  
 ASME, Student Member  
 The Combustion Institute, Student Member
+ACS, Student Member

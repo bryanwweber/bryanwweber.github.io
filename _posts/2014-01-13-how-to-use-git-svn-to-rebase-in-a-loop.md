@@ -28,3 +28,9 @@ to match the remote branch.
 For this to work, you can't have conflicts on any of your branches with the
 files you'll be updating. This may or may not be the case, so proceed
 with caution.
+
+**Update:** If you only have one branch with no local commits, running
+
+    git svn rebase
+    
+will fast forward that branch to the most recent `refs/remotes/trunk`

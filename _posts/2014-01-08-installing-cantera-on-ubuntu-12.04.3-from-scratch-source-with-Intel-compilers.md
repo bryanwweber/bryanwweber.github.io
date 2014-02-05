@@ -158,7 +158,6 @@ sudo -s
 source /opt/intel/bin/compilervars.sh intel64
 ./bootstrap.sh --with-toolset=intel-linux
 ./b2 -a -q --link=shared --variant=release --address-model=64 \
-    --link-flags="-Wl,-z,defs,--no-undefined" \
     --compileflags="-xhost -fp-model precise -O3" -j2 \
     --threading=multi install
 exit
@@ -175,7 +174,6 @@ Let's look at these commands.
     - `--link=shared`: Build shared libraries.
     - `--variant=release`: Build the release version. No idea if its required.
     - `--address-model=64`: Build 64 bit binaries. No idea if its required.
-    - `--link-flags="..."`: Flags that are sent to the linker. No idea which of these are required.
     - `--compileflags="..."`: Flags sent to the C and C++ compilers. These options are
         - `-xhost`: Add additional Intel specific optimizations
         - `-fp-model precise`: Use the `precise` floating point model
@@ -315,11 +313,11 @@ blas_lapack_libs = 'mkl_rt'
 blas_lapack_dir = '/opt/intel/composerxe/mkl/lib/intel64/'
 env_vars = 'all'
 cc_flags = '-Wall -Wno-deprecated -xhost -fp-model precise'
-debug_linker_flags = '-lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread \
--liomp5 -lboost_system -lboost_regex'
+debug_linker_flags = '-lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread -liomp5'
 build_thread_safe = True
 boost_inc_dir = '/usr/local/include'
 boost_lib_dir = '/usr/local/lib'
+boost_thread_lib = 'boost_system'
 F77 = 'ifort'
 F77FLAGS = '-O3 -xhost'
 rpfont = 'helvetica'
@@ -356,12 +354,13 @@ of the Intel MKL. Briefly, they are:
 - `build_thread_safe`: Allow Cantera to be used in multi-threaded applications
 - `boost_inc_dir`, `boost_lib_dir`: Similar to Sundials, the include and libraries directories where
   Boost was installed
+- `boost_thread_lib`: Libraries to include when building the Boost threaded components
 - `rpfont`: The font to use when printing reaction paths. 
 
 After `cantera.conf` is set, its time to build and install Cantera. The following commands will
 build, test, and install Cantera:
 
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/lib
+    export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
     scons build -j2
     scons test
     scons install

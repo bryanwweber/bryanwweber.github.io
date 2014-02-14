@@ -2,7 +2,7 @@ Journal Articles
 ---
 
 {:.year}
-###2014
+### 2014
 
 {:.paper}
 <span>Experiments and modeling of the autoignition of methylcyclohexane at high pressure</span>{:.papertitle}  
@@ -11,7 +11,7 @@ Journal Articles
 <span>**DOI:** [10.1016/j.combustflame.2014.01.018](http://dx.doi.org/10.1016/j.combustflame.2014.01.018)</span>{:.doi}  
 
 {:.year}
-###2013
+### 2013
 
 {:.paper}
 <span>A comprehensive experimental and modeling study of iso-pentanol combustion</span>{:.papertitle}  
@@ -27,7 +27,7 @@ Journal Articles
 <span>Users without a subscription to _Energy and Fuels_ can download the paper from this link: [Articles On Request](http://pubs.acs.org/articlesonrequest/AOR-nVQe5YcTdC5nepMQYiyn).</span>{:.comment}  
 
 {:.year}
-###2012
+### 2012
 
 {:.paper}
 <span>Development of Isopentanol Reaction Mechanism Reproducing Autoignition Character at High and Low Temperatures</span>{:.papertitle}  
@@ -36,7 +36,7 @@ Journal Articles
 <span>**DOI:** [10.1021/ef300879k](http://dx.doi.org/10.1021/ef300879k)</span>{:.doi}  
 
 {:.year}
-###2011
+### 2011
 
 {:.paper}
 <span>Autoignition of n-butanol at elevated pressure and low-to-intermediate temperature</span>{:.papertitle}  
@@ -48,7 +48,7 @@ Conference Publications and Posters
 ---
 
 {:.year}
-###2013
+### 2013
 
 {:.paper}
 <span>Combustion of the Butanol Isomers: Reaction Pathways from High to Low Temperature</span>{:.papertitle}  
@@ -58,9 +58,9 @@ Conference Publications and Posters
 **Abstract:** [University of Seville](http://acdc.sav.us.es/icck2013/images/stories/c-orales/index.html?pageNumber=86)</span>{:.comment}  
 
 {:.paper}
-<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
-<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
+<span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
+<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togb\'{e}, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
+<span>Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
 
 {:.paper}
 <span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
@@ -69,12 +69,12 @@ Conference Publications and Posters
 <span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
 
 {:.paper}
-<span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
-<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togb\'{e}, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
-<span>Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
+<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
+<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
 
 {:.year}
-###2011
+### 2011
 
 {:.paper}
 <span>Comparative Investigation of the High Pressure Autoignition of the Butanol Isomers</span>{:.papertitle}  
@@ -106,7 +106,7 @@ Conference Publications and Posters
 <span>**DOI:** [10.2514/6.2011-316](http://dx.doi.org/10.2514/6.2011-316)</span>{:.doi}  
 
 {:.year}
-###2010
+### 2010
 
 {:.paper}
 <span>Autoignition of n-Butanol at Elevated Pressure and Low to Intermediate Temperature</span>{:.papertitle}  
@@ -115,7 +115,7 @@ Conference Publications and Posters
 <span>**Poster:** [PDF]({{ site.baseurl }}/files/pubs/Weber_2010_CEFRC_Annual_Poster.pdf)</span>{:.comment}  
 
 {:.year}
-###2009
+### 2009
 
 {:.paper}
 <span>An Investigation of Hydrocarbon Flames using Probe Sampling and Gas Chromatography/Mass Spectrometry</span>{:.papertitle}  
@@ -127,7 +127,7 @@ Master's Thesis
 ---
 
 {:.year}
-###2010
+### 2010
 
 {:.paper}
 <span>Autoigniton of n-Butanol at Low to Intermediate Temperature and Elevated Pressure</span>{:.papertitle}  

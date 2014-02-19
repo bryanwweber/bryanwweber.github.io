@@ -9,7 +9,7 @@ Education
 ---
 **University of Connecticut**, Storrs, CT, USA
 
-Ph.D., Mechanical Engineering, 2014 (Planned)  
+Ph.D., Mechanical Engineering, Planned Defense: May 2014  
 Working Dissertation Title: *High Pressure Ignition Chemistry of Alternative Fuels*  
 Advisor: Prof. Chih-Jen (Jackie) Sung
 

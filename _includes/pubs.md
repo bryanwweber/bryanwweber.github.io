@@ -15,7 +15,7 @@ Journal Articles
 
 {:.paper}
 <span>A comprehensive experimental and modeling study of iso-pentanol combustion</span>{:.papertitle}  
-<span>S.M. Sarathy, S. Park, **B.W. Weber**, W. Wang, P.S. Veloo, A.C. Davis, C. Togb\'{e}, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
+<span>S.M. Sarathy, S. Park, **B.W. Weber**, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
 <span>_Combustion and Flame_, vol. 160, no. 12, pp. 2712--2728, Dec. 2013</span>{:.journal}  
 <span>**DOI:** [10.1016/j.combustflame.2013.06.022](http://dx.doi.org/10.1016/j.combustflame.2013.06.022)</span>{:.doi}  
 
@@ -52,14 +52,14 @@ Conference Publications and Posters
 
 {:.paper}
 <span>Combustion of the Butanol Isomers: Reaction Pathways from High to Low Temperature</span>{:.papertitle}  
-<span>S.S. Merchant, W.H. Green, K.M. {Van Geem}, N. Hansen, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
+<span>S.S. Merchant, W.H. Green, K.M. Van Geem, N. Hansen, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
 <span>8th International Conference on Chemical Kinetics, University Seville, Seville, Spain, Jul. 2013</span>{:.journal}  
 <span>S.S. Merchant presenting.
 **Abstract:** [University of Seville](http://acdc.sav.us.es/icck2013/images/stories/c-orales/index.html?pageNumber=86)</span>{:.comment}  
 
 {:.paper}
 <span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
-<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togb\'{e}, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
+<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
 <span>Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
 
 {:.paper}
@@ -89,7 +89,7 @@ Conference Publications and Posters
 
 {:.paper}
 <span>Combustion of the butanol isomers: Reaction pathways at elevated pressure from low-to-high temperatures.</span>{:.papertitle}  
-<span>M.R. Harper, W.H. Green, K.M. {Van Geem}, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson</span>{:.authors}  
+<span>M.R. Harper, W.H. Green, K.M. Van Geem, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson</span>{:.authors}  
 <span>Paper \#84, 7th International Conference on Chemical Kinetics, Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
 <span>W.H. Green presenting.
 **Slides:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  

@@ -256,11 +256,12 @@ Let's take a look at these commands now too.
 
 Now we have finally finished installing the dependencies, and we can actually install Cantera itself.
 You can either download the tarball of the most recent stable source from here:
-<https://code.google.com/p/cantera/downloads/list> and unzip it by
+<http://sourceforge.net/projects/cantera/files/cantera/> and unzip it by
 
     tar -xzf cantera-X.Y.Z.tar.gz
 
-Alternatively, you can download the source code by Subversion or `git-svn`
+Alternatively, you can download the source code by Subversion or
+[`git-svn`](https://www.kernel.org/pub/software/scm/git/docs/git-svn.html)
 
     svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.1/ cantera
     #                                                                   ^The space here is 

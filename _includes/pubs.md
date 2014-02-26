@@ -90,7 +90,7 @@ Conference Publications and Posters
 {:.paper}
 <span>Combustion of the butanol isomers: Reaction pathways at elevated pressure from low-to-high temperatures.</span>{:.papertitle}  
 <span>M.R. Harper, W.H. Green, K.M. Van Geem, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson</span>{:.authors}  
-<span>Paper \#84, 7th International Conference on Chemical Kinetics, Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
+<span>Paper #84, 7th International Conference on Chemical Kinetics, Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
 <span>W.H. Green presenting.
 **Slides:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
 

@@ -4,16 +4,16 @@ title:  "How to Install Arara with SumatraPDF Support"
 date:   2014-01-30 13:00
 categories: Personal
 ---
-[Arara](https://github.com/cereda/arara) is a cross platform build system 
+[Arara](https://github.com/cereda/arara) is a cross platform build system
 written in Java. It is intended for use with TeX and various derivatives
 thereof, but can really be used for any build process. I'm using it to help
-write my dissertation in XeLaTeX.Installation is a little bit of a pain on 
+write my dissertation in XeLaTeX. Installation is a little bit of a pain on
 Windows, so here are some notes to ease the process. 
 <!--more-->
 
 First, download the Arara package from [CTAN](http://www.ctan.org/pkg/arara).
 After unizipping, copy the contents of `arara/scripts` to a directory on your 
-path, or add the directory with the `arara.jar` file to your path. For instance,
+path, and/or add the directory with the `arara.jar` file to your path. For instance,
 I copied the files in that folder to `C:\Program Files (x86)\Arara` and added 
 that folder to my `PATH` variable. Then, add a batch file named `arara.bat` to
 the same folder where `arara.jar` exists with the following contents:
@@ -25,7 +25,7 @@ java -jar "%~dp0\arara.jar" %*
 
 Now, typing `arara` at a command window should print the Arara help. Next, we 
 have to add a custom rule to enable SumatraPDF support. Create a file in your
-home directory (`C:\Users\<username>\` called `araraconfig.yaml` with the 
+home directory (`C:\Users\<username>\`) called `araraconfig.yaml` with the 
 following content:
 
 {% highlight yaml %}
@@ -86,4 +86,4 @@ Forward search can be enabled by setting up another NppExec script, this one a o
     NPP_RUN "C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe" -reuse-instance \
     $(NAME_PART).pdf -forward-search $(NAME_PART).tex $(CURRENT_LINE)
     
-Then go through the same procedure to set a keyboard shortcut. I'm using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>~</kbd>.
+Then go through the same procedure to set a keyboard shortcut. I'm using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F5</kbd>.

@@ -3,7 +3,7 @@ layout: default
 title: Personal Writing
 section: writing personal
 ---
-  <h1>All posts categorized as Personal Writing.</h1>
+  <h1>Blagh posts!</h1>
   <ul class="posts">
     {% for post in site.categories.personal %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>

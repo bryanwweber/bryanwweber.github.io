@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to fix broken hyperlinks to equations in LaTeX
+date: 2014-03-07 23:00
 categories:
 - Personal
 ---

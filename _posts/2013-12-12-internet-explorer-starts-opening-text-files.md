@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Internet Explorer Starts Opening Text Files"
+title:  Internet Explorer Starts Opening Text Files
 date:   2013-12-12 12:02
 categories: Personal
 ---

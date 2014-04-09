@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Install Arara with SumatraPDF Support"
+title:  How to Install Arara with SumatraPDF Support
 date:   2014-01-30 13:00
 categories: Personal
 ---

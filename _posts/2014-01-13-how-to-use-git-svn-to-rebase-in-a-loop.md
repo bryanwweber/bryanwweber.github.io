@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to use git-svn to rebase in a loop"
+title:  How to use git-svn to rebase in a loop
 date:   2014-01-13 07:50
 categories: Personal
 ---

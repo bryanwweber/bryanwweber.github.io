@@ -1,7 +1,6 @@
 ---
 layout: post
-title: A new method for estimating secondary mass savings in vehicles could offer
-  improved fuel economy
+title: A new method for estimating secondary mass savings in vehicles could offer improved fuel economy
 categories:
 - Articles
 tags:

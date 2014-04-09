@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installing NumPy/SciPy on Ubuntu 12.04.3 from scratch/source with Intel compilers"
+title:  Installing NumPy/SciPy on Ubuntu 12.04.3 from scratch/source with Intel compilers
 date:   2014-01-11 16:53
 categories: Personal
 ---

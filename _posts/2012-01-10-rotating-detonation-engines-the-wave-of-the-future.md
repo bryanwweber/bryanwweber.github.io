@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Rotating Detonation Engines: the "wave" of the future?'
+title: Rotating Detonation Engines the 'wave' of the future?
 categories:
 - Articles
 tags:

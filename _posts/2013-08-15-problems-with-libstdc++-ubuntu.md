@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "Problems with libstdc++ on Ubuntu when using
-         Intel Fortran Compiler 11.1"
+title:  Problems with libstdc++ on Ubuntu when using Intel Fortran Compiler 11.1
 date:   2013-08-15 10:11:53
 categories: Personal
 ---

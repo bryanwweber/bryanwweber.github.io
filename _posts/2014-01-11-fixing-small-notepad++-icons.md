@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fixing small Notepad++ icons"
+title:  Fixing small Notepad++ icons
 date:   2014-01-11 15:29
 categories: Personal
 ---

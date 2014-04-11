@@ -65,6 +65,7 @@ print for me:
 |  2261   |    `≡`    |
 |  0025   |    `%`    |
 |  22C5   |    `⋅`    |
+|  00B1   |    `±`    |
 |=========|===========|
 
 These lines reset these characters to use the Cambria Math font. Now, all

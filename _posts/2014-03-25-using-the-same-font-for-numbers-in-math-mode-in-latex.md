@@ -30,7 +30,7 @@ so the default must be changed. <!--more--> For instance, in  my dissertation, I
 \setmathfont[range=\mathup/{greek,Greek,latin,Latin}]{Cambria Math}
 \setmathfont[range={"2212,"002B,"003D,"0028,"0029,"005B,
 "005D,"221A,"2211,"2248,"222B,"007C,"2026,"2202,"00D7,"0302,
-"2261,"0025,"22C5}]{Cambria Math}
+"2261,"0025,"22C5,"00B1,"2194,"21D4}]{Cambria Math}
 {% endhighlight %}
 
 The lines starting `\setmathfont` are what control the font for different
@@ -66,6 +66,8 @@ print for me:
 |  0025   |    `%`    |
 |  22C5   |    `⋅`    |
 |  00B1   |    `±`    |
+|  2194   |    `↔`    |
+|  21D4   |    `⇔`   |
 |=========|===========|
 
 These lines reset these characters to use the Cambria Math font. Now, all

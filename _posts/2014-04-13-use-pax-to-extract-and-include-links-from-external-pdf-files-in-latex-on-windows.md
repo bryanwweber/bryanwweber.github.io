@@ -18,7 +18,7 @@ reads the `.pax` file when it includes the PDF and re-generates all of
 the links.<!--more-->
 
 Unfortunately, installing Pax is kind of a bear. The first thing to
-do is download Java and Perl. [Java][http://java.com] is easy to download and install
+do is download Java and Perl. [Java](http://java.com) is easy to download and install
 on Windows; I used [Strawberry Perl][3] as my Perl interpreter.
 Strawberry Perl gets installed in a directory in the root of the
 `C:\` drive to avoid any permissions issues with the Program Files

@@ -68,6 +68,7 @@ print for me:
 |  00B1   |    `±`    |
 |  2194   |    `↔`    |
 |  21D4   |    `⇔`   |
+|  2260   |    `≠`    |
 |=========|===========|
 
 These lines reset these characters to use the Cambria Math font. Now, all

@@ -2,7 +2,7 @@
 # System imports
 from datetime import datetime
 import sys
-import getopt
+import argparse
 
 # Package imports
 try:
@@ -17,7 +17,7 @@ except ImportError:
 # First is to define a function to format the names we get from BibTeX,
 # since this task will be the same for every paper type. The current
 # format is "F.M. Last, F.M. Last, and F.M. Last".
-def reorder(names, faname='F.A. Author'):
+def reorder(names, faname):
     """Format the string of author names and return a string.
 
     Adapated from one of the `customization` functions in
@@ -42,7 +42,7 @@ def reorder(names, faname='F.A. Author'):
     # " and " and strip out any remaining whitespace.
     nameslist = [i.strip() for i in names.replace('\n', ' ').split(" and ")]
 
-    # Initialize a list to store the names after they've been tidied 
+    # Initialize a list to store the names after they've been tidied
     # up.
     tidynames = []
 
@@ -104,11 +104,12 @@ def reorder(names, faname='F.A. Author'):
 
     # Find the case of the website author and set the format for that
     # name
-    try:
-        i = tidynames.index(faname)
-        tidynames[i] = my_name_format_tag + tidynames[i] + my_name_format_tag
-    except ValueError:
-        print("Couldn't find ",faname,"in the names list. Sorry!")
+    if faname is not None:
+        try:
+            i = tidynames.index(faname)
+            tidynames[i] = my_name_format_tag + tidynames[i] + my_name_format_tag
+        except ValueError:
+            print("Couldn't find ",faname,"in the names list. Sorry!")
 
     # Handle the various cases of number of authors and how they should
     # be joined. Convert the elements of `tidynames` to a string.
@@ -128,42 +129,36 @@ def reorder(names, faname='F.A. Author'):
     return nameout
 
 def main(argv):
-    bib_file_name = 'refs.bib'
-    output_file_name = 'pubs.md'
-    faname = 'F.A. Author'
-    help = ("Usage:\n"
-    "-h, --help: Print this help dialog and exit\n"
-    "-b filename, --bibfile=filename: Set the filename of the "
-    "BibTeX reference file. Default: refs.bib\n"
-    "-o filename, --output=filename: Set the filename of the "
-    "kramdown output. Default: pubs.md\n"
-    "-a 'author', --author='f.a. name': Set the name of the author "
-    "to be highlighted. Default: 'F.A. Author'")
-    try:
-        opts, args = getopt.getopt(argv, "hb:o:a:",
-                                   ["help", "bibfile=", "output=",
-                                   "author="])
-    except getopt.GetoptError as e:
-        print("You did not enter an option properly. Please try again.")
-        print(e)
-        print(help)
-        sys.exit(1)
+    arg_parser = argparse.ArgumentParser(
+        description=("Convert a BibTeX file to kramdown output with optional "
+        "author highlighting."),
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        )
+    arg_parser.add_argument(
+        "-b", "--bibfile",
+        help="Set the filename of the BibTeX reference file.",
+        default="refs.bib",
+        type=str,
+        )
+    arg_parser.add_argument(
+        "-o", "--output",
+        help="Set the filename of the kramdown output.",
+        default="pubs.md",
+        type=str,
+        )
+    arg_parser.add_argument("-a", "--author",
+        help="Set the name of the author to be highlighted.",
+        type=str,
+        )
 
-    # If the user doesn't input any options, print the help.
-    if not opts:
-        print(help)
-        sys.exit(0)
-
-    for opt, arg in opts:
-        if opt in {"-h", "--help"}:
-            print(help)
-            sys.exit()
-        elif opt in {"-b", "--bibfile"}:
-            bib_file_name = arg
-        elif opt in {"-o", "--output"}:
-            output_file_name = arg
-        elif opt in {"-a", "--author"}:
-            faname = arg
+    args = arg_parser.parse_args()
+    bib_file_name = args.bibfile
+    output_file_name = args.output
+    faname = args.author
+    if args.author is None:
+        print("\nWARNING: A name to highlight has not been specified. See the"
+              " help and the option --author to specify a name to highlight\n"
+              )
 
     # Set the formatting identifiers. Since we're using kramdown, we
     # don't have to use the HTML tags.
@@ -178,10 +173,10 @@ def main(argv):
     # `bibtexparser`
 
     with open(bib_file_name,'r') as bib_file:
-        bp = BibTexParser(bib_file, customization=convert_to_unicode)
+        bp = BibTexParser(bib_file.read(), customization=convert_to_unicode)
 
     # Get a dictionary of dictionaries of key, value pairs from the
-    # BibTeX file. The structure is 
+    # BibTeX file. The structure is
     # {ID:{authors:...},ID:{authors:...}}.
     refsdict = bp.get_entry_dict()
 
@@ -191,7 +186,7 @@ def main(argv):
     types = []
     for k,ref in refsdict.items():
         types.append(ref["type"])
-    types  = set(types)
+    types = set(types)
 
     # For each of the types of reference, we need to sort each by month
     # then year. We store the dictionary representing each reference in
@@ -259,8 +254,8 @@ def main(argv):
             reference = (
                 '\n{{:.paper}}\n{open}{title}{close}{{:.papertitle}}  \n'
                 '{open}{authors}{close}{{:.authors}}  \n'
-                '{open}{em}{journal}{em}, '.format(open=open_span, 
-                close=close_span, title=title, authors=authors, em=em, 
+                '{open}{em}{journal}{em}, '.format(open=open_span,
+                close=close_span, title=title, authors=authors, em=em,
                 journal=journal,
                 )
                 )
@@ -276,16 +271,23 @@ def main(argv):
             if "pages" in ref:
                 reference += 'pp. ' + ref["pages"] + ', '
 
+            month = ref["month"].title()
+            if month == "May":
+                month += ' '
+            else:
+                month += '. '
+
             reference += (
-                ref["month"].title() + '. ' +
-                year + close_span + '{:.journal}  \n'
+                '{month}{year}{close}{{:.journal}}  \n'.format(
+                month=month, year=year, close=close_span,
+                )
                 )
 
             if "doi" in ref:
                 reference += (
                     '{open}{strong}DOI:{strong} [{doi}]'
                     '(http://dx.doi.org/{doi}){close}{{:.doi}}  \n'.format(
-                    open=open_span, close=close_span, strong=strong, 
+                    open=open_span, close=close_span, strong=strong,
                     doi=ref["doi"],
                     )
                     )
@@ -296,7 +298,7 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, close=close_span, 
+                    open=open_span, close=close_span,
                     annote=ref["annote"].replace('\\',''),
                     )
                     )
@@ -348,9 +350,15 @@ def main(argv):
             if "address" in ref:
                 reference += ref["address"] + ', '
 
+            month = ref["month"].title()
+            if month == "May":
+                month += ' '
+            else:
+                month += '. '
+
             reference += (
-                '{month}. {year}{close}{{:.journal}}  \n'.format(
-                month=ref["month"].title(), year=year, close=close_span,
+                '{month}{year}{close}{{:.journal}}  \n'.format(
+                month=month, year=year, close=close_span,
                 )
                 )
 
@@ -358,7 +366,7 @@ def main(argv):
                 reference += (
                     '{open}{strong}DOI:{strong} [{doi}]'
                     '(http://dx.doi.org/{doi}){close}{{:.doi}}  \n'.format(
-                    open=open_span, strong=strong, doi=ref["doi"], 
+                    open=open_span, strong=strong, doi=ref["doi"],
                     close=close_span,
                     )
                     )
@@ -369,7 +377,7 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, annote=ref["annote"].replace('\\',''), 
+                    open=open_span, annote=ref["annote"].replace('\\',''),
                     close=close_span,
                     )
                     )
@@ -378,8 +386,6 @@ def main(argv):
 
         # Finally are the theses and dissertations. Same general logic
         # as for the other reference types.
-        print("Master's Thesis\n---\n")
-        out_file.write("\nMaster's Thesis\n---\n")
         pubyear = '2200'
         for ref in sort_dict["phdthesis"]:
             authors = reorder(ref["author"],faname)
@@ -401,19 +407,39 @@ def main(argv):
             if "school" in ref:
                 reference += ref["school"] + ', '
             if "month" in ref:
-                reference += ref["month"].title() + '. '
+                month = ref["month"].title()
+                if month == "May":
+                    month += ' '
+                else:
+                    month += '. '
+                reference += month
 
             reference += year + close_span + '{:.journal}  \n'
 
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, annote=ref["annote"].replace('\\',''), 
+                    open=open_span, annote=ref["annote"].replace('\\',''),
                     close=close_span,
                     )
                     )
-            print(reference)
-            out_file.write(reference)
+
+            # Here we have some me-specific customization, where my
+            # Ph.D. dissertation and Master's thesis are picked out
+            # of the reference list specifically.
+            if ref["id"] == "Weber2014a":
+                print("Ph.D. Dissertation\n---\n")
+                out_file.write("\nPh.D. Dissertation\n---\n")
+                print(reference)
+                out_file.write(reference)
+            elif ref["id"] == "Weber2010":
+                print("Master's Thesis\n---\n")
+                out_file.write("\nMaster's Thesis\n---\n")
+                print(reference)
+                out_file.write(reference)
+            else:
+                print(reference)
+                out_file.write(reference)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

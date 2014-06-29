@@ -7,7 +7,7 @@ Journal Articles
 {:.paper}
 <span>Experiments and modeling of the autoignition of methylcyclohexane at high pressure</span>{:.papertitle}  
 <span>**B.W. Weber**, W.J. Pitz, M. Mehl, E.J. Silke, A.C. Davis, and C.J. Sung</span>{:.authors}  
-<span>_Combustion and Flame_, Feb. 2014</span>{:.journal}  
+<span>_Combustion and Flame_, vol. 161, no. 8, pp. 1972--1983, Aug. 2014</span>{:.journal}  
 <span>**DOI:** [10.1016/j.combustflame.2014.01.018](http://dx.doi.org/10.1016/j.combustflame.2014.01.018)</span>{:.doi}  
 
 {:.year}
@@ -60,18 +60,18 @@ Conference Publications and Posters
 {:.paper}
 <span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
 <span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
-<span>Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
-
-{:.paper}
-<span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
-<span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
-<span>Paper 3A02, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
-<span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
+<span>Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.paper}
 <span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
 <span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May. 2013</span>{:.journal}  
+<span>Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May 2013</span>{:.journal}  
+
+{:.paper}
+<span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
+<span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
+<span>Paper 3A02, 8th US National Technical Meeting of the Combustion Institute, University of Utah, Park City, UT, May 2013</span>{:.journal}  
+<span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
 
 {:.year}
 ### 2011
@@ -123,14 +123,26 @@ Conference Publications and Posters
 <span>Support of Undergraduate Research and Creative Endeavors Symposium and Poster Session, Case Western Reserve University, Cleveland, OH, Apr. 2009</span>{:.journal}  
 <span>**Poster:** [PDF]({{ site.baseurl }}/files/pubs/Weber_2009_SOURCE_Poster.pdf) <!--_--></span>{:.comment}  
 
-Master's Thesis
+{:.year}
+### 2014
+
+Ph.D. Dissertation
 ---
+
+{:.paper}
+<span>High Pressure Ignition Chemistry of Alternative Fuels</span>{:.papertitle}  
+<span>**B.W. Weber**</span>{:.authors}  
+<span>University of Connecticut, Jun. 2014</span>{:.journal}  
+<span>**Screen Reading Paper:** [PDF]({{ site.baseurl }}/files/pubs/Weber_2014_Dissertation_Paper_Online.pdf) **Print Reading Paper:** [PDF]({{ site.baseurl }}/files/pubs/Weber_2014_Dissertation_Paper_Print.pdf) **Slides:** [PDF]({{ site.baserul }}/files/pubs/Weber_2014_Dissertation_Slides.pdf)</span>{:.comment}  
 
 {:.year}
 ### 2010
 
+Master's Thesis
+---
+
 {:.paper}
-<span>Autoigniton of n-Butanol at Low to Intermediate Temperature and Elevated Pressure</span>{:.papertitle}  
+<span>Autoignition of n-Butanol at Low to Intermediate Temperature and Elevated Pressure</span>{:.papertitle}  
 <span>**B.W. Weber**</span>{:.authors}  
 <span>University of Connecticut, Aug. 2010</span>{:.journal}  
 <span>**Paper:** [PDF]({{ site.baseurl }}/files/pubs/Weber_2010_Thesis_Paper.pdf) **Slides:** [PDF]({{ site.baserul }}/files/pubs/Weber_2010_Thesis_Slides.pdf)</span>{:.comment}  

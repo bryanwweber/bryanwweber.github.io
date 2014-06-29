@@ -9,15 +9,13 @@ Education
 ---
 **University of Connecticut**, Storrs, CT, USA
 
-Ph.D., Mechanical Engineering, Planned Defense: May 2014  
-Working Dissertation Title: *High Pressure Ignition Chemistry of Alternative Fuels*  
-Advisor: Chih-Jen (Jackie) Sung
+Ph.D., Mechanical Engineering, 2014
 
-M.S., Mechanical Engineering, August 2010  
+M.S., Mechanical Engineering, 2010
 
 **Case Western Reserve University**, Cleveland, OH, USA
 
-B.S.E., Aerospace Engineering, May 2009  
+B.S.E., Aerospace Engineering, 2009
 
 Research Experience
 ---
@@ -72,6 +70,7 @@ U.S. Department of Energy
 Contributed articles to the newsletter describing recent scientific advances resulting from EFRC research, including:  
 ["Burning Butanol in a Better Engine"](http://www.energyfrontier.us/newsletter/201210/burning-butanol-better-engine)  
 ["The Advantage of Renewable Fuels in High-Efficiency Engines"](http://www.energyfrontier.us/newsletter/201401/advantage-renewable-fuels-high-efficiency-engines)  
+["Confined Catalysts Last Longer"](http://www.energyfrontier.us/newsletter/201404/confined-catalysts-last-longer)  
 The audience for the articles is scientifically literate, but not
 expert in the fields relevant to each article. Edit articles written 
 by other board members for factual and grammatical correctness.
@@ -109,7 +108,7 @@ Summer Undergraduate Research in Energy Sciences Grant, 2008
 
 Professional Affiliations
 ---
-AIAA, Student Member  
-ASME, Student Member  
+AIAA, Member  
+ASME, Member  
 The Combustion Institute, Student Member  
 ACS, Student Member

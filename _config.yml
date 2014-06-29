@@ -1,6 +1,6 @@
 name: Bryan W. Weber
 markdown: kramdown
-pygments: true
+highlighter: rouge
 kramdown:
     auto_ids: false
 lsi: false

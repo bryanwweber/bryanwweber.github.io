@@ -153,7 +153,7 @@ When you have downloaded the appropriate `.tar.gz` file, unzip it with the comma
 Then change to the appropriate directory (most likely `boost_X_YY_Z`), and run the following
 commands
     
-{% highlight bash linenos=table%}
+{% highlight bash %}
 sudo -s
 source /opt/intel/bin/compilervars.sh intel64
 ./bootstrap.sh --with-toolset=intel-linux
@@ -202,7 +202,7 @@ Similar to the Boost section, we untar the tarball
     
 Then change to the appropriate directory and run the following commands
 
-{% highlight bash linenos=table %}
+{% highlight bash %}
 mkdir build && cd build
 ../configure CXX=icpc CC=icc F77=ifort --with-blas="mkl_rt" \
     --with-lapack="mkl_rt" \

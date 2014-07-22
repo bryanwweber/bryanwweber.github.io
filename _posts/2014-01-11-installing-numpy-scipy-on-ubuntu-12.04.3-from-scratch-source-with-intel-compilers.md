@@ -38,10 +38,10 @@ To checkout the most recent stable version, type
     git tag
     
 and pick the highest one that is just numbers. As of today, for `numpy`
-that is `v1.8.0`, and for `scipy` it is `v0.13.2`, so
+that is `v1.8.1`, and for `scipy` it is `v0.14.0`, so
 
-    cd numpy && git checkout v1.8.0
-    cd scipy && git checkout v0.13.2
+    cd numpy && git checkout v1.8.1
+    cd scipy && git checkout v0.14.0
     
 This step is optional. The next step is to compile and install `numpy`;
 `scipy` depends on `numpy`, so `numpy` goes first. From the folder where you
@@ -82,7 +82,7 @@ to open the `intelccompiler.py` not `intelccompiler.pyc`. We need to change
 the `IntelEM64TCComiler` class to have the right flags. Initially, the class will
 look like:
 
-{% highlight python linenos %}
+{% highlight python %}
 #BEFORE
 class IntelEM64TCCompiler(UnixCCompiler):
     """ A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.
@@ -107,7 +107,7 @@ the proper flags. Edit the string on that line to include `-openmp`,
 `cc_args` lines (6 and 7), but this is probably optional. After the
 changes, the code will look like:
 
-{% highlight python linenos %}
+{% highlight python %}
 
 class IntelEM64TCCompiler(UnixCCompiler):
     """ A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.
@@ -133,16 +133,18 @@ Then, we will build and install for Python 2 & 3.
 
 {% highlight bash %}
 python setup.py config --compiler=intelem --fcompiler=intelem build_clib \
---compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem build
+--compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem \
+build
 sudo -s
-source /opt/intel/bin/compilervars.sh
+source /opt/intel/bin/compilervars.sh intel64
 python setup.py install
 rm -rf build
 exit
 python3 setup.py config --compiler=intelem --fcompiler=intelem build_clib \
---compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem build
+--compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem \
+build
 sudo -s
-source /opt/intel/bin/compilervars.sh
+source /opt/intel/bin/compilervars.sh intel64
 python3 setup.py install
 exit
 {% endhighlight %}
@@ -208,7 +210,7 @@ OK (KNOWNFAIL=5, SKIP=7)
 
 During the test, a number of dots will be printed to the screen, along with 
 the letters `S` and `K`. If any tests fail, `F` will be printed. All of the
-tests passed for me on 13-JAN-2014.
+tests passed for me on 15-JUL-2014.
 
 Now we can install `sicpy`. First, change to the `scipy` directory. 
 Just like for `numpy`, we need a configuration file so that `scipy`
@@ -222,16 +224,18 @@ Then, the build and install commands are the same as before:
 
 {% highlight bash %}
 python setup.py config --compiler=intelem --fcompiler=intelem build_clib \
---compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem build
+--compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem \
+build
 sudo -s
-source /opt/intel/bin/compilervars.sh
+source /opt/intel/bin/compilervars.sh intel64
 python setup.py install
 rm -rf build
 exit
 python3 setup.py config --compiler=intelem --fcompiler=intelem build_clib \
---compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem build
+--compiler=intelem --fcompiler=intelem build_ext --compiler=intelem --fcompiler=intelem \
+build
 sudo -s
-source /opt/intel/bin/compilervars.sh
+source /opt/intel/bin/compilervars.sh intel64
 python3 setup.py install
 exit
 {% endhighlight %}

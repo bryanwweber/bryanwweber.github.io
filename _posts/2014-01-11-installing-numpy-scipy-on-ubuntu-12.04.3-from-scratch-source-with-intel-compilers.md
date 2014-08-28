@@ -4,6 +4,8 @@ title:  Installing NumPy/SciPy on Ubuntu 12.04.3 from scratch/source with Intel 
 date:   2014-01-11 16:53
 categories: Personal
 ---
+**Update: The following procedure will work on Ubuntu 14.04.1 as well.**
+
 This post will explain how to install Numpy and Scipy on Ubuntu 12.04.3
 with the most recent Intel compilers as of this writing (2013 SP1 Update 
 1).
@@ -25,8 +27,8 @@ following, if they haven't been already:
     wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
     -O - | sudo python2.7
     sudo easy_install pip
-    sudo pip install cython nose
-    sudo pip3.2 install cython nose
+    sudo pip2 install cython nose
+    sudo pip3 install cython nose
 
 First, download the source from the git repositories.
 
@@ -38,9 +40,9 @@ To checkout the most recent stable version, type
     git tag
     
 and pick the highest one that is just numbers. As of today, for `numpy`
-that is `v1.8.1`, and for `scipy` it is `v0.14.0`, so
+that is `v1.8.2`, and for `scipy` it is `v0.14.0`, so
 
-    cd numpy && git checkout v1.8.1
+    cd numpy && git checkout v1.8.2
     cd scipy && git checkout v0.14.0
     
 This step is optional. The next step is to compile and install `numpy`;
@@ -108,7 +110,7 @@ the proper flags. Edit the string on that line to include `-openmp`,
 changes, the code will look like:
 
 {% highlight python %}
-
+#AFTER
 class IntelEM64TCCompiler(UnixCCompiler):
     """ A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.
     """

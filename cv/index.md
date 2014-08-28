@@ -7,22 +7,22 @@ Download the latest version of my CV here: [pdf]({{ site.baseurl }}/files/cv/Web
 
 Education
 ---
-**University of Connecticut**, Storrs, CT, USA
+Ph.D., Mechanical Engineering, University of Connecticut, 2014
 
-Ph.D., Mechanical Engineering, 2014
+M.S., Mechanical Engineering, University of Connecticut, 2010
 
-M.S., Mechanical Engineering, 2010
+B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
-**Case Western Reserve University**, Cleveland, OH, USA
-
-B.S.E., Aerospace Engineering, 2009
-
-Research Experience
+Professional Experience
 ---
-**Combustion Diagnostics Laboratory**  
-University of Connecticut, Storrs, CT, USA  
-Case Western Reserve University, Cleveland, OH, USA  
-<http://combdiaglab.engr.uconn.edu>
+Visiting Assistant Professor, University of Connecticut  
+Conducting research on the combustion kinetics of alternative and traditional
+fuels. Teaching undergraduate courses in thermal-fluids engineering.
+
+Graduate Research Assistant, University of Connecticut, 2009--2014  
+Undergraduate Research Assistant, Case Western Reserve University, 2007--2009  
+[Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu)  
+Director: Chih-Jen (Jackie) Sung
 
 Conducting experimental and computational studies of the ignition
 properties of several alternative fuels and foundational fuels, with
@@ -43,6 +43,8 @@ Teaching Experience
 ---
 **University of Connecticut,** Storrs, CT, USA
 
+Fall 2014 -- Fundamentals of Engineering Thermodynamics
+
 Spring 2013 -- Instructor for _Introduction to Mechanical Engineering_  
 Supervisor: Kevin Murphy  
 Lecture notes and sample homework problems developed by me for this course are available on request
@@ -51,7 +53,7 @@ Fall 2012 -- Teaching Assistant for _Combustion for Energy Conversion_
 Supervisor: Chih-Jen Sung  
 Sample project assignments developed by me for this course are available on request
 
-Professional Experience
+Professional Service
 ---
 **Lead Chairperson, Junior Associates Committee, 2012--**  
 Combustion Energy Frontier Research Center
@@ -75,7 +77,7 @@ The audience for the articles is scientifically literate, but not
 expert in the fields relevant to each article. Edit articles written 
 by other board members for factual and grammatical correctness.
 
-**Journal Referee, 2013--**
+**Journal Referee**
 
 {:.duties}
 + Energy & Fuels

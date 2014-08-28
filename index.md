@@ -7,11 +7,11 @@ section: home
 Welcome
 =====================
 
-I'm Bryan W. Weber and this is my website. My current vocation is as a postdoctoral researcher in the
+I'm Bryan W. Weber and this is my website. My current vocation is as a visiting assistant professor in the
 [Mechanical Engineering](http://engr.uconn.edu/me) department [University of Connecticut](http://uconn.edu).
 In my spare time, I enjoy cooking, playing Ultimate and cycling.
 
-I work in the [Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu) for [Prof. Jackie Sung][1].
+I also do research with the [Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu), headed by [Prof. Jackie Sung][1].
 My research is generally focused on the chemical kinetics of alternative fuel combustion. Please see my
 [research page]({{ site.baseurl }}/work/) for more information.
 

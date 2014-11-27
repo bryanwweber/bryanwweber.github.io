@@ -26,10 +26,10 @@ If you would like to have Visual Studio installed in addition to the SDK, the in
 [here](http://blogs.msdn.com/b/vcblog/archive/2011/03/31/10148110.aspx) give the proper
 order to install everything.
 
-Next, download and install CMake from http://cmake.org/cmake/resources/software.html
+Next, download and install CMake from <http://cmake.org/cmake/resources/software.html>
 To properly install SUNDIALS, CMake 2.8.12.2 is required.
-Then, download SUNDIALS from http://computation.llnl.gov/casc/sundials/main.html
-You will need 7zip to extract the tarball on Windows, which can be found here: http://www.7-zip.org/
+Then, download SUNDIALS from <http://computation.llnl.gov/casc/sundials/main.html>
+You will need 7zip to extract the tarball on Windows, which can be found here: <http://www.7-zip.org/>
 
 Extract the tarball to the root of the `C:\` drive, so you have a folder `C:\sundials-2.5.0`.
 Create new folders called `C:\sundials-2.5.0-build` and `C:\sundials-2.5.0-install`.

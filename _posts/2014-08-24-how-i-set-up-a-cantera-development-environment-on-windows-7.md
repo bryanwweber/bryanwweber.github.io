@@ -23,8 +23,8 @@ If you would like to have Visual Studio installed in addition to the SDK, the in
 [here](http://blogs.msdn.com/b/vcblog/archive/2011/03/31/10148110.aspx) give the proper
 order to install everything.
 
-If you only have the SDK and its updated installed, Microsoft has not-so-helpfully
-removed a file that is necessary to build Cantera, called ammintrin.h. There is a
+If you only have the SDK and its update installed, Microsoft has not-so-helpfully
+removed a file that is necessary to build Cantera, called `ammintrin.h`. There is a
 post [at The Mathworks][4] forum with a link to the file, and I'll also post it
 [here][5] for reference. Add this file to the `C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include`
 directory, and it should be all set. If you have Visual Studio installed,
@@ -60,7 +60,7 @@ depends on `VS90COMNTOOLS` being installed. This allows us to install certain pa
 with `pip` in Python 2. Note that not all packages will work with this trick (in particular,
 `matplotlib` can't be installed with `pip` this way).
 
-Python 3.4 comes with Pip installed, but 2.7 does not, plus we need some other packages anyways.
+Python 3.4 comes with `pip` installed, but 2.7 does not, plus we need some other packages anyways.
 Head to [Christopher Gohlke's page](http://www.lfd.uci.edu/~gohlke/pythonlibs/) and download
 the following packages. Make sure to get the correct bitness for your Python versions.
 
@@ -92,7 +92,7 @@ is available on [SourceForge](http://sourceforge.net/projects/doxygen/files/rel-
 Finally, install the [WiX Toolset](http://wixtoolset.org/) so that MSI installers for Cantera
 can be built.
 
-That should (finally) be all the software needed to get up and running in developing Python.
+That should (finally) be all the software needed to get up and running in developing Cantera.
 The last thing to do is actually get the Cantera source code.
 There are several ways to get the code; my preferred way is to use GitHub.
 Ray Speth has a clone of the main Cantera repository on GitHub: <https://github.com/Cantera/cantera>.
@@ -116,27 +116,29 @@ Create a file called `cantera.conf` and put as its contents:
 
 Now, `scons build` and `scons msi` should work. If you get errors, read on.
 
-The first warning you might see is that 3to2 is not installed properly, even
-though we installed it earlier. This is because the SConstruct file calls `3to2`
+<s>The first warning you might see is that 3to2 is not installed properly, even
+though we installed it earlier. This is because the SConstruct file calls <code>3to2</code>
 as an executable, which doesn't work on Windows. The fix for this is to edit
-two lines, one in the root `SConstruct` file, one in the `interfaces/cython/SConscript`
-file. First, in `SConstruct` change:
+two lines, one in the root <code>SConstruct</code> file, one in the <code>interfaces/cython/SConscript</code>
+file. First, in <code>SConstruct</code> change:
 
-    ret = getCommandOutput('3to2','-l')
-
-to
-
-    ret = getCommandOutput(env['python_cmd'], 'C:/Python27/Scripts/3to2','-l')
-
-Then, in `interfaces/cython/SConscript`, change:
-
-    subprocess.call(['3to2', '--no-diff', '-n', '-w','-x', 'str',
+<pre><code>ret = getCommandOutput('3to2','-l')</code></pre>
 
 to
 
-    subprocess.call([env['python_cmd'], 'C:/Python27/Scripts/3to2', '--no-diff', '-n', '-w','-x', 'str',
+<pre><code>ret = getCommandOutput(env['python_cmd'], 'C:/Python27/Scripts/3to2','-l')</code></pre>
 
-Note that these are basically hacks until the problem can be fixed in the source.
+Then, in <code>interfaces/cython/SConscript</code>, change:
+
+<pre><code>subprocess.call(['3to2', '--no-diff', '-n', '-w','-x', 'str',</code></pre>
+
+to
+
+<pre><code>subprocess.call([env['python_cmd'], 'C:/Python27/Scripts/3to2', '--no-diff', '-n', '-w','-x', 'str',</code></pre>
+
+Note that these are basically hacks until the problem can be fixed in the source.</s>
+
+As of [revision 3113](https://code.google.com/p/cantera/source/detail?r=3113), this problem has been fixed.
 
 Second, you may get actual errors when trying to build the MATLAB interface
 (if you aren't building this interface, you might not see this error).

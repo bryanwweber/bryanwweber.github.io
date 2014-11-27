@@ -13,6 +13,7 @@ except ImportError:
           "If pip is installed, `pip install bibtexparser` will install the "
           "package. Code is tested with version 0.4, may not work with other "
           "versions.")
+    sys.exit(1)
 
 # First is to define a function to format the names we get from BibTeX,
 # since this task will be the same for every paper type. The current
@@ -232,7 +233,7 @@ def main(argv):
             if '\&' in journal:
                 words = journal.strip().split('\&')
                 journal = words[0] + '&' + words[1]
-            doi = ref["doi"]
+            # doi = ref["doi"]
 
             # Get the publication year. If the year of the current
             # reference is not equal to the year of the previous
@@ -393,7 +394,7 @@ def main(argv):
             year = ref["year"]
             if year != pubyear:
                 pubyear = year
-                write_year = '\n{{:.year}}\n### {}\n'.format(year)
+                write_year = '{{:.year}}\n### {}\n'.format(year)
 
             reference = (
                 '\n{{:.paper}}\n{open}{title}{close}{{:.papertitle}}  \n'
@@ -426,20 +427,22 @@ def main(argv):
             # Ph.D. dissertation and Master's thesis are picked out
             # of the reference list specifically.
             if ref["id"] == "Weber2014a":
-                print("Ph.D. Dissertation\n---\n")
-                out_file.write("\nPh.D. Dissertation\n---\n")
+                print("Ph.D. Dissertation\n---\n\n")
+                out_file.write("\nPh.D. Dissertation\n---\n\n")
                 print(write_year)
                 out_file.write(write_year)
                 print(reference)
                 out_file.write(reference)
             elif ref["id"] == "Weber2010":
-                print("Master's Thesis\n---\n")
-                out_file.write("\nMaster's Thesis\n---\n")
+                print("Master's Thesis\n---\n\n")
+                out_file.write("\nMaster's Thesis\n---\n\n")
                 print(write_year)
                 out_file.write(write_year)
                 print(reference)
                 out_file.write(reference)
             else:
+                print(write_year)
+                out_file.write(write_year)
                 print(reference)
                 out_file.write(reference)
 

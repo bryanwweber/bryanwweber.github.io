@@ -2,18 +2,22 @@ Journal Articles
 ---
 
 {:.year}
-### 2014
+### 2015
 
 {:.paper}
 <span>On the Uncertainty of Temperature Estimation in a Rapid Compression Machine</span>{:.papertitle}  
 <span>**B.W. Weber**, M.W. Renfro, and C.J. Sung</span>{:.authors}  
-<span>_Submitted to Comubstion and Flame_, Sep. 2014</span>{:.journal}  
+<span>_Combust. Flame_, Apr. 2015</span>{:.journal}  
+<span>**DOI:** [10.1016/j.combustflame.2015.03.001](http://dx.doi.org/10.1016/j.combustflame.2015.03.001)</span>{:.doi}  
 
 {:.paper}
 <span>An experimental and modeling study of propene oxidation. Part 2: Ignition delay time and flame speed measurements</span>{:.papertitle}  
 <span>S.M. Burke, U. Burke, R. Mc Donagh, O. Mathieu, I. Osorio, C. Keesee, A. Morones, E.L. Petersen, W. Wang, T.A. DeVerter, M.A. Oehlschlaeger, B. Rhodes, R.K. Hanson, D.F. Davidson, **B.W. Weber**, C.J. Sung, J. Santner, Y. Ju, F.M. Haas, F.L. Dryer, E.N. Volkov, E.J. Nilsson, A.A. Konnov, M. Alrefae, F. Khaled, A. Farooq, P. Dirrenberger, P.A. Glaude, F. Battin-Leclerc, and H.J. Curran</span>{:.authors}  
-<span>_Combust. Flame_, Sep. 2014</span>{:.journal}  
+<span>_Combust. Flame_, vol. 162, no. 2, pp. 296--314, Feb. 2015</span>{:.journal}  
 <span>**DOI:** [10.1016/j.combustflame.2014.07.032](http://dx.doi.org/10.1016/j.combustflame.2014.07.032)</span>{:.doi}  
+
+{:.year}
+### 2014
 
 {:.paper}
 <span>Experiments and modeling of the autoignition of methylcyclohexane at high pressure</span>{:.papertitle}  
@@ -69,10 +73,9 @@ Conference Publications and Posters
 **Abstract:** [University of Seville](http://acdc.sav.us.es/icck2013/images/stories/c-orales/index.html?pageNumber=86)</span>{:.comment}  
 
 {:.paper}
-<span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
-<span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
-<span>Paper 3A02, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
-<span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
+<span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
+<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
+<span>Paper 2A12, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.paper}
 <span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
@@ -80,9 +83,10 @@ Conference Publications and Posters
 <span>Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.paper}
-<span>A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion</span>{:.papertitle}  
-<span>S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut</span>{:.authors}  
-<span>Paper 2A12, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
+<span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
+<span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
+<span>Paper 3A02, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
+<span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
 
 {:.year}
 ### 2011

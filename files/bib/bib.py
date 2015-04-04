@@ -147,7 +147,8 @@ def main(argv):
         default="pubs.md",
         type=str,
         )
-    arg_parser.add_argument("-a", "--author",
+    arg_parser.add_argument(
+        "-a", "--author",
         help="Set the name of the author to be highlighted.",
         type=str,
         )
@@ -173,7 +174,7 @@ def main(argv):
     # Open and parse the BibTeX file in `bib_file_name` using
     # `bibtexparser`
 
-    with open(bib_file_name,'r') as bib_file:
+    with open(bib_file_name, 'r') as bib_file:
         bp = BibTexParser(bib_file.read(), customization=convert_to_unicode)
 
     # Get a dictionary of dictionaries of key, value pairs from the
@@ -185,7 +186,7 @@ def main(argv):
     # file, typically `article`, `inproceedings`, and `phdthesis`.
     # Dedupe the list.
     types = []
-    for k,ref in refsdict.items():
+    for k, ref in refsdict.items():
         types.append(ref["type"])
     types = set(types)
 
@@ -227,7 +228,7 @@ def main(argv):
             # the journal title to remove the '\' before '&' in
             # 'Energy & Fuels' because Mendeley inserts an extra '\'
             # into the BibTeX.
-            authors = reorder(ref["author"],faname)
+            authors = reorder(ref["author"], faname)
             title = ref["title"]
             journal = ref["journal"]
             if '\&' in journal:
@@ -280,17 +281,17 @@ def main(argv):
 
             reference += (
                 '{month}{year}{close}{{:.journal}}  \n'.format(
-                month=month, year=year, close=close_span,
-                )
+                    month=month, year=year, close=close_span,
+                    )
                 )
 
             if "doi" in ref:
                 reference += (
                     '{open}{strong}DOI:{strong} [{doi}]'
                     '(http://dx.doi.org/{doi}){close}{{:.doi}}  \n'.format(
-                    open=open_span, close=close_span, strong=strong,
-                    doi=ref["doi"],
-                    )
+                        open=open_span, close=close_span, strong=strong,
+                        doi=ref["doi"],
+                        )
                     )
 
             # Extra comments, such as links to files, should be stored
@@ -299,9 +300,9 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, close=close_span,
-                    annote=ref["annote"].replace('\\',''),
-                    )
+                        open=open_span, close=close_span,
+                        annote=ref["annote"].replace('\\', ''),
+                        )
                     )
             print(reference)
             out_file.write(reference)
@@ -316,7 +317,7 @@ def main(argv):
 
         # Loop through the references in the `inproceedings` type.
         for ref in sort_dict["inproceedings"]:
-            authors = reorder(ref["author"],faname)
+            authors = reorder(ref["author"], faname)
             title = ref["title"]
             year = ref["year"]
             if year != pubyear:
@@ -329,9 +330,10 @@ def main(argv):
             reference = (
                 '\n{{:.paper}}\n{open}{title}{close}{{:.papertitle}}  \n'
                 '{open}{authors}{close}{{:.authors}}  \n'
-                '{open}'.format(open=open_span, close=close_span, title=title,
-                authors=authors,
-                )
+                '{open}'.format(
+                    open=open_span, close=close_span, title=title,
+                    authors=authors,
+                    )
                 )
 
             # Since Mendeley doesn't allow customization of BibTeX
@@ -359,17 +361,17 @@ def main(argv):
 
             reference += (
                 '{month}{year}{close}{{:.journal}}  \n'.format(
-                month=month, year=year, close=close_span,
-                )
+                    month=month, year=year, close=close_span,
+                    )
                 )
 
             if "doi" in ref:
                 reference += (
                     '{open}{strong}DOI:{strong} [{doi}]'
                     '(http://dx.doi.org/{doi}){close}{{:.doi}}  \n'.format(
-                    open=open_span, strong=strong, doi=ref["doi"],
-                    close=close_span,
-                    )
+                        open=open_span, strong=strong, doi=ref["doi"],
+                        close=close_span,
+                        )
                     )
 
             # Extra comments, such as links to files, should be stored
@@ -378,9 +380,9 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, annote=ref["annote"].replace('\\',''),
-                    close=close_span,
-                    )
+                        open=open_span, annote=ref["annote"].replace('\\',''),
+                        close=close_span,
+                        )
                     )
             print(reference)
             out_file.write(reference)
@@ -389,7 +391,7 @@ def main(argv):
         # as for the other reference types.
         pubyear = '2200'
         for ref in sort_dict["phdthesis"]:
-            authors = reorder(ref["author"],faname)
+            authors = reorder(ref["author"], faname)
             title = ref["title"]
             year = ref["year"]
             if year != pubyear:
@@ -399,9 +401,10 @@ def main(argv):
             reference = (
                 '\n{{:.paper}}\n{open}{title}{close}{{:.papertitle}}  \n'
                 '{open}{authors}{close}{{:.authors}}  \n'
-                '{open}'.format(open=open_span, close=close_span, title=title,
-                authors=authors,
-                )
+                '{open}'.format(
+                    open=open_span, close=close_span, title=title,
+                    authors=authors,
+                    )
                 )
             if "school" in ref:
                 reference += ref["school"] + ', '
@@ -418,9 +421,9 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                    open=open_span, annote=ref["annote"].replace('\\',''),
-                    close=close_span,
-                    )
+                        open=open_span, annote=ref["annote"].replace('\\',''),
+                        close=close_span,
+                        )
                     )
 
             # Here we have some me-specific customization, where my

@@ -15,24 +15,25 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
 Professional Experience
 ---
-Visiting Assistant Professor, University of Connecticut  
+Visiting Assistant Professor, University of Connecticut, 2014--Present  
 Conducting research on the combustion kinetics of alternative and traditional
 fuels. Teaching undergraduate courses in thermal-fluids engineering.
+Mentoring undergraduate students in the capstone design project.
 
 Graduate Research Assistant, University of Connecticut, 2009--2014  
 Undergraduate Research Assistant, Case Western Reserve University, 2007--2009  
 [Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu)  
 Director: Chih-Jen (Jackie) Sung
 
-Conducting experimental and computational studies of the ignition
+CConducted experimental and computational studies of the ignition
 properties of several alternative fuels and foundational fuels, with
-focus on engine-relevant conditions.
-Designing a species sampling apparatus for time-resolved
+a focus on engine-relevant conditions.
+Designed a species sampling apparatus for time-resolved
 species measurements in the rapid compression machine, using gas
 chromatography/mass spectrometry to identify and quantify
 combustion intermediates.
-Analyzing kinetic models for combustion to determine the parameters
-controlling prediction of ignition delay and improve the ability of
+Analyzed kinetic models of combustion to determine the parameters
+controlling prediction of ignition delay and to improve the ability of
 the models to predict combustion events.
 
 In general, my research interests lie in the area of combustion engineering and energy sustainability. 
@@ -43,9 +44,11 @@ Teaching Experience
 ---
 **University of Connecticut,** Storrs, CT, USA
 
-Fall 2014 -- _Fundamentals of Engineering Thermodynamics_
+Fall 2014, Spring 2015 -- _Thermodynamic Principles_
 
-Spring 2013 -- Instructor of Record for _Introduction to Mechanical Engineering_
+Fall 2014, Spring 2015 -- _Senior Capstone Design Project Mentor_
+
+Spring 2013 -- Instructor for _Introduction to Mechanical Engineering_
 
 Professional Service
 ---
@@ -56,7 +59,7 @@ Combustion Energy Frontier Research Center
 Coordinate monthly teleconferences for graduate students
 and post-doctoral researchers in the CEFRC where junior members of
 the CEFRC present recent research results to the group.
-Act as the liasion between the Center's principle investigators
+Act as the liasion between the Center's principal investigators
 and the junior members.
 
 **EFRC Newsletter Editorial Board Member, 2013--2014**  

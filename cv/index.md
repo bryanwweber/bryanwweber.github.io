@@ -25,7 +25,7 @@ Undergraduate Research Assistant, Case Western Reserve University, 2007--2009
 [Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu)  
 Director: Chih-Jen (Jackie) Sung
 
-CConducted experimental and computational studies of the ignition
+Conducted experimental and computational studies of the ignition
 properties of several alternative fuels and foundational fuels, with
 a focus on engine-relevant conditions.
 Designed a species sampling apparatus for time-resolved

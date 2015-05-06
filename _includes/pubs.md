@@ -6,9 +6,10 @@ Journal Articles
 
 {:.paper}
 <span>On the Uncertainty of Temperature Estimation in a Rapid Compression Machine</span>{:.papertitle}  
-<span>**B.W. Weber**, M.W. Renfro, and C.J. Sung</span>{:.authors}  
-<span>_Combust. Flame_, Apr. 2015</span>{:.journal}  
+<span>**B.W. Weber**, C.J. Sung, and M.W. Renfro</span>{:.authors}  
+<span>_Combust. Flame_, vol. 162, no. 6, pp. 2518--2528, Jun. 2015</span>{:.journal}  
 <span>**DOI:** [10.1016/j.combustflame.2015.03.001](http://dx.doi.org/10.1016/j.combustflame.2015.03.001)</span>{:.doi}  
+<span>Users without a subscription to _Combustion and Flame_ can download the paper from this link: [Articles On Request](http://authors.elsevier.com/a/1Q~MD2KiH9uYu).</span>{:.comment}  
 
 {:.paper}
 <span>An experimental and modeling study of propene oxidation. Part 2: Ignition delay time and flame speed measurements</span>{:.papertitle}  
@@ -78,15 +79,15 @@ Conference Publications and Posters
 <span>Paper 2A12, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.paper}
-<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
-<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
-
-{:.paper}
 <span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
 <span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
 <span>Paper 3A02, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 <span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
+
+{:.paper}
+<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
+<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.year}
 ### 2011
@@ -97,17 +98,17 @@ Conference Publications and Posters
 <span>Paper A--01, Fall Tech. Meet. East. States Sect. Combust. Inst., University of Connecticut, Storrs, CT, Oct. 2011</span>{:.journal}  
 
 {:.paper}
+<span>Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine</span>{:.papertitle}  
+<span>**B.W. Weber** and C.J. Sung</span>{:.authors}  
+<span>Poster T40, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
+<span>**Poster:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
+
+{:.paper}
 <span>Combustion of the butanol isomers: Reaction pathways at elevated pressure from low-to-high temperatures.</span>{:.papertitle}  
 <span>M.R. Harper, W.H. Green, K.M. Van Geem, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson</span>{:.authors}  
 <span>Paper #84, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
 <span>W.H. Green presenting.
 **Slides:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
-
-{:.paper}
-<span>Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine</span>{:.papertitle}  
-<span>**B.W. Weber** and C.J. Sung</span>{:.authors}  
-<span>Poster T40, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
-<span>**Poster:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
 
 {:.paper}
 <span>A Rapid Compression Study of the Butanol Isomers at Elevated Pressure</span>{:.papertitle}  

@@ -64,6 +64,24 @@ Conference Publications and Posters
 ---
 
 {:.year}
+### 2015
+
+{:.paper}
+<span>Autoignition of methyl-propanoate and a comparison with its selected ester homologs</span>{:.papertitle}  
+<span>K. Kumar, J. Bunnell, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
+<span>Paper 1G07, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
+
+{:.paper}
+<span>Towards a comprehensive DME/propane blended combustion kinetic model</span>{:.papertitle}  
+<span>E.E. Dames, **B.W. Weber**, A. Rosen, C.W. Gao, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>Paper 2F16, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
+
+{:.paper}
+<span>Autoignition study of tetralin in a rapid compression machines at elevated pressures and low-to-intermediate temperatures</span>{:.papertitle}  
+<span>G. Kukkadapu, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
+<span>Paper 1G05, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
+
+{:.year}
 ### 2013
 
 {:.paper}
@@ -79,15 +97,15 @@ Conference Publications and Posters
 <span>Paper 2A12, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.paper}
+<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
+<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
+
+{:.paper}
 <span>Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure</span>{:.papertitle}  
 <span>**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis</span>{:.authors}  
 <span>Paper 3A02, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 <span>**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)</span>{:.comment}  
-
-{:.paper}
-<span>An Autoignition Study of iso-Butanol: Experiments and Modeling</span>{:.papertitle}  
-<span>**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013</span>{:.journal}  
 
 {:.year}
 ### 2011
@@ -98,17 +116,17 @@ Conference Publications and Posters
 <span>Paper A--01, Fall Tech. Meet. East. States Sect. Combust. Inst., University of Connecticut, Storrs, CT, Oct. 2011</span>{:.journal}  
 
 {:.paper}
-<span>Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine</span>{:.papertitle}  
-<span>**B.W. Weber** and C.J. Sung</span>{:.authors}  
-<span>Poster T40, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
-<span>**Poster:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
-
-{:.paper}
 <span>Combustion of the butanol isomers: Reaction pathways at elevated pressure from low-to-high temperatures.</span>{:.papertitle}  
 <span>M.R. Harper, W.H. Green, K.M. Van Geem, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson</span>{:.authors}  
 <span>Paper #84, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
 <span>W.H. Green presenting.
 **Slides:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
+
+{:.paper}
+<span>Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine</span>{:.papertitle}  
+<span>**B.W. Weber** and C.J. Sung</span>{:.authors}  
+<span>Poster T40, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011</span>{:.journal}  
+<span>**Poster:** [MIT](http://web.mit.edu/icck/documents.html)</span>{:.comment}  
 
 {:.paper}
 <span>A Rapid Compression Study of the Butanol Isomers at Elevated Pressure</span>{:.papertitle}  

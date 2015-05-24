@@ -15,6 +15,7 @@ except ImportError:
           "versions.")
     sys.exit(1)
 
+
 # First is to define a function to format the names we get from BibTeX,
 # since this task will be the same for every paper type. The current
 # format is "F.M. Last, F.M. Last, and F.M. Last".
@@ -110,7 +111,7 @@ def reorder(names, faname):
             i = tidynames.index(faname)
             tidynames[i] = my_name_format_tag + tidynames[i] + my_name_format_tag
         except ValueError:
-            print("Couldn't find ",faname,"in the names list. Sorry!")
+            print("Couldn't find ", faname, "in the names list. Sorry!")
 
     # Handle the various cases of number of authors and how they should
     # be joined. Convert the elements of `tidynames` to a string.
@@ -129,10 +130,11 @@ def reorder(names, faname):
     # Return `nameout`, the string of formatted authors
     return nameout
 
+
 def main(argv):
     arg_parser = argparse.ArgumentParser(
         description=("Convert a BibTeX file to kramdown output with optional "
-        "author highlighting."),
+                     "author highlighting."),
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         )
     arg_parser.add_argument(

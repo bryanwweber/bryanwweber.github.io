@@ -59,7 +59,7 @@ Combustion Energy Frontier Research Center
 Coordinate monthly teleconferences for graduate students
 and post-doctoral researchers in the CEFRC where junior members of
 the CEFRC present recent research results to the group.
-Act as the liasion between the Center's principal investigators
+Act as the liaison between the Center's principal investigators
 and the junior members.
 
 **EFRC Newsletter Editorial Board Member, 2013--2014**  
@@ -80,6 +80,7 @@ by other board members for factual and grammatical correctness.
 + Energy & Fuels
 + Proceedings of the Combustion Institute
 + Combustion Science & Technology
++ Industrial & Engineering Chemistry Research
 + SAE World Congress
 
 Publications

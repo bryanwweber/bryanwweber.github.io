@@ -82,6 +82,7 @@ by other board members for factual and grammatical correctness.
 + Combustion Science & Technology
 + Industrial & Engineering Chemistry Research
 + SAE World Congress
++ Measurement
 
 Publications
 ---

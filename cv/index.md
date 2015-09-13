@@ -44,11 +44,13 @@ Teaching Experience
 ---
 **University of Connecticut,** Storrs, CT, USA
 
-Fall 2014, Spring 2015 -- _Thermodynamic Principles_
+_Thermodynamic Principles_
 
-Fall 2014, Spring 2015 -- _Senior Capstone Design Project Mentor_
+_Fluid Dynamics 1_
 
-Spring 2013 -- Instructor for _Introduction to Mechanical Engineering_
+_Senior Capstone Design Project Mentor_
+
+Instructor for _Introduction to Mechanical Engineering_
 
 Professional Service
 ---

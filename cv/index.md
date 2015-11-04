@@ -50,7 +50,9 @@ _Fluid Dynamics 1_
 
 _Senior Capstone Design Project Mentor_
 
-Instructor for _Introduction to Mechanical Engineering_
+_Introduction to Mechanical Engineering_ (Instructor)
+
+_Combustion for Energy Conversion_ (Teaching Assistant)
 
 Professional Service
 ---

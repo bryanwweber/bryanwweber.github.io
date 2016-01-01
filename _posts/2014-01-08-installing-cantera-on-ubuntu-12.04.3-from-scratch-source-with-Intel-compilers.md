@@ -3,7 +3,7 @@ layout: post
 title:  Installing Cantera on Ubuntu 12.04.3 from scratch/source with Intel compilers
 date:   2014-01-08 17:09
 categories: Personal
-excerpt: "<p>My lab typically uses the CHEMKIN-Pro software from Reaction Design 
+excerpt: "<p>My lab typically uses the CHEMKIN-Pro software from Reaction Design
 to perform simulations of our experiments. Unfortunately, CHEMKIN-Pro is closed
 source and does not include a number of features I have found useful for my
 research. Thus, my labmate and I have recently endeavored to install a separate
@@ -11,29 +11,34 @@ software package on our Ubuntu 12.04.3 server to perform these simulations.</p>"
 ---
 # Table of Contents:
 
+[Update](#Update)  
 [Introduction](#Introduction)  
 [Install Intel Compilers](#InstallIntelCompilers)  
 [Install Dependencies](#InstallDependencies)  
-[Install NumPy/SciPy](#InstallNumpyScipy)   
+[Install NumPy/SciPy](#InstallNumpyScipy)  
 [Install Boost](#InstallBoost)  
 [Install Sundials](#InstallSundials)  
 [Install Cantera](#InstallCantera)  
 
 
+## UPDATE 01-01-2016 {#Update}
+
+I have posted new instructions for how to build the developer's version of Cantera in a new post: [Installing Cantera on Ubuntu with Intel Compilers UPDATED!]({% post_url 2016-01-01-how-to-install-cantera-on-ubuntu-updated %})
+
 ## Introduction {#Introduction}
 
-My lab typically uses the CHEMKIN-Pro software from [Reaction Design](http://reactiondesign.com) 
+My lab typically uses the CHEMKIN-Pro software from [Reaction Design](http://reactiondesign.com)
 to perform simulations of our experiments. Unfortunately, CHEMKIN-Pro is closed
 source and does not include a number of features I have found useful for my
 research. Thus, my labmate and I have recently endeavored to install a separate
 software package on our Ubuntu 12.04.3 server to perform these simulations.
 
 This software is called [Cantera](http://cantera.github.io/docs/sphinx/html/index.html),
-and is an open-source, C++-based "suite of object-oriented software tools" designed to 
+and is an open-source, C++-based "suite of object-oriented software tools" designed to
 perform chemical and thermodynamic simulations. Although it was once rather difficult
 to install, recent upgrades have improved the install and usage procedure drastically.
-Cantera can be used from one of several interfaces - C++, Fortran, MATLAB, or Python. 
-Essentially, each of the interfaces allows the user to easily access the functions and 
+Cantera can be used from one of several interfaces - C++, Fortran, MATLAB, or Python.
+Essentially, each of the interfaces allows the user to easily access the functions and
 methods at the heart of Cantera and conduct their work without worrying about the details
 of, say, how to calculate a reaction rate. On our server, we decided to install the C++,
 Fortran, and Python interfaces. Unfortunately, the MATLAB interface is broken when using
@@ -54,7 +59,7 @@ to note in a few places where the commands must be changed.
 
 ## Install Intel Compilers {#InstallIntelCompilers}
 
-First we have to install some dependences for the Intel compilers. See 
+First we have to install some dependences for the Intel compilers. See
 [here](http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu)
 for more instructions.
 
@@ -64,12 +69,12 @@ sudo apt-get install build-essential gcc-multilib rpm openjdk-6-jre-headless
 
 The next step is to install the Intel compilers themselves. My lab has a license to
 the Intel Fortran and C/C++ compiler suites, which also include Intel's Math Kernal Library
-(MKL). The MKL contains the LAPACK and BLAS implementations required by the solvers in 
+(MKL). The MKL contains the LAPACK and BLAS implementations required by the solvers in
 Cantera (and other software as well). If you are using the compilers for "non-
 commercial software development", you can also download a copy of the Fortran and C/C++
 compiler suites from [here](http://software.intel.com/en-us/non-commercial-software-development).
 Included in the scripts are fairly standard installers - mostly you can go through them by
-the "Next->Next->Next" method. If you get a warning that 32-bit dependencies are not 
+the "Next->Next->Next" method. If you get a warning that 32-bit dependencies are not
 installed, go back to the step that lists all of the packages to be installed and choose
 "Customize Installation" at the bottom-center of the window. Then, deselect "32-bit support"
 since we will not be compiling any 32-bit applications.
@@ -77,38 +82,38 @@ since we will not be compiling any 32-bit applications.
 Once the Intel compilers are installed, it is very important to add them to your PATH
 environment variable. Intel helpfully provides a script to set all of the relevent variables
 at once. You can source this script from your login script to allow easy access to the compilers.
-On our server, this meant adding `source /opt/intel/bin/compilervars.sh intel64` to the `~/.profile` 
+On our server, this meant adding `source /opt/intel/bin/compilervars.sh intel64` to the `~/.profile`
 file. On a desktop install, the better place to add this is in the `~/.bashrc` file
 
 ## Install Dependencies {#InstallDependencies}
 
-Next, install (some) of the dependencies for Cantera and its dependecies. The server on which we 
-intended to install Cantera has a "well-loved" Ubuntu install, as in, many packages were already 
-installed. We were using the 4.4 versions of the GNU compilers but the default version of GCC for 
-Ubuntu 12.04 is 4.6. Despite that we will be using the Intel compilers for most of the stuff here, 
-in some cases the Intel compilers are little more than a wrapper around the GNU compilers. To easily 
-switch the entire system between compiler versions, use the built-in program 
+Next, install (some) of the dependencies for Cantera and its dependecies. The server on which we
+intended to install Cantera has a "well-loved" Ubuntu install, as in, many packages were already
+installed. We were using the 4.4 versions of the GNU compilers but the default version of GCC for
+Ubuntu 12.04 is 4.6. Despite that we will be using the Intel compilers for most of the stuff here,
+in some cases the Intel compilers are little more than a wrapper around the GNU compilers. To easily
+switch the entire system between compiler versions, use the built-in program
 [`update-alternatives`](http://askubuntu.com/questions/233190/what-exactly-does-update-alternatives-do).
 
 The following commands were tested on a fresh installation of Ubuntu 12.04.3 with GCC 4.6, with only package updates
 and the Intel compilers installed (as shown above), so it should get anyone up and running.
 
-A list of Cantera's dependencies can be found at the 
+A list of Cantera's dependencies can be found at the
 [documentation site](http://cantera.github.io/docs/sphinx/html/compiling.html#software-used-by-cantera).
 The following dependencies from `apt-get` are required. This does not cover all of the dependencies
 in the documentation, but we will be installing some others separately.
 
     sudo apt-get install scons subversion python python-dev python3 python3-dev \
     libsuitesparse-dev libbz2-dev libbz2-1.0 wget git git-svn swig
-    
-Not all of these dependencies are dependencies of Cantera itself; some of them are dependencies of 
-the dependencies. 
+
+Not all of these dependencies are dependencies of Cantera itself; some of them are dependencies of
+the dependencies.
 
 With the `apt-get` installs out of the way, its time to move on to the Python dependencies. First up is
 `pip`, which makes installing the other dependencies much easier. One note - if you do not have admin
 access (i.e. `sudo` rights) on the particular machine you're using, be sure to specify the `--user` option
 to all of the following `easy_install` commands (and you'll have to have gotten a sysadmin to do the previous steps).
-The `--user` option will install the packages in the directory 
+The `--user` option will install the packages in the directory
 `/home/username/.local/lib/pythonX.Y/site-packages`, which is editable by the user and thus doesn't require super-user rights.
 
     wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
@@ -117,26 +122,26 @@ The `--user` option will install the packages in the directory
     wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
     -O - | sudo python2.7
     sudo easy_install pip
-    
-It is important to install for Python 3 first, because otherwise the executables of `easy_install` and `pip` 
-for Python 3 will overwrite those for Python 2, and forevermore you'll get unexpected behavior. Then, with 
+
+It is important to install for Python 3 first, because otherwise the executables of `easy_install` and `pip`
+for Python 3 will overwrite those for Python 2, and forevermore you'll get unexpected behavior. Then, with
 `pip` installed, we can do
 
     sudo pip install cython 3to2 nose ipython
     sudo pip3.2 install cython 3to2-py3k nose ipython
     #The following is only required if you want to build the Cantera documentation
-    sudo pip install Sphinx pygments pyparsing sphinxcontrib-doxylink 
-    
+    sudo pip install Sphinx pygments pyparsing sphinxcontrib-doxylink
+
 ## Install NumPy/SciPy {#InstallNumpyScipy}
-    
+
 A quick perusal of the list of dependencies shows that NumPy and SciPy are also required to use the
-Python interface. If you would like to compile these with the Intel compilers, see 
+Python interface. If you would like to compile these with the Intel compilers, see
 [here]({{ site.baseurl }}/writing/personal/2014/01/11/installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers).
 If using GCC is OK with you, then `pip` should be good enough.
 
     sudo pip install numpy scipy
     sudo pip3.2 install numpy scipy
-    
+
 ## Install Boost {#InstallBoost}
 
 Now we come to the fun stuff. Its time to install some dependencies - from source! First up is
@@ -149,10 +154,10 @@ SourceForge download site: <http://sourceforge.net/projects/boost/files/boost/>
 When you have downloaded the appropriate `.tar.gz` file, unzip it with the command
 
     tar -xzf boost_X_YY_Z.tar.gz
-    
+
 Then change to the appropriate directory (most likely `boost_X_YY_Z`), and run the following
 commands
-    
+
 {% highlight bash %}
 sudo -s
 source /opt/intel/bin/compilervars.sh intel64
@@ -162,12 +167,12 @@ source /opt/intel/bin/compilervars.sh intel64
     --threading=multi install
 exit
 {% endhighlight %}
-    
-Let's look at these commands. 
+
+Let's look at these commands.
 
 1. Switch to the root terminal (if you don't have `sudo` permissions, see below)
-2. Since the regular environment isn't passed to the root user, we have to setup the Intel compilers again. 
-3. Run the setup script `bootstrap.sh` to tell Boost which compiler we will use. 
+2. Since the regular environment isn't passed to the root user, we have to setup the Intel compilers again.
+3. Run the setup script `bootstrap.sh` to tell Boost which compiler we will use.
 4. Run the install program that `bootstrap.sh` has created. The options (as far as I know them) are:
     - `-a`: Rebuild all targets, even if they're up-to-date
     - `-q`: Quit the build on the first error
@@ -182,12 +187,12 @@ Let's look at these commands.
     - `install`: Install the libraries and headers
 5. {:value=7} Exit root
 
-If you don't have `sudo` privileges, you can use the option `--prefix=/path/to/install`. Make 
+If you don't have `sudo` privileges, you can use the option `--prefix=/path/to/install`. Make
 sure that you have permissions to write to `/path/to/install`. The `--prefix` option should be
 specified to `b2` I think - not sure about that, proceed at your own risk. If resources are tight,
 you can add `--with-python --with-regex --with-system --with-thread` to install only the minimal
-set of libraries that Cantera requires. Note also that these directions are somewhat different 
-than the ones provided at [the official documentation](http://www.boost.org/doc/libs/1_55_0/more/getting_started/unix-variants.html) 
+set of libraries that Cantera requires. Note also that these directions are somewhat different
+than the ones provided at [the official documentation](http://www.boost.org/doc/libs/1_55_0/more/getting_started/unix-variants.html)
 so proceed at your own risk.
 
 ## Install Sundials {#InstallSundials}
@@ -199,7 +204,7 @@ version is 2.5.0) from here: <http://computation.llnl.gov/casc/sundials/download
 Similar to the Boost section, we untar the tarball
 
     tar -xzf sundials-X.Y.Z.tar.gz
-    
+
 Then change to the appropriate directory and run the following commands
 
 {% highlight bash %}
@@ -218,8 +223,8 @@ source /opt/intel/bin/compilervars.sh intel64
 make install
 exit
 {% endhighlight %}
-    
-Let's take a look at these commands now too. 
+
+Let's take a look at these commands now too.
 
 1. Create a build directory and change into it
 2. Give Sundials all the options we're going to use
@@ -227,15 +232,15 @@ Let's take a look at these commands now too.
     - `CXX=icpc`: Which C++ compiler to use (`icpc` is the name of the Intel C++ compiler)
     - `CC=icc`: Which C compiler to use (`icc` is the name of the Intel C compiler)
     - `F77=ifort`: Which Fortran compiler to use (`ifort` is the name of the Intel Fortran compiler)
-    - `--with-blas="mkl_rt"`: This tells Sundials to use BLAS from the Intel MKL 
+    - `--with-blas="mkl_rt"`: This tells Sundials to use BLAS from the Intel MKL
     - `--with-lapack="mkl_rt"`: This tells Sundials to use LAPACK from the Intel MKL
-    - `--with-libs="..."`: This line tells Sundials where it can find all of the fancy Intel MKL stuff. 
-      <del>The `mkl_intel_thread` and `iomp5` entries are particularly important, as these enable multi-threaded 
-      solving for the Cantera 1-D solvers.</del> Update: Further testing has shown that including these libraries 
+    - `--with-libs="..."`: This line tells Sundials where it can find all of the fancy Intel MKL stuff.
+      <del>The `mkl_intel_thread` and `iomp5` entries are particularly important, as these enable multi-threaded
+      solving for the Cantera 1-D solvers.</del> Update: Further testing has shown that including these libraries
       in SUNDIALS is not important for the 1-D solver in Cantera. I think these libraries are only required if
       the Intel MKL will be used in a program that uses OpenMP threading.
     - `--with-cflags="..."`, `--with-cppflags="..."`, and `--with-fflags="..."`: These are compiler flags for
-      Sundials. 
+      Sundials.
         - `-xhost`: Intel specific optimizations for Intel processors
         - `-O3`: Optimization level
         - `-m64`: Build for 64 bits
@@ -264,30 +269,30 @@ Alternatively, you can download the source code by Subversion or
 [`git-svn`](https://www.kernel.org/pub/software/scm/git/docs/git-svn.html)
 
     svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.1/ cantera
-    #                                                                   ^The space here is 
+    #                                                                   ^The space here is
     #                                                                    important
-    
+
 or
 
     git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
-    #                                                                   ^The space here is 
+    #                                                                   ^The space here is
     #                                                                    important
     cd cantera
     git checkout 2.1
-    
+
 Either of these options will give you the most recent stable build of Cantera. If you want to live on
 the bleeding edge, you can download the developer version of Cantera by either
 
     svn checkout http://cantera.googlecode.com/svn/cantera/trunk cantera
-    #                                                           ^The space here is 
+    #                                                           ^The space here is
     #                                                            important
-    
+
 or
 
     git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
-    #                                                                   ^The space here is 
+    #                                                                   ^The space here is
     #                                                                    important
-    
+
 and don't give the `git checkout 2.1` line. After that, change into the directory where Cantera was
 downloaded or unzipped.
 
@@ -324,7 +329,7 @@ F77FLAGS = '-O3 -xhost'
 rpfont = 'helvetica'
 {% endhighlight %}
 
-`_username_` should be the username where Cantera should be installed. To see an explanation of 
+`_username_` should be the username where Cantera should be installed. To see an explanation of
 these options, type `scons install help`. Note that you may have to change the directory
 of the Intel MKL. Briefly, they are:
 
@@ -338,7 +343,7 @@ of the Intel MKL. Briefly, they are:
   prefix directory, delete these lines
 - `python_compiler`: The compiler to use when compiling the Python module. Should be the same as `CXX`.
 - `f90_interface`: Compile the Fortran 90 interface
-- `F90FLAGS` and `F77FLAGS`: Flags to send to the Fortran compiler when compiling the Fortran 90 and 
+- `F90FLAGS` and `F77FLAGS`: Flags to send to the Fortran compiler when compiling the Fortran 90 and
   Fortran 77 interfaces, respectively
 - `use_sundials`: Specify whether or not to use SUNDIALS
 - `sundials_include`,`sundials_libdir`: The directories where Cantera can find the header files and the
@@ -356,7 +361,7 @@ of the Intel MKL. Briefly, they are:
 - `boost_inc_dir`, `boost_lib_dir`: Similar to Sundials, the include and libraries directories where
   Boost was installed
 - `boost_thread_lib`: Libraries to include when building the Boost threaded components
-- `rpfont`: The font to use when printing reaction paths. 
+- `rpfont`: The font to use when printing reaction paths.
 
 After `cantera.conf` is set, its time to build and install Cantera. The following commands will
 build, test, and install Cantera:
@@ -365,16 +370,16 @@ build, test, and install Cantera:
     scons build -j2
     scons test
     scons install
-    
+
 As before, the `-jn` option specifies the number of build tasks to perform in parallel. Set `n`
 less than or equal to the number of processors you wish to use to perform the build. Higher `n`
 makes the build go muuuuuch faster as long as you don't exceed the number of processors on your
 computer. After that, change out of the Cantera directory, and in Python 2 & 3 shells, type
 
     >>> import cantera
-    
+
 If no errors pop out, you've done it! Congratulations! Now just make some small
-additions to your `~/.bashrc` file (at the bottom of the file) so that Cantera 
+additions to your `~/.bashrc` file (at the bottom of the file) so that Cantera
 is ready to go on each login:
 
     source /opt/intel/bin/compilervars.sh intel64

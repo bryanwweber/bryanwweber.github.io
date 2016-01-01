@@ -4,8 +4,8 @@ highlighter: rouge
 kramdown:
     auto_ids: false
 lsi: false
-permalink: /writing/:categories/:year/:month/:day/:title
-baseurl: 
+permalink: /writing/:categories/:year/:month/:day/:title/
+baseurl:
 exclude: [.gitignore, .git]
 excerpt_separator : <!--more-->
 encoding: UTF-8

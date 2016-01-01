@@ -8,6 +8,7 @@ categories:
 Christopher Gohlke's website for Python packages for Windows (he hosts many, but the most popular are probably numpy and scipy) now distributes wheels instead of exe files.
 This means we need the most recent version of pip and a new procedure to install them.
 Here's a procedure I use to simplify installing dependencies.
+<!--more-->
 
 First, create a new folder to store all of the files in; I put mine in `C:\Users\user\Documents\python-upgrades`.
 Then, go to Christopher's site and download all of the packages you need and put them in the folder you just created.

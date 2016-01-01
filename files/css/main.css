@@ -326,7 +326,8 @@ Body.writing a#writing {
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
+  padding: 0.4em;
+  overflow: auto;
 }
 
 .post ul, .post ol {
@@ -373,6 +374,7 @@ text-shadow: 0 1px 0 #fff;
 line-height: 1.4;
 white-space: nowrap;
 }
+
 .centerimg{
     text-align: center;
     width: 100%;

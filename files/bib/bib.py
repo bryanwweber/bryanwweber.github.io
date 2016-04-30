@@ -201,7 +201,7 @@ def main(argv):
     for type in types:
         temp = sorted([val for key, val in refsdict.items()
                       if val["type"] == type], key=lambda l:
-                      datetime.strptime(l["month"],'%b').month, reverse=True)
+                      datetime.strptime(l["month"], '%b').month, reverse=True)
         sort_dict[type] = sorted(temp, key=lambda k: k["year"], reverse=True)
 
     # Open the output file with utf-8 encoding, write mode, and Unix
@@ -258,9 +258,9 @@ def main(argv):
             reference = (
                 '\n{{:.paper}}\n{open}{title}{close}{{:.papertitle}}  \n'
                 '{open}{authors}{close}{{:.authors}}  \n'
-                '{open}{em}{journal}{em}, '.format(open=open_span,
-                close=close_span, title=title, authors=authors, em=em,
-                journal=journal,
+                '{open}{em}{journal}{em}, '.format(
+                    open=open_span, close=close_span, title=title, authors=authors, em=em,
+                    journal=journal,
                 )
                 )
 
@@ -382,7 +382,7 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                        open=open_span, annote=ref["annote"].replace('\\',''),
+                        open=open_span, annote=ref["annote"].replace('\\', ''),
                         close=close_span,
                         )
                     )
@@ -423,7 +423,7 @@ def main(argv):
             if "annote" in ref:
                 reference += (
                     '{open}{annote}{close}{{:.comment}}  \n'.format(
-                        open=open_span, annote=ref["annote"].replace('\\',''),
+                        open=open_span, annote=ref["annote"].replace('\\', ''),
                         close=close_span,
                         )
                     )

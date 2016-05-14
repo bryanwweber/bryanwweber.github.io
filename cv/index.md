@@ -36,13 +36,15 @@ Analyzed kinetic models of combustion to determine the parameters
 controlling prediction of ignition delay and to improve the ability of
 the models to predict combustion events.
 
-In general, my research interests lie in the area of combustion engineering and energy sustainability. 
+In general, my research interests lie in the area of combustion engineering and energy sustainability.
 See the [research]({{ site.baseurl }}/work/#researchinterests) section for more detail.
 
 
 Teaching Experience
 ---
 **University of Connecticut,** Storrs, CT, USA
+
+_Applied Thermodynamics_
 
 _Thermodynamic Principles_
 
@@ -81,8 +83,10 @@ by other board members for factual and grammatical correctness.
 **Journal Referee**
 
 {:.duties}
++ Combustion and Flame
 + Energy & Fuels
 + Proceedings of the Combustion Institute
++ Fuel
 + Combustion Science & Technology
 + Industrial & Engineering Chemistry Research
 + SAE World Congress

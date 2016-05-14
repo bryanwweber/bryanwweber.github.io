@@ -2,6 +2,15 @@ Journal Articles
 ---
 
 {:.year}
+### 2016
+
+{:.paper}
+<span>A detailed combined experimental and theoretical study on dimethyl ether/propane blended oxidation</span>{:.papertitle}  
+<span>E.E. Dames, A.S. Rosen, **B.W. Weber**, C.W. Gao, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>_Combustion and Flame_, Apr. 2016</span>{:.journal}  
+<span>**DOI:** [10.1016/j.combustflame.2016.02.021](https://dx.doi.org/10.1016/j.combustflame.2016.02.021)</span>{:.doi}  
+
+{:.year}
 ### 2015
 
 {:.paper}

@@ -13,7 +13,7 @@ computational analysis of reaction mechanisms for combustion
 
 {% include pubs.md %}
 
-<!--- **All content above is &copy; 2009-2013 Bryan W. Weber, unless otherwise noted in the document.** --->
+<!--- **All content above is &copy; 2009-2016 Bryan W. Weber, unless otherwise noted in the document.** --->
 
 Further information about the above papers can be found at the following links:
 

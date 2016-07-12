@@ -15,10 +15,16 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
 Professional Experience
 ---
-Visiting Assistant Professor, University of Connecticut, 2014--Present  
+Assistant Professor in Residence, University of Connecticut, 2016--Present  
+Visiting Assistant Professor, University of Connecticut, 2014--2016  
 Conducting research on the combustion kinetics of alternative and traditional
-fuels. Teaching undergraduate courses in thermal-fluids engineering.
+fuels. Teaching undergraduate courses in thermal-fluids engineering.  
 Mentoring undergraduate students in the capstone design project.
+
+Contributing Developer, Cantera, 2014--Present  
+Contributing source code to the open-source software toolkit for chemical kinetics, thermodynamics, and transport processes  
+Assisting users with usage of Cantera in the online support group  
+Contributions available on GitHub: <https://github.com/Cantera/cantera>
 
 Graduate Research Assistant, University of Connecticut, 2009--2014  
 Undergraduate Research Assistant, Case Western Reserve University, 2007--2009  
@@ -27,11 +33,11 @@ Director: Chih-Jen (Jackie) Sung
 
 Conducted experimental and computational studies of the ignition
 properties of several alternative fuels and foundational fuels, with
-a focus on engine-relevant conditions.
+a focus on engine-relevant conditions.  
 Designed a species sampling apparatus for time-resolved
 species measurements in the rapid compression machine, using gas
 chromatography/mass spectrometry to identify and quantify
-combustion intermediates.
+combustion intermediates.  
 Analyzed kinetic models of combustion to determine the parameters
 controlling prediction of ignition delay and to improve the ability of
 the models to predict combustion events.
@@ -43,6 +49,8 @@ See the [research]({{ site.baseurl }}/work/#researchinterests) section for more 
 Teaching Experience
 ---
 **University of Connecticut,** Storrs, CT, USA
+
+_Combustion for Energy Conversion_
 
 _Applied Thermodynamics_
 

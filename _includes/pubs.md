@@ -7,7 +7,7 @@ Journal Articles
 {:.paper}
 <span>A detailed combined experimental and theoretical study on dimethyl ether/propane blended oxidation</span>{:.papertitle}  
 <span>E.E. Dames, A.S. Rosen, **B.W. Weber**, C.W. Gao, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>_Combustion and Flame_, Apr. 2016</span>{:.journal}  
+<span>_Combustion and Flame_, vol. 168, pp. 310--330, Jun. 2016</span>{:.journal}  
 <span>**DOI:** [10.1016/j.combustflame.2016.02.021](https://dx.doi.org/10.1016/j.combustflame.2016.02.021)</span>{:.doi}  
 
 {:.year}
@@ -83,12 +83,6 @@ Conference Publications and Posters
 ### 2015
 
 {:.paper}
-<span>Towards a comprehensive DME/propane blended combustion kinetic model</span>{:.papertitle}  
-<span>E.E. Dames, **B.W. Weber**, A. Rosen, C.W. Gao, C.J. Sung, and W.H. Green</span>{:.authors}  
-<span>Paper 2F16, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
-<span>E.E. Dames presenting.</span>{:.comment}  
-
-{:.paper}
 <span>Autoignition study of tetralin in a rapid compression machines at elevated pressures and low-to-intermediate temperatures</span>{:.papertitle}  
 <span>G. Kukkadapu, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
 <span>Paper 1G05, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
@@ -99,6 +93,12 @@ Conference Publications and Posters
 <span>K. Kumar, J. Bunnell, **B.W. Weber**, and C.J. Sung</span>{:.authors}  
 <span>Paper 1G07, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
 <span>K. Kumar presenting.</span>{:.comment}  
+
+{:.paper}
+<span>Towards a comprehensive DME/propane blended combustion kinetic model</span>{:.papertitle}  
+<span>E.E. Dames, **B.W. Weber**, A. Rosen, C.W. Gao, C.J. Sung, and W.H. Green</span>{:.authors}  
+<span>Paper 2F16, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015</span>{:.journal}  
+<span>E.E. Dames presenting.</span>{:.comment}  
 
 {:.year}
 ### 2013

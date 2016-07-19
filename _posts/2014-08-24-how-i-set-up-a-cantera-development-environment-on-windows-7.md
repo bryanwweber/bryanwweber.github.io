@@ -61,7 +61,7 @@ with `pip` in Python 2. Note that not all packages will work with this trick (in
 `matplotlib` can't be installed with `pip` this way).
 
 Python 3.4 comes with `pip` installed, but 2.7 does not, plus we need some other packages anyways.
-Head to [Christopher Gohlke's page](http://www.lfd.uci.edu/~gohlke/pythonlibs/) and download
+Head to [Christoph Gohlke's page](http://www.lfd.uci.edu/~gohlke/pythonlibs/) and download
 the following packages. Make sure to get the correct bitness for your Python versions.
 
 2.7:
@@ -138,12 +138,12 @@ to
 
 Note that these are basically hacks until the problem can be fixed in the source.</s>
 
-As of [revision 3113](https://code.google.com/p/cantera/source/detail?r=3113), this problem has been fixed.
+As of [eeab08](https://github.com/Cantera/cantera/commit/eeab08d683fbbf40924b11fdc4d84e74a311aa1b), this problem has been fixed.
 
 Second, you may get actual errors when trying to build the MATLAB interface
 (if you aren't building this interface, you might not see this error).
 In case you get an error in the MATLAB interface about redefining `_char16t`,
-open `scr/matlab/ctmatutils.h` and comment out lines 12-14. These lines
+open `src/matlab/ctmatutils.h` and comment out lines 12-14. These lines
 were introduced to fix some problems in MATLAB R2010a, and aren't required
 for at least R2013a and R2014a.
 

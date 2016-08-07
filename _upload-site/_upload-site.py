@@ -4,7 +4,7 @@ import os
 os.environ['HOME'] = "C:\\Users\\Bryan"
 os.environ['PATH'] += ";" + os.path.join(os.getcwd(), "_upload-site")
 
-cmd = "rsync -rv -e ssh /cygdrive/c/Users/Bryan/Dropbox/bryanwweber.com/_site/"
+cmd = "rsync -rv -e ssh /cygdrive/c/Users/Bryan/Documents/GitHub/bryanwweber.com/_site/"
 cmd += " darthbith@bryanwweber.com:bryanwweber.com"
 
 

@@ -1,3 +1,6 @@
 [submodule "pelican-plugins"]
 	path = pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins
+[submodule "bulrush"]
+	path = bulrush
+	url = ../bulrush/

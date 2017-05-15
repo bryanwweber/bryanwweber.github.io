@@ -2,3 +2,6 @@ _site
 _bryanwweber.wordpress.2013-07-16.xml
 .jekyll-metadata
 __pycache__
+output
+pelican.pid
+srv.pid

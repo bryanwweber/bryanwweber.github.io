@@ -24,14 +24,14 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 |+|Developing the open-source database format and Python package for chemical kinetics data|+|  
 |+|Contributions available on GitHub: <https://github.com/pr-omethe-us/PyKED>|+|
 
+|-|Lead developer, UConnRCMPy 2015--Present|-|
+|+|Developing the open-source platform for Rapid Compression Machine data analysis|+|
+|+|Contributions available on GitHub: <https://github.com/bryanwweber/UConnRCMPy>|+|
+
 |-|Contributing Developer, Cantera, 2014--Present|-|  
 |+|Contributing source code to the open-source software toolkit for chemical kinetics, thermodynamics, and transport processes|+|  
 |+|Assisting users with usage of Cantera in the online support group|+|  
 |+|Contributions available on GitHub: <https://github.com/Cantera/cantera>|+|
-
-|-|Lead developer, UConnRCMPy 2015--Present|-|
-|+|Developing the open-source platform for Rapid Compression Machine data analysis|+|
-|+|Contributions available on GitHub: <https://github.com/bryanwweber/UConnRCMPy>|+|
 
 |-|Graduate Research Assistant, University of Connecticut, 2009--2014|-|  
 |-|Undergraduate Research Assistant, Case Western Reserve University, 2007--2009|-|  

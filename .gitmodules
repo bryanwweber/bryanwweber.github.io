@@ -4,3 +4,4 @@
 [submodule "bulrush"]
 	path = bulrush
 	url = ../bulrush/
+	branch = my-styles

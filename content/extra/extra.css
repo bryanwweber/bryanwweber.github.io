@@ -1,0 +1,76 @@
+kbd {
+    padding: 0.1em 0.6em;
+    border: 1px solid #ccc;
+    font-size: 11px;
+    font-family: Arial,Helvetica,sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 0.1em;
+    text-shadow: 0 1px 0 #fff;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+p { margin: 0.5em 0; }
+
+h1.cv-category {
+  font-size: 150%;
+}
+
+h3.cv-year {
+	font-size: 100%;
+	line-height: 1.5em;
+	position: absolute;
+	width: 6em;
+	max-width: 6em;
+	margin-left: 0em;
+	margin-top: 0;
+}
+
+h3.pub-year {
+	font-size: 120%;
+	line-height: 1.5em;
+	position: absolute;
+	width: 6em;
+	max-width: 6em;
+	margin-left: 0em;
+	margin-top: 0;
+}
+
+h2 {
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+
+p.award { margin-left: 6em; }
+p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
+
+/* http://stackoverflow.com/a/19170853/2449192 */
+.collapse {
+  cursor: pointer;
+  display: block;
+}
+.collapse + input {
+  display: none; /* hide the checkboxes */
+}
+.collapse + input + span {
+  display: none;
+}
+.collapse + input:checked + span {
+  display: block;
+  background: #f5f5f5;
+}
+
+.cv-position { font-weight: bold; }
+.cv-duty { margin-left: 1em; display: inline-block;}
+.cv-location { font-style: italic; }
+.cv-award { margin-left: 1em; display: inline-block; font-weight: bold;}
+
+.papertitle { font-style: italic;}

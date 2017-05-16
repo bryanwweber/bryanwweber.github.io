@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 #####
 # DISABLE THIS
-LOAD_CONTENT_CACHE = False
+# LOAD_CONTENT_CACHE = False
 ########
 
 AUTHOR = 'Bryan W. Weber'

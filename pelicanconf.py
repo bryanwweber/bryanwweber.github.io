@@ -41,7 +41,8 @@ SOCIAL = (
     ('LinkedIn', 'https://www.linkedin.com/in/bryanwweber'),
     ('Mendeley', 'https://www.mendeley.com/profiles/bryan-w-weber/'),
     ('Academia.edu', 'https://uconn.academia.edu/BryanWWeber'),
-    ('Zotero', 'https://www.zotero.org/darthbith')
+    ('Zotero', 'https://www.zotero.org/darthbith'),
+    ('arXiv', 'https://arxiv.org/a/weber_b_1.html'),
 )
 
 # Static Files
@@ -87,6 +88,7 @@ MD_INLINE = {
     '|j|': 'paperjournal',
     '|d|': 'paperdoi',
     '|c|': 'papercomment',
+    '|a|': 'paperarxiv',
 }
 
 TYPOGRIFY = True

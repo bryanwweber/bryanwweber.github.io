@@ -81,3 +81,11 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
     position: absolute;
     left: 0; /* Adjust as needed */
 }
+
+.paperarxiv { position: relative; padding-left: 20px; }
+.paperarxiv:after {
+    content: '\e918';
+    font-family: Academicons;
+    position: absolute;
+    left: 0; /* Adjust as needed */
+}

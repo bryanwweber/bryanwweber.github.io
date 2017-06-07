@@ -69,8 +69,15 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
 }
 
 .cv-position { font-weight: bold; }
-.cv-duty { margin-left: 1em; display: inline-block;}
+.cv-duty { margin-left: 1em; display: inline-block; }
 .cv-location { font-style: italic; }
-.cv-award { margin-left: 1em; display: inline-block; font-weight: bold;}
+.cv-award { margin-left: 1em; display: inline-block; font-weight: bold; }
 
-.papertitle { font-style: italic;}
+.papertitle { font-style: italic; }
+.paperdoi { position: relative; padding-left: 20px; }
+.paperdoi:after {
+    content: '\e928';
+    font-family: Academicons;
+    position: absolute;
+    left: 0; /* Adjust as needed */
+}

@@ -79,6 +79,13 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 |p|ChemKED: A human- and machine readable data standard for chemical kinetics experiments|p|  
 |u|**B.W. Weber** and K.E. Niemeyer|u|  
+|j|Paper MUQ004, 10th International Conference on Chemical Kinetics, Chicago, IL, May 2017|j|  
+|x|[arxiv:1706.01987v2](https://arxiv.org/abs/1706.01987v2)|x|  
+|f|[figshare:10.6084/m9.figshare.5033417](https://doi.org/10.6084/m9.figshare.5033417)|f|
+{: .paper}
+
+|p|ChemKED: A human- and machine readable data standard for chemical kinetics experiments|p|  
+|u|**B.W. Weber** and K.E. Niemeyer|u|  
 |j|Paper 1D11, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 |x|[arxiv:1706.01987v1](https://arxiv.org/abs/1706.01987v1)|x|  
 |f|[figshare:10.6084/m9.figshare.5082709](https://doi.org/10.6084/m9.figshare.5082709)|f|
@@ -102,11 +109,27 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|H. Wang, **B.W. Weber**, R. Fang, and C.J. Sung|u|  
 |j|Paper 3D01, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 |x|[arxiv:1706.01485](https://arxiv.org/abs/1706.01485)|x|  
+|c|R. Fang presenting.|c|
 {: .paper}
 
 |p|Fast sampling system for simultaneous speciation and ignition delay measurements in a rapid compression machine|p|  
 |u|R. Fang, **B.W. Weber**, and C.J. Sung|u|  
 |j|Poster P11, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|
+{: .paper}
+
+|p|ChemKED: A human- and machine readable data standard for chemical kinetics experiments|p|  
+|u|**B.W. Weber** and K.E. Niemeyer|u|  
+|j|16th International Conference on Numerical Combustion, Orlando, FL, Apr. 2017|j|  
+|f|[figshare:10.6084/m9.figshare.4818448](https://doi.org/10.6084/m9.figshare.4818448)|f|
+{: .paper}
+
+<h3 class="pub-year">2016</h3>
+
+|p|UConnRCMPy: Python-based data analysis for rapid compression machines|p|  
+|u|**B.W. Weber** and C.J. Sung|u|  
+|j|15th Python in Science Conference, Austin, TX, Jul. 2016.|j|  
+|r|[SciPy Proceedings](http://conference.scipy.org/proceedings/scipy2016/bryan_weber.html)|r|  
+|f|[figshare:10.6084/m9.figshare.5089573](https://doi.org/10.6084/m9.figshare.5089573)|f|
 {: .paper}
 
 <h3 class="pub-year">2015</h3>
@@ -207,6 +230,14 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|**B.W. Weber**, K. Kumar, and C.J. Sung|u|  
 |j|Support of Undergraduate Research and Creative Endeavors Symposium Poster Session, Case Western Reserve University, Cleveland, OH, Apr. 2009|j|  
 |f|[figshare:10.6084/m9.figshare.5084797](https://doi.org/10.6084/m9.figshare.5084797)|f|
+{: .paper}
+
+<h3 class="pub-year">2008</h3>
+
+|p|An Investigation of Hydrocarbon Flames using Probe Sampling and Gas Chromatography/Mass Spectrometry|p|  
+|u|**B.W. Weber** and C.J. Sung|u|  
+|j| Summer Undergraduate Research in Energy Sciences Program, Dominion Energy East Ohio Branch, Cleveland, OH, Aug.\ 2008.|j|  
+|f|[figshare:10.6084/m9.figshare.5098933](https://doi.org/10.6084/m9.figshare.5098933)|f|
 {: .paper}
 
 <h2>Ph.D. Dissertation</h2>

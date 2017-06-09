@@ -70,7 +70,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|**B.W. Weber**, K. Kumar, Y. Zhang, and C.J. Sung|u|  
 |j|_Combust. Flame_, vol. 158, no. 5, pp. 809--819, Mar. 2011|j|  
 |d|[doi:10.1016/j.combustflame.2011.02.005](https://dx.doi.org/10.1016/j.combustflame.2011.02.005)|d|  
-|a|[arxiv:1706.00867](https://arxiv.org/abs/1706.00867)|a|
+|x|[arxiv:1706.00867](https://arxiv.org/abs/1706.00867)|x|
 {: .paper}
 
 <h2>Conference Publications and Posters</h2>
@@ -80,23 +80,25 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|ChemKED: A human- and machine readable data standard for chemical kinetics experiments|p|  
 |u|**B.W. Weber** and K.E. Niemeyer|u|  
 |j|Paper 1D11, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
+|x|[arxiv:1706.01987v1](https://arxiv.org/abs/1706.01987v1)|x|  
 {: .paper}
 
 |p|Autoignition of methyl valerate at low to intermediate temperatures and elevated pressures in rapid compression machine|p|  
 |u|**B.W. Weber**, J.A. Bunnell, K. Kumar, and C.J. Sung|u|  
 |j|Paper 2D01, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
-|a|[arxiv:1706.01483](https://arxiv.org/abs/1706.01483)|a|
+|x|[arxiv:1706.01483](https://arxiv.org/abs/1706.01483)|x|  
 {: .paper}
 
 |p|UConnRCMPy: Python-based data analysis for rapid compression machines|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
 |j|Paper 2D19, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
+|x|[arxiv:1706.01984](https://arxiv.org/abs/1706.01984)|x|  
 {: .paper}
 
 |p|High pressure autoignition of binary blends of methanol and dimethyl ether|p|  
 |u|H. Wang, **B.W. Weber**, R. Fang, and C.J. Sung|u|  
 |j|Paper 3D01, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
-|a|[arxiv:1706.01485](https://arxiv.org/abs/1706.01485)|a|
+|x|[arxiv:1706.01485](https://arxiv.org/abs/1706.01485)|x|  
 {: .paper}
 
 |p|Fast sampling system for simultaneous speciation and ignition delay measurements in a rapid compression machine|p|  
@@ -135,7 +137,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure|p|  
 |u|**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis|u|  
 |j|Paper 3A02, 8th US National Technical Meeting of the Combustion Institute, Park City, UT, May 2013|j|  
-|a|[arxiv:1706.01828](https://arxiv.org/abs/1706.01828)|a|  
+|x|[arxiv:1706.01828](https://arxiv.org/abs/1706.01828)|x|  
 |c|**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)|c|
 {: .paper}
 
@@ -147,7 +149,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|An Autoignition Study of iso-Butanol: Experiments and Modeling|p|  
 |u|**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green|u|  
 |j|Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, Park City, UT, May 2013|j|  
-|a|[arxiv:1706.01827](https://arxiv.org/abs/1706.01827)|a|
+|x|[arxiv:1706.01827](https://arxiv.org/abs/1706.01827)|x|  
 {: .paper}
 
 <h3 class="pub-year">2011</h3>
@@ -155,7 +157,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Comparative Investigation of the High Pressure Autoignition of the Butanol Isomers|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
 |j|Paper A--01, Fall Technical Meeting of the Eastern States Section of the Combustion Institute, Storrs, CT, Oct. 2011|j|  
-|a|[arxiv:1706.01842](https://arxiv.org/abs/1706.01842)|a|
+|x|[arxiv:1706.01842](https://arxiv.org/abs/1706.01842)|x|  
 {: .paper}
 
 |p|Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine|p|  
@@ -173,14 +175,14 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|A Rapid Compression Study of the Butanol Isomers at Elevated Pressure|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
 |j|Paper 1B13, 7th US National Technical Meeting of the Combustion Institute, Atlanta, GA, Apr. 2011|j|  
-|a|[arxiv:1706.01832](https://arxiv.org/abs/1706.01832)|a|
+|x|[arxiv:1706.01832](https://arxiv.org/abs/1706.01832)|x|  
 {: .paper}
 
 |p|Autoignition of Butanol Isomers at Low to Intermediate Temperature and Elevated Pressure|p|  
 |u|**B.W. Weber**, K. Kumar, and C.J. Sung|u|  
 |j|Paper AIAA--2011--0316, 49th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition, Orlando, FL, Jan. 2011|j|  
 |d|[doi:10.2514/6.2011-316](https://dx.doi.org/10.2514/6.2011-316)|d|  
-|a|[arxiv:1706.01837](https://arxiv.org/abs/1706.01837)|a|
+|x|[arxiv:1706.01837](https://arxiv.org/abs/1706.01837)|x|  
 {: .paper}
 
 <h3 class="pub-year">2010</h3>

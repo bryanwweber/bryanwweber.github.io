@@ -88,7 +88,7 @@ MD_INLINE = {
     '|j|': 'paperjournal',
     '|d|': 'paperdoi',
     '|c|': 'papercomment',
-    '|a|': 'paperarxiv',
+    '|x|': 'paperarxiv',
 }
 
 TYPOGRIFY = True

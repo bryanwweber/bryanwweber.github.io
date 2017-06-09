@@ -79,48 +79,48 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 |p|ChemKED: A human- and machine readable data standard for chemical kinetics experiments|p|  
 |u|**B.W. Weber** and K.E. Niemeyer|u|  
-|j|Paper 1D11, 10th US Natl. Tech. Meet. Combust. Inst., University of Maryland, College Park, MD, April 2017|j|
+|j|Paper 1D11, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 {: .paper}
 
 |p|Autoignition of methyl valerate at low to intermediate temperatures and elevated pressures in rapid compression machine|p|  
 |u|**B.W. Weber**, J.A. Bunnell, K. Kumar, and C.J. Sung|u|  
-|j|Paper 2D01, 10th US Natl. Tech. Meet. Combust. Inst., University of Maryland, College Park, MD, April 2017|j|  
+|j|Paper 2D01, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 |a|[arxiv:1706.01483](https://arxiv.org/abs/1706.01483)|a|
 {: .paper}
 
 |p|UConnRCMPy: Python-based data analysis for rapid compression machines|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
-|j|Paper 2D19, 10th US Natl. Tech. Meet. Combust. Inst., University of Maryland, College Park, MD, April 2017|j|
+|j|Paper 2D19, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 {: .paper}
 
 |p|High pressure autoignition of binary blends of methanol and dimethyl ether|p|  
 |u|H. Wang, **B.W. Weber**, R. Fang, and C.J. Sung|u|  
-|j|Paper 3D01, 10th US Natl. Tech. Meet. Combust. Inst., University of Maryland, College Park, MD, April 2017|j|  
+|j|Paper 3D01, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|  
 |a|[arxiv:1706.01485](https://arxiv.org/abs/1706.01485)|a|
 {: .paper}
 
 |p|Fast sampling system for simultaneous speciation and ignition delay measurements in a rapid compression machine|p|  
 |u|R. Fang, **B.W. Weber**, and C.J. Sung|u|  
-|j|Poster P11, 10th US Natl. Tech. Meet. Combust. Inst., University of Maryland, College Park, MD, April 2017|j|
+|j|Poster P11, 10th US National Technical Meeting of the Combustion Institute, College Park, MD, Apr. 2017|j|
 {: .paper}
 
 <h3 class="pub-year">2015</h3>
 
 |p|Autoignition study of tetralin in a rapid compression machines at elevated pressures and low-to-intermediate temperatures|p|  
 |u|G. Kukkadapu, **B.W. Weber**, and C.J. Sung|u|  
-|j|Paper 1G05, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015|j|  
+|j|Paper 1G05, 9th US National Technical Meeting of the Combustion Institute, Cincinnati, OH, May 2015|j|  
 |c|G. Kukkadapu presenting.|c|  
 {: .paper}
 
 |p|Autoignition of methyl-propanoate and a comparison with its selected ester homologs|p|  
 |u|K. Kumar, J. Bunnell, **B.W. Weber**, and C.J. Sung|u|  
-|j|Paper 1G07, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015|j|  
+|j|Paper 1G07, 9th US National Technical Meeting of the Combustion Institute, Cincinnati, OH, May 2015|j|  
 |c|K. Kumar presenting.|c|  
 {: .paper}
 
 |p|Towards a comprehensive DME/propane blended combustion kinetic model|p|  
 |u|E.E. Dames, **B.W. Weber**, A. Rosen, C.W. Gao, C.J. Sung, and W.H. Green|u|  
-|j|Paper 2F16, 9th US Natl. Tech. Meet. Combust. Inst., University of Cincinnati, Cincinnati, OH, May 2015|j|  
+|j|Paper 2F16, 9th US National Technical Meeting of the Combustion Institute, Cincinnati, OH, May 2015|j|  
 |c|E.E. Dames presenting.|c|  
 {: .paper}
 
@@ -128,25 +128,25 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 |p|Combustion of the Butanol Isomers: Reaction Pathways from High to Low Temperature|p|  
 |u|S.S. Merchant, W.H. Green, K.M. Van Geem, N. Hansen, **B.W. Weber**, and C.J. Sung|u|  
-|j|8th Int. Conf. Chem. Kinet., University Seville, Seville, Spain, Jul. 2013|j|  
+|j|8th International Conference on Chemical Kinetics, Seville, Spain, Jul. 2013|j|  
 |c|S.S. Merchant presenting. **Abstract:** [University of Seville](http://acdc.sav.us.es/icck2013/images/stories/c-orales/index.html?pageNumber=86)|c|  
 {: .paper}
 
 |p|Experiments and Modeling of the Autoignition of Methyl-Cyclohexane at High Pressure|p|  
 |u|**B.W. Weber**, W.J. Pitz, C.J. Sung, M. Mehl, E.J. Silke, and A.C. Davis|u|  
-|j|Paper 3A02, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013|j|  
+|j|Paper 3A02, 8th US National Technical Meeting of the Combustion Institute, Park City, UT, May 2013|j|  
 |a|[arxiv:1706.01828](https://arxiv.org/abs/1706.01828)|a|  
-|c|**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)|c|  
+|c|**Paper:** [PDF from LLNL](https://e-reports-ext.llnl.gov/pdf/737412.pdf)|c|
 {: .paper}
 
 |p|A Comprehensive Experimental and Modeling Study of iso-Pentanol Combustion|p|  
 |u|S.M. Sarathy, S. Park, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, **B.W. Weber**, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut|u|  
-|j|Paper 2A12, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013|j|  
+|j|Paper 2A12, 8th US National Technical Meeting of the Combustion Institute, Park City, UT, May 2013|j|  
 {: .paper}
 
 |p|An Autoignition Study of iso-Butanol: Experiments and Modeling|p|  
 |u|**B.W. Weber**, S.S. Merchant, C.J. Sung, and W.H. Green|u|  
-|j|Paper 3A01, 8th US Natl. Tech. Meet. Combust. Inst., University of Utah, Park City, UT, May 2013|j|  
+|j|Paper 3A01, 8th US National Technical Meeting of the Combustion Institute, Park City, UT, May 2013|j|  
 |a|[arxiv:1706.01827](https://arxiv.org/abs/1706.01827)|a|
 {: .paper}
 
@@ -154,25 +154,25 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 |p|Comparative Investigation of the High Pressure Autoignition of the Butanol Isomers|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
-|j|Paper A--01, Fall Tech. Meet. East. States Sect. Combust. Inst., University of Connecticut, Storrs, CT, Oct. 2011|j|  
+|j|Paper A--01, Fall Technical Meeting of the Eastern States Section of the Combustion Institute, Storrs, CT, Oct. 2011|j|  
 |a|[arxiv:1706.01842](https://arxiv.org/abs/1706.01842)|a|
 {: .paper}
 
 |p|Validation of Kinetic Models of the Butanol Isomers at High Pressure using a Rapid Compression Machine|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
-|j|Poster T40, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011|j|  
+|j|Poster T40, 7th International Conference on Chemical Kinetics, Cambridge, MA, Jul. 2011|j|  
 |c|**Poster:** [MIT](http://web.mit.edu/icck/documents.html)|c|  
 {: .paper}
 
 |p|Combustion of the butanol isomers: Reaction pathways at elevated pressure from low-to-high temperatures.|p|  
 |u|M.R. Harper, W.H. Green, K.M. Van Geem, **B.W. Weber**, C.J. Sung, I. Stranic, D.F. Davidson, and R.K. Hanson|u|  
-|j|Paper #84, 7th Int. Conf. Chem. Kinet., Massachusetts Institute of Technology, Cambridge, MA, Jul. 2011|j|  
+|j|Paper #84, 7th International Conference on Chemical Kinetics, Cambridge, MA, Jul. 2011|j|  
 |c|W.H. Green presenting. **Slides:** [MIT](http://web.mit.edu/icck/documents.html)|c|  
 {: .paper}
 
 |p|A Rapid Compression Study of the Butanol Isomers at Elevated Pressure|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
-|j|Paper 1B13, 7th US Natl. Tech. Meet. Combust. Inst., Georgia Institute of Technology, Atlanta, GA, Apr. 2011|j|  
+|j|Paper 1B13, 7th US National Technical Meeting of the Combustion Institute, Atlanta, GA, Apr. 2011|j|  
 |a|[arxiv:1706.01832](https://arxiv.org/abs/1706.01832)|a|
 {: .paper}
 

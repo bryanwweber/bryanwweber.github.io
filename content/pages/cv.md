@@ -119,6 +119,8 @@ See the updated list on the [Publications page]({filename}/pages/work.md)
 <span>"Experiments and Detailed Modeling of Butanol Ignition"<br/>Funding: $2,000</span>
 </p>
 
+<h3 class="cv-year">2013</h3>
+
 <p class="award">
 <label class="collapse" for="4_1">Graduate Teaching Fellowship</label>
 <input id="4_1" type="checkbox">

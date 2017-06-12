@@ -40,6 +40,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|**B.W. Weber**, W.J. Pitz, M. Mehl, E.J. Silke, A.C. Davis, and C.J. Sung|u|  
 |j|_Combust. Flame_, vol. 161, no. 8, pp. 1972--1983, Aug. 2014|j|  
 |d|[doi:10.1016/j.combustflame.2014.01.018](https://dx.doi.org/10.1016/j.combustflame.2014.01.018)|d|  
+|x|[arxiv:1706.02996](https://arxiv.org/abs/1706.02996)|a|
 {: .paper}
 
 <h3 class="pub-year">2013</h3>
@@ -54,6 +55,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|**B.W. Weber** and C.J. Sung|u|  
 |j|_Energy & Fuels_, vol. 27, no. 3, pp. 1688--1698, Mar. 2013|j|  
 |d|[doi:10.1021/ef302195c](https://dx.doi.org/10.1021/ef302195c)|d|  
+|x|[arxiv:1706.02965](https://arxiv.org/abs/1706.02965)|x|
 {: .paper}
 
 <h3 class="pub-year">2012</h3>
@@ -258,6 +260,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Autoignition of n-Butanol at Low to Intermediate Temperature and Elevated Pressure|p|  
 |u|**B.W. Weber**|u|  
 |j|University of Connecticut, Aug. 2010|j|  
+|x|[arxiv:1706.03009](https://arxiv.org/abs/1706.03009)|x|  
 |f|[figshare:10.6084/m9.figshare.5088493](https://doi.org/10.6084/m9.figshare.5088493)|f|
 {: .paper}
 

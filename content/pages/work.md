@@ -26,6 +26,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |u|**B.W. Weber**, C.J. Sung, and M.W. Renfro|u|  
 |j|_Combust. Flame_, vol. 162, no. 6, pp. 2518--2528, Jun. 2015|j|  
 |d|[doi:10.1016/j.combustflame.2015.03.001](https://dx.doi.org/10.1016/j.combustflame.2015.03.001)|d|  
+|x|[arxiv:1706.04243](https://arxiv.org/abs/1706.04243)|x|
 {: .paper}
 
 |p|An experimental and modeling study of propene oxidation. Part 2: Ignition delay time and flame speed measurements|p|  

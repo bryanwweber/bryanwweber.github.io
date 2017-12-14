@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import sys
+sys.path.append('bulrush')
+
+import bulrush  # noqa: E402
 
 #####
 # DISABLE THIS
@@ -69,12 +73,11 @@ DEFAULT_PAGINATION = 9
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-THEME = './bulrush'
+THEME = bulrush.PATH
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['assets', 'summary', 'md_inline_extension']
-JINJA_ENVIRONMENT = {
-    'extensions': ['webassets.ext.jinja2.AssetsExtension', 'jinja2.ext.with_'],
-}
+JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
+JINJA_FILTERS = bulrush.FILTERS
 SUMMARY_END_MARKER = '<!--more-->'
 SUMMARY_USE_FIRST_PARAGRAPH = True
 

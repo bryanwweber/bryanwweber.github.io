@@ -103,6 +103,14 @@ See the updated list on the [Publications page]({filename}/pages/work.md)
 
 <i class="fa fa-star fa-border fa-pull-left"></i> <h1 class="cv-category">Awards, Grants, and Fellowships</h1>
 
+<h3 class="cv-year">2018</h3>
+
+<p class="award">
+<label class="collapse" for="8_1">Principle Investigator, University of Connecticut Provost Mini-Grant</label>
+<input id="8_1" type="checkbox">
+<span>"Integration of Software-Based Problem Solving to Thermodynamics Instruction"<br/>Funding: $5,000</span>
+</p>
+
 <h3 class="cv-year">2017</h3>
 
 <p class="award">

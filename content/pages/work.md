@@ -6,6 +6,26 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 <h2>Journal Articles</h2>
 
+<h3 class="pub-year">2018</h3>
+
+|p|ChemKED: a human- and machine-readable data standard for chemical kinetics experiments.|p|  
+|u|**B.W. Weber**, K.E. Niemeyer|u|
+|j|_International Journal of Chemical Kinetics_, Accepted Dec. 2017|j|  
+|x|[arXiv:1706.01987v3](https://arxiv.org/abs/1706.01987v3)|x|
+{: .paper}
+
+|p|Experiments and Modeling of the Autoignition of Methyl Pentanoate at Low to Intermediate Temperatures and Elevated Pressures in a Rapid Compression Machine.|p|  
+|u|**B.W. Weber**, J.A. Bunnell, K. Kumar, C.J. Sung|u|  
+|j|_Fuel_, vol. 212, pp. 479--486, Jan. 2018|j|  
+|d|[doi:10.1016/j.combustflame.2017.09.027](https://dx.doi.org/10.1016/j.combustflame.2017.09.027)|d|
+{: .paper}
+
+|p|Autoignition of Methyl Propanoate and its Comparisons with Methyl Ethanoate and Methyl Butanoate.|p|  
+|u|K. Kumar, J.A. Bunnell, **B.W. Weber**, C.J. Sung|u|  
+|j|_Combustion and Flame_, vol. 188, pp. 116--128, Jan. 2018|j|  
+|d|[doi:10.1016/j.combustflame.2017.09.027](https://dx.doi.org/10.1016/j.combustflame.2017.09.027)|d|
+{: .paper}
+
 <h3 class="pub-year">2016</h3>
 
 |p|A detailed combined experimental and theoretical study on dimethyl ether/propane blended oxidation|p|  

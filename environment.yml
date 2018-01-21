@@ -1,42 +1,41 @@
 name: pelican
 channels:
-- defaults
-- conda-forge
+  - defaults
+  - conda-forge
 dependencies:
-- blinker=1.4=py36_0
-- feedgenerator=1.9=py36_0
-- ghp-import=0.5.5=py36_0
-- pelican=3.7.1=py36_0
-- smartypants=2.0.0=py36_0
-- typogrify=2.0.7=py36_0
-- webassets=0.12.1=py36_0
-- ca-certificates=2017.08.26=h1d4fec5_0
-- certifi=2017.11.5=py36hf29ccca_0
-- docutils=0.14=py36hb0f60f5_0
-- jinja2=2.10=py36ha16c418_0
-- libedit=3.1=heed3624_0
-- libffi=3.2.1=hd88cf55_4
-- libgcc-ng=7.2.0=h7cc24e2_2
-- libstdcxx-ng=7.2.0=h7a57d05_2
-- markdown=2.6.9=py36_0
-- markupsafe=1.0=py36hd9260cd_1
-- ncurses=6.0=h9df7e31_2
-- openssl=1.0.2n=hb7f436b_0
-- pip=9.0.1=py36h6c6f9ce_4
-- pygments=2.2.0=py36h0d3125c_0
-- python=3.6.3=h6c0c0dc_5
-- python-dateutil=2.6.1=py36h88d3b88_1
-- pytz=2017.3=py36h63b9c63_0
-- readline=7.0=ha6073c6_4
-- setuptools=36.5.0=py36he42e2e1_0
-- six=1.11.0=py36h372c433_1
-- sqlite=3.20.1=hb898158_2
-- tk=8.6.7=hc745277_3
-- unidecode=0.04.21=py36_0
-- wheel=0.30.0=py36hfd4bba0_1
-- xz=5.2.3=h55aa19d_2
-- zlib=1.2.11=ha838bed_2
-- pip:
-  - yuicompressor==2.4.8
+  - blinker=1.4=py_0
+  - feedgenerator=1.9=py36_0
+  - ghp-import=0.5.5=py36_0
+  - pelican=3.7.1=py36_0
+  - smartypants=2.0.0=py36_0
+  - typogrify=2.0.7=py36_0
+  - webassets=0.12.1=py36_0
+  - ca-certificates=2017.08.26=h1d4fec5_0
+  - certifi=2017.11.5=py36hf29ccca_0
+  - docutils=0.14=py36hb0f60f5_0
+  - jinja2=2.10=py36ha16c418_0
+  - libedit=3.1=heed3624_0
+  - libffi=3.2.1=hd88cf55_4
+  - libgcc-ng=7.2.0=h7cc24e2_2
+  - libstdcxx-ng=7.2.0=h7a57d05_2
+  - markdown=2.6.9=py36_0
+  - markupsafe=1.0=py36hd9260cd_1
+  - ncurses=6.0=h9df7e31_2
+  - openssl=1.0.2n=hb7f436b_0
+  - pip=9.0.1=py36h6c6f9ce_4
+  - pygments=2.2.0=py36h0d3125c_0
+  - python=3.6.4=hc3d631a_1
+  - python-dateutil=2.6.1=py36h88d3b88_1
+  - pytz=2017.3=py36h63b9c63_0
+  - readline=7.0=ha6073c6_4
+  - setuptools=38.4.0=py36_0
+  - six=1.11.0=py36h372c433_1
+  - sqlite=3.20.1=hb898158_2
+  - tk=8.6.7=hc745277_3
+  - unidecode=0.04.21=py36_0
+  - wheel=0.30.0=py36hfd4bba0_1
+  - xz=5.2.3=h55aa19d_2
+  - zlib=1.2.11=ha838bed_2
+  - pip:
+    - yuicompressor==2.4.8
 prefix: /home/bryan/miniconda3/envs/pelican
-

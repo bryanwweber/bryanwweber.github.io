@@ -1,6 +1,6 @@
 [submodule "pelican-plugins"]
 	path = pelican-plugins
-	url = https://github.com/getpelican/pelican-plugins
+	url = https://github.com/bryanwweber/pelican-plugins
 	branch = fix_md_inline
 [submodule "bulrush"]
 	path = bulrush

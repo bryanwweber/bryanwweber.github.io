@@ -18,13 +18,13 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Experiments and Modeling of the Autoignition of Methyl Pentanoate at Low to Intermediate Temperatures and Elevated Pressures in a Rapid Compression Machine.|p|  
 |u|**B.W. Weber**, J.A. Bunnell, K. Kumar, C.J. Sung|u|  
 |j|_Fuel_, vol. 212, pp. 479--486, Jan. 2018|j|  
-|d|[doi:10.1016/j.combustflame.2017.09.027](https://dx.doi.org/10.1016/j.combustflame.2017.09.027)|d|
+|d|[doi:10.1016/j.combustflame.2017.09.027](https://doi.org/10.1016/j.combustflame.2017.09.027)|d|
 {: .paper}
 
 |p|Autoignition of Methyl Propanoate and its Comparisons with Methyl Ethanoate and Methyl Butanoate.|p|  
 |u|K. Kumar, J.A. Bunnell, **B.W. Weber**, C.J. Sung|u|  
 |j|_Combustion and Flame_, vol. 188, pp. 116--128, Jan. 2018|j|  
-|d|[doi:10.1016/j.combustflame.2017.09.027](https://dx.doi.org/10.1016/j.combustflame.2017.09.027)|d|
+|d|[doi:10.1016/j.combustflame.2017.09.027](https://doi.org/10.1016/j.combustflame.2017.09.027)|d|
 {: .paper}
 
 <h3 class="pub-year">2016</h3>
@@ -32,7 +32,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|A detailed combined experimental and theoretical study on dimethyl ether/propane blended oxidation|p|  
 |u|E.E. Dames, A.S. Rosen, **B.W. Weber**, C.W. Gao, C.J. Sung, and W.H. Green|u|  
 |j|_Combustion and Flame_, vol. 168, pp. 310--330, Jun. 2016|j|  
-|d|[doi:10.1016/j.combustflame.2016.02.021](https://dx.doi.org/10.1016/j.combustflame.2016.02.021)|d|  
+|d|[doi:10.1016/j.combustflame.2016.02.021](https://doi.org/10.1016/j.combustflame.2016.02.021)|d|  
 {: .paper}
 
 <h3 class="pub-year">2015</h3>
@@ -40,20 +40,20 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Autoignition study of tetralin in a rapid compression machine at elevated pressures and low-to-intermediate temperatures|p|  
 |u|G. Kukkadapu, **B.W. Weber**, and C.J. Sung|u|  
 |j|_Fuel_, vol. 159, pp. 436--445, Nov. 2015|j|  
-|d|[doi:10.1016/j.fuel.2015.06.093](https://dx.doi.org/10.1016/j.fuel.2015.06.093)|d|  
+|d|[doi:10.1016/j.fuel.2015.06.093](https://doi.org/10.1016/j.fuel.2015.06.093)|d|  
 {: .paper}
 
 |p|On the Uncertainty of Temperature Estimation in a Rapid Compression Machine|p|  
 |u|**B.W. Weber**, C.J. Sung, and M.W. Renfro|u|  
 |j|_Combust. Flame_, vol. 162, no. 6, pp. 2518--2528, Jun. 2015|j|  
-|d|[doi:10.1016/j.combustflame.2015.03.001](https://dx.doi.org/10.1016/j.combustflame.2015.03.001)|d|  
+|d|[doi:10.1016/j.combustflame.2015.03.001](https://doi.org/10.1016/j.combustflame.2015.03.001)|d|  
 |x|[arXiv:1706.04243](https://arxiv.org/abs/1706.04243)|x|
 {: .paper}
 
 |p|An experimental and modeling study of propene oxidation. Part 2: Ignition delay time and flame speed measurements|p|  
 |u|S.M. Burke, U. Burke, R. Mc Donagh, O. Mathieu, I. Osorio, C. Keesee, A. Morones, E.L. Petersen, W. Wang, T.A. DeVerter, M.A. Oehlschlaeger, B. Rhodes, R.K. Hanson, D.F. Davidson, **B.W. Weber**, C.J. Sung, J. Santner, Y. Ju, F.M. Haas, F.L. Dryer, E.N. Volkov, E.J. Nilsson, A.A. Konnov, M. Alrefae, F. Khaled, A. Farooq, P. Dirrenberger, P.A. Glaude, F. Battin-Leclerc, and H.J. Curran|u|  
 |j|_Combust. Flame_, vol. 162, no. 2, pp. 296--314, Feb. 2015|j|  
-|d|[doi:10.1016/j.combustflame.2014.07.032](https://dx.doi.org/10.1016/j.combustflame.2014.07.032)|d|  
+|d|[doi:10.1016/j.combustflame.2014.07.032](https://doi.org/10.1016/j.combustflame.2014.07.032)|d|  
 {: .paper}
 
 <h3 class="pub-year">2014</h3>
@@ -61,7 +61,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Experiments and modeling of the autoignition of methylcyclohexane at high pressure|p|  
 |u|**B.W. Weber**, W.J. Pitz, M. Mehl, E.J. Silke, A.C. Davis, and C.J. Sung|u|  
 |j|_Combust. Flame_, vol. 161, no. 8, pp. 1972--1983, Aug. 2014|j|  
-|d|[doi:10.1016/j.combustflame.2014.01.018](https://dx.doi.org/10.1016/j.combustflame.2014.01.018)|d|  
+|d|[doi:10.1016/j.combustflame.2014.01.018](https://doi.org/10.1016/j.combustflame.2014.01.018)|d|  
 |x|[arXiv:1706.02996](https://arxiv.org/abs/1706.02996)|x|
 {: .paper}
 
@@ -70,13 +70,13 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|A comprehensive experimental and modeling study of iso-pentanol combustion|p|  
 |u|S.M. Sarathy, S. Park, **B.W. Weber**, W. Wang, P.S. Veloo, A.C. Davis, C. Togbé, C.K. Westbrook, O. Park, G. Dayma, Z. Luo, M.A. Oehlschlaeger, F.N. Egolfopoulos, T. Lu, W.J. Pitz, C.J. Sung, and P. Dagaut|u|  
 |j|_Combust. Flame_, vol. 160, no. 12, pp. 2712--2728, Dec. 2013|j|  
-|d|[doi:10.1016/j.combustflame.2013.06.022](https://dx.doi.org/10.1016/j.combustflame.2013.06.022)|d|  
+|d|[doi:10.1016/j.combustflame.2013.06.022](https://doi.org/10.1016/j.combustflame.2013.06.022)|d|  
 {: .paper}
 
 |p|Comparative Autoignition Trends in Butanol Isomers at Elevated Pressure|p|  
 |u|**B.W. Weber** and C.J. Sung|u|  
 |j|_Energy & Fuels_, vol. 27, no. 3, pp. 1688--1698, Mar. 2013|j|  
-|d|[doi:10.1021/ef302195c](https://dx.doi.org/10.1021/ef302195c)|d|  
+|d|[doi:10.1021/ef302195c](https://doi.org/10.1021/ef302195c)|d|  
 |x|[arXiv:1706.02965](https://arxiv.org/abs/1706.02965)|x|
 {: .paper}
 
@@ -85,7 +85,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Development of Isopentanol Reaction Mechanism Reproducing Autoignition Character at High and Low Temperatures|p|  
 |u|T. Tsujimura, W.J. Pitz, F. Gillespie, H.J. Curran, **B.W. Weber**, Y. Zhang, and C.J. Sung|u|  
 |j|_Energy & Fuels_, vol. 26, no. 8, pp. 4871--4886, Aug. 2012|j|  
-|d|[doi:10.1021/ef300879k](https://dx.doi.org/10.1021/ef300879k)|d|  
+|d|[doi:10.1021/ef300879k](https://doi.org/10.1021/ef300879k)|d|  
 {: .paper}
 
 <h3 class="pub-year">2011</h3>
@@ -93,7 +93,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Autoignition of n-butanol at elevated pressure and low-to-intermediate temperature|p|  
 |u|**B.W. Weber**, K. Kumar, Y. Zhang, and C.J. Sung|u|  
 |j|_Combust. Flame_, vol. 158, no. 5, pp. 809--819, Mar. 2011|j|  
-|d|[doi:10.1016/j.combustflame.2011.02.005](https://dx.doi.org/10.1016/j.combustflame.2011.02.005)|d|  
+|d|[doi:10.1016/j.combustflame.2011.02.005](https://doi.org/10.1016/j.combustflame.2011.02.005)|d|  
 |x|[arXiv:1706.00867](https://arxiv.org/abs/1706.00867)|x|
 {: .paper}
 
@@ -235,7 +235,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Autoignition of Butanol Isomers at Low to Intermediate Temperature and Elevated Pressure|p|  
 |u|**B.W. Weber**, K. Kumar, and C.J. Sung|u|  
 |j|Paper AIAA--2011--0316, 49th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition, Orlando, FL, Jan. 2011|j|  
-|d|[doi:10.2514/6.2011-316](https://dx.doi.org/10.2514/6.2011-316)|d|  
+|d|[doi:10.2514/6.2011-316](https://doi.org/10.2514/6.2011-316)|d|  
 |x|[arXiv:1706.01837](https://arxiv.org/abs/1706.01837)|x|  
 |f|[figshare:10.6084/m9.figshare.5089537](https://doi.org/10.6084/m9.figshare.5089537)|f|
 {: .paper}

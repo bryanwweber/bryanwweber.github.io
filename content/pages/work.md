@@ -10,7 +10,8 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 |p|ChemKED: a human- and machine-readable data standard for chemical kinetics experiments.|p|  
 |u|**B.W. Weber**, K.E. Niemeyer|u|
-|j|_International Journal of Chemical Kinetics_, Accepted Dec. 2017|j|  
+|j|_International Journal of Chemical Kinetics_, vol. 50, no. 3, pp. 135--148, Mar. 2018|j|  
+|d|[doi:10.1002/kin.21142](https://doi.org/10.1002/kin.21142)|d|  
 |x|[arXiv:1706.01987v3](https://arxiv.org/abs/1706.01987v3)|x|
 {: .paper}
 

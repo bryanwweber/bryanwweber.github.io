@@ -18,7 +18,7 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 |p|Experiments and Modeling of the Autoignition of Methyl Pentanoate at Low to Intermediate Temperatures and Elevated Pressures in a Rapid Compression Machine.|p|  
 |u|**B.W. Weber**, J.A. Bunnell, K. Kumar, C.J. Sung|u|  
 |j|_Fuel_, vol. 212, pp. 479--486, Jan. 2018|j|  
-|d|[doi:10.1016/j.combustflame.2017.09.027](https://doi.org/10.1016/j.combustflame.2017.09.027)|d|
+|d|[doi:10.1016/j.fuel.2017.10.037](https://doi.org/10.1016/j.fuel.2017.10.037)|d|
 {: .paper}
 
 |p|Autoignition of Methyl Propanoate and its Comparisons with Methyl Ethanoate and Methyl Butanoate.|p|  

@@ -18,7 +18,7 @@ The anchors can be changed to move the picture around, and further adjustments c
 \usetikzlibrary{calc}
 % ...
 % Main document
-\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,0))$) {\includegraphics{foo}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,0)$) {\includegraphics{foo}};
 ```
 
 will place the image 1 cm to the left of the center.

@@ -8,6 +8,18 @@ Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan
 
 <h3 class="pub-year">2018</h3>
 
+|p|An experimental and modeling study of dimethyl ether/methanol blends autoignition at low temperature.|p|  
+|u|H. Wang, R. Fang. **B.W. Weber**, C.J. Sung.|u|
+|j|_Combustion and Flame_, vol. 198, pp. 88--99, Dec. 2018|j|  
+|d|[doi:10.1016/j.combustflame.2018.09.012](https://doi.org/10.1016/j.combustflame.2018.09.012)|d|
+{: .paper}
+
+|p|ThermoState: A state manager for thermodynamics courses.|p|  
+|u|**B.W. Weber**|u|
+|j|_Journal of Open Source Education_, vol. 1, no. 8, pp. 33, Oct. 2018|j|  
+|d|[doi:10.21105/jose.00033](https://doi.org/10.21105/jose.00033)|d|
+{: .paper}
+
 |p|ChemKED: a human- and machine-readable data standard for chemical kinetics experiments.|p|  
 |u|**B.W. Weber**, K.E. Niemeyer|u|
 |j|_International Journal of Chemical Kinetics_, vol. 50, no. 3, pp. 135--148, Mar. 2018|j|  

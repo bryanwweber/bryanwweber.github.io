@@ -16,18 +16,31 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 |-|Assistant Professor in Residence, 2016--Present|-|  
 |-|Visiting Assistant Professor, 2014--2016|-|  
 |=|University of Connecticut|=|
-|+|Conducting research on the combustion kinetics of alternative and traditional fuels.|+|  
-|+|Teaching undergraduate courses in thermal-fluids engineering.|+|  
-|+|Mentoring undergraduate students in the capstone design project.|+|
+|+|Teaching 3 undergraduate courses per semester in thermal-fluids engineering|+|  
+|+|Integrating and developing open-source software tools to promote higher-level learning outcomes in undergraduate courses|+|  
+|+|Mentoring undergraduate student teams during their industrially-sponsored capstone design project|+|  
+|+|Mentoring graduate and undergraduate TAs in grading and tutoring|+|  
+|+|Conducting research with undergraduate and high-school students to develop software for combustion kinetics|+|  
+|+|Developing open-source software tools for combustion and chemical kinetic analysis|+|  
 
-|-|Lead developer, ThermoState, 2016--Present|-|
-|+|Developing an open-source package to evaluate thermodynamic properties of common materials|+|
-|+|Used in several undergraduate Thermodynamics courses, with strong student approval|+|
+|-|Co-Lead Developer, Cantera, 2013--Present|-|  
+|-|Member, Cantera Steering Committee, 2018--Present|-|  
+|+|Contributing source code to the open-source software toolkit for chemical kinetics, thermodynamics, and transport processes|+|  
+|+|Organized 4 workshops for approximately 200 Cantera users at regional and national meetings of the Combustion Institute|+|  
+|+|Organized 3 annual workshops for 10 Cantera developers|+|  
+|+|Awarded $3,000 NumFOCUS Small Development Grant to redesign the Cantera website at <https://cantera.org>|+|  
+|+|Contributions available on GitHub: <https://github.com/Cantera/cantera>|+|
+
+|-|Lead developer, ThermoState, 2016--Present|-|  
+|+|Developing an open-source package to evaluate thermodynamic properties of simple compressible systems|+|  
+|+|Used in 6 undergraduate Thermodynamics courses at the University of Connecticut, with strong student approval|+|  
+|+|Published in the Journal of Open Source Education doi: [10.21105/jose.00033](https://doi.org/10.21105/jose.00033)|+|  
 |+|Code is available on GitHub: <https://github.com/bryanwweber/thermostate>|+|
 
 |-|Co-lead developer, ChemKED/PyKED, 2016--Present|-|  
-|+|Implemented a Python interface to the ChemKED database format for chemical kinetics experiments|+|
-|+|Collaborating with other researchers to define the database format, project governance, and community standards|+|
+|+|Implemented a Python interface to the ChemKED database format for chemical kinetics experiments|+|  
+|+|Collaborating with researchers from Oregon State University, Columbia University, Trinity University Dublin, and Argonne National Laboratory, among others, to define the database format, project governance, and community standards|+|  
+|+|Used as the data standard for an experimental characterization initiative involving more than 15 international universities|+|  
 |+|Code is available on GitHub: <https://github.com/pr-omethe-us/PyKED>|+|
 
 |-|Lead developer, UConnRCMPy 2015--Present|-|
@@ -35,38 +48,65 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 |+|Collaborating with other researchers to improve and extend the package|+|
 |+|Code is available on GitHub: <https://github.com/bryanwweber/UConnRCMPy>|+|
 
-|-|Contributing Developer, Cantera, 2013--Present|-|  
-|+|Contributing source code to the open-source software toolkit for chemical kinetics, thermodynamics, and transport processes|+|  
-|+|Assisting users with usage of Cantera in the online support group|+|  
-|+|Contributions available on GitHub: <https://github.com/Cantera/cantera>|+|
-
 |-|Graduate Research Assistant, University of Connecticut, 2009--2014|-|  
 |-|Undergraduate Research Assistant, Case Western Reserve University, 2007--2009|-|  
 |=|[Combustion Diagnostics Laboratory](http://combdiaglab.engr.uconn.edu), University of Connecticut|=|  
 |+|Conducted experimental and computational studies of the ignition
 properties of several alternative fuels and foundational fuels, with
-a focus on engine-relevant conditions.|+|  
+a focus on engine-relevant conditions|+|  
 |+|Designed a species sampling apparatus for time-resolved
 species measurements in the rapid compression machine, using gas
 chromatography/mass spectrometry to identify and quantify
-combustion intermediates.|+|  
+combustion intermediates|+|  
 |+|Analyzed kinetic models of combustion to determine the parameters
 controlling prediction of ignition delay and to improve the ability of
-the models to predict combustion events.|+|
+the models to predict combustion events|+|
 
 <i class="fa fa-university fa-border fa-pull-left"></i> <h1 class="cv-category">Teaching Experience</h1>
 
 |=|University of Connecticut, Storrs, CT, USA|=|
 
+**Honors:**
+
++ Four-time recipient of the University of Connecticut Provost's Teaching Commendation, awarded to faculty for excellence on their end-of-semester teaching evaluations
++ Two-time elected Commencement Marshal for Mechanical Engineering by the senior-class students
++ Nominated for the 2018 University Teaching Innovation Award by the Mechanical Engineering Department Chair
+
+Typical enrollment in the courses listed below is 60--100 students per section.
+
++ Applied Mechanical Engineering Laboratory
 + Applied Thermodynamics
 + Combustion for Energy Conversion
 + Fluid Dynamics 1
 + Fluid Dynamics 2 (Compressible Flow)
 + Senior Capstone Design Lecturer/Project Mentor
-+ Thermodynamic Principles
++ Thermodynamic Principals
 + Introduction to Mechanical Engineering (Instructor)
 
 <i class="fa fa-handshake-o fa-border fa-pull-left"></i> <h1 class="cv-category">Professional Service</h1>
+
+|-|Member, 2018--Present|-|  
+|=|Cantera Steering Committee|=|
+
+|+|Coordinating Cantera development and activities for the benefit of the community|+|  
+|+|As representative for the Cantera project, attended 2018 NumFOCUS Summit Meeting for all projects sponsored by NumFOCUS|+|  
+|+|Establishing roadmap for Cantera development, including objectives related to technical features and community engagement|+|
+
+|-|University of Connecticut Team Leader, 2018|-|  
+|=|Worcester Polytechnic Institute Institute for Project-Based Learning|=|
+
+|+|Led team of 7 faculty from Engineering, Computer Science, Accounting, and Education|+|  
+|+|Developed plan to implement project-based learning in the School of Engineering Curriculum at UConnRCMPy|+|  
+|+|Presented plan to attendees of the Institute|+|  
+|+|Worked with UConn Administration to identify key stakeholders, roadblocks, and resources required to implement Project-Based Learning|+|  
+
+|-|Member, ABET Committee, 2017--Present|-|  
+|-|Member, Ph.D.\ Qualifier Committee, 2017--Present|-|  
+|=|University of Connecticut, Department of Mechanical Engineering|=|
+
+|+|Developing materials to demonstrate continuing improvement for 2019 ABET accreditation visit|+|  
+|+|Developed pre- and post-quizzes for undergraduate Thermodynamics courses in Mechanical Engineering to demonstrate student achievement of ABET outcomes|+|  
+|+|Developed Ph.D.\ qualifying exam questions in collaboration with other department faculty|+|
 
 |-|Lead Chairperson, Junior Associates Committee, 2012--2014|-|  
 |=|Combustion Energy Frontier Research Center|=|
@@ -96,6 +136,7 @@ and the junior members.|+|
 + SAE World Congress
 + Measurement
 + Journal of Energy Resources Technology
++ Journal of Open Source Software
 
 <i class="fa fa-file-text fa-border fa-pull-left"></i> <h1 class="cv-category">Publications</h1>
 
@@ -106,7 +147,19 @@ See the updated list on the [Publications page]({filename}/pages/work.md)
 <h3 class="cv-year">2018</h3>
 
 <p class="award">
-<label class="collapse" for="8_1">Principle Investigator, University of Connecticut Provost Mini-Grant</label>
+<label class="collapse" for="10_1">Co-Principal Investigator, NumFOCUS Small Development Grant</label>
+<input id="10_1" type="checkbox">
+<span>"Modernize, Reorganize, and Update Cantera's Website"<br/>Funding: $3,000</span>
+</p>
+
+<p class="award">
+<label class="collapse" for="9_1">Principal Investigator, University of New Haven/KEEN Mini-Grant</label>
+<input id="9_1" type="checkbox">
+<span>"Integrating KEEN E-Learning Module: Resolving Ethical Issues"<br/>Funding: $2,000</span>
+</p>
+
+<p class="award">
+<label class="collapse" for="8_1">Principal Investigator, University of Connecticut Provost Mini-Grant</label>
 <input id="8_1" type="checkbox">
 <span>"Integration of Software-Based Problem Solving to Thermodynamics Instruction"<br/>Funding: $5,000</span>
 </p>
@@ -114,7 +167,7 @@ See the updated list on the [Publications page]({filename}/pages/work.md)
 <h3 class="cv-year">2017</h3>
 
 <p class="award">
-<label class="collapse" for="7_1">Principle Investigator, NASA CT Space Grant</label>
+<label class="collapse" for="7_1">Principal Investigator, NASA CT Space Grant</label>
 <input id="7_1" type="checkbox">
 <span>"Measurement of Combustion Products at High Pressure and Low Temperature"<br/>Funding: $20,000</span>
 </p>

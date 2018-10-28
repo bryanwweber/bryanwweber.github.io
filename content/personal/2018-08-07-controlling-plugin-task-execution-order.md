@@ -1,6 +1,7 @@
 title: Controlling plugin task execution order in Nikola
 date: 2018-08-07 18:00
 category: personal
+status: draft
 
 When writing a plugin for [Nikola](https://getnikola.com), it may be useful to have a task that has
 to run another task. For instance, you may want to be able to link to specific points on other

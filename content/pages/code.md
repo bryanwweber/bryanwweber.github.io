@@ -12,48 +12,6 @@ All of the code below, and much more, is available at my GitHub page:&nbsp;<i cl
 <div class="card">
 <header class="card-header">
 <p class="card-header-title">
-<a href="https://github.com/bryanwweber/UConnRCMPy">
-UConnRCMPy
-</a>
-</header>
-<div class="card-content">
-<div class="content">
-Python-based data analysis for Rapid Compression Machines. Promotes open-science principles, data sharing, and reproducible data processing for combustion experiments.
-</div> <!-- content -->
-</div> <!-- card-content -->
-<footer class="card-footer">
-<p class="card-footer-item"><a href="https://zenodo.org/badge/latestdoi/36095263"><img src="https://zenodo.org/badge/36095263.svg"></img></a>&nbsp;
-<a href="https://travis-ci.org/bryanwweber/UConnRCMPy"><img src="https://travis-ci.org/bryanwweber/UConnRCMPy.svg?branch=master"></img></a>
-</p> <!-- card-footer-item -->
-</footer> <!-- card-footer -->
-</div> <!-- card -->
-</div> <!-- column -->
-
-<div class="column is-half">
-<div class="card">
-<header class="card-header">
-<p class="card-header-title">
-<a href="https://github.com/pr-omethe-us/PyKED">
-ChemKED/PyKED
-</a>
-</header>
-<div class="card-content">
-<div class="content">
-The open and libre Chemical Kinetics Experimental Database format, and a Python interface to enable interactive analysis of databases of fundamental combustion experimental data.
-</div> <!-- content -->
-</div> <!-- card-content -->
-<footer class="card-footer">
-<p class="card-footer-item"><a href="https://zenodo.org/badge/latestdoi/66023863"><img src="https://zenodo.org/badge/66023863.svg"></img></a>&nbsp;
-<a href="https://travis-ci.org/pr-omethe-us/PyKED"><img src="https://travis-ci.org/pr-omethe-us/PyKED.svg?branch=master"></img></a>
-</p> <!-- card-footer-item -->
-</footer> <!-- card-footer -->
-</div> <!-- card -->
-</div> <!-- column -->
-
-<div class="column is-half">
-<div class="card">
-<header class="card-header">
-<p class="card-header-title">
 <a href="https://github.com/Cantera/cantera">
 Cantera
 </a> <!-- Cantera -->
@@ -89,8 +47,52 @@ Interactive state manager for thermodynamics. Enables management of a thermodyna
 </div> <!-- content -->
 </div> <!-- card-content -->
 <footer class="card-footer">
-<p class="card-footer-item"><a href="https://anaconda.org/bryanwweber/thermostate"><img src="https://anaconda.org/bryanwweber/thermostate/badges/version.svg"></img></a>&nbsp;
+<p class="card-footer-item"><a style="border-width:0" href="https://doi.org/10.21105/jose.00033">
+  <img src="https://jose.theoj.org/papers/10.21105/jose.00033/status.svg" alt="DOI badge" >
+</a>&nbsp;<a href="https://anaconda.org/bryanwweber/thermostate"><img src="https://anaconda.org/bryanwweber/thermostate/badges/version.svg"></img></a>&nbsp;
 <a href="https://travis-ci.org/bryanwweber/thermostate"><img src="https://travis-ci.org/bryanwweber/thermostate.svg?branch=master"></img></a>
+</p> <!-- card-footer-item -->
+</footer> <!-- card-footer -->
+</div> <!-- card -->
+</div> <!-- column -->
+
+<div class="column is-half">
+<div class="card">
+<header class="card-header">
+<p class="card-header-title">
+<a href="https://github.com/bryanwweber/UConnRCMPy">
+UConnRCMPy
+</a>
+</header>
+<div class="card-content">
+<div class="content">
+Python-based data analysis for Rapid Compression Machines. Promotes open-science principles, data sharing, and reproducible data processing for combustion experiments.
+</div> <!-- content -->
+</div> <!-- card-content -->
+<footer class="card-footer">
+<p class="card-footer-item"><a href="https://zenodo.org/badge/latestdoi/36095263"><img src="https://zenodo.org/badge/36095263.svg"></img></a>&nbsp;
+<a href="https://travis-ci.org/bryanwweber/UConnRCMPy"><img src="https://travis-ci.org/bryanwweber/UConnRCMPy.svg?branch=master"></img></a>
+</p> <!-- card-footer-item -->
+</footer> <!-- card-footer -->
+</div> <!-- card -->
+</div> <!-- column -->
+
+<div class="column is-half">
+<div class="card">
+<header class="card-header">
+<p class="card-header-title">
+<a href="https://github.com/pr-omethe-us/PyKED">
+ChemKED/PyKED
+</a>
+</header>
+<div class="card-content">
+<div class="content">
+The open and libre Chemical Kinetics Experimental Database format, and a Python interface to enable interactive analysis of databases of fundamental combustion experimental data.
+</div> <!-- content -->
+</div> <!-- card-content -->
+<footer class="card-footer">
+<p class="card-footer-item"><a href="https://zenodo.org/badge/latestdoi/66023863"><img src="https://zenodo.org/badge/66023863.svg"></img></a>&nbsp;
+<a href="https://travis-ci.org/pr-omethe-us/PyKED"><img src="https://travis-ci.org/pr-omethe-us/PyKED.svg?branch=master"></img></a>
 </p> <!-- card-footer-item -->
 </footer> <!-- card-footer -->
 </div> <!-- card -->

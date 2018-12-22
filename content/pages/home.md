@@ -9,9 +9,9 @@ In my spare time, I enjoy cooking, playing Ultimate and cycling.
 
 My primary focus at the University is teaching thermo-fluids courses. Aside from teaching, my
 research focus is on software tools for combustion research and thermodynamics, which you can find
-on my [Code page]({filename}/pages/code.md). I also do research with the [Combustion Diagnostics
+on my [Code page]({static}/pages/code.md). I also do research with the [Combustion Diagnostics
 Laboratory](http://combdiaglab.engr.uconn.edu), headed by [Prof. Jackie Sung][1]. Please see my
-[research page]({filename}/pages/work.md) for more information.
+[research page]({static}/pages/work.md) for more information.
 
 In addition to research and hobbies, I enjoy writing about recent articles that catch my eye from the literature.
 I'm aiming to distill the articles and present them such that any lay person with an interest in science will grasp

@@ -3,7 +3,7 @@ date: 2014-08-24 09:46
 category: personal
 
 Setting up a development environment for Cantera on Windows 7 can be a little
-trickier than on [Linux]({filename}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md).
+trickier than on [Linux]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md).
 This post contains instructions for how I set up my development environment on Windows 7.
 <!--more-->
 
@@ -28,7 +28,7 @@ directory, and it should be all set. If you have Visual Studio installed,
 this will not be a problem.
 
 Next, install [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html) (I've helpfully
-posted some instructions [here]({filename}2014-08-21-how-to-install-sundials-on-windows-7.md)).
+posted some instructions [here]({static}2014-08-21-how-to-install-sundials-on-windows-7.md)).
 Then, download and unzip the Boost libraries: <http://www.boost.org/>
 I recommend unzipping into the root of the `C:\` drive, so there will be a folder called
 `boost_1_56_0` (for the most recent version as of this writing) with all the required files inside.
@@ -148,6 +148,6 @@ for at least R2013a and R2014a.
 [2]: http://www.microsoft.com/en-us/download/details.aspx?id=4422
 [3]: http://www.mathworks.com/matlabcentral/answers/95039-why-does-the-sdk-7-1-installation-fail-with-an-installation-failed-message-on-my-windows-system
 [4]: http://www.mathworks.com/matlabcentral/answers/90383-fix-problem-when-mex-cpp-file
-[5]: {filename}/files/2014/08/ammintrin.h
+[5]: {static}/files/2014/08/ammintrin.h
 [py278]: https://www.python.org/download/releases/2.7.8/
 [py341]: https://www.python.org/downloads/release/python-341/

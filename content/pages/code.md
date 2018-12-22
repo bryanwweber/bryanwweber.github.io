@@ -17,7 +17,7 @@ Cantera
 </a> <!-- Cantera -->
 </p> <!-- card-header-title -->
 <a class="card-header-icon" href="https://github.com/Cantera/cantera">
-<img src="{filename}/files/icons/cantera-logo.png" width="40px"></img>
+<img src="{static}/files/icons/cantera-logo.png" width="40px"></img>
 </a>
 </header> <!-- card-header -->
 <div class="card-content">

@@ -1,7 +1,7 @@
 Title: Curriculum Vitae
 Summary: My curriculum vitae
 
-Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan_CV.pdf)
+Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
 <i class="fa fa-graduation-cap fa-border fa-pull-left"></i> <h1 class="cv-category">Education</h1>
 
@@ -140,7 +140,7 @@ and the junior members.|+|
 
 <i class="fa fa-file-text fa-border fa-pull-left"></i> <h1 class="cv-category">Publications</h1>
 
-See the updated list on the [Publications page]({filename}/pages/work.md)
+See the updated list on the [Publications page]({static}/pages/work.md)
 
 <i class="fa fa-star fa-border fa-pull-left"></i> <h1 class="cv-category">Awards, Grants, and Fellowships</h1>
 

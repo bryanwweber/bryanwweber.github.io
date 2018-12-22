@@ -6,7 +6,7 @@ I was recently annoyed by having the wrong icon for certain files that
 should open with Notepad++. <!--more--> You can see the proper icon in the top of
 this image, and the incorrect icon in the bottom.
 
-![Wrong file icons in Windows 7 Explorer]({filename}/files/2014/01/wrong_icons.png)<br /> Wrong file icons in Windows 7 Explorer
+![Wrong file icons in Windows 7 Explorer]({static}/files/2014/01/wrong_icons.png)<br /> Wrong file icons in Windows 7 Explorer
 
 The problem was that instead of setting the file association in Notepad++,
 I set it with the "Open With" dialog in Explorer, and Windows chose the

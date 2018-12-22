@@ -2,7 +2,7 @@ Title: Research&nbsp;& Publications
 Summary: Research & Publications
 Slug: work
 
-Download the latest version of my CV here: [pdf]({filename}/files/cv/Weber_Bryan_CV.pdf)
+Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
 <h2>Journal Articles</h2>
 

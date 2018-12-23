@@ -7,83 +7,92 @@ slug: installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-co
 
 **Update: The following procedure will work on Ubuntu 14.04.1 as well.**
 
-This post will explain how to install Numpy and Scipy on Ubuntu 12.04.3
-with the most recent Intel compilers as of this writing (2013 SP1 Update
-1).
+This post will explain how to install Numpy and Scipy on Ubuntu 12.04.3 with the
+most recent Intel compilers as of this writing (2013 SP1 Update 1).
 <!--more-->
-These instructions are based heavily on the excellent blog post by Son Hua,
-at <http://songuke.blogspot.com/2012/02/compile-numpy-and-scipy-with-intel-math.html>.
+These instructions are based heavily on the excellent blog post by Son Hua, at
+<http://songuke.blogspot.com/2012/02/compile-numpy-and-scipy-with-intel-math.html>.
 
-The procedure to install the Intel compilers can be found at
-[this page]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md/#InstallIntelCompilers).
+The procedure to install the Intel compilers can be found at [this
+page]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md/#InstallIntelCompilers).
 
-The dependencies for NumPy and SciPy can be installed with the
-following, if they haven't been already:
+The dependencies for NumPy and SciPy can be installed with the following, if
+they haven't been already:
 
-    sudo apt-get install git swig libsuitesparse-dev python3 \
-    python3-dev python-dev
-    wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
-    -O - | sudo python3.2
-    sudo easy_install-3.2 pip
-    wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
-    -O - | sudo python2.7
-    sudo easy_install pip
-    sudo pip2 install cython nose
-    sudo pip3 install cython nose
+```bash
+sudo apt-get install git swig libsuitesparse-dev python3 \
+python3-dev python-dev
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
+-O - | sudo python3.2
+sudo easy_install-3.2 pip
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
+-O - | sudo python2.7
+sudo easy_install pip
+sudo pip2 install cython nose
+sudo pip3 install cython nose
+```
 
 First, download the source from the git repositories.
 
-    git clone git://github.com/numpy/numpy.git
-    git clone git://github.com/scipy/scipy.git
+```bash
+git clone git://github.com/numpy/numpy.git
+git clone git://github.com/scipy/scipy.git
+```
 
 To checkout the most recent stable version, type
 
-    git tag
+```bash
+git tag
+```
 
-and pick the highest one that is just numbers. As of today, for `numpy`
-that is `v1.8.2`, and for `scipy` it is `v0.14.0`, so
+and pick the highest one that is just numbers. As of today, for `numpy` that is
+`v1.8.2`, and for `scipy` it is `v0.14.0`, so
 
-    cd numpy && git checkout v1.8.2
-    cd scipy && git checkout v0.14.0
+```bash
+cd numpy && git checkout v1.8.2
+cd scipy && git checkout v0.14.0
+```
 
-This step is optional. The next step is to compile and install `numpy`;
-`scipy` depends on `numpy`, so `numpy` goes first. From the folder where you
-ran the git commands, change into the `numpy` directory (there should be a file
-called `setup.py` if you're in the correct directory), create a file called
-`site.cfg`, and copy the following contents into it:
+This step is optional. The next step is to compile and install `numpy`; `scipy`
+depends on `numpy`, so `numpy` goes first. From the folder where you ran the git
+commands, change into the `numpy` directory (there should be a file called
+`setup.py` if you're in the correct directory), create a file called `site.cfg`,
+and copy the following contents into it:
 
-    [DEFAULT]
-    library_dirs = /usr/local/lib:/usr/lib
-    include_dirs = /usr/local/include:/usr/include
+```ini
+[DEFAULT]
+library_dirs = /usr/local/lib:/usr/lib
+include_dirs = /usr/local/include:/usr/include
 
-    [mkl]
-    library_dirs = /opt/intel/composerxe/lib/intel64:/opt/intel/composerxe/mkl/lib/intel64
-    include_dirs = /opt/intel/composerxe/mkl/include/intel64/lp64
-    mkl_libs = mkl_def, mkl_intel_lp64, mkl_intel_thread, mkl_core, iomp5
-    lapack_libs = mkl_lapack95_lp64
+[mkl]
+library_dirs = /opt/intel/composerxe/lib/intel64:/opt/intel/composerxe/mkl/lib/intel64
+include_dirs = /opt/intel/composerxe/mkl/include/intel64/lp64
+mkl_libs = mkl_def, mkl_intel_lp64, mkl_intel_thread, mkl_core, iomp5
+lapack_libs = mkl_lapack95_lp64
 
-    [umfpack]
-    library_dirs = /usr/lib
-    include_dirs = /usr/include/suitesparse
-    umfpack_libs = umfpack
+[umfpack]
+library_dirs = /usr/lib
+include_dirs = /usr/include/suitesparse
+umfpack_libs = umfpack
 
-    [amd]
-    library_dirs = /usr/lib
-    include_dirs = /usr/include/suitesparse
-    amd_libs = amd
+[amd]
+library_dirs = /usr/lib
+include_dirs = /usr/include/suitesparse
+amd_libs = amd
+```
 
 Note that the `umfpack` and `amd` sections are optional. If you choose not to
 install with support for them, `libsuitesparse-dev` in the dependencies can be
-eliminated. The directories you specify for the libraries and the include **must**
-be the directories where the Intel compilers are actually installed, and this
-directory might be different than listed above.
+eliminated. The directories you specify for the libraries and the include
+**must** be the directories where the Intel compilers are actually installed,
+and this directory might be different than listed above.
 
 The `distutils` setup options for using the Intel C compiler aren't quite right
 by default, so we have to edit one file to ensure all the right flags are used.
-In your favorite text editor, open `numpy/distutils/intelccompiler.py`. Make sure
-to open the `intelccompiler.py` not `intelccompiler.pyc`. We need to change
-the `IntelEM64TCComiler` class to have the right flags. Initially, the class will
-look like:
+In your favorite text editor, open `numpy/distutils/intelccompiler.py`. Make
+sure to open the `intelccompiler.py` not `intelccompiler.pyc`. We need to change
+the `IntelEM64TCComiler` class to have the right flags. Initially, the class
+will look like:
 
 ```python
 #BEFORE
@@ -104,11 +113,10 @@ class IntelEM64TCCompiler(UnixCCompiler):
                              linker_so=compiler + ' -shared')
 ```
 
-We need to change the `self.cc_exe` line (line 10) to include all
-the proper flags. Edit the string on that line to include `-openmp`,
-`-g`, `-O3`, and `-xhost`. You can also comment out the `cc_exe` and
-`cc_args` lines (6 and 7), but this is probably optional. After the
-changes, the code will look like:
+We need to change the `self.cc_exe` line (line 10) to include all the proper
+flags. Edit the string on that line to include `-openmp`, `-g`, `-O3`, and
+`-xhost`. You can also comment out the `cc_exe` and `cc_args` lines (6 and 7),
+but this is probably optional. After the changes, the code will look like:
 
 ```python
 #AFTER
@@ -129,8 +137,8 @@ class IntelEM64TCCompiler(UnixCCompiler):
                              linker_so=compiler + ' -shared')
 ```
 
-These compiler flags will give us all of the benefits of the Intel
-compilers running on Intel chips.
+These compiler flags will give us all of the benefits of the Intel compilers
+running on Intel chips.
 
 Then, we will build and install for Python 2 & 3.
 
@@ -153,9 +161,9 @@ exit
 ```
 
 Awesome, `numpy` is installed. Check that everything went properly by changing
-out of the `numpy` directory, then run the following, in both a Python 2
-and Python 3 shell (the lines with `>>>` indicate text to be typed at the
-Python prompt).
+out of the `numpy` directory, then run the following, in both a Python 2 and
+Python 3 shell (the lines with `>>>` indicate text to be typed at the Python
+prompt).
 
 ```python
 >>> import numpy
@@ -211,17 +219,18 @@ OK (KNOWNFAIL=5, SKIP=7)
 <nose.result.TextTestResult run=5231 errors=0 failures=0>
 ```
 
-During the test, a number of dots will be printed to the screen, along with
-the letters `S` and `K`. If any tests fail, `F` will be printed. All of the
-tests passed for me on 15-JUL-2014.
+During the test, a number of dots will be printed to the screen, along with the
+letters `S` and `K`. If any tests fail, `F` will be printed. All of the tests
+passed for me on 15-JUL-2014.
 
-Now we can install `scipy`. First, change to the `scipy` directory.
-Just like for `numpy`, we need a configuration file so that `scipy`
-knows where to find all of the information it needs. It turns out that
-the `site.cfg` we created for `numpy` will work just fine for `scipy`.
-Type
+Now we can install `scipy`. First, change to the `scipy` directory. Just like
+for `numpy`, we need a configuration file so that `scipy` knows where to find
+all of the information it needs. It turns out that the `site.cfg` we created for
+`numpy` will work just fine for `scipy`. Type
 
-    cp ../numpy/site.cfg site.cfg
+```bash
+cp ../numpy/site.cfg site.cfg
+```
 
 Then, the build and install commands are the same as before:
 
@@ -313,9 +322,9 @@ FAILED (KNOWNFAIL=118, SKIP=449, errors=20, failures=13)
 <nose.result.TextTestResult run=9944 errors=20 failures=13>
 ```
 
-As you can see, `scipy` has a number of errors and failures. The text
-of these errors will be printed prior to the `Ran 9944...` line. Nonetheless,
-everything that I use seems to work.
+As you can see, `scipy` has a number of errors and failures. The text of these
+errors will be printed prior to the `Ran 9944...` line. Nonetheless, everything
+that I use seems to work.
 
-And that should do it. NumPy and SciPy should now be installed for both
-Python 2 & 3.
+And that should do it. NumPy and SciPy should now be installed for both Python 2
+& 3.

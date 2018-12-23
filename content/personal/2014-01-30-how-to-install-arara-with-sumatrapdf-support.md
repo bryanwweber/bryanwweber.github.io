@@ -13,10 +13,11 @@ Windows, so here are some notes to ease the process.
 
 First, download the Arara package from [CTAN](http://www.ctan.org/pkg/arara).
 After unizipping, copy the contents of `arara/scripts` to a directory on your
-path, and/or add the directory with the `arara.jar` file to your path. For instance,
-I copied the files in that folder to `C:\Program Files (x86)\Arara` and added
-that folder to my `PATH` variable. Then, add a batch file named `arara.bat` to
-the same folder where `arara.jar` exists with the following contents:
+path, and/or add the directory with the `arara.jar` file to your path. For
+instance, I copied the files in that folder to `C:\Program Files (x86)\Arara`
+and added that folder to my `PATH` variable. Then, add a batch file named
+`arara.bat` to the same folder where `arara.jar` exists with the following
+contents:
 
 ```batch
 @echo off
@@ -36,7 +37,8 @@ paths:
 
 Then, create the directory `C:\Users\<username>\arara\rules` and in it, create
 two files, `sumatrapdf.yaml` and `sumatra.bat`. The content of these files comes
-from the TeX.SX answer of Mr Komandez <http://tex.stackexchange.com/a/139055/32374>:
+from the TeX.SX answer of Mr Komandez
+<http://tex.stackexchange.com/a/139055/32374>:
 
 ```yaml
 #sumatrapdf.yaml
@@ -58,32 +60,36 @@ START /b "C:\Progra~2\SumatraPDF\SumatraPDF.exe" %1 -reuse-instance %2
 EXIT
 ```
 
-Then, to have Notepad++ able to compile the XeLaTeX document and automatically open the PDF,
-put in the top of your `.tex` file:
+Then, to have Notepad++ able to compile the XeLaTeX document and automatically
+open the PDF, put in the top of your `.tex` file:
 
 ```tex
 % arara: xelatex: { synctex: on shell: off }
 % arara: sumatrapdf
 ```
 
-Next, download the NPPExec plugin from <http://sourceforge.net/projects/npp-plugins/files/NppExec/>,
-and copy the `.dll` file to the `plugins` folder in your Notepad++ installation. Press <kbd>F6</kbd>
+Next, download the NPPExec plugin from
+<http://sourceforge.net/projects/npp-plugins/files/NppExec/>, and copy the
+`.dll` file to the `plugins` folder in your Notepad++ installation. Press ++f6++
 to open the Execute dialog, and put in that box
 
     NPP_SAVE
     cd $(CURRENT_DIRECTORY)
     arara.bat $(NAME_PART)
 
-Save the script with a name, then go to the menubar, Plugins -> NppExec -> Advanced Options..
-Under 'Menu item', choose the script we just created above, and click 'Add/Modify'. Restart
-Notepad++ if prompted. This allows us to assign shortcut keys through Settings -> Shortcut
-Mapper, then find the tab called "Plugins", find the name of the script, click "Modify" and
-add a keyboard shortcut.
+Save the script with a name, then go to the menubar, Plugins -> NppExec ->
+Advanced Options... Under 'Menu item', choose the script we just created above,
+and click 'Add/Modify'. Restart Notepad++ if prompted. This allows us to assign
+shortcut keys through Settings -> Shortcut Mapper, then find the tab called
+"Plugins", find the name of the script, click "Modify" and add a keyboard
+shortcut.
 
-Forward search can be enabled by setting up another NppExec script, this one a one-liner
-(for formatting purposes, its on two lines here but make sure its all one in the NppExec dialog).
+Forward search can be enabled by setting up another NppExec script, this one a
+one-liner (for formatting purposes, its on two lines here but make sure its all
+one in the NppExec dialog).
 
     NPP_RUN "C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe" -reuse-instance \
     $(NAME_PART).pdf -forward-search $(NAME_PART).tex $(CURRENT_LINE)
 
-Then go through the same procedure to set a keyboard shortcut. I'm using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F5</kbd>.
+Then go through the same procedure to set a keyboard shortcut. I'm using
+++ctrl+shift+f5++.

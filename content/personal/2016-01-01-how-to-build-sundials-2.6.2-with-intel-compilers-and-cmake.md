@@ -4,11 +4,16 @@ date: 2016-01-01 12:04
 category: personal
 ---
 
-The removal of the old `configure` build system for SUNDIALS means that CMake must be used. This requires a few different settings than my previous posts. The commands below worked for me on Ubuntu 14.04.1 with the Intel version 15 compilers.
+The removal of the old `configure` build system for SUNDIALS means that CMake
+must be used. This requires a few different settings than my previous posts. The
+commands below worked for me on Ubuntu 14.04.1 with the Intel version 15
+compilers.
 <!--more-->
 
-First, download SUNDIALS from <https://computation.llnl.gov/casc/sundials/main.html> and untar the tarball.
-Then, ensure that your version of CMake is new enough by downloading and installing a recent version of CMake from <https://cmake.org/download/>
+First, download SUNDIALS from
+<https://computation.llnl.gov/casc/sundials/main.html> and untar the tarball.
+Then, ensure that your version of CMake is new enough by downloading and
+installing a recent version of CMake from <https://cmake.org/download/>
 
 Then, build and install SUNDIALS
 
@@ -26,4 +31,5 @@ make install
 exit
 ```
 
-Rather than using the variables in the `configure` script, this sets all the same variables in CMake. Happy solving!
+Rather than using the variables in the `configure` script, this sets all the
+same variables in CMake. Happy solving!

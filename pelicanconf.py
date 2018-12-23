@@ -81,6 +81,19 @@ JINJA_FILTERS = bulrush.FILTERS
 SUMMARY_END_MARKER = '<!--more-->'
 SUMMARY_USE_FIRST_PARAGRAPH = True
 
+MARKDOWN = {
+    "tab_length": 2,
+    "extensions": [
+        "pymdownx.superfences",
+        "pymdownx.inlinehilite",
+        "pymdownx.tilde",
+        "pymdownx.caret",
+        "pymdownx.keys",
+        "attr_list",
+        "tables",
+    ],
+}
+
 MD_INLINE = {
     '|-|': 'cv-position',
     '|+|': 'cv-duty',

@@ -1,6 +1,8 @@
+---
 Title: What Role Does the Government Play in Introducing a New Biofuel to Market?
 category: Research Revealed!
 date: 2012-01-18
+---
 
 One of the ways in which climate change may be mitigated, and domestic energy security improved, is to create a new biofuel to power our cars and trucks that does not rely on traditional petroleum sources. One such fuel, ethanol, is already widely blended into gasoline in the US; another, biodiesel, is on sale in many fueling stations as a standalone fuel for diesel engines. However, due to concerns over the long-term sustainability of current production processes for biofuels (and for ethanol [in particular](http://topics.nytimes.com/top/news/business/energy-environment/biofuels/index.html)), researchers are investigating a so called "second-generation" of biofuels. These include fuels that can be made from cellulose (the material that makes up plants' cell walls, and comprises most of the mass of a plant) as well as fuels made from novel feedstocks, such as algae. My research in particular has focused on one such second-generation biofuel, called biobutanol. Biobutanol has many technical advantages over ethanol, but biobutanol has not been approved by the Environmental Protection Agency (EPA) for use in road vehicles. In a recent review, Slating and Kesan [discussed](http://dx.doi.org/10.1111/j.1757-1707.2011.01146.x)  the regulatory hurdles biobutanol must clear to be approved for everyday use.
 <!--more-->

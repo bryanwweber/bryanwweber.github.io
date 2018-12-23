@@ -1,7 +1,9 @@
+---
 Title: Rotating Detonation Engines the 'wave' of the future?
 Category: Research Revealed!
 Date: 2012-01-10
 Slug: rotating-detonation-engines-the-wave-of-the-future
+---
 
 The desire for energy security and (lack of) climate change are driving two avenues of innovation to power the next generation of vehicles. The first avenue is to invent new fuels, such as bio-fuels, that change the supply dynamics of the industry. The second avenue is to invent entirely new engine concepts to improve efficiency. One such concept, using [detonations](http://en.wikipedia.org/wiki/Detonation) (as opposed to [deflagrations](http://en.wikipedia.org/wiki/Deflagration)) to combust fuel and air mixtures, has been investigated since [the 1940's](http://ronney.usc.edu/AME514S11/Lecture13/Papers/KailasPDEreview-AIAAJ2000.pdf). Using detonations allows for much higher efficiency engine operation. One of the most common types of detonation engines is the Pulsed Detonation Engine (PDE). Unfortunately, due to many difficulties including the intermittent nature of thrust from such engines, no PDEs have been commercially produced to date (although the concept has flown in an [Air Force test plane][testplane]).
 <!--more-->

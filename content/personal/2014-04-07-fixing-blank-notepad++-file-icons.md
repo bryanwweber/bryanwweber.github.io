@@ -1,6 +1,8 @@
+---
 title: Fixing Blank Notepad++ File Icons
 date: 2014-04-07 18:53
 category: personal
+---
 
 I had a problem recently that the file icons in Windows Explorer for
 all the filetypes set to open in Notepad++ were coming up as the blank

@@ -1,6 +1,8 @@
+---
 title:  Fixing small Notepad++ icons
 date:   2014-01-11 15:29
 category: personal
+---
 
 I was recently annoyed by having the wrong icon for certain files that
 should open with Notepad++. <!--more--> You can see the proper icon in the top of

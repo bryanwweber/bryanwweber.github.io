@@ -1,6 +1,8 @@
+---
 title: How to install new Python wheels on Windows 7
 date: 2015-03-20 10:39
 category: personal
+---
 
 Christoph Gohlke's website for Python packages for Windows (he hosts many, but the most popular are probably numpy and scipy) now distributes wheels instead of exe files.
 This means we need the most recent version of pip and a new procedure to install them.

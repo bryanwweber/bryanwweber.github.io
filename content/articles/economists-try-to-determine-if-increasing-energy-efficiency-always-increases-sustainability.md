@@ -1,6 +1,8 @@
+---
 Title: Economists Try to Determine if Increasing Energy Efficiency Always Increases Sustainability
 Category: Research Revealed!
 Date: 2012-01-17
+---
 
 In the race to stop global warming and improve energy security, one of the strongest initiatives politicians can rely on is regulating the energy efficiency of an economic sector, such as manufacturing, energy generation, or transportation. Increasing energy efficiency allows us to "do more with less", implying that increasing energy efficiency is always a good thing. Not so fast, claim some economics researchers from the UK. In a study published in 2009, they found that if energy efficiency of the Scottish economy were increased, the energy consumption of Scotland would increase as well. The authors attribute this to two effects, called rebound and backfire.
 <!--more-->

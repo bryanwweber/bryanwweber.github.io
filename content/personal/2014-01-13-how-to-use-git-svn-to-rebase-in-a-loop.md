@@ -1,6 +1,8 @@
+---
 title:  How to use git-svn to rebase in a loop
 date:   2014-01-13 07:50
 category: personal
+---
 
 I'm working on developing for an open source project right now. The source
 code is stored in a Subversion repository, but my preferred version

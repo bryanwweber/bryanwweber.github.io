@@ -1,6 +1,8 @@
+---
 title:  Installing Cantera on Ubuntu 12.04.3 from scratch/source with Intel compilers
 date:   2014-01-08 17:09
 categories: personal
+---
 
 # Table of Contents:
 

@@ -1,6 +1,8 @@
+---
 Title: Please Oppose SOPA and PIPA!
 category: personal
 date: 2012-01-18
+---
 
 Today there are many huge websites, including Google and Wikipedia who are blacking out their homepages to oppose two acts before Congress called SOPA and PIPA. Although I will typically have no desire to discuss politics on this forum, I want to make an exception to show my opposition to these bills as well. More formally known as the Stop Online Piracy Act (in the House) and the PROTECT IP Act (in the Senate), the details of them are too gory to go into in what I intend here to be a short post. If you want all the details, go [here to Reddit](http://blog.reddit.com/2012/01/technical-examination-of-sopa-and.html) or [here to The Verge](http://www.theverge.com/2011/12/22/2648219/stop-online-piracy-act-sopa-what-is-it).
 <!--more-->

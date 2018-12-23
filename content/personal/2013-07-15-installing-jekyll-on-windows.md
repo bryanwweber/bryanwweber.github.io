@@ -1,6 +1,8 @@
+---
 title: Installing Jekyll on Windows
 category: personal
 date: 2013-07-15
+---
 
 Been trying to migrate this site to use Jekyll ([http://jekyllrb.com](http://jekyllrb.com)) today and finally got it working with Pygments for code highlighting.
 <!--more-->

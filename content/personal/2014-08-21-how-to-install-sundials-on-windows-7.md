@@ -1,6 +1,8 @@
+---
 title: How to build Sundials on Windows 7
 date: 2014-08-21 15:33
 category: personal
+---
 
 [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html) is a SUite
 of Nonlinear and DIfferential/ALgebraic equation Solvers. It is useful for

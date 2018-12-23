@@ -1,6 +1,8 @@
+---
 title:  How to set up an encrypted .netrc file with GPG for GitHub 2FA access
 date:   2016-01-01 13:20
 category: personal
+---
 
 Enabling 2 factor authentication on GitHub is a good way to protect your data, but unfortunately, it means you can't use your password to login at the command line on Linux for pushes and pulls to HTTPS repositories.
 You can set up a special `.netrc` file to enable 2FA login from the command line.

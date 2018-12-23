@@ -1,6 +1,8 @@
+---
 title:  How to build a package installer on OS X for the Cantera MATLAB interface
 date:   2016-01-01 13:27
 category: personal
+---
 
 To make it easier to install certain portions of Cantera onto Macs, rather than having to install XCode and build from the source, it is possible to create an installer package.
 These instructions document how to do so for the MATLAB interface portion only.

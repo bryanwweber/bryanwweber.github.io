@@ -1,6 +1,8 @@
+---
 title: How to position images in Beamer absolutely
 date: 2014-09-02 13:56
 category: personal
+---
 
 In Beamer, it is useful to position images absolutely.
 There are many ways to do this, but one simple one-liner can be done with `tikz`.

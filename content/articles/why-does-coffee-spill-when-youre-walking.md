@@ -1,6 +1,8 @@
+---
 Title: Why does coffee spill when you're walking?
 category: Research Revealed!
 date: 2012-06-03
+---
 
 We've all been there - walking back to your table in Starbucks, hot mug of coffee in hand, trying to catch the eye of the cute girl by the window when, whoops! Coffee everywhere! Given the (probably) millions of hipsters afflicted by this scenario on a yearly basis, it seems surprising that very little research has been done into the dynamics of why the coffee ends up on on your skinny jeans instead of staying in the cup where it belongs. Never fear though, because a graduate student from the University of California at Santa Barbara has recently published a study examining the mathematics and fluid dynamics behind the spilled cup of coffee.
 <!--more-->

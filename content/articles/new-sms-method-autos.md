@@ -1,6 +1,8 @@
+---
 Title: A new method for estimating secondary mass savings in vehicles could offer improved fuel economy
 category: Research Revealed!
 date: 2012-05-19
+---
 
 A significant determinant of the fuel economy of a vehicle, in particular automobiles, is the gross vehicle mass (GVM). Reducing the GVM can offer substantial improvements in fuel economy, varying (depending on the estimate) between 2-8% improvements in fuel economy for each 10% savings in mass. Manufacturers have many methods to reduce the GVM, including material substitution (plastic for metal) and novel designs. Although these techniques can result in substantial primary mass savings, they actually represent an underestimate of the total possible mass that can be removed. This is because as the automobile is made lighter, structural components can also be made lighter, resulting in secondary mass savings (SMS). So, for instance, a lighter car would require a smaller and lighter transmission, or smaller and lighter brakes. A new paper from Alonso et al. [discusses](https://doi.org/10.1021/es202938m) a new method for manufacturers to estimate SMS more accurately.
 <!--more-->

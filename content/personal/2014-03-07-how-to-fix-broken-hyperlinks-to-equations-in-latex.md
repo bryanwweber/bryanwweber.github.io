@@ -1,6 +1,8 @@
+---
 title: How to fix broken hyperlinks to equations in LaTeX
 date: 2014-03-07 23:00
 category: personal
+---
 
 While writing my dissertation in LaTeX, I was having a problem that
 some sub-equations were not linking to the correct place. The solution

@@ -1,6 +1,8 @@
+---
 Title: How the Little Ice Age was Triggered and Sustained
 category: Research Revealed!
 date: 2012-01-30
+---
 
 During the late Middle Ages, many of the glaciers in Artic Canada and Iceland experienced abrupt increases in their size, due to substantially cooler summer months. This advance of glaciers has been termed the Little Ice Age (LIA), and the expansion of the glaciers has only been undone in the last decade or two. There are several hypotheses as to the cause of the glacial expansion during the LIA, but until now, no definitive answers have emerged. However, the retreat of these glaciers over the last few decades has allowed scientists to study the plants that were killed by the advance, determine the dates of the expansion of the glaciers, and connect the timing with global events to try to assign a cause to the LIA.
 <!--more-->

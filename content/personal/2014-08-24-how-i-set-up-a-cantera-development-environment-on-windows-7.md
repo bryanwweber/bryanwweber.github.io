@@ -1,6 +1,8 @@
+---
 title: How I set up a Cantera development environment on Windows 7
 date: 2014-08-24 09:46
 category: personal
+---
 
 Setting up a development environment for Cantera on Windows 7 can be a little
 trickier than on [Linux]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md).

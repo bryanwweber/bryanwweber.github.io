@@ -1,6 +1,8 @@
+---
 title: How to enable journal abbreviations in Mendeley bibliographies
 category: personal
 date: 2012-07-18
+---
 
 **UPDATE (10/10/2013):** The newest version of Mendeley (1.10.1) now supports journal abbreviations, so go out there and upgrade! I've also removed the file since it isn't necessary any longer.
 <!--more-->

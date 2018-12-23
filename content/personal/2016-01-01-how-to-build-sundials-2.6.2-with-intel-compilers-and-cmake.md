@@ -1,6 +1,8 @@
+---
 title: How to build SUNDIALS 2.6.2 with Intel compilers and CMake
 date: 2016-01-01 12:04
 category: personal
+---
 
 The removal of the old `configure` build system for SUNDIALS means that CMake must be used. This requires a few different settings than my previous posts. The commands below worked for me on Ubuntu 14.04.1 with the Intel version 15 compilers.
 <!--more-->

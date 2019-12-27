@@ -5,3 +5,5 @@ __pycache__
 output
 pelican.pid
 srv.pid
+.python-version
+.mypy_cache

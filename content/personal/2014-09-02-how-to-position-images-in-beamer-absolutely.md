@@ -22,7 +22,7 @@ be made by using the `calc` library.
 \usetikzlibrary{calc}
 % ...
 % Main document
-\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,0))$) {\includegraphics{foo}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,0)$) {\includegraphics{foo}};
 ```
 
 will place the image 1 cm to the left of the center.

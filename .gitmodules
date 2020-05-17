@@ -1,7 +1,7 @@
 [submodule "pelican-plugins"]
 	path = pelican-plugins
-	url = https://github.com/bryanwweber/pelican-plugins
-	branch = fix_md_inline
+	url = https://github.com/getpelican/pelican-plugins
+	branch = master
 [submodule "bulrush"]
 	path = bulrush
 	url = ../bulrush/

@@ -77,7 +77,7 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
 
 .paperdoi { position: relative; padding-left: 20px; }
 .paperdoi:after {
-    content: '\e928';
+    content: '\e97E';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */
@@ -85,7 +85,7 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
 
 .paperarxiv { position: relative; padding-left: 20px; }
 .paperarxiv:after {
-    content: '\e918';
+    content: '\e974';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */
@@ -93,7 +93,7 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
 
 .paperfigshare { position: relative; padding-left: 20px; }
 .paperfigshare:after {
-    content: '\e914';
+    content: '\e981';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */

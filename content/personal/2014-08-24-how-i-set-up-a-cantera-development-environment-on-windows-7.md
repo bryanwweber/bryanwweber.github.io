@@ -6,7 +6,7 @@ category: personal
 
 Setting up a development environment for Cantera on Windows 7 can be a little
 trickier than on
-[Linux]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md).
+[Linux]({filename}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md).
 This post contains instructions for how I set up my development environment on
 Windows 7.
 <!--more-->
@@ -35,7 +35,7 @@ problem.
 
 Next, install [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html)
 (I've helpfully posted some instructions
-[here]({static}2014-08-21-how-to-install-sundials-on-windows-7.md)). Then,
+[here]({filename}2014-08-21-how-to-install-sundials-on-windows-7.md)). Then,
 download and unzip the Boost libraries: <http://www.boost.org/> I recommend
 unzipping into the root of the `C:\` drive, so there will be a folder called
 `boost_1_56_0` (for the most recent version as of this writing) with all the

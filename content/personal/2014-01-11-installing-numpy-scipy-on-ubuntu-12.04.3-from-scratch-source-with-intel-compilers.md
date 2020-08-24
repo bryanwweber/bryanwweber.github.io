@@ -14,7 +14,7 @@ These instructions are based heavily on the excellent blog post by Son Hua, at
 <http://songuke.blogspot.com/2012/02/compile-numpy-and-scipy-with-intel-math.html>.
 
 The procedure to install the Intel compilers can be found at [this
-page]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md/#InstallIntelCompilers).
+page]({filename}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md/#InstallIntelCompilers).
 
 The dependencies for NumPy and SciPy can be installed with the following, if
 they haven't been already:

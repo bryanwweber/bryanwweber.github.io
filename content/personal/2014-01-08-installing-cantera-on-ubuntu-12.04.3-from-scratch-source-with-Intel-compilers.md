@@ -19,7 +19,7 @@ categories: personal
 
 I have posted new instructions for how to build the developer's version of
 Cantera in a new post: [Installing Cantera on Ubuntu with Intel Compilers
-UPDATED!]({static}2016-01-01-how-to-install-cantera-on-ubuntu-updated.md)
+UPDATED!]({filename}2016-01-01-how-to-install-cantera-on-ubuntu-updated.md)
 
 ## Introduction {: #Introduction}
 
@@ -154,7 +154,7 @@ sudo pip install Sphinx pygments pyparsing sphinxcontrib-doxylink
 A quick perusal of the list of dependencies shows that NumPy and SciPy are also
 required to use the Python interface. If you would like to compile these with
 the Intel compilers, see
-[here]({static}2014-01-11-installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers.md).
+[here]({filename}2014-01-11-installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers.md).
 If using GCC is OK with you, then `pip` should be good enough.
 
 ```bash

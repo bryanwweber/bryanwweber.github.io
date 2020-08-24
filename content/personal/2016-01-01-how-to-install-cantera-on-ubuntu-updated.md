@@ -6,7 +6,7 @@ category: personal
 
 Well, it is now 2 years since I wrote my original post on [how to install
 Cantera with the Intel
-compilers]({static}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md),
+compilers]({filename}2014-01-08-installing-cantera-on-ubuntu-12.04.3-from-scratch-source-with-Intel-compilers.md),
 and things have changed. For one, Ubuntu has been upgraded (and will be upgraded
 again this summer); for another, there is a new version of Cantera to work with.
 Actually, there are two new versions, if you count the master branch stored at

@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 import sys
 sys.path.append('bulrush')
 
@@ -43,8 +40,8 @@ SOCIAL = (
     ('ORCID', 'https://orcid.org/0000-0003-0815-9270'),
     ('Google Scholar', 'https://scholar.google.com/citations?user=48LLBNMAAAAJ&hl=en'),
     ('LinkedIn', 'https://www.linkedin.com/in/bryanwweber'),
-    ('Mendeley', 'https://www.mendeley.com/profiles/bryan-w-weber/'),
-    ('Academia.edu', 'https://uconn.academia.edu/BryanWWeber'),
+    # ('Mendeley', 'https://www.mendeley.com/profiles/bryan-w-weber/'),
+    # ('Academia.edu', 'https://uconn.academia.edu/BryanWWeber'),
     ('Zotero', 'https://www.zotero.org/darthbith'),
     ('arXiv', 'https://arxiv.org/a/weber_b_1.html'),
 )

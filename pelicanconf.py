@@ -8,8 +8,8 @@ import bulrush  # noqa: E402
 # LOAD_CONTENT_CACHE = False
 ########
 
-AUTHOR = 'Bryan W. Weber'
-SITENAME = 'Bryan W. Weber'
+AUTHOR = 'Bryan Weber'
+SITENAME = 'Bryan Weber'
 SITEURL = ''
 
 PATH = 'content'

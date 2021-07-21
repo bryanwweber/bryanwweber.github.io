@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>Writing Task Plugins for Nikola</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://bryanwweber.com/theme/css/main.cca68273.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
+      <link rel="stylesheet" href="https://bryanwweber.com/css/extra.css">
+      <link rel="stylesheet" href="https://bryanwweber.com/extra/css/academicons.min.css">
+<meta property="og:title" content="Bryan W. Weber - Writing Task Plugins for Nikola">
+  <meta property="og:description" content="Nikola is an awesome static website generator built in Python. I recently used it to develop the new website for the Cantera project. The architecture of Nikola is quite interesting. It is...">
+<meta property="og:url" content="https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/">
+<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="Bryan W. Weber">
+<meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-12-22T16:37:00-05:00">
+  <meta property="article:section" content="personal">
+</head>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-left navbar-brand">
+          <a class="navbar-item title is-3 is-active"
+             href="https://bryanwweber.com/">Bryan W. Weber</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/code/">Code</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/curriculum-vitae/">Curriculum&nbsp;vitae</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/work/">Research&nbsp;<Span Class="amp">&amp;</span>&nbsp;publications</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/category/research-revealed.html">Research Revealed!</a>
+          <a class="navbar-item is-tab is-active"
+             href="https://bryanwweber.com/category/personal.html">Personal</a>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+<section id="content" class="body">
+  <article>
+    <h1 class="title">
+      <a href="https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/" rel="bookmark"
+         title="Permalink to Writing Task Plugins for Nikola">Writing Task Plugins for&nbsp;Nikola</a></h1>
+<footer class="post-info">
+  <abbr class="published" title="2018-12-22T16:37:00-05:00">
+    Published <span class="is-info">Sat 22 December 2018</span>
+    in <a href="https://bryanwweber.com/category/personal.html">personal</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="https://bryanwweber.com/author/bryan-w-weber.html">Bryan W. Weber</a>
+</em>
+    </p>
+  
+</footer>    <div class="section"><p><a href="https://getnikola.com">Nikola</a> is an awesome static website generator built in Python. I recently used
+it to develop the new <a href="https://cantera.org">website</a> for the <a href="https://github.com/cantera/cantera-website">Cantera
+project</a>. The architecture of Nikola
+is quite interesting. It is essentially a series of plugins that find posts and
+pages and render the contents to <span class="caps">HTML</span>. Nikola supports source files written in
+reST, Markdown, and Jupyter Notebooks out-of-the-box, and it is relatively easy
+to add plugins that can process other formats, as well as plugins to accomplish
+any other task that would be useful for your site.
+</p>
+<p>Nikola plugins can do more than render pages to <span class="caps">HTML</span>. There are plugins that
+enable the commands (<code>nikola build</code>, <code>nikola auto</code>, etc.), plugins that provide
+shortcodes you can use in a document, for instance, to link to another page on
+your site by its slug instead of the <span class="caps">URL</span>, and a general category of <code>Task</code>s. I
+want to write some more about <code>Task</code> plugins&nbsp;here.</p>
+<p><code>Task</code> plugins, as the name implies, accomplish tasks on the source files for
+the website and are run during the <code>nikola build</code> command (or when the <code>build</code>
+is invoked automatically, such as during <code>nikola auto</code>). <code>Task</code>s includes
+generating tags (and tag pages) for posts, creating image galleries, copying
+assets (<span class="caps">CSS</span>, favicons, etc.) from the source tree to the output, and&nbsp;more.</p>
+<p>Creating your own Nikola plugin is quite simple. They are Python scripts that
+are stored in a <code>plugins</code> directory at the top level of the source for your
+website, right alongside the <code>pages</code> and <code>posts</code> directories that store your
+content. To let Nikola know that a particular Python script is a plugin, you
+have to write a <code>.plugin</code> file, which is an <span class="caps">INI</span>-formatted file to tell Nikola
+where to find the module that it should run. Taking the example from the <a href="https://getnikola.com/extending.html#task-plugins">Nikola
+documentation</a>:</p>
+<div class="highlight"><pre><span></span><span class="k">[Core]</span>
+<span class="na">Name</span> <span class="o">=</span> <span class="s">copy_assets</span>
+<span class="na">Module</span> <span class="o">=</span> <span class="s">task_copy_assets</span>
+<span class="na">...</span>
+</pre></div>
+
+<p>In the <code>[Core]</code> section, the <code>Name</code> setting must match the <code>name</code> of the <code>Task</code>
+(see below), and the <code>Module</code> setting is the name of the Python script that
+should be run (without the <code>.py</code>).</p>
+<p>Now, to write the Python for the actual plugin. First, your <code>Task</code> must inherit
+from the <code>Task</code> class from the <code>nikola.plugin_categories</code> module, or another
+class that inherits from that&nbsp;class.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+
+<span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my_task&quot;</span>
+</pre></div>
+
+<p>Note that the <code>name</code> class attribute must match the <code>Name</code> in the plugin <span class="caps">INI</span>
+file. In the <code>Task</code> class, there are two instance methods that are important:
+the <code>set_site</code> method (which is actually important for all Nikola plugins) and
+the <code>get_tasks</code> method (which is specific to task&nbsp;plugins).</p>
+<p>The <code>set_site</code> method has the&nbsp;signature</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">)</span>
+</pre></div>
+
+<p>where <code>site</code> is the instance of the website that you&#8217;re building. The
+documentation for the <code>site</code> instance is available on the <a href="https://nikola.readthedocs.io/en/latest/nikola/#module-nikola.nikola">Nikola ReadTheDocs</a>.
+The <code>set_site</code> method is run when the plugin is loaded and the site is being
+initialized. This is a good place to do any setup that you need to run your
+task. For instance, if there are configuration variables that your tasks need
+access to, it is common to group those into a dictionary in the <code>set_site</code>
+method. Another common thing to do is <a href="https://bryanwweber.com/writing/personal/2018/12/20/controlling-plugin-task-execution-order-in-nikola/">inject your
+task</a>
+as a dependency to another task. Including the <code>set_site</code> method is optional,
+but if you do, you should make sure to call the <code>super</code> of the&nbsp;class:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+
+<span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my_task&quot;</span>
+
+    <span class="k">def</span> <span class="nf">set_site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">):</span>
+        <span class="c1"># Conduct setup</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyTask</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">set_site</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+</pre></div>
+
+<p>The other method that is important is the <code>gen_tasks</code> method. According to the
+documentation, the <code>gen_tasks</code> method should <code>yield</code> <a href="http://pydoit.org/tasks.html">doit tasks</a>.
+<a href="http://pydoit.org/"><code>pydoit</code></a> is an automation library that determines the
+appropriate order to run dependent tasks. So, for instance, doit will determine
+that rendering the <span class="caps">HTML</span> for your pages is dependent on first parsing the source,
+and run the appropriate Nikola tasks in the correct&nbsp;order.</p>
+<p>A doit task can be most simply represented as a Python dictionary with special
+keywords as the keys. In particular, the <code>actions</code> keyword specifies what, well,
+action(s) the task should take. This is most commonly a function that actually
+does the work required for the task. The reason for this indirection is that
+doit pre-processes all of the tasks and decides which ones need to be run based
+on their output changing or not being current. Therefore, we don&#8217;t want doit to
+be forced to run the &#8220;task&#8221; we want to be accomplished until it is ready to do
+so. Thus, within the <code>Task</code> context, a sample might look&nbsp;like</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+
+<span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my_task&quot;</span>
+
+    <span class="k">def</span> <span class="nf">gen_tasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">action_function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="k">yield</span> <span class="p">{</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="n">action_function</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;arg1value&quot;</span><span class="p">,</span> <span class="s2">&quot;arg2value&quot;</span><span class="p">])</span>
+            <span class="p">],</span>
+        <span class="p">}</span>
+</pre></div>
+
+<p>This way, Nikola is free to execute the <code>gen_tasks</code> function on every <code>build</code>
+invocation, but the <code>action_function</code> will only be executed when Nikola passes
+control to doit and doit determines the result of running the task is&nbsp;out-of-date.</p>
+<p>The signature of the <code>action_function</code> is totally arbitrary and can be modified
+to suit the users needs. Arguments passed to the <code>action_function</code> are specified
+as the second and third elements of the tuple that specifies the <code>actions</code>,
+namely, if the second argument is a list, the elements of the list are passed as
+arguments to the function, and if the third argument is a dictionary, the values
+are passed as keyword arguments (based on the keys) to the&nbsp;function.</p>
+<p>There are a few other important keywords in the doit task dictionary. These&nbsp;include:</p>
+<ul>
+<li><code>basename</code>: The base name for the task, will be appended with the <code>name</code>
+  keyword to generate a unique name for the&nbsp;task</li>
+<li><code>name</code>: A unique name for the task, see also <code>basename</code></li>
+<li>
+<p><code>uptodate</code>: A list of <code>True</code>, <code>False</code>, <code>None</code>, or function calls (that must
+  return one of <code>True</code>, <code>False</code>, or <code>None</code>) to determine whether the task should
+  be executed. Any elements of the list that are <code>False</code> will result in the task
+  being executed. Note that even if all the elements are <code>True</code>, the task may
+  still be executed because doit also considers other kinds of dependencies,
+  such as output files, to determine whether the task is out-of-date. See also
+  the <a href="http://pydoit.org/dependencies.html#attr-uptodate">doit documentation</a>.</p>
+<ul>
+<li>
+<p><a href="https://github.com/getnikola/nikola/blob/3671c65476c87dbfa55cfd926a1084613289859b/nikola/utils.py#L552"><code>config_changed</code></a>: This is a class from the Nikola <code>utils</code>
+  module (and is an overload of the class of the same name from doit) that
+  computes a hash to determine if a &#8220;configuration&#8221; value has changed. The
+  configuration value is passed to the function and can be a string or a
+  dictionary. If the value is a dictionary, then each key is hashed to
+  determine any changes; if anything comes out different, a <code>False</code> element is
+  put into the <code>uptodate</code> list. Usage&nbsp;is</p>
+<div class="highlight"><pre><span></span><span class="n">config_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;keyword&quot;</span><span class="p">:</span> <span class="s2">&quot;something that can be hashed&quot;</span><span class="p">}</span>
+<span class="k">yield</span> <span class="p">{</span>
+    <span class="c1"># actions, etc.</span>
+    <span class="s2">&quot;uptodate&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">utils</span><span class="o">.</span><span class="n">config_changed</span><span class="p">(</span><span class="n">config_dict</span><span class="p">)],</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>A very useful place to find out what plugins can do is to look at the <a href="https://github.com/getnikola/nikola/tree/master/nikola/plugins"><code>plugins</code>
+directory</a> in
+the Nikola source tree. Hopefully, this description will help you understand
+what the code is&nbsp;doing!</p></div>
+
+  </article>
+</section>
+
+<script type="application/ld+json">
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan W. Weber"}, "datePublished": "2018-12-22T16:37:00-05:00", "headline": "Writing Task Plugins for&nbsp;Nikola", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "Nikola is an awesome static website generator built in Python. I recently used it to develop the new website for the Cantera project. The architecture of Nikola is quite interesting. It is essentially a series of plugins that find posts and pages and render the contents to HTML. Nikola supports source files written in reST, Markdown, and Jupyter Notebooks out-of-the-box, and it is relatively easy to add plugins that can process other formats, as well as plugins to accomplish any other task that would be useful for your site."}
+</script>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/bryanwweber">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">GitHub</span>
+    </a></li>
+    <li><a href="https://orcid.org/0000-0003-0815-9270">
+      <span class="icon is-small">
+          <i class="ai ai-orcid fa-fw"></i>
+      </span>
+      <span class="link-text">ORCID</span>
+    </a></li>
+    <li><a href="https://scholar.google.com/citations?user=48LLBNMAAAAJ&hl=en">
+      <span class="icon is-small">
+          <i class="ai ai-google-scholar fa-fw"></i>
+      </span>
+      <span class="link-text">Google Scholar</span>
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/bryanwweber">
+      <span class="icon is-small">
+          <i class="fa fa-linkedin fa-fw"></i>
+      </span>
+      <span class="link-text">LinkedIn</span>
+    </a></li>
+    <li><a href="https://www.zotero.org/darthbith">
+      <span class="icon is-small">
+          <i class="ai ai-zotero fa-fw"></i>
+      </span>
+      <span class="link-text">Zotero</span>
+    </a></li>
+    <li><a href="https://arxiv.org/a/weber_b_1.html">
+      <span class="icon is-small">
+          <i class="ai ai-arxiv fa-fw"></i>
+      </span>
+      <span class="link-text">arXiv</span>
+    </a></li>
+
+
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <p><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+          <a href="https://blog.getpelican.com/">Pelican</a>
+        | <span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5
+        | <span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3
+        | <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><span class="icon is-small"><i class="fa fa-creative-commons"></i></span> Some Rights Reserved</a>
+      </p>
+    </div>
+  </div>
+  <div class="github-fork-ribbon-wrapper is-hidden-mobile is-hidden-print">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/bryanwweber/bryanwweber.com">
+        <i class="fa fa-github fa-fw"></i>
+        Fork me on GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
+</body>
+</html>

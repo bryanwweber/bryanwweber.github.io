@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/bryanwweber
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bryanwweber.com
+  * I am bryanwweber (https://keybase.io/bryanwweber) on keybase.
+  * I have a public key with fingerprint 847D 51D1 70A1 3C47 E5E6  0FBA 17FD 881B 7633 F391
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018ee6d28942fd061d911fe426a4a4fd1f3ba2ebf73a566885779acfbe35aa64a80a",
+            "fingerprint": "847d51d170a13c47e5e60fba17fd881b7633f391",
+            "host": "keybase.io",
+            "key_id": "17fd881b7633f391",
+            "kid": "01018ee6d28942fd061d911fe426a4a4fd1f3ba2ebf73a566885779acfbe35aa64a80a",
+            "uid": "1e9a74ccc0fb8ec30ed121404c726e19",
+            "username": "bryanwweber"
+        },
+        "service": {
+            "hostname": "bryanwweber.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1460769848,
+    "expire_in": 157680000,
+    "prev": "4b3b13ffb8d0d585a1decd365eab01e8a2d2c952d8df50d89fef3a791eac2994",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIjAnicrZJdSBRRFMd3M4sWhcyohLSaiLAVnTufd5askMLCFHuSvljvzD2zjunO
+OjuuqWmBUFLQd4SlRA8lWGBYRCCV2gdFRUghy1IQRgQhhEEQktkdq6d67L5c7j2/
+8z//czgPM9N8AX/ozPiCJ+0rPvqfDfc0+qqyzuJWTrdpMxdq5fbB7AV1FOJueJ9F
+uRDHIx5hAIUKWJMEk/IKohpCJkiCQiQimRSZok4E0E1VJLKiYCyrqkYMUwdRJkSR
+COYJV8CZVjQCTsyxoi6TxZJKZUSRyhMkGpIKMii8qROkmhRjpKuKKJqihlhijR33
+Mpg5ncSh0LLZH3uEZ+39g//Pvht/1QGNqJJhGMwkBkPkgSIBSbxkqIICSPPAODhR
+Ug+M1p1mEm1qAh0crq2AY4GEZYA3W6+Zv6FCw65nCjHHdm3DrmPBGteNhbxctznm
+wQwL/5YJ61aUsmGyhAQ4ccuOciHESMO1PF0kKbyqaFjCBRzsj1kOhC2PkFUF8+x4
+ZSDBJCVd1JFosn4oT2UsE0TBoKIiA9F5BJgIVDA0WaCYmjJPsWaCKRJVQ0AMQdMk
+zmusIWozbZH5JBGmGbciUeI2OsC1jQztmevzB3zz0ud4W+YLLFj4Z/ceXZ8/E1ub
+vsTfF/S1rzw5eTlRfbdWHYkc3V2Wyvw6vujgWMmGrDXBPR33E6Udm6YHruR+74OR
+9t6lnUXrynMKbj4orp+zfnL6Rcbpjf2Do5ODwoNw7ah/XWf3YPat94XDiapz/UM3
+KuqMXZHk2urXX7shwO/Q5g08XP62KP8QF/9RIa++emC7mLx5rexdy+hd/3c9eHT5
+t/y0kvStxzf1rpxITWS+y3nBXVy1bdeFqcDL4sMvi6budT3fkl8+fidZ+XTviYza
+IX7AavgythO9upfKG5tZ+OnIq943n2+T3KSd07B4pqeiq/JG6bHzGdnJzS1tds2l
+U4+XPYl9SEvJwcU9eRPjvcmfrFJCXw==
+=gr6b
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bryanwweber
+
+==================================================================
+

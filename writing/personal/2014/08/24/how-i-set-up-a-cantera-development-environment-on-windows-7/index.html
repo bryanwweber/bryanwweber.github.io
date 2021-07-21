@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>How I set up a Cantera development environment on Windows 7</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://bryanwweber.com/theme/css/main.cca68273.css">
+  <style media="print">.is-hidden-print{display:none !important}</style>
+      <link rel="stylesheet" href="https://bryanwweber.com/css/extra.css">
+      <link rel="stylesheet" href="https://bryanwweber.com/extra/css/academicons.min.css">
+<meta property="og:title" content="Bryan W. Weber - How I set up a Cantera development environment on Windows 7">
+  <meta property="og:description" content="Setting up a development environment for Cantera on Windows 7 can be a little trickier than on Linux. This post contains instructions for how I set up my development environment on Windows 7.">
+<meta property="og:url" content="https://bryanwweber.com/writing/personal/2014/08/24/how-i-set-up-a-cantera-development-environment-on-windows-7/">
+<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="Bryan W. Weber">
+<meta property="og:type" content="article">
+  <meta property="article:published_time" content="2014-08-24T09:46:00-04:00">
+  <meta property="article:section" content="personal">
+</head>
+
+<body id="index" class="home">
+<header class="hero is-primary">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-left navbar-brand">
+          <a class="navbar-item title is-3 is-active"
+             href="https://bryanwweber.com/">Bryan W. Weber</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar has-shadow is-hidden-print">
+  <div class="container">
+    <div class="navbar-center"></div>
+    <span id="navToggle" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/code/">Code</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/curriculum-vitae/">Curriculum&nbsp;vitae</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/work/">Research&nbsp;<Span Class="amp">&amp;</span>&nbsp;publications</a>
+          <a class="navbar-item is-tab "
+             href="https://bryanwweber.com/category/research-revealed.html">Research Revealed!</a>
+          <a class="navbar-item is-tab is-active"
+             href="https://bryanwweber.com/category/personal.html">Personal</a>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section columns">
+    <div class="column is-three-quarters-desktop is-two-thirds-tablet">
+<section id="content" class="body">
+  <article>
+    <h1 class="title">
+      <a href="https://bryanwweber.com/writing/personal/2014/08/24/how-i-set-up-a-cantera-development-environment-on-windows-7/" rel="bookmark"
+         title="Permalink to How I set up a Cantera development environment on Windows 7">How I set up a Cantera development environment on Windows&nbsp;7</a></h1>
+<footer class="post-info">
+  <abbr class="published" title="2014-08-24T09:46:00-04:00">
+    Published <span class="is-info">Sun 24 August 2014</span>
+    in <a href="https://bryanwweber.com/category/personal.html">personal</a>
+  </abbr>
+
+    <p class="author">
+      <em>by           <a class="url fn" href="https://bryanwweber.com/author/bryan-w-weber.html">Bryan W. Weber</a>
+</em>
+    </p>
+  
+</footer>    <div class="section"><p>Setting up a development environment for Cantera on Windows 7 can be a little
+trickier than on
+<a href="https://bryanwweber.com/writing/personal/2014/01/08/installing-cantera-on-ubuntu-12043-from-scratchsource-with-intel-compilers/">Linux</a>.
+This post contains instructions for how I set up my development environment on
+Windows 7.
+</p>
+<p>The first step is to download the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=8279"><span class="caps">SDK</span> 7.1 compiler</a> and its <a href="http://www.microsoft.com/en-us/download/details.aspx?id=4422"><span class="caps">SP1</span> update</a>.
+Installation should be a &#8220;Next-&gt;Next&#8221; affair, but if the install fails, <a href="http://www.mathworks.com/matlabcentral/answers/95039-why-does-the-sdk-7-1-installation-fail-with-an-installation-failed-message-on-my-windows-system">The
+Mathworks recommends</a> the following&nbsp;steps:</p>
+<ol>
+<li>Uninstall any Visual C++ 2010 Redistributable&nbsp;packages</li>
+<li>Install the <span class="caps">SDK</span> again, but uncheck the options for the compiler and the
+   Visual C++&nbsp;Redistributable</li>
+<li>Install the compiler update, which will install the&nbsp;compilers</li>
+<li>Reinstall the Visual C++ Redistributable from <a href="http://www.microsoft.com/en-us/download/details.aspx?id=14632">this&nbsp;link</a></li>
+</ol>
+<p>If you would like to have Visual Studio installed in addition to the <span class="caps">SDK</span>, the
+instructions <a href="http://blogs.msdn.com/b/vcblog/archive/2011/03/31/10148110.aspx">here</a> give the proper order to install&nbsp;everything.</p>
+<p>If you only have the <span class="caps">SDK</span> and its update installed, Microsoft has
+not-so-helpfully removed a file that is necessary to build Cantera, called
+<code>ammintrin.h</code>. There is a post <a href="http://www.mathworks.com/matlabcentral/answers/90383-fix-problem-when-mex-cpp-file">at The Mathworks</a> forum with a link to the
+file, and I&#8217;ll also post it <a href="https://bryanwweber.com/files/2014/08/ammintrin.h">here</a> for reference. Add this file to the
+<code>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include</code> directory, and
+it should be all set. If you have Visual Studio installed, this will not be a&nbsp;problem.</p>
+<p>Next, install <a href="http://computation.llnl.gov/casc/sundials/main.html"><span class="caps">SUNDIALS</span></a>
+(I&#8217;ve helpfully posted some instructions
+<a href="https://bryanwweber.com/writing/personal/2014/08/21/how-to-build-sundials-on-windows-7/">here</a>). Then,
+download and unzip the Boost libraries: <a href="http://www.boost.org/">http://www.boost.org/</a> I recommend
+unzipping into the root of the <code>C:\</code> drive, so there will be a folder called
+<code>boost_1_56_0</code> (for the most recent version as of this writing) with all the
+required files inside. Note that if you&#8217;re not careful, you&#8217;ll get a folder
+<code>C:\boost_1_56_0\boost_1_56_0</code>, which is not what we want, it should be just
+<code>C:\boost_1_56_0\&lt;files go here&gt;</code>.</p>
+<p>Now we need other components of the development environment, particularly Python
+and all its packages. The most recent versions of Python are 2.7.8 and 3.4.1,
+which can be downloaded respectively <a href="https://www.python.org/download/releases/2.7.8/">here</a> and <a href="https://www.python.org/downloads/release/python-341/">here</a>. Make sure
+to get the proper version for your operating system (32-bit or 64-bit).
+Installation into the default directories is preferable, and make sure to have
+the python.exe added to your&nbsp;path.</p>
+<p>If you forget to add python.exe to your path in the installer, open the System
+control panel (<span class="keys"><kbd class="key-left-windows">Left Win</kbd><span>+</span><kbd class="key-media-pause">Pause</kbd></span>), choose &#8220;Advanced System Settings&#8221; in the left
+panel, then choose the &#8220;Advanced&#8221; tab, and at the bottom click &#8220;Environment
+Variables&#8221;. In the &#8220;System variables&#8221; box, find &#8220;Path&#8221; and add
+<code>C:\Python34;C:\Python34\Scripts;C:\Python27;C:\Python27\Scripts;</code> to the front
+of the text&nbsp;box.</p>
+<p>While we&#8217;re here, we need to add one environment variable. Click &#8220;New&#8221;, and in
+the first text box add <code>VS90COMNTOOLS</code> and in the second box add
+<code>%VS100COMNTOOLS%</code>. This sets the variable called <code>VS90COMNTOOLS</code> to be equal to
+the value of the variable called <code>VS100COMNTOOLS</code>. <code>VS100COMNTOOLS</code> is set by
+the <span class="caps">SDK</span> when it is installed, but Python 2 depends on <code>VS90COMNTOOLS</code> being
+installed. This allows us to install certain packages with <code>pip</code> in Python 2.
+Note that not all packages will work with this trick (in particular,
+<code>matplotlib</code> can&#8217;t be installed with <code>pip</code> this&nbsp;way).</p>
+<p>Python 3.4 comes with <code>pip</code> installed, but 2.7 does not, plus we need some other
+packages anyways. Head to <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Christoph Gohlke&#8217;s
+page</a> and download the following
+packages. Make sure to get the correct bitness for your Python&nbsp;versions.</p>
+<p>2.7:</p>
+<ul>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools"><code>setuptools</code></a></li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip"><code>pip</code></a></li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy"><code>numpy</code></a></li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#cython"><code>cython</code></a></li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scons"><code>scons</code></a></li>
+</ul>
+<p>3.4:</p>
+<ul>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy"><code>numpy</code></a></li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#cython"><code>cython</code></a></li>
+</ul>
+<p>Install these after you install Python. Now, open the &#8220;Windows <span class="caps">SDK</span> 7.1 Command
+Prompt&#8221; (searching for 7.1 in the Start Menu search box usually brings it up)
+and install some additional packages for Python with the following&nbsp;command:</p>
+<div class="highlight"><pre><span></span>pip2 install sphinxcontrib-matlabdomain sphinxcontrib-doxylink 3to2
+</pre></div>
+
+<p>This will fetch all the Python packages required to build the documentation and
+the package (3to2) to convert the examples from Python 3 syntax to Python 2&nbsp;syntax.</p>
+<p>You should also install Doxygen at this point, so that the C++ documentation can
+be built. The Windows installer for the most recent version of Doxygen (at the
+time of this writing, 1.8.8) is available on
+<a href="http://sourceforge.net/projects/doxygen/files/rel-1.8.8/doxygen-1.8.8-setup.exe">SourceForge</a>.
+Finally, install the <a href="http://wixtoolset.org/">WiX Toolset</a> so that <span class="caps">MSI</span>
+installers for Cantera can be&nbsp;built.</p>
+<p>That should (finally) be all the software needed to get up and running in
+developing Cantera. The last thing to do is actually get the Cantera source
+code. There are several ways to get the code; my preferred way is to use GitHub.
+Ray Speth has a clone of the main Cantera repository on GitHub:
+<a href="https://github.com/Cantera/cantera">https://github.com/Cantera/cantera</a>. What you should do is create a fork of
+this project into your own personal GitHub account. This way, you can add
+branches, do all your work, push them to your forked repository, and create a
+pull request so that Ray can see the code and help you improve it. Then, either
+use the <a href="http://windows.github.com">GitHub for Windows</a> client, or clone the
+repository&nbsp;yourself.</p>
+<p>Once in the main Cantera directory, we need to tell SCons how to build Cantera.
+Create a file called <code>cantera.conf</code> and put as its&nbsp;contents:</p>
+<pre><code>  msvc_version = '10.0'
+  python_cmd = 'C:/Python27/python.exe'
+  python3_cmd = 'C:/Python34/python.exe'
+  matlab_path = 'C:/Program Files/MATLAB/R2014a'
+  sundials_include = 'C:/sundials-2.5.0-install/include'
+  sundials_libdir = 'C:/sundials-2.5.0-install/lib'
+  env_vars = 'all'
+  boost_inc_dir = 'C:/boost_1_56_0/'
+</code></pre>
+<p>Now, <code>scons build</code> and <code>scons msi</code> should work. If you get errors, read&nbsp;on.</p>
+<!-- markdownlint-disable MD033 -->
+
+<p><s>The first warning you might see is that 3to2 is not installed properly, even
+though we installed it earlier. This is because the SConstruct file calls <code>3to2</code>
+as an executable, which doesn&#8217;t work on Windows. The fix for this is to edit
+two lines, one in the root <code>SConstruct</code> file, one in the <code>interfaces/cython/SConscript</code>
+file. First, in <code>SConstruct</code> change:</p>
+<div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">getCommandOutput</span><span class="p">(</span><span class="s1">'3to2'</span><span class="p">,</span><span class="s1">'-l'</span><span class="p">)</span>
+</pre></div>
+
+<p>to</p>
+<div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">getCommandOutput</span><span class="p">(</span><span class="n">env</span><span class="p">[</span><span class="s1">'python_cmd'</span><span class="p">],</span> <span class="s1">'C:/Python27/Scripts/3to2'</span><span class="p">,</span><span class="s1">'-l'</span><span class="p">)</span>
+</pre></div>
+
+<p>Then, in <code>interfaces/cython/SConscript</code>,&nbsp;change:</p>
+<div class="highlight"><pre><span></span><span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">'3to2'</span><span class="p">,</span> <span class="s1">'--no-diff'</span><span class="p">,</span> <span class="s1">'-n'</span><span class="p">,</span> <span class="s1">'-w'</span><span class="p">,</span><span class="s1">'-x'</span><span class="p">,</span> <span class="s1">'str'</span><span class="p">,</span>
+</pre></div>
+
+<p>to</p>
+<div class="highlight"><pre><span></span><span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="n">env</span><span class="p">[</span><span class="s1">'python_cmd'</span><span class="p">],</span> <span class="s1">'C:/Python27/Scripts/3to2'</span><span class="p">,</span> <span class="s1">'--no-diff'</span><span class="p">,</span> <span class="s1">'-n'</span><span class="p">,</span> <span class="s1">'-w'</span><span class="p">,</span><span class="s1">'-x'</span><span class="p">,</span> <span class="s1">'str'</span><span class="p">,</span>
+</pre></div>
+
+<p>Note that these are basically hacks until the problem can be fixed in the source.</s></p>
+<!-- markdownlint-enable MD033 -->
+
+<p>As of <a href="https://github.com/Cantera/cantera/commit/eeab08d683fbbf40924b11fdc4d84e74a311aa1b">eeab08</a>, this problem has been&nbsp;fixed.</p>
+<p>Second, you may get actual errors when trying to build the <span class="caps">MATLAB</span> interface (if
+you aren&#8217;t building this interface, you might not see this error). In case you
+get an error in the <span class="caps">MATLAB</span> interface about redefining <code>_char16t</code>, open
+<code>src/matlab/ctmatutils.h</code> and comment out lines 12-14. These lines were
+introduced to fix some problems in <span class="caps">MATLAB</span> R2010a, and aren&#8217;t required for at
+least R2013a and&nbsp;R2014a.</p></div>
+
+  </article>
+</section>
+
+<script type="application/ld+json">
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan W. Weber"}, "datePublished": "2014-08-24T09:46:00-04:00", "headline": "How I set up a Cantera development environment on Windows&nbsp;7", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/personal/2014/08/24/how-i-set-up-a-cantera-development-environment-on-windows-7/"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "Setting up a development environment for Cantera on Windows 7 can be a little trickier than on Linux. This post contains instructions for how I set up my development environment on Windows 7."}
+</script>
+    </div>
+
+    <div class="column is-one-quarter-desktop is-one-third-tablet is-hidden-print">
+      <aside class="menu">
+<p class="menu-label">Social</p>
+<ul class="menu-list">
+    <li><a href="https://github.com/bryanwweber">
+      <span class="icon is-small">
+          <i class="fa fa-github fa-fw"></i>
+      </span>
+      <span class="link-text">GitHub</span>
+    </a></li>
+    <li><a href="https://orcid.org/0000-0003-0815-9270">
+      <span class="icon is-small">
+          <i class="ai ai-orcid fa-fw"></i>
+      </span>
+      <span class="link-text">ORCID</span>
+    </a></li>
+    <li><a href="https://scholar.google.com/citations?user=48LLBNMAAAAJ&hl=en">
+      <span class="icon is-small">
+          <i class="ai ai-google-scholar fa-fw"></i>
+      </span>
+      <span class="link-text">Google Scholar</span>
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/bryanwweber">
+      <span class="icon is-small">
+          <i class="fa fa-linkedin fa-fw"></i>
+      </span>
+      <span class="link-text">LinkedIn</span>
+    </a></li>
+    <li><a href="https://www.zotero.org/darthbith">
+      <span class="icon is-small">
+          <i class="ai ai-zotero fa-fw"></i>
+      </span>
+      <span class="link-text">Zotero</span>
+    </a></li>
+    <li><a href="https://arxiv.org/a/weber_b_1.html">
+      <span class="icon is-small">
+          <i class="ai ai-arxiv fa-fw"></i>
+      </span>
+      <span class="link-text">arXiv</span>
+    </a></li>
+
+
+</ul>      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <div class="credits">
+      <p><a href="https://github.com/textbook/bulrush">Bulrush</a> theme for
+          <a href="https://blog.getpelican.com/">Pelican</a>
+        | <span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5
+        | <span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3
+        | <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><span class="icon is-small"><i class="fa fa-creative-commons"></i></span> Some Rights Reserved</a>
+      </p>
+    </div>
+  </div>
+  <div class="github-fork-ribbon-wrapper is-hidden-mobile is-hidden-print">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/bryanwweber/bryanwweber.com">
+        <i class="fa fa-github fa-fw"></i>
+        Fork me on GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.getElementById('navMenu');
+    var className = nav.getAttribute('class');
+    if (className == 'navbar-menu') {
+      nav.className = 'navbar-menu is-active';
+    } else {
+      nav.className = 'navbar-menu';
+    }
+  });
+</script>
+</body>
+</html>

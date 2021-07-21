@@ -6,13 +6,13 @@
   <title>Writing Task Plugins for Nikola</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://bryanwweber.com/theme/css/main.cca68273.css">
+    <link rel="stylesheet" href="https://bryanwweber.github.io/theme/css/main.cca68273.css">
   <style media="print">.is-hidden-print{display:none !important}</style>
-      <link rel="stylesheet" href="https://bryanwweber.com/css/extra.css">
-      <link rel="stylesheet" href="https://bryanwweber.com/extra/css/academicons.min.css">
+      <link rel="stylesheet" href="https://bryanwweber.github.io/css/extra.css">
+      <link rel="stylesheet" href="https://bryanwweber.github.io/extra/css/academicons.min.css">
 <meta property="og:title" content="Bryan W. Weber - Writing Task Plugins for Nikola">
   <meta property="og:description" content="Nikola is an awesome static website generator built in Python. I recently used it to develop the new website for the Cantera project. The architecture of Nikola is quite interesting. It is...">
-<meta property="og:url" content="https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/">
+<meta property="og:url" content="https://bryanwweber.github.io/writing/personal/2018/12/22/writing-task-plugins-for-nikola/">
 <meta name="twitter:card" content="summary">
 <meta property="og:site_name" content="Bryan W. Weber">
 <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
       <nav class="navbar">
         <div class="navbar-left navbar-brand">
           <a class="navbar-item title is-3 is-active"
-             href="https://bryanwweber.com/">Bryan W. Weber</a>
+             href="https://bryanwweber.github.io/">Bryan W. Weber</a>
         </div>
       </nav>
     </div>
@@ -45,15 +45,15 @@
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-end">
           <a class="navbar-item is-tab "
-             href="https://bryanwweber.com/code/">Code</a>
+             href="https://bryanwweber.github.io/code/">Code</a>
           <a class="navbar-item is-tab "
-             href="https://bryanwweber.com/curriculum-vitae/">Curriculum&nbsp;vitae</a>
+             href="https://bryanwweber.github.io/curriculum-vitae/">Curriculum&nbsp;vitae</a>
           <a class="navbar-item is-tab "
-             href="https://bryanwweber.com/work/">Research&nbsp;<Span Class="amp">&amp;</span>&nbsp;publications</a>
+             href="https://bryanwweber.github.io/work/">Research&nbsp;<Span Class="amp">&amp;</span>&nbsp;publications</a>
           <a class="navbar-item is-tab "
-             href="https://bryanwweber.com/category/research-revealed.html">Research Revealed!</a>
+             href="https://bryanwweber.github.io/category/research-revealed.html">Research Revealed!</a>
           <a class="navbar-item is-tab is-active"
-             href="https://bryanwweber.com/category/personal.html">Personal</a>
+             href="https://bryanwweber.github.io/category/personal.html">Personal</a>
     </div>
     </div>
   </div>
@@ -65,16 +65,16 @@
 <section id="content" class="body">
   <article>
     <h1 class="title">
-      <a href="https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/" rel="bookmark"
+      <a href="https://bryanwweber.github.io/writing/personal/2018/12/22/writing-task-plugins-for-nikola/" rel="bookmark"
          title="Permalink to Writing Task Plugins for Nikola">Writing Task Plugins for&nbsp;Nikola</a></h1>
 <footer class="post-info">
   <abbr class="published" title="2018-12-22T16:37:00-05:00">
     Published <span class="is-info">Sat 22 December 2018</span>
-    in <a href="https://bryanwweber.com/category/personal.html">personal</a>
+    in <a href="https://bryanwweber.github.io/category/personal.html">personal</a>
   </abbr>
 
     <p class="author">
-      <em>by           <a class="url fn" href="https://bryanwweber.com/author/bryan-w-weber.html">Bryan W. Weber</a>
+      <em>by           <a class="url fn" href="https://bryanwweber.github.io/author/bryan-w-weber.html">Bryan W. Weber</a>
 </em>
     </p>
   
@@ -137,7 +137,7 @@ The <code>set_site</code> method is run when the plugin is loaded and the site i
 initialized. This is a good place to do any setup that you need to run your
 task. For instance, if there are configuration variables that your tasks need
 access to, it is common to group those into a dictionary in the <code>set_site</code>
-method. Another common thing to do is <a href="https://bryanwweber.com/writing/personal/2018/12/20/controlling-plugin-task-execution-order-in-nikola/">inject your
+method. Another common thing to do is <a href="https://bryanwweber.github.io/writing/personal/2018/12/20/controlling-plugin-task-execution-order-in-nikola/">inject your
 task</a>
 as a dependency to another task. Including the <code>set_site</code> method is optional,
 but if you do, you should make sure to call the <code>super</code> of the&nbsp;class:</p>
@@ -234,7 +234,7 @@ what the code is&nbsp;doing!</p></div>
 </section>
 
 <script type="application/ld+json">
-  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan W. Weber"}, "datePublished": "2018-12-22T16:37:00-05:00", "headline": "Writing Task Plugins for&nbsp;Nikola", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/personal/2018/12/22/writing-task-plugins-for-nikola/"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "Nikola is an awesome static website generator built in Python. I recently used it to develop the new website for the Cantera project. The architecture of Nikola is quite interesting. It is essentially a series of plugins that find posts and pages and render the contents to HTML. Nikola supports source files written in reST, Markdown, and Jupyter Notebooks out-of-the-box, and it is relatively easy to add plugins that can process other formats, as well as plugins to accomplish any other task that would be useful for your site."}
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan W. Weber"}, "datePublished": "2018-12-22T16:37:00-05:00", "headline": "Writing Task Plugins for&nbsp;Nikola", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.github.io/writing/personal/2018/12/22/writing-task-plugins-for-nikola/"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "Nikola is an awesome static website generator built in Python. I recently used it to develop the new website for the Cantera project. The architecture of Nikola is quite interesting. It is essentially a series of plugins that find posts and pages and render the contents to HTML. Nikola supports source files written in reST, Markdown, and Jupyter Notebooks out-of-the-box, and it is relatively easy to add plugins that can process other formats, as well as plugins to accomplish any other task that would be useful for your site."}
 </script>
     </div>
 

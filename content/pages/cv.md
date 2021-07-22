@@ -69,16 +69,18 @@ the models to predict combustion events|+|
 **Honors:**
 
 + Four-time recipient of the University of Connecticut Provost's Teaching Commendation, awarded to faculty for excellence on their end-of-semester teaching evaluations
-+ Two-time elected Commencement Marshal for Mechanical Engineering by the senior-class students
-+ Nominated for the 2018 University Teaching Innovation Award by the Mechanical Engineering Department Chair
++ Three-time elected Commencement Marshal for Mechanical Engineering by the senior-class students
++ Nominated for the 2018, 2019, and 2020 University Teaching Innovation Award by the Mechanical Engineering Department Chair
 
 Typical enrollment in the courses listed below is 60--100 students per section.
 
++ Aerodynamics & Flight Mechanics
 + Applied Mechanical Engineering Laboratory
 + Applied Thermodynamics
 + Combustion for Energy Conversion
 + Fluid Dynamics 1
 + Fluid Dynamics 2 (Compressible Flow)
++ Orbital Mechanics
 + Senior Capstone Design Lecturer/Project Mentor
 + Thermodynamic Principals
 + Introduction to Mechanical Engineering (Instructor)

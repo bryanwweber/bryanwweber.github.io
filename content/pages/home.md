@@ -3,8 +3,8 @@ Save_as: index.html
 
 # Welcome
 
-I'm Bryan Weber. My current vocation is as an assistant professor in residence in the
-[Mechanical Engineering](http://me.engr.uconn.edu) department at the [University of Connecticut](http://uconn.edu).
+I'm Bryan Weber. My current vocation is as the director of undergraduate studies and an assistant professor in residence in the
+[Mechanical Engineering](https://me.engr.uconn.edu) department at the [University of Connecticut](https://uconn.edu).
 In my spare time, I enjoy cooking, playing Ultimate and cycling.
 
 My primary focus at the University is teaching thermo-fluids courses. Aside from teaching, my

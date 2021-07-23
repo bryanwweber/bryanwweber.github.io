@@ -1,9 +1,11 @@
+---
 Title: Curriculum Vitae
 Summary: My curriculum vitae
+---
 
 Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
-<i class="fa fa-graduation-cap fa-border fa-pull-left"></i> <h1 class="cv-category">Education</h1>
+<h2 class="cv-category"><i class="fa fa-graduation-cap fa-pull-left"></i>Education</h2>
 
 Ph.D., Mechanical Engineering, University of Connecticut, 2014
 
@@ -11,7 +13,7 @@ M.S., Mechanical Engineering, University of Connecticut, 2010
 
 B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
-<i class="fa fa-briefcase fa-border fa-pull-left"></i> <h1 class="cv-category">Professional Experience</h1>
+<h2 class="cv-category"><i class="fa fa-briefcase fa-pull-left"></i>Professional Experience</h2>
 
 <p><span class="cv-position">Director of Undergraduate Studies, Mechanical Engineering, 2019&#8212;Present</span><br />
 <span class="cv-position">Assistant Professor in Residence, 2016&#8212;Present</span><br />
@@ -70,7 +72,7 @@ combustion intermediates</span><br />
 controlling prediction of ignition delay and to improve the ability of
 the models to predict combustion&nbsp;events</span></p>
 
-<i class="fa fa-university fa-border fa-pull-left"></i> <h1 class="cv-category">Teaching Experience</h1>
+<h2 class="cv-category"><i class="fa fa-university fa-pull-left"></i>Teaching Experience</h2>
 
 <p><span class="cv-location">University of Connecticut, Storrs, <span class="caps">CT</span>, <span class="caps">USA</span></span></p>
 
@@ -93,7 +95,7 @@ Typical enrollment in the courses listed below is 60--100 students per section.
 + Thermodynamic Principals
 + Introduction to Mechanical Engineering (Instructor)
 
-<i class="fa fa-handshake-o fa-border fa-pull-left"></i> <h1 class="cv-category">Professional Service</h1>
+<h2 class="cv-category"><i class="fa fa-handshake-o fa-pull-left"></i>Professional Service</h2>
 
 <p><span class="cv-position">Co-Chair, 2019&#8212;Present</span><br />
 <span class="cv-location">NumFOCUS Small Development Grants Committee</span><br />
@@ -149,11 +151,11 @@ and the junior&nbsp;members.</span></p>
 + Journal of Energy Resources Technology
 + Journal of Open Source Software
 
-<i class="fa fa-file-text fa-border fa-pull-left"></i> <h1 class="cv-category">Publications</h1>
+<h2 class="cv-category"><i class="fa fa-file-text fa-pull-left"></i>Publications</h2>
 
 See the updated list on the [Publications page]({filename}/pages/work.md)
 
-<i class="fa fa-star fa-border fa-pull-left"></i> <h1 class="cv-category">Awards, Grants, and Fellowships</h1>
+<h2 class="cv-category"><i class="fa fa-star fa-pull-left"></i>Awards, Grants, and Fellowships</h2>
 
 <h3 class="cv-year">2020</h3>
 
@@ -253,7 +255,7 @@ See the updated list on the [Publications page]({filename}/pages/work.md)
 <span>"Investigation of Hydrocarbon Flame Structure using Probe Sampling and GC/MS."<br/>Fuding: $3,500</span>
 </p>
 
-<i class="fa fa-users fa-border fa-pull-left"></i> <h1 class="cv-category">Professional Affiliations</h1>
+<h2 class="cv-category"><i class="fa fa-users fa-pull-left"></i>Professional Affiliations</h2>
 
 AIAA, Member  
 ASME, Member  

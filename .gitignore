@@ -8,3 +8,4 @@ srv.pid
 .python-version
 .mypy_cache
 .vscode
+cache/

@@ -22,9 +22,35 @@ If you want to use the site's theme and customizations, you are generally welcom
 Developing
 ----------
 
-Run `./develop_server.sh start` to start a server that watches for changes to the content. Note that `make devserver` is broken for some reason.
+Clone the repository. Install the Python requirements:
+
+```shell
+python -m pip install -r requirements.txt
+```
+
+Install Node via Homebrew:
+
+```shell
+brew install node
+```
+
+Install Less via NPM:
+
+```shell
+npm install -g less
+```
+
+Run `livereload`:
+
+```shell
+invoke livereload
+```
 
 Publishing
 ----------
 
-Run `make rsync_upload` to push the changes to the website. Must have SSH keys for the server configured.
+Published via GitHub Pages.
+
+```shell
+invoke gh-pages
+```

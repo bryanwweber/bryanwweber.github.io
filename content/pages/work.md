@@ -1,6 +1,8 @@
+---
 Title: Research&nbsp;& Publications
 Summary: Research & Publications
 Slug: work
+---
 
 Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
@@ -30,19 +32,23 @@ Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_C
 <span class="paperauthors"><strong><span class="caps">B.W.</span> Weber</strong></span>
 <span class="paperjournal"><em>Journal of Open Source Education</em>, vol. 1, no. 8, pp. 33, Oct. 2018</span><br />
 <span class="paperdoi"><a href="https://doi.org/10.21105/jose.00033">doi:10.21105/jose.00033</a></span></p>
+
 <p class="paper"><span class="papertitle">ChemKED: a human- and machine-readable data standard for chemical kinetics experiments.</span><br />
 <span class="paperauthors"><strong><span class="caps">B.W.</span> Weber</strong>, <span class="caps">K.E.</span> Niemeyer</span>
 <span class="paperjournal"><em>International Journal of Chemical Kinetics</em>, vol. 50, no. 3, pp. 135&#8212;148, Mar. 2018</span><br />
 <span class="paperdoi"><a href="https://doi.org/10.1002/kin.21142">doi:10.1002/kin.21142</a></span><br />
 <span class="paperarxiv"><a href="https://arxiv.org/abs/1706.01987v3">arXiv:1706.01987v3</a></span></p>
+
 <p class="paper"><span class="papertitle">Experiments and Modeling of the Autoignition of Methyl Pentanoate at Low to Intermediate Temperatures and Elevated Pressures in a Rapid Compression Machine.</span><br />
 <span class="paperauthors"><strong><span class="caps">B.W.</span> Weber</strong>, <span class="caps">J.A.</span> Bunnell, K. Kumar, <span class="caps">C.J.</span> Sung</span><br />
 <span class="paperjournal"><em>Fuel</em>, vol. 212, pp. 479&#8212;486, Jan. 2018</span><br />
 <span class="paperdoi"><a href="https://doi.org/10.1016/j.fuel.2017.10.037">doi:10.1016/j.fuel.2017.10.037</a></span></p>
+
 <p class="paper"><span class="papertitle">Autoignition of Methyl Propanoate and its Comparisons with Methyl Ethanoate and Methyl Butanoate.</span><br />
 <span class="paperauthors">K. Kumar, <span class="caps">J.A.</span> Bunnell, <strong><span class="caps">B.W.</span> Weber</strong>, <span class="caps">C.J.</span> Sung</span><br />
 <span class="paperjournal"><em>Combustion and Flame</em>, vol. 188, pp. 116&#8212;128, Jan. 2018</span><br />
 <span class="paperdoi"><a href="https://doi.org/10.1016/j.combustflame.2017.09.027">doi:10.1016/j.combustflame.2017.09.027</a></span></p>
+
 <h3 class="pub-year">2016</h3>
 
 <p class="paper"><span class="papertitle">A detailed combined experimental and theoretical study on dimethyl ether/propane blended oxidation</span><br />
@@ -97,6 +103,12 @@ Download the latest version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_C
 <span class="paperarxiv"><a href="https://arxiv.org/abs/1706.00867">arXiv:1706.00867</a></span></p>
 
 <h2>Conference Publications and&nbsp;Posters</h2>
+
+<h3 class="pub-year">2021</h3>
+
+<p class="paper"><span class="papertitle">Implementing a steady-state solver for zero dimensional reactors in Cantera</span><br />
+<span class="paperauthors"><span class="caps">P.</span> Blum, <strong><span class="caps">B.W.</span> Weber</strong>, and <span class="caps">R.L.</span> Speth<br />
+<span class="paperjournal">Paper 2E08, 12th <span class="caps">US</span> National Technical Meeting of the Combustion Institute, Virtual Online, May 2021</span></p>
 
 <h3 class="pub-year">2020</h3>
 

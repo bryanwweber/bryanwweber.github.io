@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title|striptags }}{% endblock %}
+{% block tags %}
+{% with item=page %}
+{% include 'meta_tags.html' %}
+{% endwith %}
+{% endblock %}
+{% block content %}
+<section id="content" class="body">
+  <article>
+    <h1 class="title">{{ page.title }}</h1>
+    {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
+    <div class="section">{{ page.content }}</div>
+  </article>
+</section>
+{% endblock %}

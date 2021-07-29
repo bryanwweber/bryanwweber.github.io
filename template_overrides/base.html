@@ -59,12 +59,8 @@
           {% endif %}
           {% endfor %}
           {% endif %}
-          {% if DISPLAY_CATEGORIES_ON_MENU %}
-          {% for cat, null in categories|reverse %}
-          <a class="navbar-item is-tab {% if cat == category %}is-active{% endif %}"
-            href="{{ SITEURL }}/{{ cat.url }}">{{ cat|title }}</a>
-          {% endfor %}
-          {% endif %}
+          <a class="navbar-item is-tab {% if output_file.startswith('writing') %}is-active{% endif %}"
+            href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">Writing</a>
         </div>
       </div>
     </div>

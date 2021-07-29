@@ -77,7 +77,7 @@ initialized. This is a good place to do any setup that you need to run your
 task. For instance, if there are configuration variables that your tasks need
 access to, it is common to group those into a dictionary in the `set_site`
 method. Another common thing to do is [inject your
-task]({filename}/personal/2018-12-20-controlling-plugin-task-execution-order.md)
+task]({filename}/writing/2018-12-20-controlling-plugin-task-execution-order.md)
 as a dependency to another task. Including the `set_site` method is optional,
 but if you do, you should make sure to call the `super` of the class:
 

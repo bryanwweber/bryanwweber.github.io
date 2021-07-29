@@ -1,52 +1,85 @@
+a.card-header-icon img {
+    padding: 0em;
+}
+
+.hero.is-primary {
+  background-color: #004369;
+}
+
+.hero.is-primary a.title:hover {
+  background-color: #004369;
+}
+
+.menu-list a.is-active {
+  background-color: #004369;
+}
+
+.menu-list a:hover {
+  color: #85B3CC;
+}
+
+.hero.is-primary a.navbar-item.is-active {
+  background-color: #004369;
+}
+
+a.nav-item.is-tab.is-active, a.nav-item.is-tab:hover {
+  border-bottom-color: #85B3CC;
+  color: #004369;
+}
+
+a, .card-content a h3 {
+  color: #85B3CC;
+}
+
 kbd {
-    padding: 0.1em 0.6em;
-    border: 1px solid #ccc;
-    font-size: 11px;
-    font-family: Arial,Helvetica,sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    display: inline-block;
-    margin: 0 0.1em;
-    text-shadow: 0 1px 0 #fff;
-    line-height: 1.4;
-    white-space: nowrap;
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 p { margin: 0.5em 0; }
 
-h1.cv-category {
-  font-size: 150%;
+h2.cv-category {
+  font-size: 125%;
 }
 
 h3.cv-year {
-	font-size: 100%;
-	line-height: 1.5em;
-	position: absolute;
-	width: 6em;
-	max-width: 6em;
-	margin-left: 0em;
-	margin-top: 0;
+  font-size: 100%;
+  line-height: 1.5em;
+  position: absolute;
+  width: 6em;
+  max-width: 6em;
+  margin-left: 0em;
+  margin-top: 0;
 }
 
 h3.pub-year {
-	font-size: 120%;
-	line-height: 1.5em;
-	position: absolute;
-	width: 6em;
-	max-width: 6em;
-	margin-left: 0em;
-	margin-top: 0;
+  font-size: 120%;
+  line-height: 1.5em;
+  position: absolute;
+  width: 6em;
+  max-width: 6em;
+  margin-left: 0em;
+  margin-top: 0;
 }
 
 h2 {
-    font-size: 200%;
-    margin-bottom: 10px;
+  font-size: 200%;
+  margin-bottom: 10px;
 }
 
 p.award { margin-left: 6em; }

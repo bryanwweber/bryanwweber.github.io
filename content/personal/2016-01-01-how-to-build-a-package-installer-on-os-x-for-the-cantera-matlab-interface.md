@@ -2,6 +2,7 @@
 title:  How to build a package installer on OS X for the Cantera MATLAB interface
 date:   2016-01-01 13:27
 category: personal
+original_url: writing/personal/2016/01/01/how-to-build-a-package-installer-on-os-x-for-the-cantera-matlab-interface/index.html
 ---
 
 <!-- markdownlint-disable MD014 -->

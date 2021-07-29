@@ -2,6 +2,7 @@
 Title: What Role Does the Government Play in Introducing a New Biofuel to Market?
 category: Research Revealed!
 date: 2012-01-18
+original_url: writing/research-revealed/2012/01/18/what-role-does-the-government-play-in-introducing-a-new-biofuel-to-market/index.html
 ---
 
 One of the ways in which climate change may be mitigated, and domestic energy

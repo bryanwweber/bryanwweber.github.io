@@ -2,6 +2,7 @@
 Title: Please Oppose SOPA and PIPA!
 category: personal
 date: 2012-01-18
+original_url: writing/personal/2012/01/18/sopa-pipa-protest/index.html
 ---
 
 Today there are many huge websites, including Google and Wikipedia who are

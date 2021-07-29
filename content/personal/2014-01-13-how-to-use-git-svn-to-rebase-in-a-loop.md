@@ -2,6 +2,7 @@
 title:  How to use git-svn to rebase in a loop
 date:   2014-01-13 07:50
 category: personal
+original_url: writing/personal/2014/01/13/how-to-use-git-svn-to-rebase-in-a-loop/index.html
 ---
 
 I'm working on developing for an open source project right now. The source code

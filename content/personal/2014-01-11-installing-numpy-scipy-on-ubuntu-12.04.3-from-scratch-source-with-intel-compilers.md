@@ -3,6 +3,7 @@ title:  Installing NumPy/SciPy on Ubuntu 12.04.3 from scratch/source with Intel 
 date:   2014-01-11 16:53
 category: personal
 slug: installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers
+original_url: writing/personal/2014/01/11/installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers/index.html
 ---
 
 **Update: The following procedure will work on Ubuntu 14.04.1 as well.**

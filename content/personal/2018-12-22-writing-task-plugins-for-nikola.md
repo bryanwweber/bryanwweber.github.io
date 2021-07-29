@@ -3,6 +3,7 @@ title: Writing Task Plugins for Nikola
 date: 2018-12-22 16:37
 category: personal
 status: published
+original_url: writing/personal/2018/12/22/writing-task-plugins-for-nikola/index.html
 ---
 
 [Nikola] is an awesome static website generator built in Python. I recently used

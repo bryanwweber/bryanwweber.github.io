@@ -2,6 +2,7 @@
 Title: A new method for estimating secondary mass savings in vehicles could offer improved fuel economy
 category: Research Revealed!
 date: 2012-05-19
+original_url: writing/research-revealed/2012/05/19/a-new-method-for-estimating-secondary-mass-savings-in-vehicles-could-offer-improved-fuel-economy/index.html
 ---
 
 A significant determinant of the fuel economy of a vehicle, in particular

@@ -2,6 +2,7 @@
 Title: Economists Try to Determine if Increasing Energy Efficiency Always Increases Sustainability
 Category: Research Revealed!
 Date: 2012-01-17
+original_url: writing/research-revealed/2012/01/17/economists-try-to-determine-if-increasing-energy-efficiency-always-increases-sustainability/index.html
 ---
 
 In the race to stop global warming and improve energy security, one of the

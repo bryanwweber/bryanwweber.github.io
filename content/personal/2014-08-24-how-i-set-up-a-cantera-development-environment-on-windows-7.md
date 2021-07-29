@@ -2,6 +2,7 @@
 title: How I set up a Cantera development environment on Windows 7
 date: 2014-08-24 09:46
 category: personal
+original_url: writing/personal/2014/08/24/how-i-set-up-a-cantera-development-environment-on-windows-7/index.html
 ---
 
 Setting up a development environment for Cantera on Windows 7 can be a little

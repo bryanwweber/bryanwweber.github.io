@@ -2,6 +2,7 @@
 title: How to build Sundials on Windows 7
 date: 2014-08-21 15:33
 category: personal
+original_url: writing/personal/2014/08/21/how-to-install-sundials-on-windows-7/index.html
 ---
 
 [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html) is a SUite of

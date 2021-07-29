@@ -2,6 +2,7 @@
 title: Using the same font for numbers in math mode in LaTeX
 date: 2014-03-25 13:00
 category: personal
+original_url: writing/personal/2014/03/25/using-the-same-font-for-numbers-in-math-mode-in-latex/index.html
 ---
 
 It really bugs me when numbers are typeset with two different fonts on the same

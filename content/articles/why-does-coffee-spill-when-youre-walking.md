@@ -2,6 +2,7 @@
 Title: Why does coffee spill when you're walking?
 category: Research Revealed!
 date: 2012-06-03
+original_url: writing/research-revealed/2012/06/03/why-does-coffee-spill-when-youre-walking/index.html
 ---
 
 We've all been there - walking back to your table in Starbucks, hot mug of

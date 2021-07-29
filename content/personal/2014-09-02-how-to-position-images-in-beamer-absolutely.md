@@ -2,6 +2,7 @@
 title: How to position images in Beamer absolutely
 date: 2014-09-02 13:56
 category: personal
+original_url: writing/personal/2014/09/02/how-to-position-images-in-beamer-absolutely/index.html
 ---
 
 In Beamer, it is useful to position images absolutely. There are many ways to do

@@ -2,6 +2,7 @@
 title: Various tricks for using the LaTeX packages caption and floatrow
 date: 2014-03-24 18:00
 category: personal
+original_url: writing/personal/2014/03/24/various-tricks-for-using-the-latex-packages-caption-and-floatrow/index.html
 ---
 
 Today I had two problems with clashes between the

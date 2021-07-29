@@ -2,6 +2,7 @@
 title: How to fix broken hyperlinks to equations in LaTeX
 date: 2014-03-07 23:00
 category: personal
+original_url: writing/personal/2014/03/07/how-to-fix-broken-hyperlinks-to-equations-in-latex/index.html
 ---
 
 While writing my dissertation in LaTeX, I was having a problem that some

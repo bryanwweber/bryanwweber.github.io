@@ -2,6 +2,7 @@
 title:  Installing Cantera on Ubuntu with Intel Compilers UPDATED!
 date:   2016-01-01 12:57
 category: personal
+original_url: writing/personal/2016/01/01/how-to-install-cantera-on-ubuntu-updated/index.html
 ---
 
 Well, it is now 2 years since I wrote my original post on [how to install

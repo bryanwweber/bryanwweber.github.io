@@ -3,6 +3,7 @@ title: Controlling plugin task execution order in Nikola
 date: 2018-12-20 18:00
 category: personal
 status: published
+original_url: writing/personal/2018/12/20/controlling-plugin-task-execution-order/index.html
 ---
 
 When writing a plugin for [Nikola](https://getnikola.com), it may be useful to

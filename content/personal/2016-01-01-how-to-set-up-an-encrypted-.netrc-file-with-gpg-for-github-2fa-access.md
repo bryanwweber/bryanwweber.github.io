@@ -2,6 +2,7 @@
 title:  How to set up an encrypted .netrc file with GPG for GitHub 2FA access
 date:   2016-01-01 13:20
 category: personal
+original_url: writing/personal/2016/01/01/how-to-set-up-an-encrypted-.netrc-file-with-gpg-for-github-2fa-access/index.html
 ---
 
 Enabling 2 factor authentication on GitHub is a good way to protect your data,

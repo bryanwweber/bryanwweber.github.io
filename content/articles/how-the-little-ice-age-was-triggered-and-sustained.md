@@ -2,6 +2,7 @@
 Title: How the Little Ice Age was Triggered and Sustained
 category: Research Revealed!
 date: 2012-01-30
+original_url: writing/research-revealed/2012/01/30/how-the-little-ice-age-was-triggered-and-sustained/index.html
 ---
 
 During the late Middle Ages, many of the glaciers in Arctic Canada and Iceland

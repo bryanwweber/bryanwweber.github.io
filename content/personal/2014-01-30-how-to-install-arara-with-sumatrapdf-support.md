@@ -2,6 +2,7 @@
 title:  How to Install Arara with SumatraPDF Support
 date:   2014-01-30 13:00
 category: personal
+original_url: writing/personal/2014/01/30/how-to-install-arara-with-sumatrapdf-support/index.html
 ---
 
 [Arara](https://github.com/cereda/arara) is a cross platform build system

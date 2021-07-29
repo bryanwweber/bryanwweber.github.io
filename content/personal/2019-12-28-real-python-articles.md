@@ -3,6 +3,7 @@ title: Real Python Articles
 date: 2019-12-28 09:20
 category: personal
 status: published
+original_url: writing/personal/2019/12/28/real-python-articles/index.html
 ---
 
 For about a year, I've been writing for a website called [_Real Python_](https://realpython.com). They publish tutorials and video courses on using Python effectively. So far, I've published two articles with them:

@@ -2,6 +2,7 @@
 title: Get a Spotify account without Facebook connection
 category: personal
 date: 2012-07-31
+original_url: writing/personal/2012/07/31/get-spotify-without-facebook/index.html
 ---
 
 Spotify, the ~~(supposedly, I just got an account)~~ **(Update: It is excellent,

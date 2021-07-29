@@ -2,6 +2,7 @@
 Title: Confined Catalysts Last Longer
 date: 2014-04-30 09:23
 category: Research Revealed!
+original_url: writing/research-revealed/2014/04/30/confined-catalysts-last-longer/index.html
 ---
 
 I was recently appointed to be a member of the EFRC newsletter editorial board.

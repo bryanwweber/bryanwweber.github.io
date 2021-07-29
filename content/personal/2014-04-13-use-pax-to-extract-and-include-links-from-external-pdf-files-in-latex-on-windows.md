@@ -2,6 +2,7 @@
 title: Use pax to Extract and Include Links from External PDF files in LaTeX on Windows
 date: 2014-04-13 16:37
 category: personal
+original_url: writing/personal/2014/04/13/use-pax-to-extract-and-include-links-from-external-pdf-files-in-latex-on-windows/index.html
 ---
 
 I want to include the documentation for one of my programming projects in my

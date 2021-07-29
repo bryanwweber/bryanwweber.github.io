@@ -2,7 +2,7 @@
 Title: Rotating Detonation Engines the 'wave' of the future?
 Category: Research Revealed!
 Date: 2012-01-10
-Slug: rotating-detonation-engines-the-wave-of-the-future
+original_url: writing/research-revealed/2012/01/10/rotating-detonation-engines-the-wave-of-the-future/
 ---
 
 The desire for energy security and (lack of) climate change are driving two

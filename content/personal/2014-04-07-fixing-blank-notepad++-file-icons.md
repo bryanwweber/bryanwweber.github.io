@@ -2,6 +2,7 @@
 title: Fixing Blank Notepad++ File Icons
 date: 2014-04-07 18:53
 category: personal
+original_url: writing/personal/2014/04/07/fixing-blank-notepad++-file-icons/index.html
 ---
 
 I had a problem recently that the file icons in Windows Explorer for all the

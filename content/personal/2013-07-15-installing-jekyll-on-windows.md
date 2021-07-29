@@ -2,6 +2,7 @@
 title: Installing Jekyll on Windows
 category: personal
 date: 2013-07-15
+original_url: writing/personal/2013/07/15/installing-jekyll-on-windows/index.html
 ---
 
 Been trying to migrate this site to use Jekyll

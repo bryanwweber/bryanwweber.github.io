@@ -2,6 +2,7 @@
 title:  Problems with libstdc++ on Ubuntu when using Intel Fortran Compiler 11.1
 date:   2013-08-15 10:11:53
 category: personal
+original_url: writing/personal/2013/08/15/problems-with-libstdc++-ubuntu/index.html
 ---
 
 Lately, we've had a problem on our computational server in the lab when trying

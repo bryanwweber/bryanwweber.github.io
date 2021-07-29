@@ -2,6 +2,7 @@
 title:  Fixing small Notepad++ icons
 date:   2014-01-11 15:29
 category: personal
+original_url: writing/personal/2014/01/11/fixing-small-notepad++-icons/index.html
 ---
 
 I was recently annoyed by having the wrong icon for certain files that should

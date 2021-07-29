@@ -2,6 +2,7 @@
 title: Entering complicated n-ary Operators in Word Equation Editor 2010 or 2007
 category: personal
 date: 2012-12-06
+original_url: writing/personal/2012/12/06/entering-operators-in-word-2010-2007/index.html
 ---
 
 When adding integrals or sums to formulas in Word 2010 or 2007, the command

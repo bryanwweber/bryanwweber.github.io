@@ -2,6 +2,7 @@
 title: How to install new Python wheels on Windows 7
 date: 2015-03-20 10:39
 category: personal
+original_url: writing/personal/2015/03/20/how-to-install-new-python-wheels-on-windows-7/index.html
 ---
 
 Christoph Gohlke's website for Python packages for Windows (he hosts many, but

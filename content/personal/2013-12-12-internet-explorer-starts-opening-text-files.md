@@ -2,6 +2,7 @@
 title:  Internet Explorer Starts Opening Text Files
 date:   2013-12-12 12:02
 category: personal
+original_url: writing/personal/2013/12/12/internet-explorer-starts-opening-text-files/index.html
 ---
 
 On Windows 7, Microsoft Office 2010 and 2013 will take over the file association

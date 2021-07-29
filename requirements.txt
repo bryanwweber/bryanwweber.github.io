@@ -11,6 +11,7 @@ livereload==2.6.3
 Markdown==3.3.4
 MarkupSafe==1.1.1
 pelican==4.6.0
+pelican-redirect==1.0.2
 pelican-webassets==2.0.0
 pelican-yaml-metadata @ git+https://github.com/pR0Ps/pelican-yaml-metadata.git@cdc1b9708916410e455e8e258e3d39a9d575c7b5
 pep562==1.0

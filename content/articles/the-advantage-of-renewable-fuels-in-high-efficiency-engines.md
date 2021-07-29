@@ -2,6 +2,7 @@
 Title: The Advantage of Renewable Fuels in High-Efficiency Engines
 date: 2014-02-14 14:53
 category: Research Revealed!
+original_url: writing/research-revealed/2014/02/14/the-advantage-of-renewable-fuels-in-high-efficiency-engines/index.html
 ---
 
 I was recently appointed to be a member of the EFRC newsletter editorial board.

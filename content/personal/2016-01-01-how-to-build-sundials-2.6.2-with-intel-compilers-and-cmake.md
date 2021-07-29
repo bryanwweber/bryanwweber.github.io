@@ -2,6 +2,7 @@
 title: How to build SUNDIALS 2.6.2 with Intel compilers and CMake
 date: 2016-01-01 12:04
 category: personal
+original_url: writing/personal/2016/01/01/how-to-build-sundials-2.6.2-with-intel-compilers-and-cmake/index.html
 ---
 
 The removal of the old `configure` build system for SUNDIALS means that CMake

@@ -26,11 +26,12 @@ AUTHOR_FEED_RSS = None
 
 PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
-ARTICLE_URL = "writing/{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
-ARTICLE_SAVE_AS = "writing/{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
+ARTICLE_URL = "writing/{slug}.html"
+ARTICLE_SAVE_AS = "writing/{slug}.html"
 DIRECT_TEMPLATES = []
 DEFAULT_CATEGORY = "writing"
 USE_FOLDER_AS_CATEGORY = True
+SLUGIFY_SOURCE = "basename"
 
 # Blogroll
 LINKS = ()

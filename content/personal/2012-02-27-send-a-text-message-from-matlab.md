@@ -2,6 +2,7 @@
 title: Send a text message from MATLAB
 category: personal
 date: 2012-02-27
+original_url: writing/personal/2012/02/27/send-a-text-message-from-matlab/index.html
 ---
 
 User Ke Feng has posted a MATLAB script to use the sendmail function within

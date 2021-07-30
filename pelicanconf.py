@@ -61,10 +61,9 @@ GITHUB_URL = "https://github.com/bryanwweber/bryanwweber.github.io"
 
 EXTRA_PATH_METADATA = {
     "extra/extra.css": {"path": "css/extra.css"},
-    "extra/robots.txt": {"path": "robots.txt"},
     "extra/favicon.ico": {"path": "favicon.ico"},
-    "extra/htaccess": {"path": ".htaccess"},
     "extra/keybase.txt": {"path": "keybase.txt"},
+    "extra/CNAME": {"path": "CNAME"},
     # "extra/css/academicons.css": {"path": "extra/css/academicons.css"},
     "extra/css/academicons.min.css": {"path": "extra/css/academicons.min.css"},
 }

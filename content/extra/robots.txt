@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /joomla*
-Disallow: /wiki*
-Disallow: /wordp*

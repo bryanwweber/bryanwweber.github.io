@@ -68,7 +68,7 @@ EXTRA_PATH_METADATA = {
     "extra/css/academicons.min.css": {"path": "extra/css/academicons.min.css"},
 }
 
-DEFAULT_PAGINATION = 9
+DEFAULT_PAGINATION = 6
 
 THEME = bulrush.PATH
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT

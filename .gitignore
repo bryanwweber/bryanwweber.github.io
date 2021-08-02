@@ -9,3 +9,4 @@ srv.pid
 .mypy_cache
 .vscode
 cache/
+.DS_Store

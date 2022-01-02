@@ -58,23 +58,43 @@ h2.cv-category {
 }
 
 h3.cv-year {
-  font-size: 100%;
-  line-height: 1.5em;
-  position: absolute;
-  width: 6em;
-  max-width: 6em;
-  margin-left: 0em;
-  margin-top: 0;
-}
-
-h3.pub-year {
   font-size: 120%;
   line-height: 1.5em;
-  position: absolute;
-  width: 6em;
-  max-width: 6em;
+  width: 100px;
+  max-width: 100px;
   margin-left: 0em;
   margin-top: 0;
+  grid-column: 1;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+h4.pub-year {
+  font-size: 120%;
+  line-height: 1.5em;
+  width: 100px;
+  max-width: 100px;
+  margin-left: 0em;
+  margin-top: 0;
+  grid-column: 1;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+section.pub-year {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  margin-bottom: 1em;
+}
+section.cv-year {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -82,22 +102,22 @@ h2 {
   margin-bottom: 10px;
 }
 
-p.award { margin-left: 6em; }
-p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
+div.award { margin-bottom: 0.5em; grid-column: 2; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+div.paper { margin-bottom: 0.5em; grid-column: 2; display: flex; gap: 5px 10px; justify-content: flex-start; align-items: flex-start; align-content: flex-start; }
 
 /* http://stackoverflow.com/a/19170853/2449192 */
 .collapse {
   cursor: pointer;
-  display: block;
+  display: inline-block;
 }
 .collapse + input {
   display: none; /* hide the checkboxes */
 }
-.collapse + input + span {
+.collapse + input + span.paperdetails {
   display: none;
 }
-.collapse + input:checked + span {
-  display: block;
+.collapse + input:checked + span.paperdetails {
+  display: inline-block;
   background: #f5f5f5;
 }
 
@@ -105,37 +125,48 @@ p.paper { margin-left: 6em; margin-top: 0em; margin-bottom: 1.5em;}
 .cv-duty { margin-left: 1em; display: inline-block; }
 .cv-location { font-style: italic; }
 .cv-award { margin-left: 1em; display: inline-block; font-weight: bold; }
+.grant-title { grid-column: 2; font-style: italic; grid-row-start: 1; grid-row-end: 3 }
+.grant-funding { grid-column: 1; grid-row: 2; }
+.grant-investigator { grid-column: 1; grid-row: 1; }
 
 .papertitle { font-style: italic; }
 
-.paperdoi { position: relative; padding-left: 20px; }
-.paperdoi:after {
+.paperdoi { position: relative; padding-left: 20px; display: inline-block; }
+.paperdoi::after {
     content: '\e97E';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */
+    top: 0;
 }
 
-.paperarxiv { position: relative; padding-left: 20px; }
-.paperarxiv:after {
+.paperarxiv { position: relative; padding-left: 20px; display: inline-block; }
+.paperarxiv::after {
     content: '\e974';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */
+    top: 0;
 }
 
-.paperfigshare { position: relative; padding-left: 20px; }
-.paperfigshare:after {
+.paperfigshare { position: relative; padding-left: 20px; display: inline-block; }
+.paperfigshare::after {
     content: '\e981';
     font-family: Academicons;
     position: absolute;
     left: 0; /* Adjust as needed */
+    top: 0;
 }
 
-.paperref { position: relative; padding-left: 20px; }
-.paperref:after {
+.paperref { position: relative; padding-left: 20px; display: inline-block; }
+.paperref::after {
     content: '\f0ac';
     font-family: FontAwesome;
     position: absolute;
     left: 0; /* Adjust as needed */
+    top: 0;
 }
+
+.papercomment { display: inline-block; }
+
+div.paperlinks { min-width: 100px; }

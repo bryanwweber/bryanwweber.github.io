@@ -42,13 +42,13 @@ DISPLAY_PAGES_ON_MENU = True
 # Social widget
 SOCIAL = (
     ("GitHub", "https://github.com/bryanwweber"),
-    ("ORCID", "https://orcid.org/0000-0003-0815-9270"),
-    ("Google Scholar", "https://scholar.google.com/citations?user=48LLBNMAAAAJ&hl=en"),
+    # ("ORCID", "https://orcid.org/0000-0003-0815-9270"),
+    # ("Google Scholar", "https://scholar.google.com/citations?user=48LLBNMAAAAJ&hl=en"),
     ("LinkedIn", "https://www.linkedin.com/in/bryanwweber"),
     # ('Mendeley', 'https://www.mendeley.com/profiles/bryan-w-weber/'),
     # ('Academia.edu', 'https://uconn.academia.edu/BryanWWeber'),
-    ("Zotero", "https://www.zotero.org/darthbith"),
-    ("arXiv", "https://arxiv.org/a/weber_b_1.html"),
+    # ("Zotero", "https://www.zotero.org/darthbith"),
+    # ("arXiv", "https://arxiv.org/a/weber_b_1.html"),
 )
 
 # Static Files

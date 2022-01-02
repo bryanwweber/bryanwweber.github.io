@@ -51,17 +51,12 @@
           {% for title, link in MENUITEMS|reverse %}
           <a class="navbar-item is-tab" href="{{ link }}">{{ title }}</a>
           {% endfor %}
-          {% if DISPLAY_PAGES_ON_MENU and pages %}
-          {% for pg in pages %}
-          {% if not pg.source_path.endswith('home.md') %}
-          <a class="navbar-item is-tab {% if pg == page %}is-active{% endif %}" href="{{ SITEURL }}/{{ pg.url }}">{{
-            pg.title|title }}</a>
-          {% endif %}
-          {% endfor %}
-          {% endif %}
           <a class="navbar-item is-tab {% if output_file.startswith('writing') %}is-active{% endif %}"
             href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">Writing</a>
-        </div>
+	  <a class="navbar-item is-tab {% if output_file.startswith('code') %}is-active{% endif %}"
+	     href="{{ SITEURL }}/code.html">Code</a>
+	  <a class="navbar-item is-tab {% if output_file.startswith('resume') %}is-active{% endif %}"
+	     href="{{ SITEURL }}/resume.html">Resume</a>
       </div>
     </div>
   </nav>

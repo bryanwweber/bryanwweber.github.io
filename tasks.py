@@ -106,6 +106,7 @@ def livereload(c):
     watched_globs = [
         CONFIG["settings_base"],
         "{}/templates/**/*.html".format(theme_path),
+        f"template_overrides/*.html",
     ]
 
     content_file_extensions = [".md", ".rst"]
@@ -117,6 +118,10 @@ def livereload(c):
     for extension in static_file_extensions:
         static_file_glob = "{0}/static/**/*{1}".format(theme_path, extension)
         watched_globs.append(static_file_glob)
+
+    for extra_file in SETTINGS.get("EXTRA_PATH_METADATA", {}).keys():
+        extra_file_glob = f"{SETTINGS['PATH']}/{extra_file}"
+        watched_globs.append(extra_file_glob)
 
     for glob in watched_globs:
         server.watch(glob, cached_build)

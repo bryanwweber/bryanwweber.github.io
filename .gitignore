@@ -10,3 +10,5 @@ srv.pid
 .vscode
 cache/
 .DS_Store
+.venv/
+*.swp

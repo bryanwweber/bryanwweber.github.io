@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://bryanwweber.com/css/extra.css">
   <link rel="stylesheet" href="https://bryanwweber.com/extra/css/academicons.min.css">
 <meta property="og:title" content="Bryan Weber - How to position images in Beamer absolutely">
-  <meta property="og:description" content="In Beamer, it is useful to position images absolutely. There are many ways to do this, but one simple one-liner can be done with tikz. \tikz[remember picture, overlay] \node[anchor=center] at...">
+  <meta property="og:description" content="In Beamer, it is useful to position images absolutely. There are many ways to do this, but one simple one-liner can be done with tikz.">
 <meta property="og:url" content="https://bryanwweber.com/writing/2014-09-02-how-to-position-images-in-beamer-absolutely.html">
 <meta name="twitter:card" content="summary">
 <meta property="og:site_name" content="Bryan Weber">
@@ -79,7 +79,7 @@
     
 </footer>    <div class="section"><p>In Beamer, it is useful to position images absolutely. There are many ways to do
 this, but one simple one-liner can be done with <code>tikz</code>.</p>
-<!--more-->
+
 
 <div class="highlight"><pre><span></span><span class="k">\tikz</span><span class="na">[remember picture, overlay]</span> <span class="k">\node</span><span class="na">[anchor=center]</span> at (current page.center) <span class="nb">{</span><span class="k">\includegraphics</span><span class="nb">{</span>foo<span class="nb">}}</span>;
 </pre></div>
@@ -99,7 +99,7 @@ be made by using the <code>calc</code> library.</p>
 </section>
 
 <script type="application/ld+json">
-  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2014-09-02T13:56:00-04:00", "headline": "How to position images in Beamer&nbsp;absolutely", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2014-09-02-how-to-position-images-in-beamer-absolutely.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "In Beamer, it is useful to position images absolutely. There are many ways to do this, but one simple one-liner can be done with tikz. \\tikz[remember picture, overlay] \\node[anchor=center] at (current page.center) {\\includegraphics{foo}}; Compile twice to have the picture placed at exactly the center of \u2026"}
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2014-09-02T13:56:00-04:00", "headline": "How to position images in Beamer&nbsp;absolutely", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2014-09-02-how-to-position-images-in-beamer-absolutely.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "In Beamer, it is useful to position images absolutely. There are many ways to do this, but one simple one-liner can be done with tikz."}
 </script>
       </div>
 

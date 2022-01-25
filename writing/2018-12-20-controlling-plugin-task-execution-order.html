@@ -84,7 +84,7 @@ before the posts are rendered in the <code>render_posts</code> task. If you&#821
 both tasks, this is fairly simple with the <code>task_dep</code> parameter for the doit
 task engine. However, if the task that must run later is already built in to
 Nikola, you can&#8217;t set its <code>task_dep</code> list.</p>
-<!--more-->
+
 
 <p>Never fear though, there is a way out of this problem. The Nikola
 <a href="https://github.com/getnikola/nikola/blob/d7dcb55201b22764a81cb468316a4a73a18e7891/nikola/plugin_categories.py#L65"><code>BasePlugin</code></a> has a method to
@@ -120,7 +120,7 @@ built-in <code>render_posts</code> plugin.</p></div>
 </section>
 
 <script type="application/ld+json">
-  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2018-12-20T18:00:00-05:00", "headline": "Controlling plugin task execution order in&nbsp;Nikola", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2018-12-20-controlling-plugin-task-execution-order.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "When writing a plugin for Nikola, it may be useful to have a task that has to run another task. For instance, you may want to be able to link to specific points on other pages, which requires parsing those pages before the posts are rendered in the render_posts task \u2026"}
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2018-12-20T18:00:00-05:00", "headline": "Controlling plugin task execution order in&nbsp;Nikola", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2018-12-20-controlling-plugin-task-execution-order.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "When writing a plugin for Nikola, it may be useful to have a task that has to run another task. For instance, you may want to be able to link to specific points on other pages, which requires parsing those pages before the posts are rendered in the render_posts task. If you\u2019re developing both tasks, this is fairly simple with the task_dep parameter for the doit task engine. However, if the task that must run later is already built in to Nikola, you can\u2019t set its task_dep list."}
 </script>
       </div>
 

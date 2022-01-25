@@ -87,7 +87,7 @@ you must use XeLaTeX (which I am). Second, the packages <a href="http://ctan.org
 while <code>unicode-math</code> lets you control the fonts used in math environments
 (between <code>$</code>, or in an equation environment, etc.). However, by default,
 <code>unicode-math</code> will typeset all of the numbers in whatever font you choose with
-that package so the default must be changed. <!--more--> For instance, in  my
+that package so the default must be changed.  For instance, in  my
 dissertation, I&nbsp;have</p>
 <div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
 <span class="k">\setmainfont</span><span class="na">[Ligatures=TeX]</span><span class="nb">{</span>Times New Roman<span class="nb">}</span>
@@ -222,7 +222,7 @@ mess with the math functionality, such as <code>amsmath</code> or <code>mathtool
 </section>
 
 <script type="application/ld+json">
-  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2014-03-25T13:00:00-04:00", "headline": "Using the same font for numbers in math mode in&nbsp;LaTeX", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2014-03-25-using-the-same-font-for-numbers-in-math-mode-in-latex.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "It really bugs me when numbers are typeset with two different fonts on the same line, say in MS Word if you type 0.01 in the text and then the same in an equation field, they won\u2019t look the same because they use different fonts. For my dissertation \u2026"}
+  {"articleSection": "personal", "author": {"@type": "Person", "name": "Bryan Weber"}, "datePublished": "2014-03-25T13:00:00-04:00", "headline": "Using the same font for numbers in math mode in&nbsp;LaTeX", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bryanwweber.com/writing/2014-03-25-using-the-same-font-for-numbers-in-math-mode-in-latex.html"}, "@context": "http://schema.org", "@type": "BlogPosting", "description": "It really bugs me when numbers are typeset with two different fonts on the same line, say in MS Word if you type 0.01 in the text and then the same in an equation field, they won\u2019t look the same because they use different fonts. For my dissertation (written in LaTeX), I wanted to be sure to avoid this pitfall. Unfortunately, it is rather more complicated than it seems on the face. First, you must use XeLaTeX (which I am). Second, the packages fontspec and unicode-math are necessary. fontspec lets you set the main body font, while unicode-math lets you control the fonts used in math environments (between $, or in an equation environment, etc.). However, by default, unicode-math will typeset all of the numbers in whatever font you choose with that package so the default must be changed."}
 </script>
       </div>
 

@@ -1,6 +1,8 @@
-beautifulsoup4==4.8.2
+beautifulsoup4==4.10.0
+black==21.12b0
 blinker==1.4
 bulrush==0.5.0
+click==8.0.3
 cssmin==0.2.0
 docutils==0.17.1
 feedgenerator==1.9
@@ -10,12 +12,16 @@ Jinja2==2.10.3
 livereload==2.6.3
 Markdown==3.3.4
 MarkupSafe==1.1.1
+mypy-extensions==0.4.3
+pathspec==0.9.0
 pelican==4.6.0
 pelican-pagination==1.0.0
 pelican-redirect==1.0.2
+pelican-summary @ https://github.com/mirekdlugosz/pelican-plugins-summary/archive/refs/heads/migrate.tar.gz
 pelican-webassets==2.0.0
 pelican-yaml-metadata @ git+https://github.com/pR0Ps/pelican-yaml-metadata.git@cdc1b9708916410e455e8e258e3d39a9d575c7b5
 pep562==1.0
+platformdirs==2.4.1
 Pygments==2.9.0
 pymdown-extensions==6.2.1
 python-dateutil==2.8.1
@@ -24,7 +30,9 @@ PyYAML==5.4.1
 six==1.13.0
 smartypants==2.0.1
 soupsieve==1.9.5
+tomli==1.2.3
 tornado==6.1
+typing_extensions==4.0.1
 typogrify==2.0.7
 Unidecode==1.1.1
 webassets==2.0

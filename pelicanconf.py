@@ -1,5 +1,3 @@
-import sys
-
 import bulrush
 
 #####
@@ -73,11 +71,10 @@ DEFAULT_PAGINATION = 6
 THEME = bulrush.PATH
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
 JINJA_FILTERS = bulrush.FILTERS
+BULRUSH_SHOW_SUMMARY = True
 THEME_TEMPLATES_OVERRIDES = ["template_overrides"]
 LICENSE = "CC BY-SA 3.0"
 
-# PLUGIN_PATHS = ["pelican-plugins"]
-# PLUGINS = ["assets", "summary", "md_inline_extension"]
 SUMMARY_END_MARKER = "<!--more-->"
 SUMMARY_USE_FIRST_PARAGRAPH = True
 

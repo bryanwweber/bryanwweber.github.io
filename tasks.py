@@ -144,7 +144,7 @@ def gh_pages(c):
     """Publish to GitHub Pages"""
     preview(c)
     c.run(
-        ".venv/bin/ghp-import -b {github_pages_branch} "
+        "ghp-import -b {github_pages_branch} "
         "-m {commit_message} "
         "{deploy_path} -p".format(**CONFIG)
     )

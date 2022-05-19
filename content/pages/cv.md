@@ -5,7 +5,7 @@ Summary: My curriculum vitae
 
 Download an old version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
-This document represents my CV as of January, 2022. It is most likely out-of-date, as I've now left academia and don't have much use for this level of detail any longer.
+This document represents my CV as of May, 2022. It is most likely out-of-date, as I've now left academia and don't have much use for this level of detail any longer.
 
 <h2 class="cv-category"><i class="fa fa-graduation-cap fa-pull-left"></i>Education</h2>
 
@@ -17,7 +17,7 @@ B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
 <h2 class="cv-category"><i class="fa fa-briefcase fa-pull-left"></i>Professional Experience</h2>
 
-<p><span class="cv-position">OSS Engineer, 2022&#8212;Present</span><br />
+<p><span class="cv-position">OSS Engineer, 2022</span><br />
 <span class="cv-location"><a href="https://coiled.io">Coiled</a></span><br />
 <span class="cv-duty">Developing Dask to scale computation over many cores and larger than local memory.</span>
 </p>

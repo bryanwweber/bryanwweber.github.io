@@ -30,8 +30,11 @@ brew install node
 Install Less via NPM:
 
 ```shell
-npm install -g less
+npm install less
+export PATH="$PATH:$(pwd)/node_modules/.bin"
 ```
+
+This will add `lessc` to the `PATH` temporarily for this shell session.
 
 Run `livereload`:
 

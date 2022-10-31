@@ -12,3 +12,6 @@ cache/
 .DS_Store
 .venv/
 *.swp
+node_modules
+package-lock.json
+package.json

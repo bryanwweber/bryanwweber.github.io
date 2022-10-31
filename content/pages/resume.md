@@ -69,6 +69,6 @@ Co-Chair, NumFOCUS Small Development Grants Committee, 2019-Present
 
 ## Education
 
-Ph.D., Mechanical Engineering, University of Connecticut, 2014
-M.S., Mechanical Engineering, University of Connecticut, 2010
-B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
+Ph.D., Mechanical Engineering, University of Connecticut, 2014  
+M.S., Mechanical Engineering, University of Connecticut, 2010  
+B.S.E., Aerospace Engineering, Case Western Reserve University, 2009  

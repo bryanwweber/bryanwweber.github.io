@@ -82,16 +82,16 @@ to link custom solvers to the <span class="caps">CHEMKIN</span>-Pro libraries. W
 complains about undefined references to a&nbsp;symbol.</p>
 
 <p>The actual error code&nbsp;is:</p>
-<div class="highlight"><pre><span></span>undefined reference to symbol <span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span>
+<div class="highlight"><pre><span></span><code>undefined reference to symbol <span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span>
 ld: note: <span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span> is defined <span class="k">in</span> DSO
 /usr/lib64/libstdc++.so.6 so try adding it to the linker <span class="nb">command</span> line
 /usr/lib64/libstdc++.so.6: could not <span class="nb">read</span> symbols: Invalid operation
-</pre></div>
+</code></pre></div>
 <p>The solution is to tell the compiler which libraries to link. In the case of
 <span class="caps">CHEMKIN</span>-Pro version 15113, this meant changing two&nbsp;files:</p>
-<div class="highlight"><pre><span></span>/home/user/<span class="k">$(</span>CHEMKINROOT<span class="k">)</span>/include/chemkin_make_unix.inc
+<div class="highlight"><pre><span></span><code>/home/user/<span class="k">$(</span>CHEMKINROOT<span class="k">)</span>/include/chemkin_make_unix.inc
 /home/user/<span class="k">$(</span>CHEMKINROOT<span class="k">)</span>/include/arch/linuxx8664.inc
-</pre></div>
+</code></pre></div>
 <p>In the first file, on the line that starts <code>SAX_LIBFLAGS=...</code> add <code>-lstdc++</code> to
 the end of the line. In the second file, on the line that starts <code>LDFLAGS=...</code>
 add <code>-L/usr/lib64</code> to the end of the&nbsp;line.</p></div>

@@ -90,12 +90,12 @@ Nikola, you can&#8217;t set its <code>task_dep</code> list.</p>
 <a href="https://github.com/getnikola/nikola/blob/d7dcb55201b22764a81cb468316a4a73a18e7891/nikola/plugin_categories.py#L65"><code>BasePlugin</code></a> has a method to
 <a href="https://github.com/getnikola/nikola/blob/d7dcb55201b22764a81cb468316a4a73a18e7891/nikola/plugin_categories.py#L96"><code>inject_dependency</code></a> to a task. The signature of the
 function&nbsp;is</p>
-<div class="highlight"><pre><span></span><span class="n">inject_dependency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">dependency</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">inject_dependency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">dependency</span><span class="p">)</span>
+</code></pre></div>
 <p>The <code>target</code> is the task where the dependency should be added, and the
 <code>dependency</code> is the task the <code>target</code> should depend on. This method can be
 called in the <code>set_site</code> method that sets up your plugin. For example, something&nbsp;like</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
 
 <span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
 
@@ -110,7 +110,7 @@ called in the <code>set_site</code> method that sets up your plugin. For example
 
     <span class="k">def</span> <span class="nf">gen_tasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
-</pre></div>
+</code></pre></div>
 <p>Here, the <code>MyTask</code> task was added as a dependency to the <code>render_posts</code> task.
 Note that the name of the task <code>my_task</code> is used in the <code>inject_dependency</code>
 function. Now, Nikola will run the plugin named <code>my_task</code> before it runs the

@@ -81,18 +81,18 @@
 this, but one simple one-liner can be done with <code>tikz</code>.</p>
 
 
-<div class="highlight"><pre><span></span><span class="k">\tikz</span><span class="na">[remember picture, overlay]</span> <span class="k">\node</span><span class="na">[anchor=center]</span> at (current page.center) <span class="nb">{</span><span class="k">\includegraphics</span><span class="nb">{</span>foo<span class="nb">}}</span>;
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">\tikz</span><span class="na">[remember picture, overlay]</span> <span class="k">\node</span><span class="na">[anchor=center]</span> at (current page.center) <span class="nb">{</span><span class="k">\includegraphics</span><span class="nb">{</span>foo<span class="nb">}}</span>;
+</code></pre></div>
 <p>Compile twice to have the picture placed at exactly the center of the slide. The
 anchors can be changed to move the picture around, and further adjustments can
 be made by using the <code>calc</code> library.</p>
-<div class="highlight"><pre><span></span><span class="c">% Preamble</span>
+<div class="highlight"><pre><span></span><code><span class="c">% Preamble</span>
 <span class="k">\usepackage</span><span class="nb">{</span>tikz<span class="nb">}</span>
 <span class="k">\usetikzlibrary</span><span class="nb">{</span>calc<span class="nb">}</span>
 <span class="c">% ...</span>
 <span class="c">% Main document</span>
 <span class="k">\tikz</span><span class="na">[remember picture, overlay]</span> <span class="k">\node</span><span class="na">[anchor=center]</span> at (<span class="s">$</span><span class="o">(</span><span class="nb">current page.center</span><span class="o">)-(</span><span class="m">1</span><span class="nb">,</span><span class="m">0</span><span class="o">)</span><span class="s">$</span>) <span class="nb">{</span><span class="k">\includegraphics</span><span class="nb">{</span>foo<span class="nb">}}</span>;
-</pre></div>
+</code></pre></div>
 <p>will place the image 1 cm to the left of the&nbsp;center.</p></div>
 
   </article>

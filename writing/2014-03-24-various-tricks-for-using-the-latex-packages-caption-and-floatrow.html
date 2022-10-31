@@ -89,7 +89,7 @@ referenced, <code>\autoref</code> will print the type of the environment (i.e. <
 instead of the correct type (<code>table</code>). This only occurs when using the <code>caption</code>
 package. The solution is to explicitly tell the caption what type it is with a
 <code>\captionsetup{type=table}</code> statement:</p>
-<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>floatrow<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>caption<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="na">[demo]</span><span class="nb">{</span>graphicx<span class="nb">}</span>
@@ -110,15 +110,15 @@ package. The solution is to explicitly tell the caption what type it is with a
     <span class="k">\end</span><span class="nb">{</span>floatrow<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</pre></div>
+</code></pre></div>
 <p>For the second, I was trying to move the subcaptions of the subfigures in a
 <code>subfloatrow</code> closer to the image. I tried using the <code>caption</code> package option
 <code>skip</code>, but it turns out that <code>floatrow</code> overwrites this in certain cases. The
 solution is to use the <code>captionskip</code> option for <code>subfigure</code> setup. If this
 change should apply document-wide, put it in the preamble. Otherwise, put it
 just after <code>\begin{figure}</code> in the figure you want to&nbsp;change.</p>
-<div class="highlight"><pre><span></span><span class="k">\captionsetup</span><span class="na">[subfigure]</span><span class="nb">{</span>captionskip=value<span class="nb">}</span>
-</pre></div></div>
+<div class="highlight"><pre><span></span><code><span class="k">\captionsetup</span><span class="na">[subfigure]</span><span class="nb">{</span>captionskip=value<span class="nb">}</span>
+</code></pre></div></div>
 
   </article>
 </section>

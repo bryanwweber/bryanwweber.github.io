@@ -82,8 +82,8 @@ filetypes set to open in Notepad++ were coming up as the blank icon. To fix the
 issue, I had to reset the icon handler for Notepad++. I&#8217;m not sure if this was
 related to an update for Notepad++, or something I did.  Anyhow, the
 solution was to delete the registry&nbsp;key</p>
-<div class="highlight"><pre><span></span><span class="err">HKEY_CLASSES_ROOT/Notepad++_file</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">HKEY_CLASSES_ROOT/Notepad++_file</span><span class="w"></span>
+</code></pre></div>
 <p>then open Notepad++ with administrator rights, remove/add a file association,
 and restart Explorer. Problem&nbsp;fixed!</p></div>
 

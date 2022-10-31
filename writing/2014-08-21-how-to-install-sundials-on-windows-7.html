@@ -107,10 +107,10 @@ extract the tarball on Windows, which can be found here: <a href="http://www.7-z
 2.4.0")</code> to <code>SET(PACKAGE_STRING "SUNDIALS 2.5.0")</code>. Do the same for the line
 <code>SET(PACKAGE_VERSION "2.4.0")</code> to <code>SET(PACKAGE_VERSION "2.5.0")</code>. Open the
 Windows <span class="caps">SDK</span> 7.1 command line interface and build and install <span class="caps">SUNDIALS</span>:</p>
-<div class="highlight"><pre><span></span><span class="k">cd</span> C:\sundials-2.5.0-build
+<div class="highlight"><pre><span></span><code><span class="k">cd</span> C:\sundials-2.5.0-build
 cmake ..\sundials-2.5.0 -G <span class="s2">&quot;NMake Makefiles&quot;</span> -DCMAKE_INSTALL_PREFIX=C:\sundials-2.5.0-install
 nmake install
-</pre></div>
+</code></pre></div>
 <p>That should be it - <span class="caps">SUNDIALS</span> is now installed in the <code>install</code> directory. Happy&nbsp;solving!</p></div>
 
   </article>

@@ -90,42 +90,42 @@ path, and/or add the directory with the <code>arara.jar</code> file to your path
 instance, I copied the files in that folder to <code>C:\Program Files (x86)\Arara</code>
 and added that folder to my <code>PATH</code> variable. Then, add a batch file named
 <code>arara.bat</code> to the same folder where <code>arara.jar</code> exists with the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 java -jar <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">\arara.jar&quot;</span> <span class="nv">%*</span>
-</pre></div>
+</code></pre></div>
 <p>Now, typing <code>arara</code> at a command window should print the Arara help. Next, we
 have to add a custom rule to enable SumatraPDF support. Create a file in your
 home directory (<code>C:\Users\&lt;username&gt;\</code>) called <code>araraconfig.yaml</code> with the
 following&nbsp;content:</p>
-<div class="highlight"><pre><span></span><span class="kt">!config</span>
-<span class="nt">paths</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{userhome}\arara\rules</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="kt">!config</span><span class="w"></span>
+<span class="nt">paths</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{userhome}\arara\rules</span><span class="w"></span>
+</code></pre></div>
 <p>Then, create the directory <code>C:\Users\&lt;username&gt;\arara\rules</code> and in it, create
 two files, <code>sumatrapdf.yaml</code> and <code>sumatra.bat</code>. The content of these files comes
 from the TeX.<span class="caps">SX</span> answer of Mr Komandez
 <a href="http://tex.stackexchange.com/a/139055/32374">http://tex.stackexchange.com/a/139055/32374</a>:</p>
-<div class="highlight"><pre><span></span><span class="c1">#sumatrapdf.yaml</span>
-<span class="kt">!config</span>
-<span class="c1"># SumatraPDF rule for arara</span>
-<span class="c1"># Author: Mr Komandez</span>
-<span class="nt">identifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sumatrapdf</span>
-<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SumatraPDF</span>
-<span class="nt">commands</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; C:\Users\&lt;username&gt;\arara\rules\sumatra.bat &quot;@{getBasename(file)}.pdf&quot; &quot;@{options}&quot;</span>
-<span class="nt">arguments</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="nt">identifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">options</span>
-  <span class="nt">flag</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{parameters.options}</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">:sumatra.bat</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#sumatrapdf.yaml</span><span class="w"></span>
+<span class="kt">!config</span><span class="w"></span>
+<span class="c1"># SumatraPDF rule for arara</span><span class="w"></span>
+<span class="c1"># Author: Mr Komandez</span><span class="w"></span>
+<span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sumatrapdf</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SumatraPDF</span><span class="w"></span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; C:\Users\&lt;username&gt;\arara\rules\sumatra.bat &quot;@{getBasename(file)}.pdf&quot; &quot;@{options}&quot;</span><span class="w"></span>
+<span class="nt">arguments</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="w"></span>
+<span class="w">  </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{parameters.options}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="c1">:sumatra.bat</span>
 <span class="k">START</span> /b <span class="s2">&quot;C:\Progra~2\SumatraPDF\SumatraPDF.exe&quot;</span> <span class="nv">%1</span> -reuse-instance <span class="nv">%2</span>
 <span class="k">EXIT</span>
-</pre></div>
+</code></pre></div>
 <p>Then, to have Notepad++ able to compile the XeLaTeX document and automatically
 open the <span class="caps">PDF</span>, put in the top of your <code>.tex</code> file:</p>
-<div class="highlight"><pre><span></span><span class="c">% arara: xelatex: { synctex: on shell: off }</span>
+<div class="highlight"><pre><span></span><code><span class="c">% arara: xelatex: { synctex: on shell: off }</span>
 <span class="c">% arara: sumatrapdf</span>
-</pre></div>
+</code></pre></div>
 <p>Next, download the NPPExec plugin from
 <a href="http://sourceforge.net/projects/npp-plugins/files/NppExec/">http://sourceforge.net/projects/npp-plugins/files/NppExec/</a>, and copy the
 <code>.dll</code> file to the <code>plugins</code> folder in your Notepad++ installation. Press <span class="keys"><kbd class="key-f6">F6</kbd></span>

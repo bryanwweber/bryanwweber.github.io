@@ -89,17 +89,17 @@ don&#8217;t have commit access to the main repository, I have to submit all my w
 patches. This means that the local commits I make with my work won&#8217;t necessarily
 line up with the commit on the main&nbsp;repository.</p>
 <p>My workflow is as&nbsp;follows:</p>
-<div class="highlight"><pre><span></span>git svn fetch
+<div class="highlight"><pre><span></span><code>git svn fetch
 <span class="k">for</span> b <span class="k">in</span> <span class="k">$(</span>git branch <span class="p">|</span> cut -c <span class="m">3</span>-<span class="k">)</span><span class="p">;</span> <span class="se">\</span>
 <span class="k">do</span> git checkout <span class="nv">$b</span> <span class="o">&amp;&amp;</span> git rebase remotes/trunk<span class="p">;</span> <span class="k">done</span>
-</pre></div>
+</code></pre></div>
 <p>First, I update my repository, then I update all my local branches to match the
 remote&nbsp;branch.</p>
 <p>For this to work, you can&#8217;t have conflicts on any of your branches with the
 files you&#8217;ll be updating. This may or may not be the case, so proceed with&nbsp;caution.</p>
 <p><strong>Update:</strong> If you only have one branch with no local commits,&nbsp;running</p>
-<div class="highlight"><pre><span></span>git svn rebase
-</pre></div>
+<div class="highlight"><pre><span></span><code>git svn rebase
+</code></pre></div>
 <p>will fast forward that branch to the most recent <code>refs/remotes/trunk</code></p></div>
 
   </article>

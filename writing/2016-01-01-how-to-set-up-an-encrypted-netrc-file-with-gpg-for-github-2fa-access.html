@@ -85,37 +85,37 @@ special <code>.netrc</code> file to enable <span class="caps">2FA</span> login f
 
 <p>First, go to GitHub and create a Personal Access Token.
 Then, create a <code>~/.netrc</code> file with the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><span class="na">machine github.com</span>
-<span class="na">login yourusername</span>
-<span class="na">password &lt;token&gt;</span>
-<span class="na">protocol https</span>
+<div class="highlight"><pre><span></span><code><span class="na">machine github.com</span><span class="w"></span>
+<span class="na">login yourusername</span><span class="w"></span>
+<span class="na">password &lt;token&gt;</span><span class="w"></span>
+<span class="na">protocol https</span><span class="w"></span>
 
-<span class="na">machine gist.github.com</span>
-<span class="na">login yourusername</span>
-<span class="na">password &lt;token&gt;</span>
-<span class="na">protocol https</span>
-</pre></div>
+<span class="na">machine gist.github.com</span><span class="w"></span>
+<span class="na">login yourusername</span><span class="w"></span>
+<span class="na">password &lt;token&gt;</span><span class="w"></span>
+<span class="na">protocol https</span><span class="w"></span>
+</code></pre></div>
 <p>where <code>&lt;token&gt;</code> is the token set up on the GitHub&nbsp;website.</p>
 <p>Then generate a <span class="caps">GPG</span> key if one doesn&#8217;t&nbsp;exist:</p>
-<div class="highlight"><pre><span></span>gpg --gen-key
-</pre></div>
+<div class="highlight"><pre><span></span><code>gpg --gen-key
+</code></pre></div>
 <p>Make sure to put a passphrase on that key.
 You may have to do some other tasks on the computer while it generates enough entropy.
 Then encrypt the <code>~/.netrc</code> file:</p>
-<div class="highlight"><pre><span></span>gpg -e -r email@example.com ~/.netrc
-</pre></div>
+<div class="highlight"><pre><span></span><code>gpg -e -r email@example.com ~/.netrc
+</code></pre></div>
 <p>Now the <code>~/.netrc</code> file can be deleted as long as the <code>~/.netrc.gpg</code> file is kept.
 Add the netrc credential&nbsp;helper:</p>
-<div class="highlight"><pre><span></span>curl -o ~/.local/bin/git-credential-netrc https://raw.githubusercontent.com/git/git/master/contrib/credential/netrc/git-credential-netrc
-</pre></div>
+<div class="highlight"><pre><span></span><code>curl -o ~/.local/bin/git-credential-netrc https://raw.githubusercontent.com/git/git/master/contrib/credential/netrc/git-credential-netrc
+</code></pre></div>
 <p>Finally, set up Git to use this&nbsp;file:</p>
-<div class="highlight"><pre><span></span>git config --global credential.helper <span class="s2">&quot;netrc -f ~/.netrc.gpg -v&quot;</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>git config --global credential.helper <span class="s2">&quot;netrc -f ~/.netrc.gpg -v&quot;</span>
+</code></pre></div>
 <p>Install <code>gpg-agent</code> and <code>pinentry</code></p>
-<div class="highlight"><pre><span></span>sudo apt-get install gnupg-agent pinentry-curses
-</pre></div>
+<div class="highlight"><pre><span></span><code>sudo apt-get install gnupg-agent pinentry-curses
+</code></pre></div>
 <p>Add to <code>~/.profile</code>:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Invoke GnuPG-Agent the first time we login.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Invoke GnuPG-Agent the first time we login.</span>
 <span class="c1"># Does `~/.gpg-agent-info&#39; exist and points to gpg-agent process accepting signals?</span>
 <span class="k">if</span> <span class="nb">test</span> -f <span class="nv">$HOME</span>/.gpg-agent-info <span class="o">&amp;&amp;</span> <span class="se">\</span>
     <span class="nb">kill</span> -0 <span class="sb">`</span>cut -d: -f <span class="m">2</span> <span class="nv">$HOME</span>/.gpg-agent-info<span class="sb">`</span> <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
@@ -126,7 +126,7 @@ Add the netrc credential&nbsp;helper:</p>
 <span class="k">fi</span>
 <span class="nb">export</span> <span class="nv">GPG_TTY</span><span class="o">=</span><span class="sb">`</span>tty<span class="sb">`</span>
 <span class="nb">export</span> GPG_AGENT_INFO
-</pre></div>
+</code></pre></div>
 <p>Now https pushes and pulls should work with GitHub on&nbsp;Linux.</p>
 <p>References:
 <a href="http://stackoverflow.com/a/18362082/2449192">http://stackoverflow.com/a/18362082/2449192</a><br />

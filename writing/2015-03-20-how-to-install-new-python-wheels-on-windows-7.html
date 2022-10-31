@@ -89,7 +89,7 @@ download all of the packages you need and put them in the folder you just
 created. Now, open any text editor and create a file called <code>requirements.txt</code>.
 The contents of that file should be a list of all the packages you downloaded;
 for instance, mine looks&nbsp;like:</p>
-<div class="highlight"><pre><span></span><span class="n">Cython</span>
+<div class="highlight"><pre><span></span><code><span class="n">Cython</span>
 <span class="n">scipy</span>
 <span class="n">numpy</span>
 <span class="n">tornado</span>
@@ -98,11 +98,11 @@ for instance, mine looks&nbsp;like:</p>
 <span class="n">pyparsing</span>
 <span class="n">lxml</span>
 <span class="n">Pillow</span>
-</pre></div>
+</code></pre></div>
 <p>Then, pop open a command window and change to the directory you created.
 Finally, run the&nbsp;command</p>
-<div class="highlight"><pre><span></span>pip install --upgrade -r requirements.txt --no-index -f . --no-deps
-</pre></div>
+<div class="highlight"><pre><span></span><code>pip install --upgrade -r requirements.txt --no-index -f . --no-deps
+</code></pre></div>
 <p>This should look up all the wheel files in the current directory while ignoring&nbsp;PyPI.</p></div>
 
   </article>

@@ -96,11 +96,11 @@ mingw64</a>
 <span class="caps">PATH</span> in the&nbsp;installer.</p>
 <p>My installation directories were the default for Ruby and <code>C:\dev kit</code> for the
 dev kit. Then, the simple&nbsp;commands</p>
-<div class="highlight"><pre><span></span><span class="k">cd</span> <span class="s2">&quot;C:\dev kit&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="k">cd</span> <span class="s2">&quot;C:\dev kit&quot;</span>
 ruby dk.rb init
 ruby dk.rb install
 gem install jekyll
-</pre></div>
+</code></pre></div>
 <p>built the dependencies and installed Jekyll. To get the code syntax highlighting
 working, we need <a href="https://www.python.org">Python</a> and pip (the Python package
 manager). The directions in the previously listed tutorial provide a work-around
@@ -139,11 +139,11 @@ it is looking&nbsp;for.</p>
 <p>Now, restart the Windows command line, and type <code>pip install Pygments</code></p>
 <p>Finally, Jekyll is installed with support for code highlighting. To test, in
 your command line&nbsp;type</p>
-<div class="highlight"><pre><span></span><span class="k">cd</span> <span class="s2">&quot;C:\Users\_User_\Documents&quot;</span> <span class="p">&amp;</span> ::Where _User_ is your user name
+<div class="highlight"><pre><span></span><code><span class="k">cd</span> <span class="s2">&quot;C:\Users\_User_\Documents&quot;</span> <span class="p">&amp;</span> ::Where _User_ is your user name
 jekyll new myblog
 <span class="k">cd</span> myblog
 jekyll serve -w
-</pre></div>
+</code></pre></div>
 <p>You can now open a browser window to <code>localhost:4000</code> and your (default) Jekyll
 webpage should open! Feel free to make changes to the markdown and css, and
 Jekyll should automagically update the site if you refresh your&nbsp;browser.</p>
@@ -153,9 +153,9 @@ Exception: No such file or directory...</code> you may need to downgrade the
 Pygments option to false, then try to start the server again. If everything
 works, you need to downgrade. Following the <span class="caps">SO</span> question
 <a href="http://stackoverflow.com/questions/17364028/jekyll-on-windows-pygments-not-working">here</a>,&nbsp;type</p>
-<div class="highlight"><pre><span></span>gem uninstall pygments.rb --version <span class="s2">&quot;=0.5.1&quot;</span>
+<div class="highlight"><pre><span></span><code>gem uninstall pygments.rb --version <span class="s2">&quot;=0.5.1&quot;</span>
 gem install pygments.rb --version <span class="s2">&quot;=0.5.0&quot;</span>
-</pre></div>
+</code></pre></div>
 <p>and reset the Pygments option in <code>_config.yml</code> to true to get it&nbsp;working.</p></div>
 
   </article>

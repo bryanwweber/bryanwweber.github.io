@@ -89,9 +89,9 @@ it with the &#8220;Open With&#8221; dialog in Explorer, and Windows chose the wr
 <p>The solution is to delete the file association and reinstate it properly. I
 found the solution on <a href="http://superuser.com/questions/49615/how-do-you-remove-a-default-program-association-for-file-types-in-windows-7">SuperUser</a>. Open <code>regedit</code> and delete the sub-key with
 the same name as the extension with the wrong icon, under the following&nbsp;keys:</p>
-<div class="highlight"><pre><span></span><span class="err">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts</span>
-<span class="err">HKEY_CLASSES_ROOT</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts</span><span class="w"></span>
+<span class="err">HKEY_CLASSES_ROOT</span><span class="w"></span>
+</code></pre></div>
 <p>Then, open Notepad++ with admin privileges and add the extension to the &#8220;File
 Exts.&#8221; panel. You may need to use the &#8220;Customize&#8221; field. Finally, open Task
 Manager (++Ctrl+Shift+Esc++), &#8220;End Process&#8221; the <code>explorer.exe</code> process, open a

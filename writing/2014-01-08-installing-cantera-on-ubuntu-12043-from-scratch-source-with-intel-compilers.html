@@ -126,8 +126,8 @@ the commands must be&nbsp;changed.</p>
 <p>First we have to install some dependences for the Intel compilers. See
 <a href="http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu">here</a>
 for more&nbsp;instructions.</p>
-<div class="highlight"><pre><span></span>sudo apt-get install build-essential gcc-multilib rpm openjdk-6-jre-headless
-</pre></div>
+<div class="highlight"><pre><span></span><code>sudo apt-get install build-essential gcc-multilib rpm openjdk-6-jre-headless
+</code></pre></div>
 <p>The next step is to install the Intel compilers themselves. My lab has a license
 to the Intel Fortran and C/C++ compiler suites, which also include Intel&#8217;s Math
 Kernel Library (<span class="caps">MKL</span>). The <span class="caps">MKL</span> contains the <span class="caps">LAPACK</span> and <span class="caps">BLAS</span> implementations
@@ -164,9 +164,9 @@ shown above), so it should get anyone up and&nbsp;running.</p>
 site</a>. The
 following dependencies from <code>apt-get</code> are required. This does not cover all of
 the dependencies in the documentation, but we will be installing some others&nbsp;separately.</p>
-<div class="highlight"><pre><span></span>sudo apt-get install scons subversion python python-dev python3 python3-dev <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>sudo apt-get install scons subversion python python-dev python3 python3-dev <span class="se">\</span>
 libsuitesparse-dev libbz2-dev libbz2-1.0 wget git git-svn swig
-</pre></div>
+</code></pre></div>
 <p>Not all of these dependencies are dependencies of Cantera itself; some of them
 are dependencies of the&nbsp;dependencies.</p>
 <p>With the <code>apt-get</code> installs out of the way, its time to move on to the Python
@@ -177,30 +177,30 @@ all of the following <code>easy_install</code> commands (and you&#8217;ll have t
 sysadmin to do the previous steps). The <code>--user</code> option will install the
 packages in the directory <code>/home/username/.local/lib/pythonX.Y/site-packages</code>,
 which is editable by the user and thus doesn&#8217;t require super-user&nbsp;rights.</p>
-<div class="highlight"><pre><span></span>wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py <span class="se">\</span>
 -O - <span class="p">|</span> sudo python3.2
 sudo easy_install-3.2 pip
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py <span class="se">\</span>
 -O - <span class="p">|</span> sudo python2.7
 sudo easy_install pip
-</pre></div>
+</code></pre></div>
 <p>It is important to install for Python 3 first, because otherwise the executables
 of <code>easy_install</code> and <code>pip</code> for Python 3 will overwrite those for Python 2, and
 forevermore you&#8217;ll get unexpected behavior. Then, with <code>pip</code> installed, we can&nbsp;do</p>
-<div class="highlight"><pre><span></span>sudo pip install cython 3to2 nose ipython
+<div class="highlight"><pre><span></span><code>sudo pip install cython 3to2 nose ipython
 sudo pip3.2 install cython 3to2-py3k nose ipython
 <span class="c1">#The following is only required if you want to build the Cantera documentation</span>
 sudo pip install Sphinx pygments pyparsing sphinxcontrib-doxylink
-</pre></div>
+</code></pre></div>
 <h2 id="InstallNumpyScipy">Install&nbsp;NumPy/SciPy</h2>
 <p>A quick perusal of the list of dependencies shows that NumPy and SciPy are also
 required to use the Python interface. If you would like to compile these with
 the Intel compilers, see
 <a href="https://bryanwweber.com/writing/installing-numpy-scipy-on-ubuntu-12.04.3-from-scratch-source-with-intel-compilers.html">here</a>.
 If using <span class="caps">GCC</span> is <span class="caps">OK</span> with you, then <code>pip</code> should be good&nbsp;enough.</p>
-<div class="highlight"><pre><span></span>sudo pip install numpy scipy
+<div class="highlight"><pre><span></span><code>sudo pip install numpy scipy
 sudo pip3.2 install numpy scipy
-</pre></div>
+</code></pre></div>
 <h2 id="InstallBoost">Install&nbsp;Boost</h2>
 <p>Now we come to the fun stuff. Its time to install some dependencies - from
 source! First up is Boost. Ubuntu has a version of Boost in the repositories,
@@ -210,18 +210,18 @@ had been compiled with a different compiler. As of this writing, the newest
 version of Boost is 1.55.0, but the absolute newest versions can be found at the
 SourceForge download site: <a href="http://sourceforge.net/projects/boost/files/boost/">http://sourceforge.net/projects/boost/files/boost/</a></p>
 <p>When you have downloaded the appropriate <code>.tar.gz</code> file, unzip it with the&nbsp;command</p>
-<div class="highlight"><pre><span></span>tar -xzf boost_X_YY_Z.tar.gz
-</pre></div>
+<div class="highlight"><pre><span></span><code>tar -xzf boost_X_YY_Z.tar.gz
+</code></pre></div>
 <p>Then change to the appropriate directory (most likely <code>boost_X_YY_Z</code>), and run
 the following&nbsp;commands</p>
-<div class="highlight"><pre><span></span>sudo -s
+<div class="highlight"><pre><span></span><code>sudo -s
 <span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
 ./bootstrap.sh --with-toolset<span class="o">=</span>intel-linux
 ./b2 -a -q --link<span class="o">=</span>shared --variant<span class="o">=</span>release --address-model<span class="o">=</span><span class="m">64</span> <span class="se">\</span>
     --compileflags<span class="o">=</span><span class="s2">&quot;-xhost -fp-model precise -O3&quot;</span> -j2 <span class="se">\</span>
     --threading<span class="o">=</span>multi install
 <span class="nb">exit</span>
-</pre></div>
+</code></pre></div>
 <p>Let&#8217;s look at these&nbsp;commands.</p>
 <ol>
 <li>Switch to the root terminal (if you don&#8217;t have <code>sudo</code> permissions, see&nbsp;below)</li>
@@ -264,10 +264,10 @@ we&#8217;re going for all the bells and whistles, so let&#8217;s go for it. Down
 Sundials (as of this writing, the most recent version is 2.5.0) from here:
 <a href="http://computation.llnl.gov/casc/sundials/download/download.html">http://computation.llnl.gov/casc/sundials/download/download.html</a>. Similar to
 the Boost section, we untar the&nbsp;tarball</p>
-<div class="highlight"><pre><span></span>tar -xzf sundials-X.Y.Z.tar.gz
-</pre></div>
+<div class="highlight"><pre><span></span><code>tar -xzf sundials-X.Y.Z.tar.gz
+</code></pre></div>
 <p>Then change to the appropriate directory and run the following&nbsp;commands</p>
-<div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<div class="highlight"><pre><span></span><code>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 ../configure <span class="nv">CXX</span><span class="o">=</span>icpc <span class="nv">CC</span><span class="o">=</span>icc <span class="nv">F77</span><span class="o">=</span>ifort --with-blas<span class="o">=</span><span class="s2">&quot;mkl_rt&quot;</span> <span class="se">\</span>
     --with-lapack<span class="o">=</span><span class="s2">&quot;mkl_rt&quot;</span> <span class="se">\</span>
     --with-libs<span class="o">=</span><span class="s2">&quot;-L</span><span class="nv">$MKLROOT</span><span class="s2">/lib/intel64 -lmkl_intel_lp64 -lmkl_core \</span>
@@ -281,7 +281,7 @@ sudo -s
 <span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
 make install
 <span class="nb">exit</span>
-</pre></div>
+</code></pre></div>
 <p>Let&#8217;s take a look at these commands now&nbsp;too.</p>
 <ol>
 <li>Create a build directory and change into&nbsp;it</li>
@@ -330,33 +330,33 @@ make install
 install Cantera itself. You can either download the tarball of the most recent
 stable source from here:
 <a href="http://sourceforge.net/projects/cantera/files/cantera/">http://sourceforge.net/projects/cantera/files/cantera/</a> and unzip it&nbsp;by</p>
-<div class="highlight"><pre><span></span>tar -xzf cantera-X.Y.Z.tar.gz
-</pre></div>
+<div class="highlight"><pre><span></span><code>tar -xzf cantera-X.Y.Z.tar.gz
+</code></pre></div>
 <p>Alternatively, you can download the source code by Subversion or
 <a href="https://www.kernel.org/pub/software/scm/git/docs/git-svn.html"><code>git-svn</code></a></p>
-<div class="highlight"><pre><span></span>svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.1/ cantera
+<div class="highlight"><pre><span></span><code>svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.1/ cantera
 <span class="c1">#                                                                   ^The space here is</span>
 <span class="c1">#                                                                    important</span>
-</pre></div>
+</code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span>git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
+<div class="highlight"><pre><span></span><code>git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
 <span class="c1">#                                                                   ^The space here is</span>
 <span class="c1">#                                                                    important</span>
 <span class="nb">cd</span> cantera
 git checkout <span class="m">2</span>.1
-</pre></div>
+</code></pre></div>
 <p>Either of these options will give you the most recent stable build of Cantera.
 If you want to live on the bleeding edge, you can download the developer version
 of Cantera by&nbsp;either</p>
-<div class="highlight"><pre><span></span>svn checkout http://cantera.googlecode.com/svn/cantera/trunk cantera
+<div class="highlight"><pre><span></span><code>svn checkout http://cantera.googlecode.com/svn/cantera/trunk cantera
 <span class="c1">#                                                           ^The space here is</span>
 <span class="c1">#                                                            important</span>
-</pre></div>
+</code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span>git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
+<div class="highlight"><pre><span></span><code>git svn clone --stdlayout http://cantera.googlecode.com/svn/cantera/ cantera
 <span class="c1">#                                                                   ^The space here is</span>
 <span class="c1">#                                                                    important</span>
-</pre></div>
+</code></pre></div>
 <p>and don&#8217;t give the <code>git checkout 2.1</code> line. After that, change into the
 directory where Cantera was downloaded or&nbsp;unzipped.</p>
 <p>Now we need to configure the installation of Cantera. This configuration file
@@ -364,7 +364,7 @@ will install the Cantera files in a different directory per user. The reason for
 this is that we wanted to allow each user of the server to have their own
 independent install of Cantera, rather than a global single version. Create a
 file called <code>cantera.conf</code> and copy the following into&nbsp;it</p>
-<div class="highlight"><pre><span></span><span class="n">CXX</span> <span class="o">=</span> <span class="s1">&#39;icpc&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">CXX</span> <span class="o">=</span> <span class="s1">&#39;icpc&#39;</span>
 <span class="n">CC</span> <span class="o">=</span> <span class="s1">&#39;icc&#39;</span>
 <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39;/home/_username_/.local&#39;</span>
 <span class="n">python_package</span> <span class="o">=</span> <span class="s1">&#39;new&#39;</span>
@@ -389,7 +389,7 @@ file called <code>cantera.conf</code> and copy the following into&nbsp;it</p>
 <span class="n">F77</span> <span class="o">=</span> <span class="s1">&#39;ifort&#39;</span>
 <span class="n">F77FLAGS</span> <span class="o">=</span> <span class="s1">&#39;-O3 -xhost&#39;</span>
 <span class="n">rpfont</span> <span class="o">=</span> <span class="s1">&#39;helvetica&#39;</span>
-</pre></div>
+</code></pre></div>
 <p><code>_username_</code> should be the username where Cantera should be installed. To see an
 explanation of these options, type <code>scons install help</code>. Note that you may have
 to change the directory of the Intel <span class="caps">MKL</span>. Briefly, they&nbsp;are:</p>
@@ -431,26 +431,26 @@ to change the directory of the Intel <span class="caps">MKL</span>. Briefly, the
 </ul>
 <p>After <code>cantera.conf</code> is set, its time to build and install Cantera. The
 following commands will build, test, and install&nbsp;Cantera:</p>
-<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:/usr/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:/usr/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 scons build -j2
 scons <span class="nb">test</span>
 scons install
-</pre></div>
+</code></pre></div>
 <p>As before, the <code>-jn</code> option specifies the number of build tasks to perform in
 parallel. Set <code>n</code> less than or equal to the number of processors you wish to use
 to perform the build. Higher <code>n</code> makes the build go much faster as long as you
 don&#8217;t exceed the number of processors on your computer. After that, change out
 of the Cantera directory, and in Python 2 <span class="amp">&amp;</span> 3 shells,&nbsp;type</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">cantera</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">cantera</span>
+</code></pre></div>
 <p>If no errors pop out, you&#8217;ve done it! Congratulations! Now just make some small
 additions to your <code>~/.bashrc</code> file (at the bottom of the file) so that Cantera
 is ready to go on each&nbsp;login:</p>
-<div class="highlight"><pre><span></span><span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/home/username/.local/bin:<span class="nv">$PATH</span>
 <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/home/_username_/.local/lib:/usr/local/lib:usr/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 <span class="nb">export</span> <span class="nv">MANPATH</span><span class="o">=</span>/home/username/.local/man:<span class="nv">$MANPATH</span>
-</pre></div></div>
+</code></pre></div></div>
 
   </article>
 </section>

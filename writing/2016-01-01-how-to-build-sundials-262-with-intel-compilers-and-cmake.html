@@ -87,7 +87,7 @@ commands below worked for me on Ubuntu 14.04.1 with the Intel version 15&nbsp;co
 Then, ensure that your version of CMake is new enough by downloading and
 installing a recent version of CMake from <a href="https://cmake.org/download/">https://cmake.org/download/</a></p>
 <p>Then, build and install <span class="caps">SUNDIALS</span></p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> sundials-2.6.2 <span class="o">&amp;&amp;</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> sundials-2.6.2 <span class="o">&amp;&amp;</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 cmake .. -DBUILD_SHARED_LIBS<span class="o">=</span>ON -DCMAKE_C_COMPILER<span class="o">=</span>icc -DCMAKE_Fortran_COMPILER<span class="o">=</span>ifort <span class="se">\</span>
 -DCMAKE_C_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span> <span class="se">\</span>
 -DCMAKE_Fortran_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span> <span class="se">\</span>
@@ -98,7 +98,7 @@ sudo -s
 . /opt/intel/bin/compilervars.sh intel64
 make install
 <span class="nb">exit</span>
-</pre></div>
+</code></pre></div>
 <p>Rather than using the variables in the <code>configure</code> script, this sets all the
 same variables in CMake. Happy&nbsp;solving!</p></div>
 

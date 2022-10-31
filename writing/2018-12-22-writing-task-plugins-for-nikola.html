@@ -104,30 +104,30 @@ content. To let Nikola know that a particular Python script is a plugin, you
 have to write a <code>.plugin</code> file, which is an <span class="caps">INI</span>-formatted file to tell Nikola
 where to find the module that it should run. Taking the example from the <a href="https://getnikola.com/extending.html#task-plugins">Nikola
 documentation</a>:</p>
-<div class="highlight"><pre><span></span><span class="k">[Core]</span>
-<span class="na">Name</span> <span class="o">=</span> <span class="s">copy_assets</span>
-<span class="na">Module</span> <span class="o">=</span> <span class="s">task_copy_assets</span>
-<span class="na">...</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">[Core]</span><span class="w"></span>
+<span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">copy_assets</span><span class="w"></span>
+<span class="na">Module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">task_copy_assets</span><span class="w"></span>
+<span class="na">...</span><span class="w"></span>
+</code></pre></div>
 <p>In the <code>[Core]</code> section, the <code>Name</code> setting must match the <code>name</code> of the <code>Task</code>
 (see below), and the <code>Module</code> setting is the name of the Python script that
 should be run (without the <code>.py</code>).</p>
 <p>Now, to write the Python for the actual plugin. First, your <code>Task</code> must inherit
 from the <code>Task</code> class from the <code>nikola.plugin_categories</code> module, or another
 class that inherits from that&nbsp;class.</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
 
 <span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
 
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my_task&quot;</span>
-</pre></div>
+</code></pre></div>
 <p>Note that the <code>name</code> class attribute must match the <code>Name</code> in the plugin <span class="caps">INI</span>
 file. In the <code>Task</code> class, there are two instance methods that are important:
 the <code>set_site</code> method (which is actually important for all Nikola plugins) and
 the <code>get_tasks</code> method (which is specific to task&nbsp;plugins).</p>
 <p>The <code>set_site</code> method has the&nbsp;signature</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">)</span>
+</code></pre></div>
 <p>where <code>site</code> is the instance of the website that you&#8217;re building. The
 documentation for the <code>site</code> instance is available on the <a href="https://nikola.readthedocs.io/en/latest/nikola/#module-nikola.nikola">Nikola ReadTheDocs</a>.
 The <code>set_site</code> method is run when the plugin is loaded and the site is being
@@ -138,7 +138,7 @@ method. Another common thing to do is <a href="https://bryanwweber.com/writing/2
 task</a>
 as a dependency to another task. Including the <code>set_site</code> method is optional,
 but if you do, you should make sure to call the <code>super</code> of the&nbsp;class:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
 
 <span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
 
@@ -147,7 +147,7 @@ but if you do, you should make sure to call the <code>super</code> of the&nbsp;c
     <span class="k">def</span> <span class="nf">set_site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">):</span>
         <span class="c1"># Conduct setup</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">MyTask</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">set_site</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>The other method that is important is the <code>gen_tasks</code> method. According to the
 documentation, the <code>gen_tasks</code> method should <code>yield</code> <a href="http://pydoit.org/tasks.html">doit tasks</a>.
 <a href="http://pydoit.org/"><code>pydoit</code></a> is an automation library that determines the
@@ -162,7 +162,7 @@ doit pre-processes all of the tasks and decides which ones need to be run based
 on their output changing or not being current. Therefore, we don&#8217;t want doit to
 be forced to run the &#8220;task&#8221; we want to be accomplished until it is ready to do
 so. Thus, within the <code>Task</code> context, a sample might look&nbsp;like</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">Task</span>
 
 <span class="k">class</span> <span class="nc">MyTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
 
@@ -177,7 +177,7 @@ so. Thus, within the <code>Task</code> context, a sample might look&nbsp;like</p
                 <span class="p">(</span><span class="n">action_function</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;arg1value&quot;</span><span class="p">,</span> <span class="s2">&quot;arg2value&quot;</span><span class="p">])</span>
             <span class="p">],</span>
         <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 <p>This way, Nikola is free to execute the <code>gen_tasks</code> function on every <code>build</code>
 invocation, but the <code>action_function</code> will only be executed when Nikola passes
 control to doit and doit determines the result of running the task is&nbsp;out-of-date.</p>
@@ -209,12 +209,12 @@ are passed as keyword arguments (based on the keys) to the&nbsp;function.</p>
   dictionary. If the value is a dictionary, then each key is hashed to
   determine any changes; if anything comes out different, a <code>False</code> element is
   put into the <code>uptodate</code> list. Usage&nbsp;is</p>
-<div class="highlight"><pre><span></span><span class="n">config_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;keyword&quot;</span><span class="p">:</span> <span class="s2">&quot;something that can be hashed&quot;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">config_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;keyword&quot;</span><span class="p">:</span> <span class="s2">&quot;something that can be hashed&quot;</span><span class="p">}</span>
 <span class="k">yield</span> <span class="p">{</span>
     <span class="c1"># actions, etc.</span>
     <span class="s2">&quot;uptodate&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">utils</span><span class="o">.</span><span class="n">config_changed</span><span class="p">(</span><span class="n">config_dict</span><span class="p">)],</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </li>
 </ul>
 </li>

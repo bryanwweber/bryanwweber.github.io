@@ -103,39 +103,39 @@ Then, we need to create a local <code>texmf</code> directory. I followed the ins
 MikTeX, in the Roots tab, add this the root directory (i.e. <code>C:\localtexmf</code>) and
 on the General tab, click Update <span class="caps">FNDB</span>.</p>
 <p>Now create a file in the <code>bin</code> directory called <code>pax.bat</code> and put into&nbsp;it</p>
-<div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 <span class="k">SETLOCAL</span>
 
 <span class="k">set</span> <span class="nv">CLASSPATH</span><span class="p">=</span>C:\PDFBox\lib\PDFBox-0.7.3.jar;<span class="nv">%CLASSPATH%</span>
 
 perl <span class="s2">&quot;C:\Program Files\MiKTeX 2.9\scripts\pax\pdfannotextractor.pl&quot;</span> <span class="nv">%*</span>
-</pre></div>
+</code></pre></div>
 <p>Finally, make sure the <code>C:\StrawberryPerl</code>, <code>C:\localtexmf\bin</code> and Java
 directories are on your path. Then you can&nbsp;run</p>
-<div class="highlight"><pre><span></span>pax FileWithLinksToBeIncluded.pdf
-</pre></div>
+<div class="highlight"><pre><span></span><code>pax FileWithLinksToBeIncluded.pdf
+</code></pre></div>
 <p>This will generate the <code>.pax</code> file. Credit for this solution goes to the
 wonderful <a href="http://tex.stackexchange.com/a/79082/32374">TeX.<span class="caps">SX</span></a>. Then, in the main TeX document,&nbsp;write</p>
-<div class="highlight"><pre><span></span>...
+<div class="highlight"><pre><span></span><code>...
 <span class="k">\usepackage</span><span class="nb">{</span>pdfpages<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>pax<span class="nb">}</span>
 ...
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <span class="k">\includepdf</span><span class="na">[pages={-}]</span><span class="nb">{</span>FileWithLinksToBeIncluded<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</pre></div>
+</code></pre></div>
 <p>and compile with pdf(La)TeX. Note that Pax only works with pdf(La)TeX. It cannot
 work with XeTeX (or XeLaTeX) according to <a href="http://tex.stackexchange.com/questions/60201/getting-pax-pdfpages-to-work-with-xelatex">this post</a>. However, LuaLaTeX
 supports nearly all of the <code>fontspec</code> options that XeTeX does, and LuaLaTeX can
 be hacked to work with Pax. If you would like to use LuaLaTeX, add the following
 to your preamble instead of <code>\usepackage{pax}</code> <a href="http://tex.stackexchange.com/a/60211/32374">credit</a>:</p>
-<div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>pdftexcmds<span class="nb">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>pdftexcmds<span class="nb">}</span>
 <span class="k">\makeatletter</span>
 <span class="k">\let\pdfescapename</span>=<span class="k">\pdf</span>@escapename
 <span class="k">\let\pdfstrcmp</span>=<span class="k">\pdf</span>@strcmp
 <span class="k">\makeatother</span>
 <span class="k">\usepackage</span><span class="nb">{</span>pax<span class="nb">}</span>
-</pre></div></div>
+</code></pre></div></div>
 
   </article>
 </section>

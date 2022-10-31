@@ -89,7 +89,7 @@ while <code>unicode-math</code> lets you control the fonts used in math environm
 <code>unicode-math</code> will typeset all of the numbers in whatever font you choose with
 that package so the default must be changed.  For instance, in  my
 dissertation, I&nbsp;have</p>
-<div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
 <span class="k">\setmainfont</span><span class="na">[Ligatures=TeX]</span><span class="nb">{</span>Times New Roman<span class="nb">}</span>
 
 <span class="k">\usepackage</span><span class="nb">{</span>unicode-math<span class="nb">}</span>
@@ -100,7 +100,7 @@ dissertation, I&nbsp;have</p>
 <span class="k">\setmathfont</span>[range=<span class="nb">{</span>&quot;2212,&quot;002B,&quot;003D,&quot;0028,&quot;0029,&quot;005B,
 &quot;005D,&quot;221A,&quot;2211,&quot;2248,&quot;222B,&quot;007C,&quot;2026,&quot;2202,&quot;00D7,&quot;0302,
 &quot;2261,&quot;0025,&quot;22C5,&quot;00B1,&quot;2194,&quot;21D4<span class="nb">}</span>]<span class="nb">{</span>Cambria Math<span class="nb">}</span>
-</pre></div>
+</code></pre></div>
 <p>The lines starting <code>\setmathfont</code> are what control the font for different
 characters. The option <code>\mathup</code> means the upright math style, while the
 <code>\mathit</code> option means the italic math style. The <code>/{num}</code> means to use the

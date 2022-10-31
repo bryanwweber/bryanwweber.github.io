@@ -3,9 +3,15 @@ title: Resume
 summary: Bryan Weber's Resume
 ---
 
-Experienced Python developer working on PyData projects and maintaing open source software. Working on the web, with data, and everything in between.
+Experienced Python developer working on PyData projects and maintaining open source software. Working on the web, with data, and everything in between.
 
 ## Select Experiences
+
+Senior Software Engineer, Rebellion Defense, 2022
+
+- Developing AI tools for sensor fusion in autonomous platforms
+
+---
 
 OSS Engineer, Coiled Computing, 2022
 

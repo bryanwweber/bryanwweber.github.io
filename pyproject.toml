@@ -1,0 +1,36 @@
+[project]
+name = "bryanwweber.github.io"
+version = "3.0.0"
+description = "My personal website!"
+authors = [{ name = "Bryan Weber", email = "bryan.w.weber@gmail.com" }]
+dependencies = [
+  "bulrush",
+  "cssmin",
+  "ghp-import",
+  "invoke",
+  "livereload",
+  "pelican",
+  "pelican-pagination",
+  "pelican-redirect",
+  "pelican-summary @ https://github.com/mirekdlugosz/pelican-plugins-summary/archive/refs/heads/migrate.tar.gz",
+  "pelican-webassets",
+  "pelican-yaml-metadata @ https://github.com/pR0Ps/pelican-yaml-metadata/archive/refs/heads/master.tar.gz",
+  "pymdown-extensions",
+  "smartypants",
+  "typogrify",
+  "webassets",
+]
+requires-python = ">=3.9"
+license = { text = "CC BY-SA 3.0" }
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=23.3.0",
+]

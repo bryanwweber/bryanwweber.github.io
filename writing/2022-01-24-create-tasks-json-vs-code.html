@@ -88,37 +88,37 @@
 <li><strong><code>args</code></strong>: Any additional arguments to the&nbsp;command</li>
 </ol>
 <p>The first task we create will run pytest with the <code>--cov</code> argument so that it generates coverage files. Note that this will require the <code>pytest-cov</code> plugin to be&nbsp;installed.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;process&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pytest&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;dask&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;--cov=dask&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;process&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pytest&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;dask&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;--cov=dask&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>This task is named <em>Run tests with coverage</em> and the command is naturally <code>pytest</code>. We chose a <code>type</code> of <code>process</code> here because we only need to launch <code>pytest</code> as a standalone program, not from within a shell. The <code>args</code> are an array of arguments that are passed to pytest. Multiple arguments that you would normally separate with a space should be individual elements in the array, otherwise they&#8217;ll be grouped with quotes and pytest won&#8217;t recognize&nbsp;them.</p>
 <p>Now let&#8217;s say you want to make your task here a little bit more intelligent. The Dask test suite takes a few minutes to run and I don&#8217;t want to wait that long when I&#8217;m iterating on a single file. Rather than passing pytest the entire tree to search for tests, I&#8217;d rather pass the specific file I&#8217;m working on. We can define an input for the task that pops open a box where we can type a value for the argument. The entire <code>tasks.json</code> file looks like this&nbsp;now:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;process&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pytest&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;${input:testsToRun}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;--cov=dask&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="p">],</span><span class="w"></span>
-<span class="nt">&quot;inputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testsToRun&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subset of tests to run&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dask&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;promptString&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;process&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pytest&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;${input:testsToRun}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;--cov=dask&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">],</span>
+<span class="nt">&quot;inputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testsToRun&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subset of tests to run&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dask&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;promptString&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">]</span>
 </code></pre></div>
 <p><code>"inputs"</code> is an array of objects with 4 main&nbsp;keys:</p>
 <ol>
@@ -130,14 +130,14 @@
 <p>The task is also modified so that the first item in <code>args</code> becomes <code>${input:testsToRun}</code>. The <code>${...}</code> tells <span class="caps">VS</span> Code that it needs to substitute a variable, <code>input</code> specifies that the variable is from the <code>inputs</code> array, and <code>testsToRun</code> is the <code>id</code> of the relevant input. Now, when I run this task, <span class="caps">VS</span> Code asks for a string that becomes the search argument for&nbsp;pytest!</p>
 <p>We can similarly add another <code>process</code> task to run the <code>coverage html</code> command that generates the <span class="caps">HTML</span> coverage&nbsp;report.</p>
 <p>The last item to accomplish is to define a single task that executes both tasks in sequence. This is known as a <em>Compound task</em> and it relies on a new key for the task object, <code>dependsOn</code>. This key must have a value that is an array of task labels to run. By default, the tasks are run in parallel; since we want them to be run in sequence, we also need the <code>dependsOrder</code> key set to a string <code>sequence</code>. The compound task to run tests and generate the report looks like&nbsp;this:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests and get coverage HTML&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Coverage HTML report&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;dependsOrder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sequence&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run tests and get coverage HTML&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dependsOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Run tests with coverage&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Coverage HTML report&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;dependsOrder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sequence&quot;</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>The task <em>Run tests and get coverage <span class="caps">HTML</span></em> will now execute the two tasks we&#8217;ve defined, which will automatically run the tests and generate the <span class="caps">HTML</span> report! All that remains is to refresh your Coverage page in your browser to see the updated&nbsp;information!</p></div>
 

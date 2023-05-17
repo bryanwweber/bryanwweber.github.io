@@ -104,10 +104,10 @@ content. To let Nikola know that a particular Python script is a plugin, you
 have to write a <code>.plugin</code> file, which is an <span class="caps">INI</span>-formatted file to tell Nikola
 where to find the module that it should run. Taking the example from the <a href="https://getnikola.com/extending.html#task-plugins">Nikola
 documentation</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[Core]</span><span class="w"></span>
-<span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">copy_assets</span><span class="w"></span>
-<span class="na">Module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">task_copy_assets</span><span class="w"></span>
-<span class="na">...</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[Core]</span>
+<span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">copy_assets</span>
+<span class="na">Module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">task_copy_assets</span>
+<span class="na">...</span>
 </code></pre></div>
 <p>In the <code>[Core]</code> section, the <code>Name</code> setting must match the <code>name</code> of the <code>Task</code>
 (see below), and the <code>Module</code> setting is the name of the Python script that

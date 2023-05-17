@@ -87,53 +87,53 @@ most recent Intel compilers as of this writing (2013 <span class="caps">SP1</spa
 page</a>.</p>
 <p>The dependencies for NumPy and SciPy can be installed with the following, if
 they haven&#8217;t been&nbsp;already:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install git swig libsuitesparse-dev python3 <span class="se">\</span>
-python3-dev python-dev
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py <span class="se">\</span>
--O - <span class="p">|</span> sudo python3.2
-sudo easy_install-3.2 pip
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py <span class="se">\</span>
--O - <span class="p">|</span> sudo python2.7
-sudo easy_install pip
-sudo pip2 install cython nose
-sudo pip3 install cython nose
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>swig<span class="w"> </span>libsuitesparse-dev<span class="w"> </span>python3<span class="w"> </span><span class="se">\</span>
+python3-dev<span class="w"> </span>python-dev
+wget<span class="w"> </span>https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py<span class="w"> </span><span class="se">\</span>
+-O<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>python3.2
+sudo<span class="w"> </span>easy_install-3.2<span class="w"> </span>pip
+wget<span class="w"> </span>https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py<span class="w"> </span><span class="se">\</span>
+-O<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>python2.7
+sudo<span class="w"> </span>easy_install<span class="w"> </span>pip
+sudo<span class="w"> </span>pip2<span class="w"> </span>install<span class="w"> </span>cython<span class="w"> </span>nose
+sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>cython<span class="w"> </span>nose
 </code></pre></div>
 <p>First, download the source from the git&nbsp;repositories.</p>
-<div class="highlight"><pre><span></span><code>git clone git://github.com/numpy/numpy.git
-git clone git://github.com/scipy/scipy.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/numpy/numpy.git
+git<span class="w"> </span>clone<span class="w"> </span>git://github.com/scipy/scipy.git
 </code></pre></div>
 <p>To checkout the most recent stable version,&nbsp;type</p>
-<div class="highlight"><pre><span></span><code>git tag
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag
 </code></pre></div>
 <p>and pick the highest one that is just numbers. As of today, for <code>numpy</code> that is
 <code>v1.8.2</code>, and for <code>scipy</code> it is <code>v0.14.0</code>,&nbsp;so</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> numpy <span class="o">&amp;&amp;</span> git checkout v1.8.2
-<span class="nb">cd</span> scipy <span class="o">&amp;&amp;</span> git checkout v0.14.0
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>numpy<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>v1.8.2
+<span class="nb">cd</span><span class="w"> </span>scipy<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>v0.14.0
 </code></pre></div>
 <p>This step is optional. The next step is to compile and install <code>numpy</code>; <code>scipy</code>
 depends on <code>numpy</code>, so <code>numpy</code> goes first. From the folder where you ran the git
 commands, change into the <code>numpy</code> directory (there should be a file called
 <code>setup.py</code> if you&#8217;re in the correct directory), create a file called <code>site.cfg</code>,
 and copy the following contents into&nbsp;it:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[DEFAULT]</span><span class="w"></span>
-<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/local/lib:/usr/lib</span><span class="w"></span>
-<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/local/include:/usr/include</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[DEFAULT]</span>
+<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/local/lib:/usr/lib</span>
+<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/local/include:/usr/include</span>
 
-<span class="k">[mkl]</span><span class="w"></span>
-<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/opt/intel/composerxe/lib/intel64:/opt/intel/composerxe/mkl/lib/intel64</span><span class="w"></span>
-<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/opt/intel/composerxe/mkl/include/intel64/lp64</span><span class="w"></span>
-<span class="na">mkl_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mkl_def, mkl_intel_lp64, mkl_intel_thread, mkl_core, iomp5</span><span class="w"></span>
-<span class="na">lapack_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mkl_lapack95_lp64</span><span class="w"></span>
+<span class="k">[mkl]</span>
+<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/opt/intel/composerxe/lib/intel64:/opt/intel/composerxe/mkl/lib/intel64</span>
+<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/opt/intel/composerxe/mkl/include/intel64/lp64</span>
+<span class="na">mkl_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mkl_def, mkl_intel_lp64, mkl_intel_thread, mkl_core, iomp5</span>
+<span class="na">lapack_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mkl_lapack95_lp64</span>
 
-<span class="k">[umfpack]</span><span class="w"></span>
-<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/lib</span><span class="w"></span>
-<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/include/suitesparse</span><span class="w"></span>
-<span class="na">umfpack_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">umfpack</span><span class="w"></span>
+<span class="k">[umfpack]</span>
+<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/lib</span>
+<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/include/suitesparse</span>
+<span class="na">umfpack_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">umfpack</span>
 
-<span class="k">[amd]</span><span class="w"></span>
-<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/lib</span><span class="w"></span>
-<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/include/suitesparse</span><span class="w"></span>
-<span class="na">amd_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">amd</span><span class="w"></span>
+<span class="k">[amd]</span>
+<span class="na">library_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/lib</span>
+<span class="na">include_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/include/suitesparse</span>
+<span class="na">amd_libs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">amd</span>
 </code></pre></div>
 <p>Note that the <code>umfpack</code> and <code>amd</code> sections are optional. If you choose not to
 install with support for them, <code>libsuitesparse-dev</code> in the dependencies can be
@@ -148,7 +148,7 @@ the <code>IntelEM64TCComiler</code> class to have the right flags. Initially, th
 will look&nbsp;like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#BEFORE</span>
 <span class="k">class</span> <span class="nc">IntelEM64TCCompiler</span><span class="p">(</span><span class="n">UnixCCompiler</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">compiler_type</span> <span class="o">=</span> <span class="s1">&#39;intelem&#39;</span>
     <span class="n">cc_exe</span> <span class="o">=</span> <span class="s1">&#39;icc -m64 -fPIC&#39;</span>
@@ -169,7 +169,7 @@ flags. Edit the string on that line to include <code>-openmp</code>, <code>-g</c
 but this is probably optional. After the changes, the code will look&nbsp;like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#AFTER</span>
 <span class="k">class</span> <span class="nc">IntelEM64TCCompiler</span><span class="p">(</span><span class="n">UnixCCompiler</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; A modified Intel x86_64 compiler compatible with a 64bit gcc built Python.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">compiler_type</span> <span class="o">=</span> <span class="s1">&#39;intelem&#39;</span>
 <span class="c1">#    cc_exe = &#39;icc -m64 -fPIC&#39;</span>
@@ -187,20 +187,20 @@ but this is probably optional. After the changes, the code will look&nbsp;like:<
 <p>These compiler flags will give us all of the benefits of the Intel compilers
 running on Intel&nbsp;chips.</p>
 <p>Then, we will build and install for Python 2 <span class="amp">&amp;</span>&nbsp;3.</p>
-<div class="highlight"><pre><span></span><code>python setup.py config --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_clib <span class="se">\</span>
---compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_ext --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>setup.py<span class="w"> </span>config<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_clib<span class="w"> </span><span class="se">\</span>
+--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_ext<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span><span class="se">\</span>
 build
-sudo -s
-<span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
-python setup.py install
-rm -rf build
+sudo<span class="w"> </span>-s
+<span class="nb">source</span><span class="w"> </span>/opt/intel/bin/compilervars.sh<span class="w"> </span>intel64
+python<span class="w"> </span>setup.py<span class="w"> </span>install
+rm<span class="w"> </span>-rf<span class="w"> </span>build
 <span class="nb">exit</span>
-python3 setup.py config --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_clib <span class="se">\</span>
---compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_ext --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem <span class="se">\</span>
+python3<span class="w"> </span>setup.py<span class="w"> </span>config<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_clib<span class="w"> </span><span class="se">\</span>
+--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_ext<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span><span class="se">\</span>
 build
-sudo -s
-<span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
-python3 setup.py install
+sudo<span class="w"> </span>-s
+<span class="nb">source</span><span class="w"> </span>/opt/intel/bin/compilervars.sh<span class="w"> </span>intel64
+python3<span class="w"> </span>setup.py<span class="w"> </span>install
 <span class="nb">exit</span>
 </code></pre></div>
 <p>Awesome, <code>numpy</code> is installed. Check that everything went properly by changing
@@ -265,23 +265,23 @@ passed for me on 15-<span class="caps">JUL</span>-2014.</p>
 for <code>numpy</code>, we need a configuration file so that <code>scipy</code> knows where to find
 all of the information it needs. It turns out that the <code>site.cfg</code> we created for
 <code>numpy</code> will work just fine for <code>scipy</code>.&nbsp;Type</p>
-<div class="highlight"><pre><span></span><code>cp ../numpy/site.cfg site.cfg
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>../numpy/site.cfg<span class="w"> </span>site.cfg
 </code></pre></div>
 <p>Then, the build and install commands are the same as&nbsp;before:</p>
-<div class="highlight"><pre><span></span><code>python setup.py config --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_clib <span class="se">\</span>
---compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_ext --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>setup.py<span class="w"> </span>config<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_clib<span class="w"> </span><span class="se">\</span>
+--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_ext<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span><span class="se">\</span>
 build
-sudo -s
-<span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
-python setup.py install
-rm -rf build
+sudo<span class="w"> </span>-s
+<span class="nb">source</span><span class="w"> </span>/opt/intel/bin/compilervars.sh<span class="w"> </span>intel64
+python<span class="w"> </span>setup.py<span class="w"> </span>install
+rm<span class="w"> </span>-rf<span class="w"> </span>build
 <span class="nb">exit</span>
-python3 setup.py config --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_clib <span class="se">\</span>
---compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem build_ext --compiler<span class="o">=</span>intelem --fcompiler<span class="o">=</span>intelem <span class="se">\</span>
+python3<span class="w"> </span>setup.py<span class="w"> </span>config<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_clib<span class="w"> </span><span class="se">\</span>
+--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span>build_ext<span class="w"> </span>--compiler<span class="o">=</span>intelem<span class="w"> </span>--fcompiler<span class="o">=</span>intelem<span class="w"> </span><span class="se">\</span>
 build
-sudo -s
-<span class="nb">source</span> /opt/intel/bin/compilervars.sh intel64
-python3 setup.py install
+sudo<span class="w"> </span>-s
+<span class="nb">source</span><span class="w"> </span>/opt/intel/bin/compilervars.sh<span class="w"> </span>intel64
+python3<span class="w"> </span>setup.py<span class="w"> </span>install
 <span class="nb">exit</span>
 </code></pre></div>
 <p>After <code>scipy</code> is installed, we need to test it as well. Change out of the

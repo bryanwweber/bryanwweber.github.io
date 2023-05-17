@@ -92,8 +92,8 @@ for example, into a directory called <code>~/testing</code>, and the layout opti
 be specified as <code>compact</code>. Then, run the builder and&nbsp;installer.</p>
 <p>Next, create a build directory, change into it, and build the sub-packages to
 contain the data files for Cantera and the <span class="caps">MATLAB</span> interface&nbsp;files</p>
-<div class="highlight"><pre><span></span><code>$ pkgbuild --install-location cantera/data --root ~/testing/data --identifier org.cantera.pkg.cantera-data ./cantera-data.pkg
-$ pkgbuild --install-location cantera/matlab --root ~/testing/matlab --identifier org.cantera.pkg.cantera-matlab-interface ./cantera-matlab-interface.pkg
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pkgbuild<span class="w"> </span>--install-location<span class="w"> </span>cantera/data<span class="w"> </span>--root<span class="w"> </span>~/testing/data<span class="w"> </span>--identifier<span class="w"> </span>org.cantera.pkg.cantera-data<span class="w"> </span>./cantera-data.pkg
+$<span class="w"> </span>pkgbuild<span class="w"> </span>--install-location<span class="w"> </span>cantera/matlab<span class="w"> </span>--root<span class="w"> </span>~/testing/matlab<span class="w"> </span>--identifier<span class="w"> </span>org.cantera.pkg.cantera-matlab-interface<span class="w"> </span>./cantera-matlab-interface.pkg
 </code></pre></div>
 <p>The command line switches here&nbsp;are</p>
 <ul>
@@ -114,23 +114,23 @@ we need to create a script to modify <code>startup.m</code>. This script should 
 <span class="c1"># This directory should be created when MATLAB is installed</span>
 <span class="nv">MATLAB_STARTUP</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Documents/MATLAB/startup.m&quot;</span>
 
-cp -fp <span class="nv">$MATLAB_STARTUP</span> <span class="si">${</span><span class="nv">MATLAB_STARTUP</span><span class="si">}</span>-cantera.bak
+cp<span class="w"> </span>-fp<span class="w"> </span><span class="nv">$MATLAB_STARTUP</span><span class="w"> </span><span class="si">${</span><span class="nv">MATLAB_STARTUP</span><span class="si">}</span>-cantera.bak
 
-<span class="nb">echo</span> <span class="s2">&quot;</span>
-<span class="s2">Adding Cantera to MATLAB Path in </span><span class="si">${</span><span class="nv">MATLAB_STARTUP</span><span class="si">}</span><span class="s2"></span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span>
+<span class="s2">Adding Cantera to MATLAB Path in </span><span class="si">${</span><span class="nv">MATLAB_STARTUP</span><span class="si">}</span>
 
 <span class="s2">For this change to become active, you have to restart MATLAB.</span>
 <span class="s2">&quot;</span>
-<span class="nb">echo</span> <span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span>
 <span class="s2">% added by Cantera installer</span>
 <span class="s2">path(&#39;</span><span class="si">${</span><span class="nv">PREFIX</span><span class="si">}</span><span class="s2">/cantera/matlab/toolbox&#39;, path)</span>
 <span class="s2">path(&#39;</span><span class="si">${</span><span class="nv">PREFIX</span><span class="si">}</span><span class="s2">/cantera/matlab/toolbox/1D&#39;, path)</span>
-<span class="s2">adddir(&#39;</span><span class="si">${</span><span class="nv">PREFIX</span><span class="si">}</span><span class="s2">/cantera/data)&#39;&quot;</span> &gt;&gt; <span class="nv">$MATLAB_STARTUP</span>
+<span class="s2">adddir(&#39;</span><span class="si">${</span><span class="nv">PREFIX</span><span class="si">}</span><span class="s2">/cantera/data)&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$MATLAB_STARTUP</span>
 
-<span class="nb">exit</span> <span class="m">0</span>
+<span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Then, build the package to contain the post-install&nbsp;script</p>
-<div class="highlight"><pre><span></span><code>$ pkgbuild --nopayload --scripts ~/testing/startupupdate/scripts/ --identifier org.cantera.pkg.startupupdate ./cantera-startupupdate.pkg
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pkgbuild<span class="w"> </span>--nopayload<span class="w"> </span>--scripts<span class="w"> </span>~/testing/startupupdate/scripts/<span class="w"> </span>--identifier<span class="w"> </span>org.cantera.pkg.startupupdate<span class="w"> </span>./cantera-startupupdate.pkg
 </code></pre></div>
 <p>The extra options here&nbsp;are:</p>
 <ul>
@@ -144,39 +144,39 @@ can be found at <a href="https://developer.apple.com/library/mac/documentation/D
 website</a>.
 The contents of this file for my purposes&nbsp;are</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;no&quot;?&gt;</span>
-<span class="nt">&lt;installer-gui-script</span> <span class="na">minSpecVersion=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;options</span> <span class="na">customize=</span><span class="s">&quot;allow&quot;</span> <span class="na">require-scripts=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;choices-outline&gt;</span>
-        <span class="nt">&lt;line</span> <span class="na">choice=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;line</span> <span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;line</span> <span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;line</span> <span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;/line&gt;</span>
-    <span class="nt">&lt;/choices-outline&gt;</span>
-    <span class="nt">&lt;choice</span> <span class="na">id=</span><span class="s">&quot;default&quot;</span> <span class="na">title=</span><span class="s">&quot;Cantera Matlab Interface&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;choice</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span> <span class="na">visible=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/choice&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span> <span class="na">version=</span><span class="s">&quot;0&quot;</span> <span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-data.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
-    <span class="nt">&lt;choice</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span> <span class="na">visible=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/choice&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span> <span class="na">version=</span><span class="s">&quot;0&quot;</span> <span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-matlab-interface.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
-    <span class="nt">&lt;choice</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span> <span class="na">visible=</span><span class="s">&quot;true&quot;</span> <span class="na">title=</span><span class="s">&quot;Modify startup.m&quot;</span> <span class="na">description=</span><span class="s">&quot;Modify or add a startup.m file for MATLAB. If you do not do this, you will have to create your own startup.m file&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/choice&gt;</span>
-    <span class="nt">&lt;pkg-ref</span> <span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span> <span class="na">version=</span><span class="s">&quot;0&quot;</span> <span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-startupupdate.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
-    <span class="nt">&lt;domains</span> <span class="na">enable_anywhere=</span><span class="s">&quot;true&quot;</span> <span class="na">enable_currentUserHome=</span><span class="s">&quot;true&quot;</span> <span class="na">enable_localSystem=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cantera Matlab Interface<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;license</span> <span class="na">file=</span><span class="s">&quot;license.txt&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;product</span> <span class="na">id=</span><span class="s">&quot;Cantera Matlab Interface&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;installer-gui-script</span><span class="w"> </span><span class="na">minSpecVersion=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">customize=</span><span class="s">&quot;allow&quot;</span><span class="w"> </span><span class="na">require-scripts=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;choices-outline&gt;</span>
+<span class="w">        </span><span class="nt">&lt;line</span><span class="w"> </span><span class="na">choice=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;line</span><span class="w"> </span><span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;line</span><span class="w"> </span><span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;line</span><span class="w"> </span><span class="na">choice=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/line&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/choices-outline&gt;</span>
+<span class="w">    </span><span class="nt">&lt;choice</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;default&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Cantera Matlab Interface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;choice</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/choice&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-data&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-data.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
+<span class="w">    </span><span class="nt">&lt;choice</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/choice&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.cantera-matlab-interface&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-matlab-interface.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
+<span class="w">    </span><span class="nt">&lt;choice</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Modify startup.m&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Modify or add a startup.m file for MATLAB. If you do not do this, you will have to create your own startup.m file&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/choice&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pkg-ref</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;org.cantera.pkg.startupupdate&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">onConclusion=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;</span>cantera-startupupdate.pkg<span class="nt">&lt;/pkg-ref&gt;</span>
+<span class="w">    </span><span class="nt">&lt;domains</span><span class="w"> </span><span class="na">enable_anywhere=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">enable_currentUserHome=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">enable_localSystem=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>Cantera<span class="w"> </span>Matlab<span class="w"> </span>Interface<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;license</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;license.txt&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;product</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Cantera Matlab Interface&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/installer-gui-script&gt;</span>
 </code></pre></div>
 <p>Finally, we need to put all the packages together into the total installer&nbsp;package</p>
-<div class="highlight"><pre><span></span><code>$ productbuild --distribution ./Distribution --resources ./Resources/ ./Cantera.pkg
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>productbuild<span class="w"> </span>--distribution<span class="w"> </span>./Distribution<span class="w"> </span>--resources<span class="w"> </span>./Resources/<span class="w"> </span>./Cantera.pkg
 </code></pre></div>
 <p>After this, it should be a double-click install procedure.&nbsp;Easy!</p></div>
 

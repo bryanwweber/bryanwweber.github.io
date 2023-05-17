@@ -82,10 +82,10 @@ to link custom solvers to the <span class="caps">CHEMKIN</span>-Pro libraries. W
 complains about undefined references to a&nbsp;symbol.</p>
 
 <p>The actual error code&nbsp;is:</p>
-<div class="highlight"><pre><span></span><code>undefined reference to symbol <span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span>
-ld: note: <span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span> is defined <span class="k">in</span> DSO
-/usr/lib64/libstdc++.so.6 so try adding it to the linker <span class="nb">command</span> line
-/usr/lib64/libstdc++.so.6: could not <span class="nb">read</span> symbols: Invalid operation
+<div class="highlight"><pre><span></span><code>undefined<span class="w"> </span>reference<span class="w"> </span>to<span class="w"> </span>symbol<span class="w"> </span><span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span>
+ld:<span class="w"> </span>note:<span class="w"> </span><span class="s1">&#39;__cxa_pure_virtual@@CXXABI_1.3&#39;</span><span class="w"> </span>is<span class="w"> </span>defined<span class="w"> </span><span class="k">in</span><span class="w"> </span>DSO
+/usr/lib64/libstdc++.so.6<span class="w"> </span>so<span class="w"> </span>try<span class="w"> </span>adding<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>linker<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line
+/usr/lib64/libstdc++.so.6:<span class="w"> </span>could<span class="w"> </span>not<span class="w"> </span><span class="nb">read</span><span class="w"> </span>symbols:<span class="w"> </span>Invalid<span class="w"> </span>operation
 </code></pre></div>
 <p>The solution is to tell the compiler which libraries to link. In the case of
 <span class="caps">CHEMKIN</span>-Pro version 15113, this meant changing two&nbsp;files:</p>

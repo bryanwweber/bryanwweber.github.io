@@ -57,11 +57,11 @@
       <aside id="featured" class="body">
         <article>
           <h1 class="title">
-            <a href="https://bryanwweber.com/writing/2022-01-24-create-tasks-json-vs-code.html">Creating A tasks.json File for <span class="caps">VS</span>&nbsp;Code</a>
+            <a href="https://bryanwweber.com/writing/2023-05-17-til-pytest-init.html"><span class="caps">TIL</span>: Pytest has a flat&nbsp;namespace</a>
           </h1>
 <footer class="post-info">
-    <abbr class="published" title="2022-01-24T16:49:00-05:00">
-      Published <span class="is-info">Mon 24 January 2022</span>
+    <abbr class="published" title="2023-05-17T06:09:00-04:00">
+      Published <span class="is-info">Wed 17 May 2023</span>
       in <a href="https://bryanwweber.com/category/personal.html">personal</a>
     </abbr>
   
@@ -70,15 +70,25 @@
       </p>
     
 </footer>          <div class="section">
-              <p><span class="caps">VS</span> Code has a super useful feature called <a href="https://code.visualstudio.com/docs/editor/tasks"><em>tasks</em></a>. These allow you to define and chain arbitrary shell commands or programs together and run them from the <span class="caps">VS</span> Code <span class="caps">UI</span>. This idea has effectively unlimited potential, but one use I came up with today is to automatically generate an <span class="caps">HTML</span> coverage report after running pytest. This is super useful when writing tests to address code coverage, since you can have the tests open in <span class="caps">VS</span> Code and the <span class="caps">HTML</span> report open in a browser. When you run the task after saving your tests, you only need to refresh the browser tab to see updated results.</p>
-
-              <p><a href="https://bryanwweber.com/writing/2022-01-24-create-tasks-json-vs-code.html">Read more...</a></p>
+              Pytest imports test modules into a flat namespace <em>unless</em> you have <code>__init__.py</code> files in the test folders. This means that your test files and test function names cannot be repeated. This explains several failures I was seeing when loading tests in <span class="caps">VS</span> Code in a bigger monorepo project.
+              <p><a href="https://bryanwweber.com/writing/2023-05-17-til-pytest-init.html">Read more...</a></p>
           </div>
         </article>
       </aside>
   <div class="is-hidden-print">
     <h2 class="subtitle">Other articles</h2>
     <div class="columns is-multiline">
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div class="card is-fullwidth is-fullheight">
+            <div class="card-content">
+              <a href="https://bryanwweber.com/writing/2022-01-24-create-tasks-json-vs-code.html">
+                <h3 class="title is-5">Creating A tasks.json File for <span class="caps">VS</span>&nbsp;Code</h3>
+                <div class="heading subtitle">Mon 24 January 2022</div>
+                <div><p>VS Code has a super useful feature called tasks. These allow you to define and chain arbitrary shell commands...<br /></p></div>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="column is-half-tablet is-one-third-desktop">
           <div class="card is-fullwidth is-fullheight">
             <div class="card-content">
@@ -130,17 +140,6 @@
                 <h3 class="title is-5">How to build a package installer on <span class="caps">OS</span> X for the Cantera <span class="caps">MATLAB</span>&nbsp;interface</h3>
                 <div class="heading subtitle">Fri 01 January 2016</div>
                 <div><p>To make it easier to install certain portions of Cantera onto Macs, rather than having to install XCode and...<br /></p></div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-half-tablet is-one-third-desktop">
-          <div class="card is-fullwidth is-fullheight">
-            <div class="card-content">
-              <a href="https://bryanwweber.com/writing/2016-01-01-how-to-set-up-an-encrypted-netrc-file-with-gpg-for-github-2fa-access.html">
-                <h3 class="title is-5">How to set up an encrypted .netrc file with <span class="caps">GPG</span> for GitHub <span class="caps">2FA</span>&nbsp;access</h3>
-                <div class="heading subtitle">Fri 01 January 2016</div>
-                <div><p>Enabling 2 factor authentication on GitHub is a good way to protect your data, but unfortunately, it means you...<br /></p></div>
               </a>
             </div>
           </div>

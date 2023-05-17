@@ -100,13 +100,13 @@ and install Cantera with Intel these&nbsp;days.</p>
 controlling environments for testing and such much easier. I also prefer to use
 Python 3 as much as possible, but unfortunately, SCons is still Python 2 only.
 First, install the pre-reqs into the <code>root</code> environment, then create the builder&nbsp;environment</p>
-<div class="highlight"><pre><span></span><code>conda install numpy cython
-conda create -n py2k <span class="nv">python</span><span class="o">=</span><span class="m">2</span> scons cython numpy
-<span class="nb">source</span> activate py2k
-pip install 3to2
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>cython
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>py2k<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>scons<span class="w"> </span>cython<span class="w"> </span>numpy
+<span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>py2k
+pip<span class="w"> </span>install<span class="w"> </span>3to2
 </code></pre></div>
 <p>With that done, clone the Git repository from&nbsp;GitHub</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/Cantera/cantera.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Cantera/cantera.git
 </code></pre></div>
 <p>Now change into that directory and create your <code>cantera.conf</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="n">CXX</span> <span class="o">=</span> <span class="s1">&#39;icpc&#39;</span>
@@ -128,8 +128,8 @@ pip install 3to2
 <span class="n">debug</span> <span class="o">=</span> <span class="kc">False</span>
 </code></pre></div>
 <p>Then it&#8217;s as simple&nbsp;as</p>
-<div class="highlight"><pre><span></span><code>scons build -j4
-scons install
+<div class="highlight"><pre><span></span><code>scons<span class="w"> </span>build<span class="w"> </span>-j4
+scons<span class="w"> </span>install
 </code></pre></div>
 <p>This will put Cantera into your <code>~/.local</code> directory, including the Python 2 and
 3 interface and the Fortran&nbsp;interface.</p></div>

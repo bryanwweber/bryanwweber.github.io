@@ -97,25 +97,25 @@ java -jar <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class
 have to add a custom rule to enable SumatraPDF support. Create a file in your
 home directory (<code>C:\Users\&lt;username&gt;\</code>) called <code>araraconfig.yaml</code> with the
 following&nbsp;content:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">!config</span><span class="w"></span>
-<span class="nt">paths</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{userhome}\arara\rules</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">!config</span>
+<span class="nt">paths</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{userhome}\arara\rules</span>
 </code></pre></div>
 <p>Then, create the directory <code>C:\Users\&lt;username&gt;\arara\rules</code> and in it, create
 two files, <code>sumatrapdf.yaml</code> and <code>sumatra.bat</code>. The content of these files comes
 from the TeX.<span class="caps">SX</span> answer of Mr Komandez
 <a href="http://tex.stackexchange.com/a/139055/32374">http://tex.stackexchange.com/a/139055/32374</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#sumatrapdf.yaml</span><span class="w"></span>
-<span class="kt">!config</span><span class="w"></span>
-<span class="c1"># SumatraPDF rule for arara</span><span class="w"></span>
-<span class="c1"># Author: Mr Komandez</span><span class="w"></span>
-<span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sumatrapdf</span><span class="w"></span>
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SumatraPDF</span><span class="w"></span>
-<span class="nt">commands</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; C:\Users\&lt;username&gt;\arara\rules\sumatra.bat &quot;@{getBasename(file)}.pdf&quot; &quot;@{options}&quot;</span><span class="w"></span>
-<span class="nt">arguments</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">options</span><span class="w"></span>
-<span class="w">  </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{parameters.options}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1">#sumatrapdf.yaml</span>
+<span class="kt">!config</span>
+<span class="c1"># SumatraPDF rule for arara</span>
+<span class="c1"># Author: Mr Komandez</span>
+<span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sumatrapdf</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SumatraPDF</span>
+<span class="nt">commands</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; C:\Users\&lt;username&gt;\arara\rules\sumatra.bat &quot;@{getBasename(file)}.pdf&quot; &quot;@{options}&quot;</span>
+<span class="nt">arguments</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">options</span>
+<span class="w">  </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;arara&gt; @{parameters.options}</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="p">:</span><span class="c1">:sumatra.bat</span>
 <span class="k">START</span> /b <span class="s2">&quot;C:\Progra~2\SumatraPDF\SumatraPDF.exe&quot;</span> <span class="nv">%1</span> -reuse-instance <span class="nv">%2</span>

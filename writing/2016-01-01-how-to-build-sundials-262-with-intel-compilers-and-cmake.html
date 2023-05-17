@@ -87,16 +87,16 @@ commands below worked for me on Ubuntu 14.04.1 with the Intel version 15&nbsp;co
 Then, ensure that your version of CMake is new enough by downloading and
 installing a recent version of CMake from <a href="https://cmake.org/download/">https://cmake.org/download/</a></p>
 <p>Then, build and install <span class="caps">SUNDIALS</span></p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> sundials-2.6.2 <span class="o">&amp;&amp;</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake .. -DBUILD_SHARED_LIBS<span class="o">=</span>ON -DCMAKE_C_COMPILER<span class="o">=</span>icc -DCMAKE_Fortran_COMPILER<span class="o">=</span>ifort <span class="se">\</span>
--DCMAKE_C_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span> <span class="se">\</span>
--DCMAKE_Fortran_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span> <span class="se">\</span>
--DEXAMPLES_ENABLE<span class="o">=</span>OFF -DLAPACK_ENABLE<span class="o">=</span>ON  -DPTHREAD_ENABLE<span class="o">=</span>ON -DOPENMP_ENABLE<span class="o">=</span>ON <span class="se">\</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>sundials-2.6.2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-DBUILD_SHARED_LIBS<span class="o">=</span>ON<span class="w"> </span>-DCMAKE_C_COMPILER<span class="o">=</span>icc<span class="w"> </span>-DCMAKE_Fortran_COMPILER<span class="o">=</span>ifort<span class="w"> </span><span class="se">\</span>
+-DCMAKE_C_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span><span class="w"> </span><span class="se">\</span>
+-DCMAKE_Fortran_FLAGS<span class="o">=</span><span class="s2">&quot;-xhost -O3 -m64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include/intel64/lp64 -I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include -fPIC -fp-model precise&quot;</span><span class="w"> </span><span class="se">\</span>
+-DEXAMPLES_ENABLE<span class="o">=</span>OFF<span class="w"> </span>-DLAPACK_ENABLE<span class="o">=</span>ON<span class="w">  </span>-DPTHREAD_ENABLE<span class="o">=</span>ON<span class="w"> </span>-DOPENMP_ENABLE<span class="o">=</span>ON<span class="w"> </span><span class="se">\</span>
 -DLAPACK_LIBRARIES<span class="o">=</span><span class="s2">&quot;libmkl_blas95_lp64.a;libmkl_lapack95_lp64.a;libmkl_intel_lp64.so;libmkl_core.so;libmkl_intel_thread.so;libpthread.so;libm.so;libiomp5.so&quot;</span>
-make -j12
-sudo -s
-. /opt/intel/bin/compilervars.sh intel64
-make install
+make<span class="w"> </span>-j12
+sudo<span class="w"> </span>-s
+.<span class="w"> </span>/opt/intel/bin/compilervars.sh<span class="w"> </span>intel64
+make<span class="w"> </span>install
 <span class="nb">exit</span>
 </code></pre></div>
 <p>Rather than using the variables in the <code>configure</code> script, this sets all the

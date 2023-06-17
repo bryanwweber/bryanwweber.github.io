@@ -86,6 +86,7 @@ MARKDOWN = {
         "pymdownx.tilde",
         "pymdownx.caret",
         "pymdownx.keys",
+        "footnotes",
         "attr_list",
         "tables",
     ],

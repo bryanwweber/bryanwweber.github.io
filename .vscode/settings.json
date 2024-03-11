@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "Cantera",
+        "Conda",
+        "Dask",
+        "dateutil",
+        "ipywidgets",
+        "MSVC"
+    ],
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "editor.formatOnSave": true
+}

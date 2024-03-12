@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:be6e77320fe6229f32a2ee079175a931cdb1115e6cb8f8f01bfc380e5b2a40e6"
+content_hash = "sha256:db81eb14401cf4ea90a2c7805f7ed009d3cc905b379b99536749ba70ab39f31c"
 
 [[package]]
 name = "anyio"

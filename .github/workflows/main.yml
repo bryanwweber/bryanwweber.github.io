@@ -21,11 +21,13 @@ jobs:
         with:
           cache: true
           python-version: "3.12"
+      - name: Check the lock file is up-to-date
+        run: pdm lock --check
       - name: Install dependencies
         run: pdm sync
       # Build the book
       - name: Build the site
-        run: invoke preview
+        run: pdm run invoke preview
       # Push the site's HTML to gh-pages
       - name: GitHub Pages action
         if: github.ref == 'refs/heads/main'

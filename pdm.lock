@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:db81eb14401cf4ea90a2c7805f7ed009d3cc905b379b99536749ba70ab39f31c"
+content_hash = "sha256:bb4ceadecab61cabc5966cc3d3cac08710ef19c2aedd40c849ea247d8e50f46f"
 
 [[package]]
 name = "anyio"
@@ -305,15 +305,15 @@ files = [
 
 [[package]]
 name = "pelican-pagination"
-version = "2.0.0"
+version = "2.0.1.post1"
 requires_python = "<4.0,>=3.8.1"
 summary = "Paginate articles"
 dependencies = [
     "pelican>=4.5",
 ]
 files = [
-    {file = "pelican_pagination-2.0.0-py3-none-any.whl", hash = "sha256:b7507493ae53c923af275043914dd213bd6a50b7fcdf80802ce831b9e14310fe"},
-    {file = "pelican_pagination-2.0.0.tar.gz", hash = "sha256:4e58c1897a1803037bccc7cf363300375ef032d486066af5939e09c38ee6c971"},
+    {file = "pelican_pagination-2.0.1.post1-py3-none-any.whl", hash = "sha256:1bdfbe3379407142ab9462cea51baf75df0e90d36b82b99481878ca370ec4707"},
+    {file = "pelican_pagination-2.0.1.post1.tar.gz", hash = "sha256:f64b34641cfe8723a2fe125529c94a7e6a91f9ffdd20b2e68a67c06b6bf97377"},
 ]
 
 [[package]]

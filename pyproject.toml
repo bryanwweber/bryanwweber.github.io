@@ -5,25 +5,18 @@ dependencies = [
   "ghp-import>=2.1.0",
   "invoke>=2.2.0",
   "livereload>=2.6.3",
-  "pelican-pagination>=1.0.0",
+  "minchin-pelican-plugins-summary>=1.2.1",
+  "pelican-pagination>=2.0.0",
   "pelican-redirect>=1.0.2",
-  "pelican-summary @ https://github.com/mirekdlugosz/pelican-plugins-summary/archive/refs/heads/migrate.tar.gz",
   "pelican-webassets>=2.0.0",
   "pelican-yaml-metadata>=2.1.2",
   "pelican>=4.9.1",
   "pymdown-extensions>=10.7.1",
   "smartypants>=2.0.1",
   "typogrify>=2.0.7",
-  "webassets>=2.0",
 ]
 requires-python = ">=3.9"
 license = { text = "CC BY-SA 3.0" }
 
 [tool.pdm]
 distribution = false
-
-[tool.pyright]
-typeCheckingMode = "strict"
-
-[tool.pdm.dev-dependencies]
-dev = ["black>=24.2.0"]

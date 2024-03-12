@@ -1,0 +1,6 @@
+[tools]
+python = { version = "3.12", virtualenv = ".venv" }
+pdm = "latest"
+
+[plugins]
+pdm = "https://github.com/1oglop1/asdf-pdm"

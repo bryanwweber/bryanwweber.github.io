@@ -1,0 +1,38 @@
+name: deploy-site
+
+# Only run this when the main branch changes
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# This job installs dependencies, builds the site, and pushes it to `gh-pages`
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%dT%H:%M%S')" >> $GITHUB_OUTPUT
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+          python-version: "3.12"
+      - name: Check the lock file is up-to-date
+        run: pdm lock --check
+      - name: Install dependencies
+        run: pdm sync
+      # Build the book
+      - name: Build the site
+        run: pdm run invoke preview -- --verbose --debug --fatal warnings
+      # Push the site's HTML to gh-pages
+      - name: GitHub Pages action
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          full_commit_message: "Publish site on ${{ steps.date.outputs.date }}"

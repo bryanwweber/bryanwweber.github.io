@@ -15,26 +15,11 @@ You should have received a copy of the license along with this work. If not, see
 Developing
 ----------
 
-Clone the repository. Install the Python requirements:
+Clone the repository. It's set up to use `mise` to install Python and pdmx. Run `mise install`. Then create the Python venv (`python -m venv .venv`) and then install the Python requirements:
 
 ```shell
-python -m pip install -r requirements.txt
+pdm install
 ```
-
-Install Node via Homebrew (on macOS) or otherwise for other platforms:
-
-```shell
-brew install node
-```
-
-Install Less via NPM:
-
-```shell
-npm install less
-export PATH="$PATH:$(pwd)/node_modules/.bin"
-```
-
-This will add `lessc` to the `PATH` temporarily for this shell session.
 
 Run `livereload`:
 

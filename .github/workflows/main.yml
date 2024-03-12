@@ -27,7 +27,7 @@ jobs:
         run: pdm sync
       # Build the book
       - name: Build the site
-        run: pdm run invoke preview
+        run: pdm run invoke preview -- --verbose --debug --fatal warnings
       # Push the site's HTML to gh-pages
       - name: GitHub Pages action
         if: github.ref == 'refs/heads/main'

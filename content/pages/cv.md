@@ -5,8 +5,9 @@ Summary: My curriculum vitae
 
 Download an old version of my CV here: [pdf]({static}/files/cv/Weber_Bryan_CV.pdf)
 
-This document represents my CV as of May, 2022. It is most likely out-of-date, as I've now left academia and don't have much use for this level of detail any longer.
+This document represents my CV as of January, 2022. It is most likely out-of-date, as I've now left academia and don't have much use for this level of detail any longer.
 
+<!-- markdownlint-disable MD033-->
 <h2 class="cv-category"><i class="fa fa-graduation-cap fa-pull-left"></i>Education</h2>
 
 Ph.D., Mechanical Engineering, University of Connecticut, 2014
@@ -16,11 +17,6 @@ M.S., Mechanical Engineering, University of Connecticut, 2010
 B.S.E., Aerospace Engineering, Case Western Reserve University, 2009
 
 <h2 class="cv-category"><i class="fa fa-briefcase fa-pull-left"></i>Professional Experience</h2>
-
-<p><span class="cv-position">OSS Engineer, 2022</span><br />
-<span class="cv-location"><a href="https://coiled.io">Coiled</a></span><br />
-<span class="cv-duty">Developing Dask to scale computation over many cores and larger than local memory.</span>
-</p>
 
 <p><span class="cv-position">Director of Undergraduate Studies, Mechanical Engineering, 2019&#8212;2022</span><br />
 <span class="cv-position">Assistant Professor in Residence, 2016&#8212;2022</span><br />
@@ -87,7 +83,7 @@ the models to predict combustion&nbsp;events</span></p>
 
 + Four-time recipient of the University of Connecticut Provost's Teaching Commendation, awarded to faculty for excellence on their end-of-semester teaching evaluations
 + Three-time elected Commencement Marshal for Mechanical Engineering by the senior-class students
-+ Nominated for the 2018, 2019, and 2020 University Teaching Innovation Award by the Mechanical Engineering Department Chair
++ Nominated for the 2018, 2019, 2020, and 2021 University Teaching Innovation Award by the Mechanical Engineering Department Chair
 
 Typical enrollment in the courses listed below is 60--100 students per section.
 
@@ -158,7 +154,7 @@ and the junior&nbsp;members.</span></p>
 + Journal of Energy Resources Technology
 + Journal of Open Source Software
 
-<h2 class="cv-category"><i class="fa fa-file-text fa-pull-left"></i>Publications</h2>
+<h2 class="cv-category" id="publications"><i class="fa fa-file-text fa-pull-left"></i>Publications</h2>
 
 <h3>Refereed Journal Articles</h3>
 
@@ -354,7 +350,6 @@ and the junior&nbsp;members.</span></p>
 
 </section>
 
-
 <h3>Conference Publications and&nbsp;Posters</h3>
 
 <section class="pub-year">
@@ -429,10 +424,10 @@ and the junior&nbsp;members.</span></p>
       Niemeyer
     </span>
     <span class="paperjournal">
-      Paper 1D11, 10th 
-      <span class="caps">US</span> 
-      National Technical Meeting of the Combustion Institute, College Park, 
-      <span class="caps">MD</span>, 
+      Paper 1D11, 10th
+      <span class="caps">US</span>
+      National Technical Meeting of the Combustion Institute, College Park,
+      <span class="caps">MD</span>,
       Apr. 2017
     </span>
   </span>

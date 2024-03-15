@@ -3,17 +3,17 @@ title: Resume
 summary: Bryan Weber's Resume
 ---
 
-Experienced Python developer working on PyData projects and maintaining open source software. Working on the web, with data, and everything in between.
+Experienced software developer working on ML in defense, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between.
 
 ## Select Experiences
 
-Senior Software Engineer, Rebellion Defense, 2022
+Senior Software Engineer, [Rebellion Defense](https://rebelliondefense.com), 2022--Present
 
 - Developing AI tools for sensor fusion in autonomous platforms
 
 ---
 
-OSS Engineer, Coiled Computing, 2022
+OSS Engineer, [Coiled Computing](https://coiled.io), 2022
 
 - Used Dask to identify performance bottlenecks when loading terabyte-scale Parquet data from cloud storage
 - Developed an `ipywidgets`-based dashboard to display cluster status in the Coiled v2 client
@@ -22,7 +22,7 @@ OSS Engineer, Coiled Computing, 2022
 
 ---
 
-Core Developer & Steering Committee Member, Cantera Project, 2014-Present
+Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), 2014--Present
 
 - Developed and automated build of Conda and PyPI packages for the C-extension, downloaded 140,000+ times in 5+ years
 - Maintain SCons-based build system for macOS, Linux, and Windows, supporting GCC, Clang, MSVC, and MinGW compilers
@@ -31,11 +31,11 @@ Core Developer & Steering Committee Member, Cantera Project, 2014-Present
 - Managed the 2020 community survey, receiving over 60 responses and leading to dropping support for Win32
 - Moderate Cantera User's Group, responding to 1,200+ posts over 10+ years
 - Organized and led three training workshops at international conferences with up to 100 paying attendees
-- Mentored 2 GSoC students under the NumFOCUS umbrella, leading to two feature enhancements
+- Mentored 2 Google Summer of Code students under the NumFOCUS umbrella, leading to two feature enhancements
 
 ---
 
-Director of Undergraduate Studies & Assistant Professor in Residence, University of Connecticut, Department of Mechanical Engineering, 2014-2022
+Director of Undergraduate Studies & Assistant Professor in Residence, University of Connecticut, [School of Mechanical, Aerospace, and Manufacturing Engineering](https://me.engr.uconn.edu/), 2014--2022
 
 - Produced 150 lecture videos, viewed over 218,000 times over three years, with 1,400+ channel subscribers
 - Led development of new curriculum for over 800 undergraduate students in Mechanical Engineering balancing needs of students, faculty, and industrial partners
@@ -48,7 +48,7 @@ Director of Undergraduate Studies & Assistant Professor in Residence, University
 
 ---
 
-Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), 2019-Present
+Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), 2019--Present
 
 - Written six in-depth articles covering topics in the Python ecosystem, including [Python `main` functions][main function], [using `datetime` and `dateutil`][datetime], and [the `enumerate` function][enumerate]
 - Articles are read by 30,000+ unique readers per week and were featured on the [Python Bytes][python bytes] and [RealPython][real python podcast] podcasts
@@ -61,11 +61,11 @@ Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), 2
 
 ---
 
-Co-Chair, NumFOCUS Small Development Grants Committee, 2019-Present
+Co-Chair, NumFOCUS Small Development Grants Committee, 2019--2024
 
-- Award up to $87,000 three times annually to applicants from NumFOCUS projects
+- Award up to $250,000 annually to applicants from NumFOCUS projects
 - Organize and co-host decision meetings for 13 committee members, ensuring each application is discussed in the allotted time
-- Provide thoughtful, actionable, feedback to projects that are not selected for funding
+- Provide thoughtful, actionable feedback to projects that are not selected for funding
 
 ## Education
 

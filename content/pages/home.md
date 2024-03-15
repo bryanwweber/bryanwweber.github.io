@@ -4,8 +4,11 @@ save_as: index.html
 summary: This is the personal website of Bryan Weber, an extraordinary teacher and software developer.
 ---
 
-I'm Bryan Weber.
+Hi! I'm Bryan Weber.
 
-I work on open source software projects which are described on the [code page]({filename}/pages/code.md). I share some of the things I've learned on my [blog](/writing.html).
+<!-- markdownlint-disable MD033 -->
+I love to teach and write software. I am currently using machine learning to solve difficult problems in the defense space. I also work on open source software projects, mostly on <i class="fa fa-github"></i>&nbsp;[GitHub](https://github.com/bryanwweber). I share some of the things I've learned on my [blog](/writing.html).
 
-In a previous life, I was an academic and my most recent publications and classes are on the [work page]({filename}/pages/cv.md). Please feel free to email any questions or inquiries to <bryan@bryanwweber.com>.
+In a past life, I was an academic so I'm obligated to maintain a list of my [publications]({filename}/pages/cv.md#publications). I also wrote an [online book about orbital mechanics](https://orbital-mechanics.space).
+
+Please feel free to email any questions or inquiries to <bryan@bryanwweber.com>.

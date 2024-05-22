@@ -7,9 +7,17 @@ Experienced software developer working on ML in defense, PyData projects, and ma
 
 ## Select Experiences
 
-Senior Software Engineer, [Rebellion Defense](https://rebelliondefense.com), 2022--Present
+Staff Software Engineer, [Rebellion Defense](https://rebelliondefense.com), 2024--Present  
+Senior Software Engineer, 2022--2024
 
-- Developing AI tools for sensor fusion in autonomous platforms
+- Lead Python developer on a modular and scalable microservice-based system to process tens-to-hundreds of thousands of sensor messages for battlefield observability. Built with Python, golang, gRPC, and RabbitMQ.
+- Led 1-month integration of ML algorithms for a \$1M/year contract. Enabled evaluating thousands of potential actions per second, while current capabilities are limited to dozens per day.
+- Led as the subject matter expert for ML-based task assignment algorithms during \$1M/year-contract close-out demonstration to the Chief Scientist of the Air Force.
+- Integrated LLM-generated action report summaries in our adversary emulation software. Used the OpenAI API with an optimized prompt to produce high-level overviews for non-technical stakeholders.
+- Developed pipelines that rapidly deployed ML models to perform cyber-asset criticality assessment and automated training data generation. Used Flyte, Kubernetes, and AWS EKS to maintain model provenance.
+- Championed developer productivity by seeking out and implementing more efficient tools while strategically removing unused ones. Added `pantsbuild` to three repositories working with approximately 20 engineers and contributed in-house features back upstream to the open-source project.
+- Founding member of a cross-disciplinary team focused on cultivating a positive and inclusive work environment through initiatives promoting empathy, team building, and open communication.
+- Reviewed hundreds of code changes from dozens of team members. Emphasized driving customer value, fostering team growth, and shared skill development.
 
 ---
 
@@ -24,13 +32,13 @@ OSS Engineer, [Coiled Computing](https://coiled.io), 2022
 
 Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), 2014--Present
 
-- Developed and automated build of Conda and PyPI packages for the C-extension, downloaded 140,000+ times in 5+ years
+- Developed and automated build of Conda and PyPI packages for the C-extension, downloaded 500,000+ times in 5+ years
 - Maintain SCons-based build system for macOS, Linux, and Windows, supporting GCC, Clang, MSVC, and MinGW compilers
 - Developed and automated build and deployment of the Cantera website to Linode hosting
 - Received \$2.5M grant from NSF to expand Cantera to novel scientific domains and develop sustainable communities
 - Managed the 2020 community survey, receiving over 60 responses and leading to dropping support for Win32
 - Moderate Cantera User's Group, responding to 1,200+ posts over 10+ years
-- Organized and led three training workshops at international conferences with up to 100 paying attendees
+- Organized and led three training workshops at international conferences with up to 100 paying attendees. Generated more than $10,000 in revenue for the project.
 - Mentored 2 Google Summer of Code students under the NumFOCUS umbrella, leading to two feature enhancements
 
 ---

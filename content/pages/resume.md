@@ -5,6 +5,14 @@ summary: Bryan Weber's Resume
 
 Experienced software developer working on distributed systems, ML, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between.
 
+## Skills
+
+**Programming languages**: Advanced Python | Basic Golang | Basic C++
+
+**DevOps & Infrastructure**: Docker | Kubernetes | CI/CD | AWS Cloud Services (S3, EC2, EKS) | Machine Learning Pipeline Development (Flyte, Dagster)
+
+**Software Development**: Software Design | Project Management | Team Leadership | Mentorship | Code Review | Communication
+
 ## Select Experiences
 
 Staff Software Engineer, [Rebellion Defense](https://rebelliondefense.com), March 2024 -- June 2024  
@@ -21,25 +29,24 @@ Senior Software Engineer, August 2022 -- February 2024
 
 ---
 
+Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), January 2014--Present
+
+- Developed and automated build of compiled (C++) packages, downloaded 500,000+ times in 5+ years
+- Maintain SCons-based build system for macOS, Linux, and Windows, supporting GCC, Clang, MSVC, and MinGW compilers
+- Developed and automated build and deployment of the Cantera website to Linode hosting
+- Received \$2.5M grant from NSF to expand Cantera to novel scientific domains and develop sustainable communities
+- Moderate Cantera User's Group, responding to 1,200+ posts over 10+ years
+- Organized and led three training workshops at international conferences with up to 100 paying attendees. Generated more than $10,000 in revenue for the project.
+- Mentored 2 Google Summer of Code students under the NumFOCUS umbrella, leading to two feature enhancements
+
+---
+
 OSS Engineer, [Coiled Computing](https://coiled.io), January 2022 -- May 2022
 
 - Used Dask to identify performance bottlenecks when loading terabyte-scale Parquet data from cloud storage
 - Developed an `ipywidgets`-based dashboard to display cluster status in the Coiled v2 client
 - Refactored three Dask DataFrame creation and joining functions to improve task graph optimization
 - Added hooks for `dask.distributed.Client` to run user-supplied preload plugins
-
----
-
-Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), January 2014--Present
-
-- Developed and automated build of Conda and PyPI packages for the C-extension, downloaded 500,000+ times in 5+ years
-- Maintain SCons-based build system for macOS, Linux, and Windows, supporting GCC, Clang, MSVC, and MinGW compilers
-- Developed and automated build and deployment of the Cantera website to Linode hosting
-- Received \$2.5M grant from NSF to expand Cantera to novel scientific domains and develop sustainable communities
-- Managed the 2020 community survey, receiving over 60 responses and leading to dropping support for Win32
-- Moderate Cantera User's Group, responding to 1,200+ posts over 10+ years
-- Organized and led three training workshops at international conferences with up to 100 paying attendees. Generated more than $10,000 in revenue for the project.
-- Mentored 2 Google Summer of Code students under the NumFOCUS umbrella, leading to two feature enhancements
 
 ---
 

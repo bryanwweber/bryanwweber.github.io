@@ -29,6 +29,11 @@ jobs:
           run-id: ${{ steps.resume-id.outputs.run_id }}
       - name: List files
         run: ls -laR content/files
+      - name: Upload resume
+        uses: actions/upload-artifact@v4
+        with:
+          name: upload-resume
+          path: content/files/cv/Weber_Bryan_Resume.pdf
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v4
         with:

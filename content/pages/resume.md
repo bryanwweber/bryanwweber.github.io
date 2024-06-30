@@ -5,6 +5,8 @@ summary: Bryan Weber's Resume
 
 Experienced software developer working on distributed systems, ML, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between.
 
+[Download a PDF]({static}/files/cv/Weber_Bryan_Resume.pdf)
+
 ## Skills
 
 **Programming languages**: Advanced Python | Basic Golang | Basic C++

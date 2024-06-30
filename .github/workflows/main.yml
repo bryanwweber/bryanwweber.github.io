@@ -23,9 +23,6 @@ jobs:
         run: echo "run_id=$(gh api --jq '.data.node.runs.nodes[].databaseId' graphql -f query='query { node(id:"W_kwDOBZcZvM4GQ8x3"){...on Workflow{runs(first:1,orderBy:{field:CREATED_AT,direction:DESC}){nodes {databaseId}}}}}')" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.RESUME_ARTIFACT }}
-      - name: Set the date
-        id: date
-        run: echo "date=$(date +%Y-%m-%dT%H:%M:%S)" >> $GITHUB_OUTPUT
       - name: Download resume PDF
         uses: actions/download-artifact@v4
         with:
@@ -34,9 +31,6 @@ jobs:
           github-token: ${{ secrets.RESUME_ARTIFACT }}
           repository: bryanwweber/resume
           run-id: ${{ steps.resume-id.outputs.run_id }}
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update resume on ${{ steps.date.outputs.date }}"
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v4
         with:
@@ -49,6 +43,8 @@ jobs:
       # Build the book
       - name: Build the site
         run: pdm run invoke preview -- --verbose --debug --fatal warnings
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Create pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -17,6 +17,8 @@ jobs:
       - name: Get the resume upload run ID
         id: resume-id
         run: echo "run_id=$(gh api --jq '.data.node.runs.nodes[].id' graphql -f query='query { node(id:"W_kwDOBZcZvM4GQ3oH"){...on Workflow{runs(first:1,orderBy:{field:CREATED_AT,direction:DESC}){nodes {id}}}}}')" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.RESUME_ARTIFACT }}
       - name: Download resume PDF
         uses: actions/download-artifact@v4
         with:

@@ -10,6 +10,7 @@ on:
 # This job installs dependencies, builds the site, and pushes it to `gh-pages`
 jobs:
   deploy-site:
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,11 +29,7 @@ jobs:
       # Build the book
       - name: Build the site
         run: pdm run invoke preview -- --verbose --debug --fatal warnings
-      # Push the site's HTML to gh-pages
-      - name: GitHub Pages action
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3.9.3
+      - name: Create pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          full_commit_message: "Publish site on ${{ steps.date.outputs.date }}"
+          path: output

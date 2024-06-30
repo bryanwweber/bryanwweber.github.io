@@ -102,10 +102,6 @@
           {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
           {% include 'social.html' %}
           {% endif %}
-          {% if LICENSE %}
-          <p class="menu-label">License</p>
-          {{ LICENSE | license | safe }}
-          {% endif %}
         </aside>
       </div>
     </div>
@@ -120,6 +116,12 @@
         <span><span class="icon is-small"><i class="fa fa-html5"></i></span> HTML 5</span>
         <span><span class="icon is-small"><i class="fa fa-css3"></i></span> CSS 3</span>
         <span>Made with <a href="https://bulma.io">Bulma</a></span>
+      </div>
+      {% if LICENSE %}
+      <div>
+        <span class="menu-label">License</span>
+        {{ LICENSE | license | safe }}
+        {% endif %}
       </div>
     </div>
   </footer>

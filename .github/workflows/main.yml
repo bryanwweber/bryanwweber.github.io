@@ -1,4 +1,4 @@
-name: deploy-site
+name: Build and deploy site
 
 # Only run this when the main branch changes
 on:
@@ -9,8 +9,7 @@ on:
 
 # This job installs dependencies, builds the site, and pushes it to `gh-pages`
 jobs:
-  deploy-site:
-    environment: github-pages
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -43,9 +42,19 @@ jobs:
       # Build the book
       - name: Build the site
         run: pdm run invoke preview -- --verbose --debug --fatal warnings
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Create pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: output
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-24.04
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

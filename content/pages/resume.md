@@ -3,16 +3,16 @@ title: Resume
 summary: Bryan Weber's Resume
 ---
 
-Experienced software developer working on ML in defense, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between.
+Experienced software developer working on distributed systems, ML, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between.
 
 ## Select Experiences
 
-Staff Software Engineer, [Rebellion Defense](https://rebelliondefense.com), 2024--Present  
-Senior Software Engineer, 2022--2024
+Staff Software Engineer, [Rebellion Defense](https://rebelliondefense.com), March 2024 -- June 2024  
+Senior Software Engineer, August 2022 -- February 2024
 
 - Lead Python developer on a modular and scalable microservice-based system to process tens-to-hundreds of thousands of sensor messages for battlefield observability. Built with Python, golang, gRPC, and RabbitMQ.
-- Led 1-month integration of ML algorithms for a \$1M/year contract. Enabled evaluating thousands of potential actions per second, while current capabilities are limited to dozens per day.
-- Led as the subject matter expert for ML-based task assignment algorithms during \$1M/year-contract close-out demonstration to the Chief Scientist of the Air Force.
+- Led 1-month integration of ML algorithms for a $1M/year contract. Enabled evaluating thousands of potential actions per second, while current capabilities are limited to dozens per day.
+- Led as the subject matter expert for ML-based task assignment algorithms during $1M/year-contract close-out demonstration to the Chief Scientist of the Air Force.
 - Integrated LLM-generated action report summaries in our adversary emulation software. Used the OpenAI API with an optimized prompt to produce high-level overviews for non-technical stakeholders.
 - Developed pipelines that rapidly deployed ML models to perform cyber-asset criticality assessment and automated training data generation. Used Flyte, Kubernetes, and AWS EKS to maintain model provenance.
 - Championed developer productivity by seeking out and implementing more efficient tools while strategically removing unused ones. Added `pantsbuild` to three repositories working with approximately 20 engineers and contributed in-house features back upstream to the open-source project.
@@ -21,7 +21,7 @@ Senior Software Engineer, 2022--2024
 
 ---
 
-OSS Engineer, [Coiled Computing](https://coiled.io), 2022
+OSS Engineer, [Coiled Computing](https://coiled.io), January 2022 -- May 2022
 
 - Used Dask to identify performance bottlenecks when loading terabyte-scale Parquet data from cloud storage
 - Developed an `ipywidgets`-based dashboard to display cluster status in the Coiled v2 client
@@ -30,7 +30,7 @@ OSS Engineer, [Coiled Computing](https://coiled.io), 2022
 
 ---
 
-Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), 2014--Present
+Core Developer & Steering Committee Member, [Cantera Project](https://cantera.org), January 2014--Present
 
 - Developed and automated build of Conda and PyPI packages for the C-extension, downloaded 500,000+ times in 5+ years
 - Maintain SCons-based build system for macOS, Linux, and Windows, supporting GCC, Clang, MSVC, and MinGW compilers
@@ -43,7 +43,7 @@ Core Developer & Steering Committee Member, [Cantera Project](https://cantera.or
 
 ---
 
-Director of Undergraduate Studies & Assistant Professor in Residence, University of Connecticut, [School of Mechanical, Aerospace, and Manufacturing Engineering](https://me.engr.uconn.edu/), 2014--2022
+Director of Undergraduate Studies & Assistant Professor in Residence, University of Connecticut, [School of Mechanical, Aerospace, and Manufacturing Engineering](https://me.engr.uconn.edu/), August 2014 -- December 2021
 
 - Produced 150 lecture videos, viewed over 218,000 times over three years, with 1,400+ channel subscribers
 - Led development of new curriculum for over 800 undergraduate students in Mechanical Engineering balancing needs of students, faculty, and industrial partners
@@ -56,7 +56,7 @@ Director of Undergraduate Studies & Assistant Professor in Residence, University
 
 ---
 
-Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), 2019--Present
+Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), Januar 2019 -- January 2021
 
 - Written six in-depth articles covering topics in the Python ecosystem, including [Python `main` functions][main function], [using `datetime` and `dateutil`][datetime], and [the `enumerate` function][enumerate]
 - Articles are read by 30,000+ unique readers per week and were featured on the [Python Bytes][python bytes] and [RealPython][real python podcast] podcasts
@@ -69,7 +69,7 @@ Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), 2
 
 ---
 
-Co-Chair, NumFOCUS Small Development Grants Committee, 2019--2024
+Co-Chair, NumFOCUS Small Development Grants Committee, January 2019 -- January 2024
 
 - Award up to $250,000 annually to applicants from NumFOCUS projects
 - Organize and co-host decision meetings for 13 committee members, ensuring each application is discussed in the allotted time

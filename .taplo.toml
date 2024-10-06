@@ -1,2 +1,3 @@
 [formatting]
 reorder_arrays = true
+indent_string = '    '

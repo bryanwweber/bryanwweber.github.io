@@ -1,6 +1,10 @@
 [tools]
-python = { version = "3.12", virtualenv = ".venv" }
+python = "3.12"
 pdm = "latest"
+taplo = "0.8.1"
 
 [plugins]
 pdm = "https://github.com/1oglop1/asdf-pdm"
+
+[env]
+_.python.venv = { path = ".venv", create = true }

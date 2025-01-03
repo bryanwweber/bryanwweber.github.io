@@ -15,16 +15,16 @@ You should have received a copy of the license along with this work. If not, see
 Developing
 ----------
 
-Clone the repository. It's set up to use `mise` to install Python and pdmx. Run `mise install`. Then create the Python venv (`python -m venv .venv`) and then install the Python requirements:
+Clone the repository. It's set up to use `mise` to install Python and uv. Run `mise install`. Then use `uv` to install dependencies:
 
 ```shell
-pdm install
+uv sync
 ```
 
 Run `livereload`:
 
 ```shell
-invoke livereload
+uv run invoke livereload
 ```
 
 Publishing
@@ -33,5 +33,5 @@ Publishing
 Published via GitHub Pages.
 
 ```shell
-invoke gh-pages
+uv run invoke gh-pages
 ```

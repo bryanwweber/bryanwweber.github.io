@@ -15,18 +15,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-      - name: Setup PDM
-        uses: pdm-project/setup-pdm@v4
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
         with:
-          cache: true
-          python-version: "3.12"
+          version: "latest"
+          python-version: "3.13"
       - name: Check the lock file is up-to-date
-        run: pdm lock --check
+        run: uv lock --check
       - name: Install dependencies
-        run: pdm sync
-      # Build the book
+        run: uv sync
+      # Build the site
       - name: Build the site
-        run: pdm run invoke preview -- --verbose --debug --fatal warnings
+        run: uv run invoke preview -- --verbose --debug --fatal warnings
       - name: Create pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

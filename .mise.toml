@@ -1,9 +1,3 @@
 [tools]
-python = "latest"
 uv = "latest"
-"cargo:taplo-cli" = "latest"
-cargo-binstall = "latest"
-
-[env]
-_.python.venv = { path = ".venv", create = true }
-UV_PYTHON_PREFERENCE = "only-system"
+taplo = "latest"

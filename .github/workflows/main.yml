@@ -28,7 +28,7 @@ jobs:
       - name: Build the site
         run: uv run invoke preview -- --verbose --debug --fatal warnings
       - name: Create pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: output
 

@@ -17,7 +17,13 @@ Experienced software developer working on distributed systems, ML, PyData projec
 
 ## Select Experiences
 
-Senior Software Engineer, [Hunted Labs](https://huntedlabs.com), August 2024 -- Present
+Senior Software Engineer, [Sphinx Defense](https://sphinxdefense.com), September 2025 -- Present
+
+- Developing satellite communication platforms
+
+---
+
+Senior Software Engineer, [Hunted Labs](https://huntedlabs.com), August 2024 -- September 2025
 
 - Architected and led the development of a **multi-source data pipeline and API** written in Go by combining deps.dev, FIRST.ORG EPSS (Exploit Prediction Scoring System), Google Maps API, and GitHub contributor data, enabling identification of developers and self-reported geographic locations to detect and mitigate **adversarial foreign influence** in open-source dependencies. Zero to MVP in less than 3 months.
 - **Drove the integration of LLM/AI capabilities** into core product offerings, enabling  natural language interaction with complex SBOM (Software Bill of Materials) and vulnerability data, thereby empowering both technical and non-technical users.

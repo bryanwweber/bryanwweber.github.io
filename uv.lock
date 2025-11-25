@@ -231,29 +231,29 @@ wheels = [
 
 [[package]]
 name = "minchin-pelican-plugins-autoloader"
-version = "1.2.1"
+version = "1.2.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "packaging" },
     { name = "pelican" },
-    { name = "semantic-version" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b0/4f/42a95cf7c37fd4b4f00df3872488294713d0a5e4827a4c8648fca1f35cf4/minchin.pelican.plugins.autoloader-1.2.1.tar.gz", hash = "sha256:74a7e9bdac33461900b8bdb81c33423409e35c9c7cece193491abf7356d9cd95", size = 7472, upload-time = "2023-08-03T20:40:24.12Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0b/18/a1c7fea55f41f4a5b712c16421eac73b282fada7ee7ad9f412008386d397/minchin_pelican_plugins_autoloader-1.2.4.tar.gz", hash = "sha256:f4d6c636d1b119eb7ec1ef2b214e3db61562431126a220a0f1c6eb026c1dde0a", size = 8656, upload-time = "2025-11-14T23:40:01.591Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0f/58/99693e37dc3abf7a0cd022090c666fca79c6a556eb921bed41717e7ad70c/minchin.pelican.plugins.autoloader-1.2.1-py3-none-any.whl", hash = "sha256:d73cec6b28ab6d83356415f99b2d899e0737d7f8955f8c2938f363e442ee035a", size = 7361, upload-time = "2023-08-03T20:39:50.688Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/90/16f044d1b3d6da7d3b238e09972dbe4b61753784ca9645344c378e5bd0fc/minchin_pelican_plugins_autoloader-1.2.4-py3-none-any.whl", hash = "sha256:53303030ece90092f3dcdb06c69ef4a8f7b2d2f91c4ce7d2de46118c1f99bfcd", size = 6696, upload-time = "2025-11-14T23:41:13.928Z" },
 ]
 
 [[package]]
 name = "minchin-pelican-plugins-summary"
-version = "1.3.0"
+version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "minchin-pelican-plugins-autoloader" },
+    { name = "packaging" },
     { name = "pelican" },
-    { name = "semantic-version" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7a/48/8080ec7b67ee3f1311074abcb0f587af66444cbc8add412279b78bf885ff/minchin_pelican_plugins_summary-1.3.0.tar.gz", hash = "sha256:ddd561c76da47db642c12b86c17741e5b2e20e06c74b3051921101e71190e350", size = 21868, upload-time = "2024-10-01T05:00:23.548Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9c/94/1bf9ae5b369157d81d3dc94566b9e14b1a6ae1fb5abd4447f916c77a8a3a/minchin_pelican_plugins_summary-1.3.1.tar.gz", hash = "sha256:7a400ff4e4d77b7a9a2880f896cc1524eec34fcbd80c5e8efb459f3bd0809536", size = 22191, upload-time = "2025-11-04T04:51:38.563Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/78/7c/4a27ea14f9b9944272d07f963a7bbf9b43ea4d79b30346b49e0757e7a698/minchin.pelican.plugins.summary-1.3.0-py3-none-any.whl", hash = "sha256:e18aff0eaccd67e3ddac1524010f0de7528f05e69778198bde0cc47ebb09b8fa", size = 19231, upload-time = "2024-10-01T05:01:06.366Z" },
+    { url = "https://files.pythonhosted.org/packages/7d/d9/90549d1758f27ba2e19aaca23f238b4d190ce7d1e757b746676ad47edb02/minchin_pelican_plugins_summary-1.3.1-py3-none-any.whl", hash = "sha256:3f7db7aa137a339ebf49c491f9692604a78bc9c3c7b541b833a103b6c41ad039", size = 19406, upload-time = "2025-11-04T04:52:49.746Z" },
 ]
 
 [[package]]
@@ -266,8 +266,17 @@ wheels = [
 ]
 
 [[package]]
+name = "packaging"
+version = "25.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
+]
+
+[[package]]
 name = "pelican"
-version = "4.11.0"
+version = "4.11.0.post0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "blinker" },
@@ -282,9 +291,9 @@ dependencies = [
     { name = "unidecode" },
     { name = "watchfiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/27/42/c06c1a7a3136729ece5a1f98544ede83edd593b3cd9110c9ad61bcc7f4dd/pelican-4.11.0.tar.gz", hash = "sha256:b90234487b818d391733acc1306b785934009749b1fc112b879df9bd89478bd8", size = 24148058, upload-time = "2025-01-15T17:05:00.554Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/ab/a5e863de66054c561e111687b4c1f7cb2ad5f2d4805d2bb12863f0f637cd/pelican-4.11.0.post0.tar.gz", hash = "sha256:0d5e9c0cc9c6713ab6c25b2c4b64844f34d9be8c8c8cc7f42c3a8aa6b3bbbe33", size = 1547126, upload-time = "2025-10-30T10:21:34.396Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/79/32/01df483f255438e792771b11ebe804af15957739e88673ca95c89289c0f4/pelican-4.11.0-py3-none-any.whl", hash = "sha256:aca6993f6b8a03a20f6828471089cb0504a4dca71e0d30b341fa80ab65668fa4", size = 24127868, upload-time = "2025-01-15T17:04:54.17Z" },
+    { url = "https://files.pythonhosted.org/packages/30/c3/a6bf5a88ec27887d31c740117b72df4f7a66910552ae3f6ccadaba5ae934/pelican-4.11.0.post0-py3-none-any.whl", hash = "sha256:522a26598d3555a48b8392a582843f96bc9dafd5efe16b8f6a0b292441290620", size = 1351261, upload-time = "2025-10-30T10:21:29.688Z" },
 ]
 
 [[package]]
@@ -348,15 +357,15 @@ wheels = [
 
 [[package]]
 name = "pymdown-extensions"
-version = "10.16.1"
+version = "10.17.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "markdown" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/55/b3/6d2b3f149bc5413b0a29761c2c5832d8ce904a1d7f621e86616d96f505cc/pymdown_extensions-10.16.1.tar.gz", hash = "sha256:aace82bcccba3efc03e25d584e6a22d27a8e17caa3f4dd9f207e49b787aa9a91", size = 853277, upload-time = "2025-07-28T16:19:34.167Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e7/d9/a987e4d549c6c82353fce5fa5f650229bb60ea4c0d1684a2714a509aef58/pymdown_extensions-10.17.1.tar.gz", hash = "sha256:60d05fe55e7fb5a1e4740fc575facad20dc6ee3a748e8d3d36ba44142e75ce03", size = 845207, upload-time = "2025-11-11T21:44:58.815Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e4/06/43084e6cbd4b3bc0e80f6be743b2e79fbc6eed8de9ad8c629939fa55d972/pymdown_extensions-10.16.1-py3-none-any.whl", hash = "sha256:d6ba157a6c03146a7fb122b2b9a121300056384eafeec9c9f9e584adfdb2a32d", size = 266178, upload-time = "2025-07-28T16:19:31.401Z" },
+    { url = "https://files.pythonhosted.org/packages/81/40/b2d7b9fdccc63e48ae4dbd363b6b89eb7ac346ea49ed667bb71f92af3021/pymdown_extensions-10.17.1-py3-none-any.whl", hash = "sha256:1f160209c82eecbb5d8a0d8f89a4d9bd6bdcbde9a8537761844cfc57ad5cd8a6", size = 266310, upload-time = "2025-11-11T21:44:56.809Z" },
 ]
 
 [[package]]
@@ -410,15 +419,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz", hash = "sha256:73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4", size = 219990, upload-time = "2025-10-09T14:16:53.064Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/25/7a/b0178788f8dc6cafce37a212c99565fa1fe7872c70c6c9c1e1a372d9d88f/rich-14.2.0-py3-none-any.whl", hash = "sha256:76bc51fe2e57d2b1be1f96c524b890b816e334ab4c1e45888799bfaab0021edd", size = 243393, upload-time = "2025-10-09T14:16:51.245Z" },
-]
-
-[[package]]
-name = "semantic-version"
-version = "2.10.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/7d/31/f2289ce78b9b473d582568c234e104d2a342fd658cc288a7553d83bb8595/semantic_version-2.10.0.tar.gz", hash = "sha256:bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c", size = 52289, upload-time = "2022-05-26T13:35:23.454Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl", hash = "sha256:de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177", size = 15552, upload-time = "2022-05-26T13:35:21.206Z" },
 ]
 
 [[package]]

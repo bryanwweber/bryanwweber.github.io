@@ -3,15 +3,15 @@ title: Resume
 summary: Bryan Weber's Resume
 ---
 
-Experienced software developer working on distributed systems, ML, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between. Proven product mindset, dedicated to understanding and solving complex customer problems through robust backend infrastructure and APIs. Adept at driving innovation, owning the full software development lifecycle, and fostering collaborative environments. Passionate about building cohesive teams through servant leadership, supporting teammates, and fostering a culture of continuous process improvement.
+Experienced software developer working on distributed systems, ML, PyData projects, and maintaining open source software. Working with data, on the web, and everything in between. Proven product mindset, dedicated to understanding and solving complex customer problems through robust backend infrastructure and APIs. Adept at driving innovation, owning the full software development life cycle, and fostering collaborative environments. Passionate about building cohesive teams through servant leadership, supporting teammates, and fostering a culture of continuous process improvement.
 
 [Download a PDF]({static}/files/cv/Weber_Bryan_Resume.pdf)
 
 ## Skills
 
-**Programming Languages/Packages:** Advanced Python | Intermediate Go | Basic C++ | NumPy | pandas | pytest | FastAPI | Pydantic
+**Programming Languages/Packages:** Advanced Python | Intermediate Go | Intermediate TypeScript | Basic C++ | NumPy | pandas | pytest | FastAPI | Pydantic
 
-**DevOps & Infrastructure:** Docker | Kubernetes | PostgreSQL | Redis | Google BigQuery | Continuous Integration and Deployent (CI/CD) | AWS Cloud Platforms (EC2, S3, EKS) | Machine Learning Pipeline Development (Flyte, Dagster) | Git, GitFlow, GitHub, GitLab
+**DevOps & Infrastructure:** Docker | Kubernetes | PostgreSQL | Redis | Google BigQuery | Continuous Integration and Deployment (CI/CD) | AWS Cloud Platforms (EC2, S3, EKS) | Machine Learning Pipeline Development (Flyte, Dagster) | Git, GitFlow, GitHub, GitLab
 
 **Software Development:** Software Design | Software Architecture | Project Management | Team Leadership | Code Review | Communication
 
@@ -27,7 +27,7 @@ Senior Software Engineer, [Hunted Labs](https://huntedlabs.com), August 2024 -- 
 
 - Architected and led the development of a **multi-source data pipeline and API** written in Go by combining deps.dev, FIRST.ORG EPSS (Exploit Prediction Scoring System), Google Maps API, and GitHub contributor data, enabling identification of developers and self-reported geographic locations to detect and mitigate **adversarial foreign influence** in open-source dependencies. Zero to MVP in less than 3 months.
 - **Drove the integration of LLM/AI capabilities** into core product offerings, enabling  natural language interaction with complex SBOM (Software Bill of Materials) and vulnerability data, thereby empowering both technical and non-technical users.
-- **Led a team of 8 engineers** in the successful completion of a critical quarterly software release. Directed the full project lifecycle, from quality assurance to customer deployment, **delivering all pre-determined scope on schedule**.
+- **Led a team of 8 engineers** in the successful completion of a critical quarterly software release. Directed the full project life cycle, from quality assurance to customer deployment, **delivering all pre-determined scope on schedule**.
 - **Engineered a robust data pipeline** for GitHub Events API data, significantly reducing dependence on third-party vendors and enhancing the accuracy of source code provenance determination for critical security insights.
 
 ---
@@ -81,7 +81,7 @@ Director of Undergraduate Studies & Assistant Professor in Residence, University
 
 ---
 
-Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), Januar 2019 -- January 2021
+Author & Technical Reviewer, [RealPython](https://realpython.com/team/bweber), January 2019 -- January 2021
 
 - Written six in-depth articles covering topics in the Python ecosystem, including [Python `main` functions][main function], [using `datetime` and `dateutil`][datetime], and [the `enumerate` function][enumerate]
 - Articles are read by 30,000+ unique readers per week and were featured on the [Python Bytes][python bytes] and [RealPython][real python podcast] podcasts
@@ -104,4 +104,4 @@ Co-Chair, NumFOCUS Small Development Grants Committee, January 2019 -- January 2
 
 Ph.D., Mechanical Engineering, University of Connecticut, 2014  
 M.S., Mechanical Engineering, University of Connecticut, 2010  
-B.S.E., Aerospace Engineering, Case Western Reserve University, 2009  
+B.S.E., Aerospace Engineering, Case Western Reserve University, 2009

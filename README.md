@@ -30,8 +30,4 @@ uv run invoke livereload
 Publishing
 ----------
 
-Published via GitHub Pages.
-
-```shell
-uv run invoke gh-pages
-```
+Published via GitHub Actions onto GitHub pages. Make and merge a PR and it will be automatically deployed.

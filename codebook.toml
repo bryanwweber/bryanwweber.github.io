@@ -1,0 +1,8 @@
+words = [
+    "Dask",
+    "EPSS",
+    "Unported",
+    "ipywidgets",
+    "livereload",
+    "pantsbuild",
+]

@@ -333,16 +333,16 @@ wheels = [
 
 [[package]]
 name = "pelican-yaml-metadata"
-version = "2.1.2"
+version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "markdown" },
     { name = "pelican" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fc/70/baf784c97d8ee1077b2db86c03df7d0165115b4db24529b0c81d302fad42/pelican_yaml_metadata-2.1.2.tar.gz", hash = "sha256:11018c3aead96e92731eeca61cdabdeafe880ece8f639b0463177e031ae361d7", size = 7527, upload-time = "2023-10-10T05:11:41.049Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/de/3d/8f5cf45b7593e9b01cbf20ce51aa08c5103fae3008c77dd240366ca49872/pelican_yaml_metadata-2.2.0.tar.gz", hash = "sha256:5fcaa19ee3521501a5129aaabcfe0bdceb00a525ccc9a102d2fb093e72e2b04b", size = 5482, upload-time = "2026-10-06T09:29:28.748Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bf/4c/14629b6f43345ad78c46a24b1bae76298e200d3be95118bdb6e9b659e30d/pelican_yaml_metadata-2.1.2-py3-none-any.whl", hash = "sha256:12282f85b68d12783d10e67c3066e5e3a1ec8daeaced889274168f1daf137a93", size = 6430, upload-time = "2023-10-10T05:11:39.541Z" },
+    { url = "https://files.pythonhosted.org/packages/a2/94/0e83a09ba95d7dd8c9ce0a7beda7a3e692080d274556fc99fdec9937e336/pelican_yaml_metadata-2.2.0-py3-none-any.whl", hash = "sha256:ad8db728a962251f0a554bcccb661a8a9d174fbad689a7af7603c02ae7f9d7e3", size = 5547, upload-time = "2026-10-06T09:29:27.387Z" },
 ]
 
 [[package]]

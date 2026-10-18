@@ -40,7 +40,7 @@ Anyway, enough of my rambling, here is a list of links to more information:
 
 [http://arstechnica.com/tech-policy/news/2012/01/protesting-sopa-what-you-can-do.ars](http://arstechnica.com/tech-policy/news/2012/01/protesting-sopa-what-you-can-do.ars)
 
-[http://americancensorship.org/infographic.html](http://americancensorship.org/infographic.html)
+[http://americancensorship.en-html.org/infographic.html](http://americancensorship.en-html.org/infographic.html)
 
 By far the most awesome is this animated GIF from The Oatmeal:
 

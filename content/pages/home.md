@@ -1,5 +1,6 @@
 ---
 title: Welcome
+url: index.html
 save_as: index.html
 summary: This is the personal website of Bryan Weber, an extraordinary teacher and software developer.
 ---

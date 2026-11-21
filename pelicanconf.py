@@ -1,4 +1,28 @@
+from pathlib import Path as _Path
+
 import bulrush
+from pelican import signals as _signals
+from pelican.plugins.sitemap import generator as _sitemap_generator
+
+
+def _queue_sitemap_page(path, context):
+    content = context.get("article") or context.get("page")
+    # pelican-redirect writes aliases with the original content object, which
+    # pelican-sitemap 1.2.2 otherwise queues again under its canonical URL.
+    if content is not None:
+        expected = _Path(context["OUTPUT_PATH"]) / content.save_as
+        if _Path(path).resolve() != expected.resolve():
+            return
+    _sitemap_generator.queue_page(path, context)
+
+
+def _configure_sitemap(pelican):
+    # Replace the callback after namespace plugins have registered themselves.
+    _signals.content_written.disconnect(_sitemap_generator.queue_page)
+    _signals.content_written.connect(_queue_sitemap_page)
+
+
+_signals.initialized.connect(_configure_sitemap)
 
 #####
 # DISABLE THIS

@@ -38,6 +38,7 @@ dependencies = [
     { name = "pelican" },
     { name = "pelican-pagination" },
     { name = "pelican-redirect" },
+    { name = "pelican-sitemap" },
     { name = "pelican-webassets" },
     { name = "pelican-yaml-metadata" },
     { name = "pymdown-extensions" },
@@ -56,6 +57,7 @@ requires-dist = [
     { name = "pelican", specifier = ">=4.12.0" },
     { name = "pelican-pagination", specifier = ">=2.0.1.post1" },
     { name = "pelican-redirect", specifier = ">=1.0.2" },
+    { name = "pelican-sitemap", specifier = ">=1.2.2" },
     { name = "pelican-webassets", specifier = ">=2.0.0" },
     { name = "pelican-yaml-metadata", specifier = ">=2.1.2" },
     { name = "pymdown-extensions", specifier = ">=11.0.1" },
@@ -317,6 +319,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/dd/0b/5e1847898f934728b010dc1a991102af3f8882b89d8993934146d903d0ac/pelican_redirect-3.0.0.tar.gz", hash = "sha256:44fdb03922c487be2fa776b0fb608c003ba012464e4a3dcd46baaeecd74a80d0", size = 47389, upload-time = "2025-10-12T15:25:40.022Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/21/66/0914c2d8590f51841e576c5ca82e7ee4a4e0ddc5d5e6b4e0d36bf8575343/pelican_redirect-3.0.0-py3-none-any.whl", hash = "sha256:f70b99cbf315c24f77d642cfa8ae9bb47e4dbc822e660e3d170de2ca1a1f3ebf", size = 5316, upload-time = "2025-10-12T15:25:38.604Z" },
+]
+
+[[package]]
+name = "pelican-sitemap"
+version = "1.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pelican" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5c/c1/d9e1d539decfba947d711bcb37427ad15914557a728418bd928d56e58a32/pelican_sitemap-1.2.2.tar.gz", hash = "sha256:93f72d035dd0ec2f5cee38b2766bbd7f6a54bf186635ae1261a6deac422dcfb7", size = 8013, upload-time = "2025-10-12T15:24:36.727Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/68/c2/d2f98364b49a40bac9f315f29d8c22322b47bc4ebdec6a8e3a4f657ebc24/pelican_sitemap-1.2.2-py3-none-any.whl", hash = "sha256:09ba150dd1b54ef855f18e7ec920160d7118e932e0dac1c6e8bf3a41e938e682", size = 8046, upload-time = "2025-10-12T15:24:35.678Z" },
 ]
 
 [[package]]
